@@ -18,7 +18,7 @@ download, install and use the models, see the
 | `2017-03-17` | `en_core_web_sm` | 1.2.0 | 50 MB | Vocab, syntax, entities, word vectors | [![][dl]][en_core_web_sm-1.2.0]
 | `2017-03-17` | `en_core_web_md` | 1.2.0 | 1 GB | Vocab, syntax, entities, word vectors | [![][dl]][en_core_web_md-1.2.0]
 | `2017-03-17` | `en_depent_web_md` | 1.2.0 | 328 MB | Vocab, syntax, entities | [![][dl]][en_depent_web_md-1.2.0]
-| `2017-03-17` | `de_core_news_md` | 1.2.0 | 637 MB | Vocab, syntax, entities, word vectors | [![][dl]][de_core_news_md-1.2.0]
+| `2017-03-17` | `de_core_news_md` | 1.2.0 | 1 GB | Vocab, syntax, entities, word vectors | [![][dl]][de_core_news_md-1.2.0]
 | `2016-03-08` | `en_vectors_glove_md` | 1.1.0 | 727 MB | GloVe Common Crawl vectors | [![][dl]][en_vectors_glove_md-1.1.0]
 
 [dl]: http://i.imgur.com/gQvPgr0.png
