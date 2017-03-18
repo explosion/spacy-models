@@ -44,20 +44,20 @@ new [models documentation](https://spacy.io/docs/usage/models).
 
 ```bash
 # out-of-the-box: download best-matching default model
-python -m spacy.download en
+python -m spacy download en
 
 # download best-matching version of specific model for your spaCy installation
-python -m spacy.download en_core_web_md
+python -m spacy download en_core_web_md
 
 # pip install .tar.gz archive from path or URL
 pip install /Users/you/en_core_web_md-1.2.0.tar.gz
 pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_md-1.2.0/en_core_web_md-1.2.0.tar.gz
 
 # set up shortcut link to load installed package as "en_default"
-python -m spacy.link en_core_web_md en_default
+python -m spacy link en_core_web_md en_default
 
 # set up shortcut link to load local model as "my_amazing_model"
-python -m spacy.link /Users/you/data my_amazing_model
+python -m spacy link /Users/you/data my_amazing_model
 ```
 
 ## Loading and using models
