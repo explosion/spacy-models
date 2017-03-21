@@ -15,18 +15,22 @@ download, install and use the models, see the
 
 | Date | Model | Version | Size | Description | |
 | --- | --- | --- | --- | -- | --- |
+| `2017-03-21` | `en_core_web_md` | 1.2.1 | 1 GB | Vocab, syntax, entities, word vectors | [![][dl]][en_core_web_md-1.2.1]
+| `2017-03-21` | `en_depent_web_md` | 1.2.1 | 328 MB | Vocab, syntax, entities | [![][dl]][en_depent_web_md-1.2.1]
 | `2017-03-17` | `en_core_web_sm` | 1.2.0 | 50 MB | Vocab, syntax, entities, word vectors | [![][dl]][en_core_web_sm-1.2.0]
 | `2017-03-17` | `en_core_web_md` | 1.2.0 | 1 GB | Vocab, syntax, entities, word vectors | [![][dl]][en_core_web_md-1.2.0]
 | `2017-03-17` | `en_depent_web_md` | 1.2.0 | 328 MB | Vocab, syntax, entities | [![][dl]][en_depent_web_md-1.2.0]
 | `2016-05-10` | `de_core_news_md` | 1.0.0 | 645 MB | Vocab, syntax, entities, word vectors | [![][dl]][de_core_news_md-1.0.0]
 | `2016-03-08` | `en_vectors_glove_md` | 1.0.0 | 727 MB | GloVe Common Crawl vectors | [![][dl]][en_vectors_glove_md-1.0.0]
 
-[dl]: http://i.imgur.com/gQvPgr0.png
+[en_core_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/download/en_core_web_md-1.2.1/en_core_web_md-1.2.1.tar.gz
+[en_depent_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/download/en_depent_web_md-1.2.1/en_depent_web_md-1.2.1.tar.gz
 [en_core_web_sm-1.2.0]: https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-1.2.0/en_core_web_sm-1.2.0.tar.gz
 [en_core_web_md-1.2.0]: https://github.com/explosion/spacy-models/releases/download/en_core_web_md-1.2.0/en_core_web_md-1.2.0.tar.gz
 [en_depent_web_md-1.2.0]: https://github.com/explosion/spacy-models/releases/download/en_depent_web_md-1.2.0/en_depent_web_md-1.2.0.tar.gz
 [de_core_news_md-1.0.0]: https://github.com/explosion/spacy-models/releases/download/de_core_news_md-1.0.0/de_core_news_md-1.0.0.tar.gz
 [en_vectors_glove_md-1.0.0]: https://github.com/explosion/spacy-models/releases/download/en_vectors_glove_md-1.0.0/en_vectors_glove_md-1.0.0.tar.gz
+[dl]: http://i.imgur.com/gQvPgr0.png
 
 ### Support for older versions
 
