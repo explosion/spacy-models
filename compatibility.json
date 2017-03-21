@@ -4,21 +4,21 @@
             "en_core_web_md": ["1.2.1", "1.2.0"],
             "en_core_web_sm": ["1.2.0"],
             "de_core_news_md": ["1.0.0"],
-            "en_depent_web_md": ["1.2.0"],
+            "en_depent_web_md": ["1.2.1", "1.2.0"],
             "en_vectors_glove_md": ["1.0.0"]
         },
         "1.7.1": {
             "en_core_web_md": ["1.2.1", "1.2.0"],
             "en_core_web_sm": ["1.2.0"],
             "de_core_news_md": ["1.0.0"],
-            "en_depent_web_md": ["1.2.0"],
+            "en_depent_web_md": ["1.2.1", "1.2.0"],
             "en_vectors_glove_md": ["1.0.0"]
         },
         "1.7.0": {
             "en_core_web_md": ["1.2.1", "1.2.0"],
             "en_core_web_sm": ["1.2.0"],
             "de_core_news_md": ["1.0.0"],
-            "en_depent_web_md": ["1.2.0"],
+            "en_depent_web_md": ["1.2.1", "1.2.0"],
             "en_vectors_glove_md": ["1.0.0"]
         },
         "1.6.0": {
