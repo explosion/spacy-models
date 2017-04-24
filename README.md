@@ -1,14 +1,14 @@
 <a href="https://explosion.ai"><img src="https://explosion.ai/assets/img/logo.svg" width="125" height="125" align="right" /></a>
 
 # spaCy models
-This repository contains [releases](releases) of models for the
+This repository contains [releases](https://github.com/explosion/spacy-models/releases) of models for the
 [spaCy](https://github.com/explosion/spaCy) NLP library. For more info on how to
 download, install and use the models, see the
 [models documentation](https://spacy.io/docs/usage/models).
 
 > **⚠️ Important note:** Because the models can be very large and consist mostly
 > of binary data, we can't simply provide them as files in a GitHub repository.
-> Instead, we've opted for adding them to [releases](releases) as `.tar.gz` files.
+> Instead, we've opted for adding them to [releases](https://github.com/explosion/spacy-models/releases) as `.tar.gz` files.
 > This allows us to still maintain a public release history.
 
 ## Releases
