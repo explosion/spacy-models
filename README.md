@@ -32,7 +32,7 @@ python -m spacy download [model]
 | `2017-03-17` | `en_core_web_md` | 1.2.0 | X | X | X | X | 1 GB | CC BY-SA | [![][i]][i-en_core_web_md-1.2.0] | [![][dl]][en_core_web_md-1.2.0]
 | `2017-03-17` | `en_depent_web_md` | 1.2.0 | X | X | X | | 328 MB | CC BY-SA | [![][i]][i-en_depent_web_md-1.2.0] | [![][dl]][en_depent_web_md-1.2.0]
 | `2016-05-10` | `de_core_news_md` | 1.0.0 | X | X | X | X | 645 MB | CC BY-SA | [![][i]][i-de_core_news_md-1.0.0] | [![][dl]][de_core_news_md-1.0.0]
-| `2016-03-08` | `en_vectors_glove_md` | 1.0.0 | | | | X | 727 MB | CC BY-SA | [![][i]][i-en_vectors_glove_md-1.0.0] | [![][dl]][en_vectors_glove_md-1.0.0]
+| `2016-03-08` | `en_vectors_glove_md` | 1.0.0 | X | | | X | 727 MB | CC BY-SA | [![][i]][i-en_vectors_glove_md-1.0.0] | [![][dl]][en_vectors_glove_md-1.0.0]
 
 [fr_depvec_web_lg-1.0.0]: https://github.com/explosion/spacy-models/releases/download/fr_depvec_web_lg-1.0.0/fr_depvec_web_lg-1.0.0.tar.gz
 [en_core_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/download/en_core_web_md-1.2.1/en_core_web_md-1.2.1.tar.gz
