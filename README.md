@@ -13,15 +13,15 @@ download, install and use the models, see the
 
 ## Releases
 
-| Date | Model | Version | Size | Description | |
-| --- | --- | --- | --- | -- | --- |
-| `2017-03-21` | `en_core_web_md` | 1.2.1 | 1 GB | Vocab, syntax, entities, word vectors | [![][dl]][en_core_web_md-1.2.1]
-| `2017-03-21` | `en_depent_web_md` | 1.2.1 | 328 MB | Vocab, syntax, entities | [![][dl]][en_depent_web_md-1.2.1]
-| `2017-03-17` | `en_core_web_sm` | 1.2.0 | 50 MB | Vocab, syntax, entities, word vectors | [![][dl]][en_core_web_sm-1.2.0]
-| `2017-03-17` | `en_core_web_md` | 1.2.0 | 1 GB | Vocab, syntax, entities, word vectors | [![][dl]][en_core_web_md-1.2.0]
-| `2017-03-17` | `en_depent_web_md` | 1.2.0 | 328 MB | Vocab, syntax, entities | [![][dl]][en_depent_web_md-1.2.0]
-| `2016-05-10` | `de_core_news_md` | 1.0.0 | 645 MB | Vocab, syntax, entities, word vectors | [![][dl]][de_core_news_md-1.0.0]
-| `2016-03-08` | `en_vectors_glove_md` | 1.0.0 | 727 MB | GloVe Common Crawl vectors | [![][dl]][en_vectors_glove_md-1.0.0]
+| Date | Model | Version | Size | License | | |
+| --- | --- | --- | --- | -- | --- | --- |
+| `2017-03-21` | `en_core_web_md` | 1.2.1 | 1 GB | CC BY-SA | [![][i]][i-en_core_web_md-1.2.1] | [![][dl]][en_core_web_md-1.2.1]
+| `2017-03-21` | `en_depent_web_md` | 1.2.1 | 328 MB | CC BY-SA | [![][i]][i-en_depent_web_md-1.2.1] | [![][dl]][en_depent_web_md-1.2.1]
+| `2017-03-17` | `en_core_web_sm` | 1.2.0 | 50 MB | CC BY-SA | [![][i]][i-en_core_web_sm-1.2.0] | [![][dl]][en_core_web_sm-1.2.0]
+| `2017-03-17` | `en_core_web_md` | 1.2.0 | 1 GB | CC BY-SA | [![][i]][i-en_core_web_md-1.2.0] | [![][dl]][en_core_web_md-1.2.0]
+| `2017-03-17` | `en_depent_web_md` | 1.2.0 | 328 MB | CC BY-SA | [![][i]][i-en_depent_web_md-1.2.0] | [![][dl]][en_depent_web_md-1.2.0]
+| `2016-05-10` | `de_core_news_md` | 1.0.0 | 645 MB | CC BY-SA | [![][i]][i-de_core_news_md-1.0.0] | [![][dl]][de_core_news_md-1.0.0]
+| `2016-03-08` | `en_vectors_glove_md` | 1.0.0 | 727 MB | CC BY-SA | [![][i]][i-en_vectors_glove_md-1.0.0] | [![][dl]][en_vectors_glove_md-1.0.0]
 
 [en_core_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/download/en_core_web_md-1.2.1/en_core_web_md-1.2.1.tar.gz
 [en_depent_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/download/en_depent_web_md-1.2.1/en_depent_web_md-1.2.1.tar.gz
@@ -30,7 +30,17 @@ download, install and use the models, see the
 [en_depent_web_md-1.2.0]: https://github.com/explosion/spacy-models/releases/download/en_depent_web_md-1.2.0/en_depent_web_md-1.2.0.tar.gz
 [de_core_news_md-1.0.0]: https://github.com/explosion/spacy-models/releases/download/de_core_news_md-1.0.0/de_core_news_md-1.0.0.tar.gz
 [en_vectors_glove_md-1.0.0]: https://github.com/explosion/spacy-models/releases/download/en_vectors_glove_md-1.0.0/en_vectors_glove_md-1.0.0.tar.gz
+
+[i-en_core_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/en_core_web_md-1.2.1
+[i-en_depent_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/en_depent_web_md-1.2.1
+[i-en_core_web_sm-1.2.0]: https://github.com/explosion/spacy-models/releases/en_core_web_sm-1.2.0
+[i-en_core_web_md-1.2.0]: https://github.com/explosion/spacy-models/releases/en_core_web_md-1.2.0
+[i-en_depent_web_md-1.2.0]: https://github.com/explosion/spacy-models/releases/en_depent_web_md-1.2.0
+[i-de_core_news_md-1.0.0]: https://github.com/explosion/spacy-models/releases/de_core_news_md-1.0.0
+[i-en_vectors_glove_md-1.0.0]: https://github.com/explosion/spacy-models/releases/en_vectors_glove_md-1.0.0
+
 [dl]: http://i.imgur.com/gQvPgr0.png
+[i]: http://i.imgur.com/OpLOcKn.png
 
 ### Support for older versions
 
