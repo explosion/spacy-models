@@ -24,7 +24,7 @@ python -m spacy download [model]
 ## Releases
 
 | Date | Model | Version | Voc | Dep | Ent | Vec | Size | License | | |
-| --- | --- | --- | --- | --- | --- | --- | ---: | --- | --- | --- |
+| --- | --- | --- | :---: | :---: | :---: | :---: | ---: | --- | --- | --- |
 | `2017-03-21` | `en_core_web_md` | 1.2.1 | X | X | X | X | 1 GB | CC BY-SA | [![][i]][i-en_core_web_md-1.2.1] | [![][dl]][en_core_web_md-1.2.1]
 | `2017-03-21` | `en_depent_web_md` | 1.2.1 | X | X | X | | 328 MB | CC BY-SA | [![][i]][i-en_depent_web_md-1.2.1] | [![][dl]][en_depent_web_md-1.2.1]
 | `2017-03-17` | `en_core_web_sm` | 1.2.0 | X | X | X | X | 50 MB | CC BY-SA | [![][i]][i-en_core_web_sm-1.2.0] | [![][dl]][en_core_web_sm-1.2.0]
