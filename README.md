@@ -25,6 +25,7 @@ python -m spacy download [model]
 
 | Date | Model | Version | Voc | Dep | Ent | Vec | Size | License | | |
 | --- | --- | --- | :---: | :---: | :---: | :---: | ---: | --- | --- | --- |
+| `2017-04-26` | `fr_depvec_web_lg` | 1.0.0 | X | X | | X | 1.5 GB | CC BY-NC | [![][i]][i-fr_depvec_web_lg-1.0.0] | [![][dl]][fr_depvec_web_lg-1.0.0]
 | `2017-03-21` | `en_core_web_md` | 1.2.1 | X | X | X | X | 1 GB | CC BY-SA | [![][i]][i-en_core_web_md-1.2.1] | [![][dl]][en_core_web_md-1.2.1]
 | `2017-03-21` | `en_depent_web_md` | 1.2.1 | X | X | X | | 328 MB | CC BY-SA | [![][i]][i-en_depent_web_md-1.2.1] | [![][dl]][en_depent_web_md-1.2.1]
 | `2017-03-17` | `en_core_web_sm` | 1.2.0 | X | X | X | X | 50 MB | CC BY-SA | [![][i]][i-en_core_web_sm-1.2.0] | [![][dl]][en_core_web_sm-1.2.0]
@@ -33,6 +34,7 @@ python -m spacy download [model]
 | `2016-05-10` | `de_core_news_md` | 1.0.0 | X | X | X | X | 645 MB | CC BY-SA | [![][i]][i-de_core_news_md-1.0.0] | [![][dl]][de_core_news_md-1.0.0]
 | `2016-03-08` | `en_vectors_glove_md` | 1.0.0 | | | | X | 727 MB | CC BY-SA | [![][i]][i-en_vectors_glove_md-1.0.0] | [![][dl]][en_vectors_glove_md-1.0.0]
 
+[fr_depvec_web_lg-1.0.0]: https://github.com/explosion/spacy-models/releases/download/fr_depvec_web_lg-1.0.0/fr_depvec_web_lg-1.0.0.tar.gz
 [en_core_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/download/en_core_web_md-1.2.1/en_core_web_md-1.2.1.tar.gz
 [en_depent_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/download/en_depent_web_md-1.2.1/en_depent_web_md-1.2.1.tar.gz
 [en_core_web_sm-1.2.0]: https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-1.2.0/en_core_web_sm-1.2.0.tar.gz
@@ -41,6 +43,7 @@ python -m spacy download [model]
 [de_core_news_md-1.0.0]: https://github.com/explosion/spacy-models/releases/download/de_core_news_md-1.0.0/de_core_news_md-1.0.0.tar.gz
 [en_vectors_glove_md-1.0.0]: https://github.com/explosion/spacy-models/releases/download/en_vectors_glove_md-1.0.0/en_vectors_glove_md-1.0.0.tar.gz
 
+[i-fr_depvec_web_lg-1.0.0]: https://github.com/explosion/spacy-models/releases/fr_depvec_web_lg-1.0.0
 [i-en_core_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/en_core_web_md-1.2.1
 [i-en_depent_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/en_depent_web_md-1.2.1
 [i-en_core_web_sm-1.2.0]: https://github.com/explosion/spacy-models/releases/en_core_web_sm-1.2.0
