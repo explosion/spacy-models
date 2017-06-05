@@ -23,10 +23,23 @@ python -m spacy download [model]
 
 ## Releases
 
+### spaCy v2.x (alpha)
+
 | Date | Model | Version | Dep | Ent | Vec | Size | License | | |
 | --- | --- | --- | :---: | :---: | :---: | ---: | --- | --- | --- |
 | `2017-06-05` | `en_core_web_sm` | 2.0.0-alpha | X | X | X | 15 MB | CC BY-SA | [![][i]][i-en_core_web_sm-2.0.0-alpha] | [![][dl]][en_core_web_sm-2.0.0-alpha]
 | `2017-06-05` | `xx_ent_wiki_sm` | 2.0.0-alpha | | | X | 12 MB | CC BY-SA | [![][i]][i-xx_ent_wiki_sm-2.0.0-alpha] | [![][dl]][xx_ent_wiki_sm-2.0.0-alpha]
+
+[en_core_web_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0-alpha/en_core_web_sm-2.0.0-alpha.tar.gz
+[xx_ent_wiki_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/download/xx_ent_wiki_sm-2.0.0-alpha/xx_ent_wiki_sm-2.0.0-alpha.tar.gz
+
+[i-xx_ent_wiki_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/xx_ent_wiki_sm-2.0.0-alpha
+[i-en_core_web_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/en_core_web_sm-2.0.0-alpha
+
+### spaCy v1.x
+
+| Date | Model | Version | Dep | Ent | Vec | Size | License | | |
+| --- | --- | --- | :---: | :---: | :---: | ---: | --- | --- | --- |
 | `2017-04-26` | `fr_depvec_web_lg` | 1.0.0 | X | | X | 1.33 GB | CC BY-NC | [![][i]][i-fr_depvec_web_lg-1.0.0] | [![][dl]][fr_depvec_web_lg-1.0.0]
 | `2017-03-21` | `en_core_web_md` | 1.2.1 | X | X | X | 1 GB | CC BY-SA | [![][i]][i-en_core_web_md-1.2.1] | [![][dl]][en_core_web_md-1.2.1]
 | `2017-03-21` | `en_depent_web_md` | 1.2.1 | X | X | | 328 MB | CC BY-SA | [![][i]][i-en_depent_web_md-1.2.1] | [![][dl]][en_depent_web_md-1.2.1]
@@ -36,8 +49,6 @@ python -m spacy download [model]
 | `2016-05-10` | `de_core_news_md` | 1.0.0 | X | X | X | 645 MB | CC BY-SA | [![][i]][i-de_core_news_md-1.0.0] | [![][dl]][de_core_news_md-1.0.0]
 | `2016-03-08` | `en_vectors_glove_md` | 1.0.0 | | | X | 727 MB | CC BY-SA | [![][i]][i-en_vectors_glove_md-1.0.0] | [![][dl]][en_vectors_glove_md-1.0.0]
 
-[en_core_web_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0-alpha/en_core_web_sm-2.0.0-alpha.tar.gz
-[xx_ent_wiki_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/download/xx_ent_wiki_sm-2.0.0-alpha/xx_ent_wiki_sm-2.0.0-alpha.tar.gz
 [fr_depvec_web_lg-1.0.0]: https://github.com/explosion/spacy-models/releases/download/fr_depvec_web_lg-1.0.0/fr_depvec_web_lg-1.0.0.tar.gz
 [en_core_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/download/en_core_web_md-1.2.1/en_core_web_md-1.2.1.tar.gz
 [en_depent_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/download/en_depent_web_md-1.2.1/en_depent_web_md-1.2.1.tar.gz
@@ -47,8 +58,6 @@ python -m spacy download [model]
 [de_core_news_md-1.0.0]: https://github.com/explosion/spacy-models/releases/download/de_core_news_md-1.0.0/de_core_news_md-1.0.0.tar.gz
 [en_vectors_glove_md-1.0.0]: https://github.com/explosion/spacy-models/releases/download/en_vectors_glove_md-1.0.0/en_vectors_glove_md-1.0.0.tar.gz
 
-[i-xx_ent_wiki_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/xx_ent_wiki_sm-2.0.0-alpha
-[i-en_core_web_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/en_core_web_sm-2.0.0-alpha
 [i-fr_depvec_web_lg-1.0.0]: https://github.com/explosion/spacy-models/releases/fr_depvec_web_lg-1.0.0
 [i-en_core_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/en_core_web_md-1.2.1
 [i-en_depent_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/en_depent_web_md-1.2.1
@@ -61,7 +70,7 @@ python -m spacy download [model]
 [dl]: http://i.imgur.com/gQvPgr0.png
 [i]: http://i.imgur.com/OpLOcKn.png
 
-### Model naming conventions
+## Model naming conventions
 
 In general, spaCy expects all model packages to follow the naming convention of
 `[lang]_[name]`. For our models, we also chose to divide the name into three
