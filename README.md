@@ -1,20 +1,20 @@
 <a href="https://explosion.ai"><img src="https://explosion.ai/assets/img/logo.svg" width="125" height="125" align="right" /></a>
 
 # spaCy models
-This repository contains [releases](https://github.com/explosion/spacy-models/releases) 
-of models for the [spaCy](https://github.com/explosion/spaCy) NLP library. For 
+This repository contains [releases](https://github.com/explosion/spacy-models/releases)
+of models for the [spaCy](https://github.com/explosion/spaCy) NLP library. For
 more info on how to download, install and use the models, see the
 [models documentation](https://spacy.io/docs/usage/models).
 
 > **⚠️ Important note:** Because the models can be very large and consist mostly
 > of binary data, we can't simply provide them as files in a GitHub repository.
-> Instead, we've opted for adding them to 
-> [releases](https://github.com/explosion/spacy-models/releases) as `.tar.gz` 
+> Instead, we've opted for adding them to
+> [releases](https://github.com/explosion/spacy-models/releases) as `.tar.gz`
 > files. This allows us to still maintain a public release history.
 
 ## Quickstart
 
-To install a specific model, run the following command with the model name 
+To install a specific model, run the following command with the model name
 (for example `en_core_web_sm`):
 
 ```bash
@@ -23,17 +23,21 @@ python -m spacy download [model]
 
 ## Releases
 
-| Date | Model | Version | Voc | Dep | Ent | Vec | Size | License | | |
-| --- | --- | --- | :---: | :---: | :---: | :---: | ---: | --- | --- | --- |
-| `2017-04-26` | `fr_depvec_web_lg` | 1.0.0 | X | X | | X | 1.33 GB | CC BY-NC | [![][i]][i-fr_depvec_web_lg-1.0.0] | [![][dl]][fr_depvec_web_lg-1.0.0]
-| `2017-03-21` | `en_core_web_md` | 1.2.1 | X | X | X | X | 1 GB | CC BY-SA | [![][i]][i-en_core_web_md-1.2.1] | [![][dl]][en_core_web_md-1.2.1]
-| `2017-03-21` | `en_depent_web_md` | 1.2.1 | X | X | X | | 328 MB | CC BY-SA | [![][i]][i-en_depent_web_md-1.2.1] | [![][dl]][en_depent_web_md-1.2.1]
-| `2017-03-17` | `en_core_web_sm` | 1.2.0 | X | X | X | X | 50 MB | CC BY-SA | [![][i]][i-en_core_web_sm-1.2.0] | [![][dl]][en_core_web_sm-1.2.0]
-| `2017-03-17` | `en_core_web_md` | 1.2.0 | X | X | X | X | 1 GB | CC BY-SA | [![][i]][i-en_core_web_md-1.2.0] | [![][dl]][en_core_web_md-1.2.0]
-| `2017-03-17` | `en_depent_web_md` | 1.2.0 | X | X | X | | 328 MB | CC BY-SA | [![][i]][i-en_depent_web_md-1.2.0] | [![][dl]][en_depent_web_md-1.2.0]
-| `2016-05-10` | `de_core_news_md` | 1.0.0 | X | X | X | X | 645 MB | CC BY-SA | [![][i]][i-de_core_news_md-1.0.0] | [![][dl]][de_core_news_md-1.0.0]
-| `2016-03-08` | `en_vectors_glove_md` | 1.0.0 | X | | | X | 727 MB | CC BY-SA | [![][i]][i-en_vectors_glove_md-1.0.0] | [![][dl]][en_vectors_glove_md-1.0.0]
+| Date | Model | Version | Dep | Ent | Vec | Size | License | | |
+| --- | --- | --- | :---: | :---: | :---: | ---: | --- | --- | --- |
+| `2017-06-05` | `en_core_web_sm` | 2.0.0-alpha | X | X | X | 15 MB | CC BY-SA | [![][i]][i-en_core_web_sm-2.0.0-alpha] | [![][dl]][en_core_web_sm-2.0.0-alpha]
+| `2017-06-05` | `xx_ent_wiki_sm` | 2.0.0-alpha | | | X | 12 MB | CC BY-SA | [![][i]][i-xx_ent_wiki_sm-2.0.0-alpha] | [![][dl]][xx_ent_wiki_sm-2.0.0-alpha]
+| `2017-04-26` | `fr_depvec_web_lg` | 1.0.0 | X | | X | 1.33 GB | CC BY-NC | [![][i]][i-fr_depvec_web_lg-1.0.0] | [![][dl]][fr_depvec_web_lg-1.0.0]
+| `2017-03-21` | `en_core_web_md` | 1.2.1 | X | X | X | 1 GB | CC BY-SA | [![][i]][i-en_core_web_md-1.2.1] | [![][dl]][en_core_web_md-1.2.1]
+| `2017-03-21` | `en_depent_web_md` | 1.2.1 | X | X | | 328 MB | CC BY-SA | [![][i]][i-en_depent_web_md-1.2.1] | [![][dl]][en_depent_web_md-1.2.1]
+| `2017-03-17` | `en_core_web_sm` | 1.2.0 | X | X | X | 50 MB | CC BY-SA | [![][i]][i-en_core_web_sm-1.2.0] | [![][dl]][en_core_web_sm-1.2.0]
+| `2017-03-17` | `en_core_web_md` | 1.2.0 | X | X | X | 1 GB | CC BY-SA | [![][i]][i-en_core_web_md-1.2.0] | [![][dl]][en_core_web_md-1.2.0]
+| `2017-03-17` | `en_depent_web_md` | 1.2.0 | X | X | | 328 MB | CC BY-SA | [![][i]][i-en_depent_web_md-1.2.0] | [![][dl]][en_depent_web_md-1.2.0]
+| `2016-05-10` | `de_core_news_md` | 1.0.0 | X | X | X | 645 MB | CC BY-SA | [![][i]][i-de_core_news_md-1.0.0] | [![][dl]][de_core_news_md-1.0.0]
+| `2016-03-08` | `en_vectors_glove_md` | 1.0.0 | | | X | 727 MB | CC BY-SA | [![][i]][i-en_vectors_glove_md-1.0.0] | [![][dl]][en_vectors_glove_md-1.0.0]
 
+[en_core_web_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0-alpha/en_core_web_sm-2.0.0-alpha.tar.gz
+[xx_ent_wiki_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/download/xx_ent_wiki_sm-2.0.0-alpha/xx_ent_wiki_sm-2.0.0-alpha.tar.gz
 [fr_depvec_web_lg-1.0.0]: https://github.com/explosion/spacy-models/releases/download/fr_depvec_web_lg-1.0.0/fr_depvec_web_lg-1.0.0.tar.gz
 [en_core_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/download/en_core_web_md-1.2.1/en_core_web_md-1.2.1.tar.gz
 [en_depent_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/download/en_depent_web_md-1.2.1/en_depent_web_md-1.2.1.tar.gz
@@ -43,6 +47,8 @@ python -m spacy download [model]
 [de_core_news_md-1.0.0]: https://github.com/explosion/spacy-models/releases/download/de_core_news_md-1.0.0/de_core_news_md-1.0.0.tar.gz
 [en_vectors_glove_md-1.0.0]: https://github.com/explosion/spacy-models/releases/download/en_vectors_glove_md-1.0.0/en_vectors_glove_md-1.0.0.tar.gz
 
+[i-xx_ent_wiki_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/xx_ent_wiki_sm-2.0.0-alpha
+[i-en_core_web_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/en_core_web_sm-2.0.0-alpha
 [i-fr_depvec_web_lg-1.0.0]: https://github.com/explosion/spacy-models/releases/fr_depvec_web_lg-1.0.0
 [i-en_core_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/en_core_web_md-1.2.1
 [i-en_depent_web_md-1.2.1]: https://github.com/explosion/spacy-models/releases/en_depent_web_md-1.2.1
@@ -57,26 +63,26 @@ python -m spacy download [model]
 
 ### Model naming conventions
 
-In general, spaCy expects all model packages to follow the naming convention of 
-`[lang]_[name]`. For our models, we also chose to divide the name into three 
+In general, spaCy expects all model packages to follow the naming convention of
+`[lang]_[name]`. For our models, we also chose to divide the name into three
 components:
 
 * **type**: Model capabilities (e.g. `core` for general-purpose model with vocabulary, syntax, entities and word vectors, or `depent` for only vocab, syntax and entities)
 * **genre**: Type of text the model is trained on (e.g. `web` for web text, `news` for news text)
 * **size**: Model size indicator (`sm`, `md` or `lg`)
 
-For example, `en_depent_web_md` is a medium-sized English model trained on 
-written web text (blogs, news, comments), that includes vocabulary, syntax and 
-entities. 
+For example, `en_depent_web_md` is a medium-sized English model trained on
+written web text (blogs, news, comments), that includes vocabulary, syntax and
+entities.
 
 ### Support for older versions
 
-If you're using an older version (v1.6.0 or below), you can still download and 
-install the old models from within spaCy using `python -m spacy.en.download all` 
-or `python -m spacy.de.download all`. The `.tar.gz` archives are also 
-[attached to the v1.6.0 release](https://github.com/explosion/spaCy/tree/v1.6.0). 
-To download and install the models manually, unpack the archive, drop the 
-contained directory into `spacy/data` and load the model via `spacy.load('en')` 
+If you're using an older version (v1.6.0 or below), you can still download and
+install the old models from within spaCy using `python -m spacy.en.download all`
+or `python -m spacy.de.download all`. The `.tar.gz` archives are also
+[attached to the v1.6.0 release](https://github.com/explosion/spaCy/tree/v1.6.0).
+To download and install the models manually, unpack the archive, drop the
+contained directory into `spacy/data` and load the model via `spacy.load('en')`
 or `spacy.load('de')`.
 
 ## Downloading models
@@ -113,7 +119,7 @@ To load a model, use `spacy.load()` with the model's shortcut link:
 
 ```python
 import spacy
-nlp = spacy.load('en_default')
+nlp = spacy.load('en')
 doc = nlp(u'This is a sentence.')
 ```
 
@@ -123,9 +129,9 @@ older models in previous versions of spaCy.
 
 ```python
 import spacy
-import en_core_web_md
+import en_core_web_sm
 
-nlp = en_core_web_md.load()
+nlp = en_core_web_sm.load()
 doc = nlp(u'This is a sentence.')
 ```
 
