@@ -1,5 +1,9 @@
 {
     "spacy": {
+        "2.0.0a0": {
+            "en_core_web_sm": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha"]
+        },
         "1.8.2": {
             "en_core_web_md": ["1.2.1", "1.2.0"],
             "en_core_web_sm": ["1.2.0"],
