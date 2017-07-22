@@ -28,7 +28,7 @@ python -m spacy download [model]
 | Date | Model | Version | Dep | Ent | Vec | Size | License | | |
 | --- | --- | --- | :---: | :---: | :---: | ---: | --- | --- | --- |
 | `2017-06-05` | `en_core_web_sm` | 2.0.0-alpha | X | X | X | 15 MB | CC BY-SA | [![][i]][i-en_core_web_sm-2.0.0-alpha] | [![][dl]][en_core_web_sm-2.0.0-alpha]
-| `2017-06-05` | `xx_ent_wiki_sm` | 2.0.0-alpha | | | X | 12 MB | CC BY-SA | [![][i]][i-xx_ent_wiki_sm-2.0.0-alpha] | [![][dl]][xx_ent_wiki_sm-2.0.0-alpha]
+| `2017-06-05` | `xx_ent_wiki_sm` | 2.0.0-alpha | | X |  | 12 MB | CC BY-SA | [![][i]][i-xx_ent_wiki_sm-2.0.0-alpha] | [![][dl]][xx_ent_wiki_sm-2.0.0-alpha]
 
 [en_core_web_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0-alpha/en_core_web_sm-2.0.0-alpha.tar.gz
 [xx_ent_wiki_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/download/xx_ent_wiki_sm-2.0.0-alpha/xx_ent_wiki_sm-2.0.0-alpha.tar.gz
