@@ -87,6 +87,20 @@ For example, `en_depent_web_md` is a medium-sized English model trained on
 written web text (blogs, news, comments), that includes vocabulary, syntax and
 entities.
 
+### Model versioning
+
+Additionally, the model versioning reflects both the compatibility with spaCy,
+as well as the major and minor model version. A model version `a.b.c` 
+translates to:
+
+* `a`: **spaCy major version**. For example, `2` for spaCy v2.x.
+* `b`: **Model major version.** Models with a different major version can't be loaded by the same code. For example, changing the width of the model, adding hidden layers or changing the activation changes the model major version.
+* `c`: **Model minor version.** Same model structure, but different parameter values, e.g. from being trained on different data, for different numbers of iterations, etc.
+
+For a detailed compatibility overview, see the [`compatibility.json`](compatibility.json). 
+This is also the source of spaCy's internal compatibility check, performed when you
+run the `download` command.
+
 ### Support for older versions
 
 If you're using an older version (v1.6.0 or below), you can still download and
