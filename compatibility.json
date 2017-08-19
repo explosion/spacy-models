@@ -1,32 +1,32 @@
 {
     "spacy": {
-       "2.0.0a9": {
-           "en_core_web_sm": ["2.0.0-alpha"],
-           "xx_ent_wiki_sm": ["2.0.0-alpha"]
-       },
-       "2.0.0a8": {
-           "en_core_web_sm": ["2.0.0-alpha"],
-           "xx_ent_wiki_sm": ["2.0.0-alpha"]
-       },
-       "2.0.0a7": {
-           "en_core_web_sm": ["2.0.0-alpha"],
-           "xx_ent_wiki_sm": ["2.0.0-alpha"]
-       },
-       "2.0.0a6": {
-           "en_core_web_sm": ["2.0.0-alpha"],
-           "xx_ent_wiki_sm": ["2.0.0-alpha"]
-       },
-       "2.0.0a5": {
-           "en_core_web_sm": ["2.0.0-alpha"],
-           "xx_ent_wiki_sm": ["2.0.0-alpha"]
-       },
-       "2.0.0a4": {
-           "en_core_web_sm": ["2.0.0-alpha"],
-           "xx_ent_wiki_sm": ["2.0.0-alpha"]
-       },
-       "2.0.0a3": {
+        "2.0.0a9": {
             "en_core_web_sm": ["2.0.0-alpha"],
             "xx_ent_wiki_sm": ["2.0.0-alpha"]
+        },
+        "2.0.0a8": {
+            "en_core_web_sm": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha"]
+        },
+        "2.0.0a7": {
+            "en_core_web_sm": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha"]
+        },
+        "2.0.0a6": {
+            "en_core_web_sm": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha"]
+        },
+        "2.0.0a5": {
+            "en_core_web_sm": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha"]
+        },
+        "2.0.0a4": {
+            "en_core_web_sm": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha"]
+        },
+        "2.0.0a3": {
+                "en_core_web_sm": ["2.0.0-alpha"],
+                "xx_ent_wiki_sm": ["2.0.0-alpha"]
         },
         "2.0.0a2": {
             "en_core_web_sm": ["2.0.0-alpha"],
@@ -40,7 +40,7 @@
             "en_core_web_sm": ["2.0.0-alpha"],
             "xx_ent_wiki_sm": ["2.0.0-alpha"]
         },
-        
+
         "1.9.0": {
             "en_core_web_md": ["1.2.1", "1.2.0"],
             "en_core_web_sm": ["1.2.0"],
