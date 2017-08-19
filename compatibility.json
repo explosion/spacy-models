@@ -25,8 +25,8 @@
             "xx_ent_wiki_sm": ["2.0.0-alpha"]
         },
         "2.0.0a3": {
-                "en_core_web_sm": ["2.0.0-alpha"],
-                "xx_ent_wiki_sm": ["2.0.0-alpha"]
+            "en_core_web_sm": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha"]
         },
         "2.0.0a2": {
             "en_core_web_sm": ["2.0.0-alpha"],
