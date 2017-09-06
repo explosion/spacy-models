@@ -5,7 +5,6 @@
             "en_vectors_web_lg": ["2.0.0-alpha"]
         },
         "2.0.0a12": {
-            "en_core_web_sm": ["2.0.0-alpha3"],
             "en_vectors_web_lg": ["2.0.0-alpha"]
         },
         "2.0.0a11": {
