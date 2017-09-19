@@ -2,6 +2,7 @@
     "spacy": {
         "2.0.0a14": {
             "en_core_web_sm": ["2.0.0-alpha4"],
+            "en_core_web_lg": ["2.0.0-alpha"],
             "en_vectors_web_lg": ["2.0.0-alpha2"],
             "xx_ent_wiki_sm": ["2.0.0-alpha2"]
         },
