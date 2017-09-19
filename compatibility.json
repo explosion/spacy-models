@@ -3,8 +3,8 @@
         "2.0.0a14": {
             "en_core_web_sm": ["2.0.0-alpha4"],
             "en_core_web_lg": ["2.0.0-alpha"],
-            "en_vectors_web_lg": ["2.0.0-alpha2"],
-            "xx_ent_wiki_sm": ["2.0.0-alpha2"]
+            "en_vectors_web_lg": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha1"]
         },
         "2.0.0a13": {
             "en_core_web_sm": ["2.0.0-alpha3"],
