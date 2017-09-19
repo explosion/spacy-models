@@ -27,7 +27,7 @@ python -m spacy download [model]
 
 | Date | Model | Version | Dep | Ent | Vec | Size | License | | |
 | --- | --- | --- | :---: | :---: | :---: | ---: | --- | --- | --- |
-| `2017-09-19` | `en_core_web_sm` | 2.0.0-alpha4 | X | X | X | 44 MB | CC BY-SA | [![][i]][i-en_core_web_sm-2.0.0-alpha4] | [![][dl]][en_core_web_sm-2.0.0-alpha4]
+| `2017-09-19` | `en_core_web_sm` | 2.0.0-alpha4 | X | X | X | 42 MB | CC BY-SA | [![][i]][i-en_core_web_sm-2.0.0-alpha4] | [![][dl]][en_core_web_sm-2.0.0-alpha4]
 | `2017-09-06` | `en_core_web_sm` | 2.0.0-alpha3 | X | X | X | 33 MB | CC BY-SA | [![][i]][i-en_core_web_sm-2.0.0-alpha3] | [![][dl]][en_core_web_sm-2.0.0-alpha3]
 | `2017-08-26` | `en_core_web_sm` | 2.0.0-alpha2 | X | X | X | 23 MB | CC BY-SA | [![][i]][i-en_core_web_sm-2.0.0-alpha2] | [![][dl]][en_core_web_sm-2.0.0-alpha2]
 | `2017-08-23` | `en_core_web_sm` | 2.0.0-alpha1 | X | X | X | 18 MB | CC BY-SA | [![][i]][i-en_core_web_sm-2.0.0-alpha1] | [![][dl]][en_core_web_sm-2.0.0-alpha1]
