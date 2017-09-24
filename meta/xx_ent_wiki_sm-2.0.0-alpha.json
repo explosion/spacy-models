@@ -1,0 +1,19 @@
+{
+  "lang":"xx",
+  "pipeline":[
+    "tensorizer",
+    "ner"
+  ],
+  "name":"ent_wiki_sm",
+  "license":"CC BY-SA 3.0",
+  "author":"Explosion AI",
+  "url":"https://explosion.ai",
+  "description":"Multi-lingual named entity recognition model trained on Wikipedia. Supports identification of PER, LOC, ORG and MISC entities for English, German, Spanish, French, Italian, Portuguese and Russian.",
+  "version":"2.0.0a0",
+  "spacy_version":">=2.0.0a0,<3.0.0",
+  "email":"contact@explosion.ai",
+  "parent_package":"spacy-nightly",
+  "size": "12 MB",
+  "sources": ["WikiNER"],
+  "notes": "Supported entity types: `PER`, `LOC`, `ORG` and `MISC`. Supported languages: English, German, Spanish, French, Italian, Portuguese, Russian. Because it's trained on Wikipedia, the model may perform inconsistently on many genres, such as social media text."
+}
