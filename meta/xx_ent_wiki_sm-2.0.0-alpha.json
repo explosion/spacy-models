@@ -15,5 +15,5 @@
   "parent_package":"spacy-nightly",
   "size": "12 MB",
   "sources": ["WikiNER"],
-  "notes": "Supported entity types: `PER`, `LOC`, `ORG` and `MISC`. Supported languages: English, German, Spanish, French, Italian, Portuguese, Russian. Because it's trained on Wikipedia, the model may perform inconsistently on many genres, such as social media text."
+  "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text."
 }
