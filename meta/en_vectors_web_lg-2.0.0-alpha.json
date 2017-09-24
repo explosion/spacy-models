@@ -1,0 +1,14 @@
+{
+ "lang":"en",
+ "name":"vectors_web_lg",
+ "license":"CC BY-SA 3.0",
+ "author":"Jeffrey Pennington, Richard Socher, and Christopher D. Manning. Repackaged by Explosion AI",
+ "url":"https://nlp.stanford.edu/projects/glove/",
+ "version":"2.0.0a0",
+ "spacy_version":">=2.0.0.a10,<3.0.0",
+ "parent_package":"spacy-nightly",
+ "email":"contact@explosion.ai",
+ "description":"1.2m 300d vectors trained on Common Crawl with GloVe",
+ "pipeline": [],
+ "size": "627 MB"
+}
