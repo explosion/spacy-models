@@ -10,5 +10,6 @@
  "email":"contact@explosion.ai",
  "description":"1.2m 300d vectors trained on Common Crawl with GloVe",
  "pipeline": [],
+ "sources": ["Common Crawl"],
  "size": "627 MB"
 }
