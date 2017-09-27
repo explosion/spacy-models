@@ -9,21 +9,21 @@
   "license": "CC BY-SA", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "3ca888e4ffbb6d8c60719bcd5a7efe1b047c851d964a8b535932187e6ba0730c", 
-  "size": "14 MB", 
+  "checksum": "40ef609ccf464f90daafc09c62f872a9f4fdf0eebb8902fa0fa6d52588a0a805", 
+  "size": "18 MB", 
   "sources": [
     "Tiger"
   ], 
   "version": "2.0.0a5", 
   "spacy_version": ">=2.0.0a15", 
   "accuracy": {
-    "token_acc": 99.8354072026, 
-    "ents_p": 0.0, 
-    "ents_r": 0.0, 
-    "uas": 7.2229401697, 
-    "tags_acc": 0.1777251185, 
-    "ents_f": 0.0, 
-    "las": 7.2229401697
+    "token_acc": 99.8266604659, 
+    "ents_p": 57.2519083969, 
+    "ents_r": 35.3773584906, 
+    "uas": 62.6774330642, 
+    "tags_acc": 82.3785192204, 
+    "ents_f": 43.7317784257, 
+    "las": 60.6159512679
   }, 
   "email": "contact@explosion.ai", 
   "description": "German multi-task CNN trained on Tiger. Assigns context-specific token vectors, POS tags, dependency parse and named entities."
