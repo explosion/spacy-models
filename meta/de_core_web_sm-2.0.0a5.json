@@ -1,0 +1,30 @@
+{
+  "lang": "de", 
+  "pipeline": [
+    "tags", 
+    "dependencies", 
+    "entities"
+  ], 
+  "name": "core_web_sm", 
+  "license": "CC BY-SA", 
+  "author": "Explosion AI", 
+  "url": "https://explosion.ai", 
+  "checksum": "919c0e432ccc4aa4f4fb5d0af4f8f33972157049e0b973cb6e134477e94f49cc", 
+  "size": "32 MB", 
+  "sources": [
+    "Tiger"
+  ], 
+  "version": "2.0.0a5", 
+  "spacy_version": ">=2.0.0a15", 
+  "accuracy": {
+    "token_acc": 99.8624484182, 
+    "ents_p": 0.0, 
+    "ents_r": 0.0, 
+    "uas": 7.4401473297, 
+    "tags_acc": 1.1691884457, 
+    "ents_f": 0.0, 
+    "las": 7.4401473297
+  }, 
+  "email": "contact@explosion.ai", 
+  "description": "German multi-task CNN trained on Tiger. Assigns context-specific token vectors, POS tags, dependency parse and named entities."
+}
