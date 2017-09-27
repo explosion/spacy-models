@@ -9,7 +9,7 @@
   "license": "CC BY-SA", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "a74adfb3293853a83e81d62596ea054d5c6199f738a1d66d37fb8e218f538da1", 
+  "checksum": "d77baa42c121b5957ebfbb4f0a06394e67e1d4173365bf23df3dd8e1736d18c5", 
   "size": "33 MB", 
   "sources": [
     "Tiger"
@@ -21,7 +21,7 @@
     "ents_p": 0.0, 
     "ents_r": 0.0, 
     "uas": 7.2229401697, 
-    "tags_acc": 0.1250658241, 
+    "tags_acc": 0.1119010005, 
     "ents_f": 0.0, 
     "las": 7.2229401697
   }, 
