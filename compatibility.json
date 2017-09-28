@@ -1,8 +1,8 @@
 {
     "spacy": {
         "2.0.0a15": {
-            "en_core_web_sm": ["2.0.0-alpha5"],
-            "en_core_web_lg": ["2.0.0-alpha"],
+            "en_core_web_sm": ["2.0.0a5"],
+            "en_core_web_lg": ["2.0.0a0"],
             "en_vectors_web_lg": ["2.0.0-alpha"]
         },
         "2.0.0a14": {
