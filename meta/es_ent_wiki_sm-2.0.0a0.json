@@ -1,29 +1,32 @@
 {
   "lang": "es", 
   "pipeline": [
-    "entities"
+    "tagger", 
+    "parser", 
+    "ner"
   ], 
+  "accuracy": {
+    "token_acc": 100.0, 
+    "ents_p": 34.8484848485, 
+    "ents_r": 33.6585365854, 
+    "uas": 0.0, 
+    "tags_acc": 86.0893416928, 
+    "ents_f": 34.2431761787, 
+    "las": 0.0
+  }, 
   "name": "ent_wiki_sm", 
   "license": "CC BY-SA 3.0", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "9ba49d6b013d7178b0e24040b11e404abb27045ba889a17476b26b5d0c1701f6", 
+  "checksum": "e43d97f68d387ed40a14013e137ccf435db14e5ca8ad9b7933a9e51e89f2b867", 
   "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text.", 
-  "size": "14 MB", 
+  "size": "35 MB", 
   "sources": [
     "Wikipedia"
   ], 
   "version": "2.0.0a0", 
   "spacy_version": ">=2.0.0a15", 
-  "accuracy": {
-    "token_acc": 100.0, 
-    "ents_p": 89.1748257466, 
-    "ents_r": 88.7918752798, 
-    "uas": 0.0, 
-    "tags_acc": 0.0, 
-    "ents_f": 88.982938495, 
-    "las": 0.0
-  }, 
+  "parent_package": "spacy-nightly", 
   "email": "contact@explosion.ai", 
   "description": "Spanish CNN trained on Nothman et al. (2010) Wikipedia corpus. Assigns named entities. Supports identification of PER, LOC, ORG and MISC entities."
 }
