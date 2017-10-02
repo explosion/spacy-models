@@ -1,17 +1,15 @@
 {
   "lang": "es", 
   "pipeline": [
-    "tags", 
-    "dependencies", 
     "entities"
   ], 
   "name": "ent_wiki_sm", 
   "license": "CC BY-SA 3.0", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "fea7858dfe2c4e922f4c70e4879adbe3cef2a18c702f07a4605e7ecf52ff8335", 
+  "checksum": "0a34aba6ec1cdfcd1d6fb18c02699eec6b83e7989b9a7e9ede59cb8d7d538a94", 
   "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text.", 
-  "size": "38 MB", 
+  "size": "14 MB", 
   "sources": [
     "Wikipedia"
   ], 
@@ -19,11 +17,11 @@
   "spacy_version": ">=2.0.0a15", 
   "accuracy": {
     "token_acc": 100.0, 
-    "ents_p": 70.3373531552, 
-    "ents_r": 55.0799853462, 
+    "ents_p": 89.3261190359, 
+    "ents_r": 88.7043595067, 
     "uas": 0.0, 
-    "tags_acc": 98.7878900509, 
-    "ents_f": 61.7806186508, 
+    "tags_acc": 0.0, 
+    "ents_f": 89.0141535445, 
     "las": 0.0
   }, 
   "email": "contact@explosion.ai", 
