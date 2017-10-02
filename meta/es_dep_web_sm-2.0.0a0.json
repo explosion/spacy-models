@@ -1,16 +1,14 @@
 {
   "lang": "es", 
   "pipeline": [
-    "tags", 
-    "dependencies", 
     "entities"
   ], 
   "name": "dep_web_sm", 
   "license": "CC BY-SA 3.0", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "93573abd406f5afbc3ba360fc9d9e65075fb33337bb174f5d5acc8b57d76a85e", 
-  "size": "24 MB", 
+  "checksum": "4ec7a72690b4ec8f4c73d181e1faa532d1fd002f014a377ab884e10e494f850a", 
+  "size": "1 MB", 
   "sources": [
     "AnCora"
   ], 
@@ -20,10 +18,10 @@
     "token_acc": 100.0, 
     "ents_p": 0.0, 
     "ents_r": 0.0, 
-    "uas": 90.1834224366, 
-    "tags_acc": 96.7353261805, 
+    "uas": 3.35676286, 
+    "tags_acc": 0.0, 
     "ents_f": 0.0, 
-    "las": 87.0561133568
+    "las": 0.0
   }, 
   "email": "contact@explosion.ai", 
   "description": "Spanish dependency parser and tagger trained on AnCora corpus."
