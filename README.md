@@ -25,31 +25,8 @@ python -m spacy download [model]
 
 ### spaCy v2.x (alpha)
 
-| Date | Model | Version | Dep | Ent | Vec | Size | License | | |
-| --- | --- | --- | :---: | :---: | :---: | ---: | --- | --- | --- |
-| `2017-09-19` | `en_core_web_sm` | 2.0.0-alpha4 | X | X | X | 42 MB | CC BY-SA | [![][i]][i-en_core_web_sm-2.0.0-alpha4] | [![][dl]][en_core_web_sm-2.0.0-alpha4]
-| `2017-09-06` | `en_core_web_sm` | 2.0.0-alpha3 | X | X | X | 33 MB | CC BY-SA | [![][i]][i-en_core_web_sm-2.0.0-alpha3] | [![][dl]][en_core_web_sm-2.0.0-alpha3]
-| `2017-08-26` | `en_core_web_sm` | 2.0.0-alpha2 | X | X | X | 23 MB | CC BY-SA | [![][i]][i-en_core_web_sm-2.0.0-alpha2] | [![][dl]][en_core_web_sm-2.0.0-alpha2]
-| `2017-08-23` | `en_core_web_sm` | 2.0.0-alpha1 | X | X | X | 18 MB | CC BY-SA | [![][i]][i-en_core_web_sm-2.0.0-alpha1] | [![][dl]][en_core_web_sm-2.0.0-alpha1]
-| `2017-08-23` | `en_vectors_web_lg` | 2.0.0-alpha |  |  | X | 627 MB | CC BY-SA | [![][i]][i-en_vectors_web_lg-2.0.0-alpha] | [![][dl]][en_vectors_web_lg-2.0.0-alpha]
-| `2017-06-05` | `en_core_web_sm` | 2.0.0-alpha | X | X | X | 15 MB | CC BY-SA | [![][i]][i-en_core_web_sm-2.0.0-alpha] | [![][dl]][en_core_web_sm-2.0.0-alpha]
-| `2017-06-05` | `xx_ent_wiki_sm` | 2.0.0-alpha | | X |  | 12 MB | CC BY-SA | [![][i]][i-xx_ent_wiki_sm-2.0.0-alpha] | [![][dl]][xx_ent_wiki_sm-2.0.0-alpha]
-
-[en_core_web_sm-2.0.0-alpha4]: https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0-alpha4/en_core_web_sm-2.0.0-alpha4.tar.gz
-[en_core_web_sm-2.0.0-alpha3]: https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0-alpha3/en_core_web_sm-2.0.0-alpha3.tar.gz
-[en_core_web_sm-2.0.0-alpha2]: https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0-alpha2/en_core_web_sm-2.0.0-alpha2.tar.gz
-[en_core_web_sm-2.0.0-alpha1]: https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0-alpha1/en_core_web_sm-2.0.0-alpha1.tar.gz
-[en_vectors_web_lg-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/download/en_vectors_web_lg-2.0.0-alpha/en_vectors_web_lg-2.0.0-alpha.tar.gz
-[en_core_web_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0-alpha/en_core_web_sm-2.0.0-alpha.tar.gz
-[xx_ent_wiki_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/download/xx_ent_wiki_sm-2.0.0-alpha/xx_ent_wiki_sm-2.0.0-alpha.tar.gz
-
-[i-en_core_web_sm-2.0.0-alpha4]: https://github.com/explosion/spacy-models/releases/en_core_web_sm-2.0.0-alpha4
-[i-en_core_web_sm-2.0.0-alpha3]: https://github.com/explosion/spacy-models/releases/en_core_web_sm-2.0.0-alpha3
-[i-en_core_web_sm-2.0.0-alpha2]: https://github.com/explosion/spacy-models/releases/en_core_web_sm-2.0.0-alpha2
-[i-en_core_web_sm-2.0.0-alpha1]: https://github.com/explosion/spacy-models/releases/en_core_web_sm-2.0.0-alpha1
-[i-en_vectors_web_lg-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/en_vectors_web_lg-2.0.0-alpha
-[i-xx_ent_wiki_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/xx_ent_wiki_sm-2.0.0-alpha
-[i-en_core_web_sm-2.0.0-alpha]: https://github.com/explosion/spacy-models/releases/en_core_web_sm-2.0.0-alpha
+* [spaCy v2.0 models directory](https://alpha.spacy.io/models/)
+* [Individual release notes](https://github.com/spacy-models/releases)
 
 ### spaCy v1.x
 
