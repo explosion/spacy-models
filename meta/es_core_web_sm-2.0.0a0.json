@@ -9,7 +9,7 @@
   "license": "CC BY-SA 3.0", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "2ed615227d7bcbb76efe35bad1c78c0dd093e1a39e48a4ff23e051c64e8a0526", 
+  "checksum": "783d55527c7a993d316b8b3fd626e3c281445415e731ee7546d54c0db8b8d77b", 
   "notes": "The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.", 
   "description": "Spanish multi-task CNN trained on the AnCora and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities.", 
   "sources": [
@@ -17,17 +17,17 @@
     "WikiNER"
   ], 
   "version": "2.0.0a0", 
-  "size": "35 MB", 
+  "size": "36 MB", 
   "spacy_version": ">=2.0.0a15", 
   "parent_package": "spacy-nightly", 
   "email": "contact@explosion.ai", 
   "accuracy": {
     "token_acc": 100.0, 
-    "ents_p": 52.7918781726, 
-    "ents_r": 50.7317073171, 
-    "uas": 65.020234857, 
-    "tags_acc": 79.9877027581, 
-    "ents_f": 51.7412935323, 
-    "las": 55.616002123
+    "ents_p": 89.1880856624, 
+    "ents_r": 88.9139903122, 
+    "uas": 90.1762621982, 
+    "tags_acc": 96.7334136592, 
+    "ents_f": 89.0508270738, 
+    "las": 87.1291647649
   }
 }
