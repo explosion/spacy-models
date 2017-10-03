@@ -6,20 +6,20 @@
     "ner"
   ], 
   "accuracy": {
-    "token_acc": 99.8568053514, 
-    "ents_p": 86.9538392507, 
-    "ents_r": 86.642821215, 
-    "uas": 91.0737134855, 
-    "tags_acc": 97.2350475706, 
-    "ents_f": 86.7980516208, 
-    "las": 89.1187451433
+    "token_acc": 99.8890484271, 
+    "ents_p": 86.3522047728, 
+    "ents_r": 86.3522047728, 
+    "uas": 91.9420992434, 
+    "tags_acc": 97.2285228118, 
+    "ents_f": 86.3522047728, 
+    "las": 90.1249554287
   }, 
   "name": "core_web_lg", 
   "license": "CC BY-SA 3.0", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "541cca26a670584ee3691b3550df0099cba3c067ebfb768cdb8b148a96d086c1", 
-  "size": "666 MB", 
+  "checksum": "a7605f2c139098b4a1922774297fb62e6390807229a25d55684cb98c2bc6d0a5", 
+  "size": "667 MB", 
   "sources": [
     "OntoNotes 5", 
     "Common Crawl"
