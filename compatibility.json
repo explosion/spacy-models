@@ -1,5 +1,13 @@
 {
     "spacy": {
+        "2.0.0a16": {
+            "en_core_web_sm": ["2.0.0a5"],
+            "en_core_web_lg": ["2.0.0a0"],
+            "en_vectors_web_lg": ["2.0.0-alpha"],
+            "de_dep_news_sm": ["2.0.0a0"],
+            "es_core_web_sm": ["2.0.0a0"],
+            "xx_ent_wiki_sm": ["2.0.0a1"]
+        },
         "2.0.0a15": {
             "en_core_web_sm": ["2.0.0a5"],
             "en_core_web_lg": ["2.0.0a0"],
