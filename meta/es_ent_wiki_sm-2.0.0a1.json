@@ -1,0 +1,30 @@
+{
+  "lang": "es", 
+  "pipeline": [
+    "ner"
+  ], 
+  "accuracy": {
+    "token_acc": 100.0, 
+    "ents_p": 89.0766964066, 
+    "ents_r": 88.5944559775, 
+    "uas": 0.0, 
+    "tags_acc": 0.0, 
+    "ents_f": 88.8349217363, 
+    "las": 0.0
+  }, 
+  "name": "ent_wiki_sm", 
+  "license": "CC BY-SA 3.0", 
+  "author": "Explosion AI", 
+  "url": "https://explosion.ai", 
+  "checksum": "7f64135247441d0ed8db5074b6c85a0af6fa513ac444d1d940f9d9f322749716", 
+  "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text.", 
+  "size": "14 MB", 
+  "sources": [
+    "Wikipedia"
+  ], 
+  "version": "2.0.0a1", 
+  "spacy_version": ">=2.0.0a15", 
+  "parent_package": "spacy-nightly", 
+  "email": "contact@explosion.ai", 
+  "description": "Spanish CNN trained on Nothman et al. (2010) Wikipedia corpus. Assigns named entities. Supports identification of PER, LOC, ORG and MISC entities."
+}
