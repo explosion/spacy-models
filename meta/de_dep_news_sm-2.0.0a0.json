@@ -5,19 +5,19 @@
     "parser"
   ], 
   "accuracy": {
-    "token_acc": 99.73893066, 
+    "token_acc": 99.7949454712, 
     "ents_p": 0.0, 
     "ents_r": 0.0, 
-    "uas": 91.7323360492, 
-    "tags_acc": 97.1981294738, 
+    "uas": 91.2489051853, 
+    "tags_acc": 97.1680861069, 
     "ents_f": 0.0, 
-    "las": 89.6116231097
+    "las": 89.0904502472
   }, 
   "name": "dep_news_sm", 
   "license": "CC BY-SA 3.0", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "cf4277fe75793067ec388fcb859b1accf4731138b081c914cd24ef7151d4b13f", 
+  "checksum": "999142c59ccc801d5972d717c47d1e216066e34a5c68be512b2b730240deccff", 
   "size": "24 MB", 
   "sources": [
     "TIGER Corpus"
