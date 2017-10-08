@@ -5,18 +5,18 @@
   ], 
   "accuracy": {
     "token_acc": 100.0, 
-    "ents_p": 89.33205288, 
-    "ents_r": 88.98115358, 
+    "ents_p": 89.3357971461, 
+    "ents_r": 88.5557862173, 
     "uas": 0.0, 
     "tags_acc": 0.0, 
-    "ents_f": 89.1562579658, 
+    "ents_f": 88.9440816035, 
     "las": 0.0
   }, 
   "name": "ent_wiki_sm", 
   "license": "CC BY-SA 3.0", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "3b8ff390d946340f85446e17610b43a660e7c743ea2253c065971f142e4963da", 
+  "checksum": "219944285f71bec415551d3685e21ca935799266039eaa56d6dc77f3f7c80a09", 
   "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text.", 
   "size": "14 MB", 
   "sources": [
