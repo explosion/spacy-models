@@ -1,0 +1,30 @@
+{
+  "lang": "de", 
+  "pipeline": [
+    "tagger", 
+    "parser"
+  ], 
+  "accuracy": {
+    "token_acc": 99.8640736094, 
+    "ents_p": 0.0, 
+    "ents_r": 0.0, 
+    "uas": 50.0144657681, 
+    "tags_acc": 73.2209101834, 
+    "ents_f": 0.0, 
+    "las": 41.1050363128
+  }, 
+  "name": "dep_news_sm", 
+  "license": "CC BY-SA 3.0", 
+  "author": "Explosion AI", 
+  "url": "https://explosion.ai", 
+  "checksum": "8c7fc34df7fe453ab31bc3eeb9afb7989da8e626a5368450fd5d923a239657c1", 
+  "size": "21 MB", 
+  "sources": [
+    "TIGER Corpus"
+  ], 
+  "version": "2.0.0a1", 
+  "spacy_version": ">=2.0.0a17", 
+  "parent_package": "spacy-nightly", 
+  "email": "contact@explosion.ai", 
+  "description": "German multi-task CNN trained on the TIGER Corpus. Assigns context-specific token vectors, POS tags and dependency parse."
+}
