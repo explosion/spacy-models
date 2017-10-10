@@ -18,7 +18,7 @@
   "license": "CC BY-SA 3.0", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "71ffe2f2f79b421b06864ee0a9a16e5b3ccbb922dba5204bf57b160bd9296ab4", 
+  "checksum": "bb1e9946761935b0f2b0715e56a0e850b9e80388fec1a2dac46b6044aa0594c9", 
   "size": "631 MB", 
   "sources": [
     "OntoNotes 5", 
@@ -28,9 +28,9 @@
   "spacy_version": ">=2.0.0a17", 
   "parent_package": "spacy-nightly", 
   "speed": {
-    "gpu": 150938.1798913521, 
+    "gpu": 151429.0732873908, 
     "nwords": 291344, 
-    "cpu": 155810.5052030469
+    "cpu": 151069.8857939848
   }, 
   "email": "contact@explosion.ai", 
   "description": "English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities."
