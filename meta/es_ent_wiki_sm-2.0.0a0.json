@@ -5,20 +5,20 @@
   ], 
   "accuracy": {
     "token_acc": 100.0, 
-    "ents_p": 88.9270737445, 
-    "ents_r": 88.4764114462, 
+    "ents_p": 88.7378561515, 
+    "ents_r": 88.4886229495, 
     "uas": 0.0, 
     "tags_acc": 0.0, 
-    "ents_f": 88.7011701813, 
+    "ents_f": 88.6130643025, 
     "las": 0.0
   }, 
   "name": "ent_wiki_sm", 
   "license": "CC BY-SA 3.0", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "e780c0ae384dcd6a113ece13fbae644b286818f6e5b82f98b56b9b4c9c5a6a9a", 
+  "checksum": "2ad7a6a6471f0baf33dd8ec343cdb9580d9c128b005b03c34bd68e6af9c40a9d", 
   "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text.", 
-  "size": "7 MB", 
+  "size": "14 MB", 
   "sources": [
     "Wikipedia"
   ], 
@@ -26,9 +26,9 @@
   "spacy_version": ">=2.0.0a17", 
   "parent_package": "spacy-nightly", 
   "speed": {
-    "gpu": 28054.9306330859, 
+    "gpu": 28580.7155620081, 
     "nwords": 699524, 
-    "cpu": 27401.7854543968
+    "cpu": 18586.0477498645
   }, 
   "email": "contact@explosion.ai", 
   "description": "Spanish CNN trained on Nothman et al. (2010) Wikipedia corpus. Assigns named entities. Supports identification of PER, LOC, ORG and MISC entities."
