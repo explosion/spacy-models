@@ -4,7 +4,11 @@
     "tagger", 
     "parser", 
     "ner"
-  ], 
+  ],
+  "vectors": {
+    "width": 0,
+    "entries": 55
+  },
   "accuracy": {
     "token_acc": 99.8725812767, 
     "ents_p": 84.5320744238, 
