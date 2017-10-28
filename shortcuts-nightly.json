@@ -1,0 +1,7 @@
+{
+    "en": "en_core_web_sm",
+    "de": "de_dep_news_sm",
+    "es": "es_core_web_sm",
+    "vectors": "en_vectors_web_lg",
+    "xx": "xx_ent_wiki_sm"
+}
