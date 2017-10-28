@@ -1,0 +1,35 @@
+{
+  "lang": "it", 
+  "pipeline": [
+    "tagger", 
+    "parser"
+  ], 
+  "name": "dep_news_sm", 
+  "license": "CC BY-SA 3.0", 
+  "author": "Explosion AI", 
+  "url": "https://explosion.ai", 
+  "checksum": "9f33eca9ad621b2f609c4cb83f19db1635504ee827c612e9125ac5d47d105352", 
+  "description": "Italian dependency parser and tagger trained on the Universal Dependencies corpus.", 
+  "size": "21 MB", 
+  "sources": [
+    "Universal Dependencies"
+  ], 
+  "version": "2.0.0a0", 
+  "spacy_version": ">=2.0.0a17", 
+  "parent_package": "spacy-nightly", 
+  "speed": {
+    "gpu": null, 
+    "nwords": 11850, 
+    "cpu": 560.5578173984
+  }, 
+  "email": "contact@explosion.ai", 
+  "accuracy": {
+    "token_acc": 100.0, 
+    "ents_p": 0.0, 
+    "ents_r": 0.0, 
+    "uas": 60.5231696236, 
+    "tags_acc": 78.8523206751, 
+    "ents_f": 0.0, 
+    "las": 48.0034431639
+  }
+}
