@@ -1,0 +1,42 @@
+{
+  "lang": "en", 
+  "pipeline": [
+    "tagger", 
+    "parser", 
+    "ner"
+  ], 
+  "accuracy": {
+    "token_acc": 99.8698372794, 
+    "ents_p": 84.9664503965, 
+    "ents_r": 85.6312524451, 
+    "uas": 91.7237657538, 
+    "tags_acc": 97.0403350292, 
+    "ents_f": 85.2975560875, 
+    "las": 89.800872413
+  }, 
+  "name": "core_web_sm", 
+  "license": "CC BY-SA 3.0", 
+  "author": "Explosion AI", 
+  "url": "https://explosion.ai", 
+  "checksum": "3a098458865e30a8b0084de170fc130fbe983dd1a138036b4207e43e90c27e0b", 
+  "vectors": {
+    "keys": 0, 
+    "width": 0, 
+    "vectors": 0
+  }, 
+  "sources": [
+    "OntoNotes 5", 
+    "Common Crawl"
+  ], 
+  "version": "2.0.0a8", 
+  "size": "35 MB", 
+  "spacy_version": ">=2.0.0a18", 
+  "parent_package": "spacy-nightly", 
+  "speed": {
+    "gpu": null, 
+    "nwords": 291344, 
+    "cpu": 5122.3040471407
+  }, 
+  "email": "contact@explosion.ai", 
+  "description": "English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities."
+}
