@@ -1,6 +1,7 @@
 {
     "spacy": {
         "2.0.0a18": {
+            "de_core_news_sm": ["2.0.0a0"],
             "es_core_news_sm": ["2.0.0a0"],
             "es_core_news_md": ["2.0.0a0"],
             "pt_core_news_sm": ["2.0.0a0"],
