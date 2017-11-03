@@ -1,17 +1,18 @@
 {
     "spacy": {
         "2.0.0a18": {
+            "en_core_web_sm": ["2.0.0a8"],
+            "en_core_web_lg": ["2.0.0a3"],
             "de_core_news_sm": ["2.0.0a0"],
             "es_core_news_sm": ["2.0.0a0"],
             "es_core_news_md": ["2.0.0a0"],
-            "pt_core_news_sm": ["2.0.0a0"],
             "fr_core_news_sm": ["2.0.0a0"],
             "fr_core_news_md": ["2.0.0a0"],
             "it_core_news_sm": ["2.0.0a0"]
         },
         "2.0.0a17": {
             "en_core_web_sm": ["2.0.0a7", "2.0.0a6"],
-            "en_core_web_lg": ["2.0.0a1"],
+            "en_core_web_lg": ["2.0.0a2", "2.0.0a1"],
             "en_vectors_web_lg": ["2.0.0-alpha"],
             "de_dep_news_sm": ["2.0.0a1"],
             "es_core_web_sm": ["2.0.0a1"],
