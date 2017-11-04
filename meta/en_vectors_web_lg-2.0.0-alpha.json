@@ -8,8 +8,13 @@
  "spacy_version":">=2.0.0.a10,<3.0.0",
  "parent_package":"spacy-nightly",
  "email":"contact@explosion.ai",
- "description":"1.2m 300d vectors trained on Common Crawl with GloVe",
+ "description":"300-dimensional word vectors trained on Common Crawl with GloVe",
  "pipeline": [],
+ "vectors": {
+   "width": 300,
+   "vectors": 1070971,
+   "keys": 1070971
+ },
  "sources": ["Common Crawl"],
  "size": "627 MB"
 }
