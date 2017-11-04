@@ -8,7 +8,8 @@
             "es_core_news_sm": ["2.0.0a0"],
             "es_core_news_md": ["2.0.0a0"],
             "fr_core_news_sm": ["2.0.0a0"],
-            "it_core_news_sm": ["2.0.0a0"]
+            "it_core_news_sm": ["2.0.0a0"],
+            "xx_ent_wiki_sm": ["2.0.0a3"]
         },
         "2.0.0a17": {
             "en_core_web_sm": ["2.0.0a7", "2.0.0a6"],
