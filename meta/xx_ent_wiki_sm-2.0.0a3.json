@@ -1,35 +1,35 @@
 {
-  "lang":"xx",
-  "name":"ent_wiki_sm",
-  "version":"2.0.0a3",
-  "spacy_version": ">=2.0.0a18",
-  "license":"CC BY-SA 3.0",
-  "author":"Explosion AI",
-  "url":"https://explosion.ai",
-  "email":"contact@explosion.ai",
-  "checksum": "d0d524bcdadc66f86e1529c01541d46c418f5daf4e137ee68d00836e5871e02a",
-  "pipeline":[
+  "lang": "xx",
+  "name": "ent_wiki_sm",
+  "version": "2.0.0a3",
+  "spacy_version":  ">=2.0.0a18",
+  "license": "CC BY-SA 3.0",
+  "author": "Explosion AI",
+  "url": "https://explosion.ai",
+  "email": "contact@explosion.ai",
+  "checksum":  "d0d524bcdadc66f86e1529c01541d46c418f5daf4e137ee68d00836e5871e02a",
+  "pipeline": [
     "ner"
   ],
-  "vectors":{
-    "keys":0,
-    "width":0,
-    "vectors":0
+  "vectors": {
+    "keys": 0,
+    "width": 0,
+    "vectors": 0
   },
-  "sources":[
+  "sources": [
     "Wikipedia"
   ],
-  "size": "33 MB",
-  "description":"Multi-lingual CNN trained on Nothman et al. (2013) Wikipedia corpus. Assigns named entities. Supports identification of PER, LOC, ORG and MISC entities for English, German, Spanish, French, Italian, Portuguese and Russian.",
-  "notes":"Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text.",
-  "parent_package":"spacy-nightly",
-  "accuracy":{
-    "uas":0.0,
-    "las":0.0,
-    "ents_p":78.4780013171,
-    "ents_r":78.618027608,
-    "ents_f":78.5479520569,
-    "tags_acc":0.0,
-    "token_acc":100.0
+  "size":  "33 MB",
+  "description": "Multi-lingual CNN trained on Nothman et al. (2013) Wikipedia corpus. Assigns named entities. Supports identification of PER, LOC, ORG and MISC entities for English, German, Spanish, French, Italian, Portuguese and Russian.",
+  "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text.",
+  "parent_package": "spacy-nightly",
+  "accuracy": {
+    "uas": 0.0,
+    "las": 0.0,
+    "ents_p": 78.4780013171,
+    "ents_r": 78.618027608,
+    "ents_f": 78.5479520569,
+    "tags_acc": 0.0,
+    "token_acc": 100.0
   }
 }
