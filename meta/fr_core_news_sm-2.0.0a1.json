@@ -9,7 +9,7 @@
   "license": "LGPL", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "760c7426147821b5a5b1b0161e83950e07d9faaf158dc95957bf926d03160d7b", 
+  "checksum": "50cd58873fdff3e756342119f3c43b0542ed4bf41887e11fb676aebb670e4a8a", 
   "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.", 
   "vectors": {
     "keys": 0, 
@@ -28,11 +28,11 @@
   "email": "contact@explosion.ai", 
   "accuracy": {
     "token_acc": 100.0, 
-    "ents_p": 81.7919133139, 
-    "ents_r": 81.5840038429, 
+    "ents_p": 82.0207306028, 
+    "ents_r": 81.5659901525, 
     "uas": 87.1639784946, 
     "tags_acc": 94.52, 
-    "ents_f": 81.6878262874, 
+    "ents_f": 81.792728331, 
     "las": 84.4310035842
   }
 }
