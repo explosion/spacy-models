@@ -35,7 +35,7 @@
   "speed": {
     "gpu": null, 
     "nwords": 291344, 
-    "cpu": 4781.5168480791
+    "cpu": 10077
   }, 
   "email": "contact@explosion.ai", 
   "description": "English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities."
