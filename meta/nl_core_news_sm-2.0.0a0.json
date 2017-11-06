@@ -9,7 +9,7 @@
   "license": "CC BY-SA 4.0", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "3ad214abbe5b0f2058607d23f47d029b3eb06ab469da3bac0d8eb1d6471d3c98", 
+  "checksum": "d4125002a18ea7d0b0b8ea0ccc013c3da56260483b84f9bc53fc80d2446a797e", 
   "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.", 
   "vectors": {
     "keys": 0, 
@@ -22,17 +22,17 @@
   ], 
   "version": "2.0.0a0", 
   "size": "34 MB", 
-  "spacy_version": ">=2.0.0a18", 
+  "spacy_version": ">=2.0.0a19", 
   "description": "Dutch multi-task CNN trained on the Universal Dependencies and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.", 
   "parent_package": "spacy-nightly", 
   "email": "contact@explosion.ai", 
   "accuracy": {
     "token_acc": 100.0, 
-    "ents_p": 86.5331972004, 
-    "ents_r": 87.1911854602, 
+    "ents_p": 86.590946112, 
+    "ents_r": 87.1822397161, 
     "uas": 83.2738803012, 
     "tags_acc": 91.5430267062, 
-    "ents_f": 86.8609452515, 
+    "ents_f": 86.8855869242, 
     "las": 77.3979389616
   }
 }
