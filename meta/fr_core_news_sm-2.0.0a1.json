@@ -1,15 +1,15 @@
 {
-  "lang": "it", 
+  "lang": "fr", 
   "pipeline": [
     "tagger", 
     "parser", 
     "ner"
   ], 
   "name": "core_news_sm", 
-  "license": "CC BY-NC 3.0", 
+  "license": "LGPL", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "cbc90ffd0b3edafa157d7aa525f5b339af0c339ae381846f3659774c260aeda2", 
+  "checksum": "809fa26a2949043931d57230bd41673a7ab9638a841f66646bc31a46c7d37239", 
   "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.", 
   "vectors": {
     "keys": 0, 
@@ -17,22 +17,22 @@
     "vectors": 0
   }, 
   "sources": [
-    "Universal Dependencies", 
+    "Sequoia Corpus (UD)", 
     "Wikipedia"
   ], 
   "version": "2.0.0a1", 
-  "size": "34 MB", 
-  "spacy_version": ">=2.0.0a18", 
-  "description": "Italian multi-task CNN trained on the Universal Dependencies and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.", 
+  "size": "37 MB", 
+  "spacy_version": ">=2.0.0a19", 
+  "description": "French multi-task CNN trained on the French Sequoia (Universal Dependencies) and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.", 
   "parent_package": "spacy-nightly", 
   "email": "contact@explosion.ai", 
   "accuracy": {
     "token_acc": 100.0, 
-    "ents_p": 85.7416642222, 
-    "ents_r": 85.4625550661, 
-    "uas": 90.5078742042, 
-    "tags_acc": 96.0421940928, 
-    "ents_f": 85.6018821324, 
-    "las": 86.7550619884
+    "ents_p": 82.053766045, 
+    "ents_r": 81.3738441215, 
+    "uas": 87.1639784946, 
+    "tags_acc": 94.52, 
+    "ents_f": 81.7123907145, 
+    "las": 84.4310035842
   }
 }

@@ -1,5 +1,31 @@
 {
     "spacy": {
+        "2.0.0rc1": {
+            "en_core_web_sm": ["2.0.0a8"],
+            "en_core_web_lg": ["2.0.0a3"],
+            "en_vectors_web_lg": ["2.0.0-alpha"],
+            "de_core_news_sm": ["2.0.0a0"],
+            "es_core_news_sm": ["2.0.0a0"],
+            "es_core_news_md": ["2.0.0a0"],
+            "pt_core_news_sm": ["2.0.0a0"],
+            "fr_core_news_sm": ["2.0.0a1"],
+            "it_core_news_sm": ["2.0.0a1"],
+            "nl_core_news_sm": ["2.0.0a0"],
+            "xx_ent_wiki_sm": ["2.0.0a3"]
+        },
+        "2.0.0a19": {
+            "en_core_web_sm": ["2.0.0a8"],
+            "en_core_web_lg": ["2.0.0a3"],
+            "en_vectors_web_lg": ["2.0.0-alpha"],
+            "de_core_news_sm": ["2.0.0a0"],
+            "es_core_news_sm": ["2.0.0a0"],
+            "es_core_news_md": ["2.0.0a0"],
+            "pt_core_news_sm": ["2.0.0a0"],
+            "fr_core_news_sm": ["2.0.0a1"],
+            "it_core_news_sm": ["2.0.0a1"],
+            "nl_core_news_sm": ["2.0.0a0"],
+            "xx_ent_wiki_sm": ["2.0.0a3"]
+        },
         "2.0.0a18": {
             "en_core_web_sm": ["2.0.0a8"],
             "en_core_web_lg": ["2.0.0a3"],
@@ -7,8 +33,9 @@
             "de_core_news_sm": ["2.0.0a0"],
             "es_core_news_sm": ["2.0.0a0"],
             "es_core_news_md": ["2.0.0a0"],
-            "fr_core_news_sm": ["2.0.0a0"],
-            "it_core_news_sm": ["2.0.0a0"],
+            "fr_core_news_sm": ["2.0.0a1"],
+            "it_core_news_sm": ["2.0.0a1"],
+            "nl_core_news_sm": ["2.0.0a0"],
             "xx_ent_wiki_sm": ["2.0.0a3"]
         },
         "2.0.0a17": {
@@ -94,7 +121,15 @@
             "en_core_web_sm": ["2.0.0-alpha"],
             "xx_ent_wiki_sm": ["2.0.0-alpha"]
         },
-
+        "1.10.0": {
+            "en_core_web_md": ["1.2.1", "1.2.0"],
+            "en_core_web_sm": ["1.2.0"],
+            "de_core_news_md": ["1.0.0"],
+            "en_depent_web_md": ["1.2.1", "1.2.0"],
+            "en_vectors_glove_md": ["1.0.0"],
+            "fr_depvec_web_lg": ["1.0.0"],
+            "es_core_web_md": ["1.0.0"]
+        },
         "1.9.0": {
             "en_core_web_md": ["1.2.1", "1.2.0"],
             "en_core_web_sm": ["1.2.0"],

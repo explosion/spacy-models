@@ -1,15 +1,15 @@
 {
-  "lang": "it", 
+  "lang": "nl", 
   "pipeline": [
     "tagger", 
     "parser", 
     "ner"
   ], 
   "name": "core_news_sm", 
-  "license": "CC BY-NC 3.0", 
+  "license": "CC BY-SA 4.0", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "cbc90ffd0b3edafa157d7aa525f5b339af0c339ae381846f3659774c260aeda2", 
+  "checksum": "d4125002a18ea7d0b0b8ea0ccc013c3da56260483b84f9bc53fc80d2446a797e", 
   "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.", 
   "vectors": {
     "keys": 0, 
@@ -20,19 +20,19 @@
     "Universal Dependencies", 
     "Wikipedia"
   ], 
-  "version": "2.0.0a1", 
+  "version": "2.0.0a0", 
   "size": "34 MB", 
-  "spacy_version": ">=2.0.0a18", 
-  "description": "Italian multi-task CNN trained on the Universal Dependencies and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.", 
+  "spacy_version": ">=2.0.0a19", 
+  "description": "Dutch multi-task CNN trained on the Universal Dependencies and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.", 
   "parent_package": "spacy-nightly", 
   "email": "contact@explosion.ai", 
   "accuracy": {
     "token_acc": 100.0, 
-    "ents_p": 85.7416642222, 
-    "ents_r": 85.4625550661, 
-    "uas": 90.5078742042, 
-    "tags_acc": 96.0421940928, 
-    "ents_f": 85.6018821324, 
-    "las": 86.7550619884
+    "ents_p": 86.590946112, 
+    "ents_r": 87.1822397161, 
+    "uas": 83.2738803012, 
+    "tags_acc": 91.5430267062, 
+    "ents_f": 86.8855869242, 
+    "las": 77.3979389616
   }
 }
