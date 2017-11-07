@@ -3,10 +3,8 @@
         "2.0.0": {
             "en_vectors_web_lg": ["2.0.0"],
             "en_core_web_sm": ["2.0.0"],
-            "en_core_web_md": ["2.0.0"],
             "en_core_web_lg": ["2.0.0"],
             "de_core_news_sm": ["2.0.0"],
-            "de_core_news_md": ["2.0.0"],
             "es_core_news_sm": ["2.0.0"],
             "es_core_news_md": ["2.0.0"],
             "pt_core_news_sm": ["2.0.0"],
