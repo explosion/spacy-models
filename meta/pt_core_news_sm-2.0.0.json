@@ -6,10 +6,10 @@
     "ner"
   ], 
   "name": "core_news_sm", 
-  "license": "CC BY-NC 3.0", 
+  "license": "CC BY-SA 3.0", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "d3adac82a321d021e39896fed5e35a739feac3e6b133b5fc6df062ba52250be8", 
+  "checksum": "557a0b9ad4637ef4c63da09043aaba55b6ee05a011ffb07d63c2a904431a0d4f", 
   "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.", 
   "vectors": {
     "keys": 0, 
