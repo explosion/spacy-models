@@ -18,7 +18,7 @@
   "license": "CC BY-SA 4.0", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "e1cc1408af414bbeeccc7331e1192eef2bffc115e4e759d1b3c86dd8f622f97c", 
+  "checksum": "5fe98a480f94dee8c2a44d0510f58a4b2993160865c1d1c77ab1a6805b46463b", 
   "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.", 
   "vectors": {
     "keys": 0, 
@@ -31,7 +31,7 @@
   ], 
   "version": "2.0.0", 
   "size": "34 MB", 
-  "spacy_version": ">=2.0.08", 
+  "spacy_version": ">=2.0.0a18", 
   "parent_package": "spacy", 
   "email": "contact@explosion.ai", 
   "description": "Italian multi-task CNN trained on the Universal Dependencies and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities."
