@@ -12,6 +12,7 @@
   "parent_package": "spacy", 
   "email": "contact@explosion.ai", 
   "description": "1.2m 300d vectors trained on Common Crawl with GloVe",
+  "sources": ["Common Crawl"],
   "vectors": {
      "width": 300,
      "vectors": 1070971,
