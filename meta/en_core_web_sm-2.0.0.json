@@ -9,7 +9,7 @@
   "license": "CC BY-SA 3.0", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "91e56207ab0ba065a194638e51b6f7d5cbeee2d06fc48845bf34896eddb80280", 
+  "checksum": "9d9d231d7c9cbad82178b566fdb25768e3d5098af23ce11e03ec4f432f4a2298", 
   "description": "English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.", 
   "vectors": {
     "keys": 0, 
@@ -21,7 +21,7 @@
     "Common Crawl"
   ], 
   "version": "2.0.0", 
-  "size": "71 MB", 
+  "size": "35 MB", 
   "spacy_version": ">=2.0.0a18", 
   "parent_package": "spacy", 
   "speed": {
