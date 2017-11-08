@@ -4,7 +4,7 @@
 This repository contains [releases](https://github.com/explosion/spacy-models/releases)
 of models for the [spaCy](https://github.com/explosion/spaCy) NLP library. For
 more info on how to download, install and use the models, see the
-[models documentation](https://spacy.io/docs/usage/models).
+[models documentation](https://spacy.io/usage/models).
 
 > **⚠️ Important note:** Because the models can be very large and consist mostly
 > of binary data, we can't simply provide them as files in a GitHub repository.
@@ -112,21 +112,21 @@ all data is now available as direct downloads, organised in
 1.7 also supports installing and loading models as **Python packages**. You can
 now choose how and where you want to keep the data files, and set up "shortcut
 links" to load models by name from within spaCy. For more info on this, see the
-new [models documentation](https://spacy.io/docs/usage/models).
+new [models documentation](https://spacy.io/usage/models).
 
 ```bash
 # out-of-the-box: download best-matching default model
 python -m spacy download en
 
 # download best-matching version of specific model for your spaCy installation
-python -m spacy download en_core_web_md
+python -m spacy download en_core_web_sm
 
 # pip install .tar.gz archive from path or URL
-pip install /Users/you/en_core_web_md-1.2.0.tar.gz
-pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_md-1.2.0/en_core_web_md-1.2.0.tar.gz
+pip install /Users/you/en_core_web_sm-2.0.0.tar.gz
+pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0/en_core_web_sm-2.0.0.tar.gz
 
 # set up shortcut link to load installed package as "en_default"
-python -m spacy link en_core_web_md en_default
+python -m spacy link en_core_web_s en_default
 
 # set up shortcut link to load local model as "my_amazing_model"
 python -m spacy link /Users/you/data my_amazing_model
@@ -163,27 +163,25 @@ configure your own download script using the URL of the archive file. The archiv
 consists of a model directory that contains another directory with the model data.
 
 ```yaml
-└── en_core_web_md-1.2.0.tar.gz       # downloaded archive
+└── en_core_web_sm-2.0.0.tar.gz       # downloaded archive
     ├── meta.json                     # model meta data
     ├── setup.py                      # setup file for pip installation
     └── en_core_web_md                # model directory
         ├── __init__.py               # init for pip installation
         ├── meta.json                 # model meta data
-        └── en_core_web_md-1.2.0      # model data
+        └── en_core_web_sm-2.0.0      # model data
 ```
 
 You can place the model data directory anywhere on your local file system. To
 use it with spaCy, simply assign it a name by createing a shortcut link for the data directory.
 
-**📖 For more info and examples, check out the [models documentation](https://spacy.io/docs/usage/models).**
+**📖 For more info and examples, check out the [models documentation](https://spacy.io/usage/models).**
 
 
 ## Issues and bug reports
 
 To report an issue with a model, please open an issue on the
-[spaCy issue tracker](https://github.com/explosion/spaCy) and tag it with the
-[`models`](https://github.com/explosion/spaCy/labels/models) label.
-
+[spaCy issue tracker](https://github.com/explosion/spaCy).
 Please note that no model is perfect. Because models are statistical, their
 expected behaviour **will always include some errors**. However, particular
 errors can indicate deeper issues with the training feature extraction or
