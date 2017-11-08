@@ -14,140 +14,6 @@
             "nl_core_news_sm": ["2.0.0"],
             "xx_ent_wiki_sm": ["2.0.0"]
         },
-        "2.0.0rc2": {
-            "en_core_web_sm": ["2.0.0a8"],
-            "en_core_web_lg": ["2.0.0a3"],
-            "en_vectors_web_lg": ["2.0.0-alpha"],
-            "de_core_news_sm": ["2.0.0a0"],
-            "es_core_news_sm": ["2.0.0a0"],
-            "es_core_news_md": ["2.0.0a0"],
-            "pt_core_news_sm": ["2.0.0a0"],
-            "fr_core_news_sm": ["2.0.0a1"],
-            "it_core_news_sm": ["2.0.0a1"],
-            "nl_core_news_sm": ["2.0.0a0"],
-            "xx_ent_wiki_sm": ["2.0.0a3"]
-        },
-        "2.0.0rc1": {
-            "en_core_web_sm": ["2.0.0a8"],
-            "en_core_web_lg": ["2.0.0a3"],
-            "en_vectors_web_lg": ["2.0.0-alpha"],
-            "de_core_news_sm": ["2.0.0a0"],
-            "es_core_news_sm": ["2.0.0a0"],
-            "es_core_news_md": ["2.0.0a0"],
-            "pt_core_news_sm": ["2.0.0a0"],
-            "fr_core_news_sm": ["2.0.0a1"],
-            "it_core_news_sm": ["2.0.0a1"],
-            "nl_core_news_sm": ["2.0.0a0"],
-            "xx_ent_wiki_sm": ["2.0.0a3"]
-        },
-        "2.0.0a19": {
-            "en_core_web_sm": ["2.0.0a8"],
-            "en_core_web_lg": ["2.0.0a3"],
-            "en_vectors_web_lg": ["2.0.0-alpha"],
-            "de_core_news_sm": ["2.0.0a0"],
-            "es_core_news_sm": ["2.0.0a0"],
-            "es_core_news_md": ["2.0.0a0"],
-            "pt_core_news_sm": ["2.0.0a0"],
-            "fr_core_news_sm": ["2.0.0a1"],
-            "it_core_news_sm": ["2.0.0a1"],
-            "nl_core_news_sm": ["2.0.0a0"],
-            "xx_ent_wiki_sm": ["2.0.0a3"]
-        },
-        "2.0.0a18": {
-            "en_core_web_sm": ["2.0.0a8"],
-            "en_core_web_lg": ["2.0.0a3"],
-            "en_vectors_web_lg": ["2.0.0-alpha"],
-            "de_core_news_sm": ["2.0.0a0"],
-            "es_core_news_sm": ["2.0.0a0"],
-            "es_core_news_md": ["2.0.0a0"],
-            "fr_core_news_sm": ["2.0.0a1"],
-            "it_core_news_sm": ["2.0.0a1"],
-            "nl_core_news_sm": ["2.0.0a0"],
-            "xx_ent_wiki_sm": ["2.0.0a3"]
-        },
-        "2.0.0a17": {
-            "en_core_web_sm": ["2.0.0a7", "2.0.0a6"],
-            "en_core_web_lg": ["2.0.0a2", "2.0.0a1"],
-            "en_vectors_web_lg": ["2.0.0-alpha"],
-            "de_dep_news_sm": ["2.0.0a1"],
-            "es_core_web_sm": ["2.0.0a1"],
-            "xx_ent_wiki_sm": ["2.0.0a2"]
-        },
-        "2.0.0a16": {
-            "en_core_web_sm": ["2.0.0a5"],
-            "en_core_web_lg": ["2.0.0a0"],
-            "en_vectors_web_lg": ["2.0.0-alpha"],
-            "de_dep_news_sm": ["2.0.0a0"],
-            "es_core_web_sm": ["2.0.0a0"],
-            "xx_ent_wiki_sm": ["2.0.0a1"]
-        },
-        "2.0.0a15": {
-            "en_core_web_sm": ["2.0.0a5"],
-            "en_core_web_lg": ["2.0.0a0"],
-            "en_vectors_web_lg": ["2.0.0-alpha"],
-            "de_dep_news_sm": ["2.0.0a0"],
-            "es_core_web_sm": ["2.0.0a0"],
-            "xx_ent_wiki_sm": ["2.0.0a1"]
-        },
-        "2.0.0a14": {
-            "en_core_web_sm": ["2.0.0-alpha4"],
-            "en_vectors_web_lg": ["2.0.0-alpha"]
-        },
-        "2.0.0a13": {
-            "en_core_web_sm": ["2.0.0-alpha3"],
-            "en_vectors_web_lg": ["2.0.0-alpha"]
-        },
-        "2.0.0a12": {
-            "en_vectors_web_lg": ["2.0.0-alpha"]
-        },
-        "2.0.0a11": {
-            "en_core_web_sm": ["2.0.0-alpha2"],
-            "en_vectors_web_lg": ["2.0.0-alpha"]
-        },
-        "2.0.0a10": {
-            "en_core_web_sm": ["2.0.0-alpha1"],
-            "en_vectors_web_lg": ["2.0.0-alpha"]
-        },
-        "2.0.0a9": {
-            "en_core_web_sm": ["2.0.0-alpha"],
-            "xx_ent_wiki_sm": ["2.0.0-alpha"]
-        },
-        "2.0.0a8": {
-            "en_core_web_sm": ["2.0.0-alpha"],
-            "xx_ent_wiki_sm": ["2.0.0-alpha"]
-        },
-        "2.0.0a7": {
-            "en_core_web_sm": ["2.0.0-alpha"],
-            "xx_ent_wiki_sm": ["2.0.0-alpha"]
-        },
-        "2.0.0a6": {
-            "en_core_web_sm": ["2.0.0-alpha"],
-            "xx_ent_wiki_sm": ["2.0.0-alpha"]
-        },
-        "2.0.0a5": {
-            "en_core_web_sm": ["2.0.0-alpha"],
-            "xx_ent_wiki_sm": ["2.0.0-alpha"]
-        },
-        "2.0.0a4": {
-            "en_core_web_sm": ["2.0.0-alpha"],
-            "xx_ent_wiki_sm": ["2.0.0-alpha"]
-        },
-        "2.0.0a3": {
-            "en_core_web_sm": ["2.0.0-alpha"],
-            "xx_ent_wiki_sm": ["2.0.0-alpha"]
-        },
-        "2.0.0a2": {
-            "en_core_web_sm": ["2.0.0-alpha"],
-            "xx_ent_wiki_sm": ["2.0.0-alpha"]
-        },
-        "2.0.0a1": {
-            "en_core_web_sm": ["2.0.0-alpha"],
-            "xx_ent_wiki_sm": ["2.0.0-alpha"]
-        },
-        "2.0.0a0": {
-            "en_core_web_sm": ["2.0.0-alpha"],
-            "xx_ent_wiki_sm": ["2.0.0-alpha"]
-        },
         "1.10.0": {
             "en_core_web_md": ["1.2.1", "1.2.0"],
             "en_core_web_sm": ["1.2.0"],
@@ -317,6 +183,141 @@
             "en_core_web_md": ["1.1.0"],
             "de_core_news_md": ["1.0.0"],
             "en_vectors_glove_md": ["1.0.0"]
+        },
+
+        "2.0.0rc2": {
+            "en_core_web_sm": ["2.0.0a8"],
+            "en_core_web_lg": ["2.0.0a3"],
+            "en_vectors_web_lg": ["2.0.0-alpha"],
+            "de_core_news_sm": ["2.0.0a0"],
+            "es_core_news_sm": ["2.0.0a0"],
+            "es_core_news_md": ["2.0.0a0"],
+            "pt_core_news_sm": ["2.0.0a0"],
+            "fr_core_news_sm": ["2.0.0a1"],
+            "it_core_news_sm": ["2.0.0a1"],
+            "nl_core_news_sm": ["2.0.0a0"],
+            "xx_ent_wiki_sm": ["2.0.0a3"]
+        },
+        "2.0.0rc1": {
+            "en_core_web_sm": ["2.0.0a8"],
+            "en_core_web_lg": ["2.0.0a3"],
+            "en_vectors_web_lg": ["2.0.0-alpha"],
+            "de_core_news_sm": ["2.0.0a0"],
+            "es_core_news_sm": ["2.0.0a0"],
+            "es_core_news_md": ["2.0.0a0"],
+            "pt_core_news_sm": ["2.0.0a0"],
+            "fr_core_news_sm": ["2.0.0a1"],
+            "it_core_news_sm": ["2.0.0a1"],
+            "nl_core_news_sm": ["2.0.0a0"],
+            "xx_ent_wiki_sm": ["2.0.0a3"]
+        },
+        "2.0.0a19": {
+            "en_core_web_sm": ["2.0.0a8"],
+            "en_core_web_lg": ["2.0.0a3"],
+            "en_vectors_web_lg": ["2.0.0-alpha"],
+            "de_core_news_sm": ["2.0.0a0"],
+            "es_core_news_sm": ["2.0.0a0"],
+            "es_core_news_md": ["2.0.0a0"],
+            "pt_core_news_sm": ["2.0.0a0"],
+            "fr_core_news_sm": ["2.0.0a1"],
+            "it_core_news_sm": ["2.0.0a1"],
+            "nl_core_news_sm": ["2.0.0a0"],
+            "xx_ent_wiki_sm": ["2.0.0a3"]
+        },
+        "2.0.0a18": {
+            "en_core_web_sm": ["2.0.0a8"],
+            "en_core_web_lg": ["2.0.0a3"],
+            "en_vectors_web_lg": ["2.0.0-alpha"],
+            "de_core_news_sm": ["2.0.0a0"],
+            "es_core_news_sm": ["2.0.0a0"],
+            "es_core_news_md": ["2.0.0a0"],
+            "fr_core_news_sm": ["2.0.0a1"],
+            "it_core_news_sm": ["2.0.0a1"],
+            "nl_core_news_sm": ["2.0.0a0"],
+            "xx_ent_wiki_sm": ["2.0.0a3"]
+        },
+        "2.0.0a17": {
+            "en_core_web_sm": ["2.0.0a7", "2.0.0a6"],
+            "en_core_web_lg": ["2.0.0a2", "2.0.0a1"],
+            "en_vectors_web_lg": ["2.0.0-alpha"],
+            "de_dep_news_sm": ["2.0.0a1"],
+            "es_core_web_sm": ["2.0.0a1"],
+            "xx_ent_wiki_sm": ["2.0.0a2"]
+        },
+        "2.0.0a16": {
+            "en_core_web_sm": ["2.0.0a5"],
+            "en_core_web_lg": ["2.0.0a0"],
+            "en_vectors_web_lg": ["2.0.0-alpha"],
+            "de_dep_news_sm": ["2.0.0a0"],
+            "es_core_web_sm": ["2.0.0a0"],
+            "xx_ent_wiki_sm": ["2.0.0a1"]
+        },
+        "2.0.0a15": {
+            "en_core_web_sm": ["2.0.0a5"],
+            "en_core_web_lg": ["2.0.0a0"],
+            "en_vectors_web_lg": ["2.0.0-alpha"],
+            "de_dep_news_sm": ["2.0.0a0"],
+            "es_core_web_sm": ["2.0.0a0"],
+            "xx_ent_wiki_sm": ["2.0.0a1"]
+        },
+        "2.0.0a14": {
+            "en_core_web_sm": ["2.0.0-alpha4"],
+            "en_vectors_web_lg": ["2.0.0-alpha"]
+        },
+        "2.0.0a13": {
+            "en_core_web_sm": ["2.0.0-alpha3"],
+            "en_vectors_web_lg": ["2.0.0-alpha"]
+        },
+        "2.0.0a12": {
+            "en_vectors_web_lg": ["2.0.0-alpha"]
+        },
+        "2.0.0a11": {
+            "en_core_web_sm": ["2.0.0-alpha2"],
+            "en_vectors_web_lg": ["2.0.0-alpha"]
+        },
+        "2.0.0a10": {
+            "en_core_web_sm": ["2.0.0-alpha1"],
+            "en_vectors_web_lg": ["2.0.0-alpha"]
+        },
+        "2.0.0a9": {
+            "en_core_web_sm": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha"]
+        },
+        "2.0.0a8": {
+            "en_core_web_sm": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha"]
+        },
+        "2.0.0a7": {
+            "en_core_web_sm": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha"]
+        },
+        "2.0.0a6": {
+            "en_core_web_sm": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha"]
+        },
+        "2.0.0a5": {
+            "en_core_web_sm": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha"]
+        },
+        "2.0.0a4": {
+            "en_core_web_sm": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha"]
+        },
+        "2.0.0a3": {
+            "en_core_web_sm": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha"]
+        },
+        "2.0.0a2": {
+            "en_core_web_sm": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha"]
+        },
+        "2.0.0a1": {
+            "en_core_web_sm": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha"]
+        },
+        "2.0.0a0": {
+            "en_core_web_sm": ["2.0.0-alpha"],
+            "xx_ent_wiki_sm": ["2.0.0-alpha"]
         }
     }
 }
