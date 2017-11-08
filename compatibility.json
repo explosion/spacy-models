@@ -185,7 +185,7 @@
             "en_vectors_glove_md": ["1.0.0"]
         },
 
-        "2.0.0.dev0": {
+        "2.0.1.dev0": {
             "en_vectors_web_lg": ["2.0.0"],
             "en_core_web_sm": ["2.0.0"],
             "en_core_web_lg": ["2.0.0"],
