@@ -185,6 +185,20 @@
             "en_vectors_glove_md": ["1.0.0"]
         },
 
+        "2.0.0.dev0": {
+            "en_vectors_web_lg": ["2.0.0"],
+            "en_core_web_sm": ["2.0.0"],
+            "en_core_web_lg": ["2.0.0"],
+            "de_core_news_sm": ["2.0.0"],
+            "es_core_news_sm": ["2.0.0"],
+            "es_core_news_md": ["2.0.0"],
+            "pt_core_news_sm": ["2.0.0"],
+            "fr_core_news_sm": ["2.0.0"],
+            "fr_core_news_md": ["2.0.0"],
+            "it_core_news_sm": ["2.0.0"],
+            "nl_core_news_sm": ["2.0.0"],
+            "xx_ent_wiki_sm": ["2.0.0"]
+        },
         "2.0.0rc2": {
             "en_core_web_sm": ["2.0.0a8"],
             "en_core_web_lg": ["2.0.0a3"],
