@@ -9,7 +9,7 @@
   "license": "CC BY 4.0", 
   "author": "Explosion AI", 
   "url": "https://explosion.ai", 
-  "checksum": "1802b052288fa73cb9e75e0764a5cdad53c2efc70fb05a6f02ba7fb90f70f4ca", 
+  "checksum": "22bbd280c968aabcf1da65b8e7e60c4aee2585c3511fe6c8e1b9bbce19056561", 
   "vectors": {
     "keys": 684830, 
     "width": 300, 
