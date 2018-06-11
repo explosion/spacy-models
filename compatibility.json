@@ -1,20 +1,5 @@
 {
     "spacy": {
-        "2.1.0a0": {
-            "en_vectors_web_lg": ["2.1.0a0", "2.0.0"],
-            "en_core_web_sm": ["2.1.0a0"],
-            "en_core_web_md": ["2.1.0a0"],
-            "en_core_web_lg": ["2.1.0a0"],
-            "de_core_news_sm": ["2.1.0a0"],
-            "es_core_news_sm": ["2.1.0a0"],
-            "es_core_news_md": ["2.1.0a0"],
-            "pt_core_news_sm": ["2.1.0a0"],
-            "fr_core_news_sm": ["2.1.0a0"],
-            "fr_core_news_md": ["2.1.0a0"],
-            "it_core_news_sm": ["2.1.0a0"],
-            "nl_core_news_sm": ["2.1.0a0"],
-            "xx_ent_wiki_sm": ["2.1.0a0"]
-        },
         "2.0.12": {
             "en_vectors_web_lg": ["2.0.0"],
             "en_core_web_sm": ["2.0.0"],
