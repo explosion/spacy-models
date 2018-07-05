@@ -1,41 +1,43 @@
 {
-  "lang": "en", 
-  "pipeline": [
-    "tagger", 
-    "parser", 
-    "ner"
-  ], 
-  "name": "core_web_md", 
-  "license": "CC BY 4.0", 
-  "author": "Explosion AI", 
-  "url": "https://explosion.ai", 
-  "checksum": "ac329914550e90366732561279e8952436ed146fcc0c2ea34e159d66afec8203", 
-  "vectors": {
-    "keys": 684830, 
-    "width": 300, 
-    "vectors": 20000
-  }, 
-  "sources": [
-    "OntoNotes 5", 
-    "Common Crawl"
-  ], 
-  "version": "2.1.0a0", 
-  "size": "107 MB", 
-  "spacy_version": ">=2.1.0a0", 
   "accuracy": {
-    "token_acc": 99.1792042163, 
-    "ents_p": 86.1853832442, 
-    "ents_r": 86.4695691052, 
-    "uas": 91.956728992, 
-    "tags_acc": 96.9190310751, 
-    "ents_f": 86.3272422932, 
-    "las": 90.1535109053
-  }, 
+    "ents_f": 86.1988173603,
+    "ents_p": 86.0404254134,
+    "ents_r": 86.3577935506,
+    "las": 90.2397123685,
+    "tags_acc": 96.9653413302,
+    "token_acc": 99.1754815703,
+    "uas": 92.0023891469
+  },
+  "author": "Explosion AI",
+  "description": "English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.",
+  "email": "contact@explosion.ai",
+  "lang": "en",
+  "license": "MIT",
+  "name": "core_web_md",
+  "parent_package": "spacy-nightly",
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "sources": [
+    "OntoNotes 5",
+    "Common Crawl"
+  ],
+  "spacy_version": ">=2.1.0a0",
   "speed": {
-    "gpu": null, 
-    "nwords": 291344, 
-    "cpu": 6215.8977168833
-  }, 
-  "email": "contact@explosion.ai", 
-  "description": "English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities."
+    "cpu": 5207.4553271236,
+    "gpu": null,
+    "nwords": 291344
+  },
+  "url": "https://explosion.ai",
+  "vectors": {
+    "keys": 684830,
+    "name": "en_model.vectors",
+    "vectors": 20000,
+    "width": 300
+  },
+  "version": "2.1.0a0",
+  "size": "107 MB",
+  "checksum": "c522541880120b8aa6269cfffdf5eca6a38dca34c9c30264248962dfd32d1771"
 }
