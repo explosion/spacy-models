@@ -1,40 +1,42 @@
 {
-  "lang": "en", 
+  "accuracy": {
+    "ents_f": 85.5737521659,
+    "ents_p": 85.5833193583,
+    "ents_r": 85.5641871123,
+    "las": 89.9641242344,
+    "tags_acc": 96.8357375523,
+    "token_acc": 99.1794885891,
+    "uas": 91.7956559973
+  },
+  "author": "Explosion AI",
+  "description": "English multi-task CNN trained on OntoNotes. Assigns context-specific token vectors, POS tags, dependency parse and named entities.",
+  "email": "contact@explosion.ai",
+  "lang": "en",
+  "license": "MIT",
+  "name": "core_web_sm",
+  "parent_package": "spacy-nightly",
   "pipeline": [
-    "tagger", 
-    "parser", 
+    "tagger",
+    "parser",
     "ner"
-  ], 
-  "name": "core_web_sm", 
-  "license": "CC BY 4.0", 
-  "author": "Explosion AI", 
-  "url": "https://explosion.ai", 
-  "checksum": "b141e2925fd4984994186906542fa9c4180f18c8f27c64def9f70dd526568a0d", 
-  "vectors": {
-    "keys": 0, 
-    "width": 0, 
-    "vectors": 0
-  }, 
+  ],
   "sources": [
     "OntoNotes 5"
-  ], 
-  "version": "2.1.0a0", 
-  "size": "29 MB", 
-  "spacy_version": ">=2.1.0a0", 
-  "accuracy": {
-    "token_acc": 99.1774609174, 
-    "ents_p": 85.4166666667, 
-    "ents_r": 85.4691778908, 
-    "uas": 91.6853915097, 
-    "tags_acc": 96.8545026523, 
-    "ents_f": 85.4429142107, 
-    "las": 89.8399487961
-  }, 
+  ],
+  "spacy_version": ">=2.1.0a0",
   "speed": {
-    "gpu": null, 
-    "nwords": 291344, 
-    "cpu": 5863.4642722998
-  }, 
-  "email": "contact@explosion.ai", 
-  "description": "English multi-task CNN trained on OntoNotes. Assigns context-specific token vectors, POS tags, dependency parse and named entities."
+    "cpu": 5377.9676043123,
+    "gpu": null,
+    "nwords": 291344
+  },
+  "url": "https://explosion.ai",
+  "vectors": {
+    "keys": 0,
+    "name": "en_model.vectors",
+    "vectors": 0,
+    "width": 0
+  },
+  "version": "2.1.0a0",
+  "size": "107 MB",
+  "checksum": "9ee17719394b370569afd83470b7e999c2abc937f6a45974a06962e314583436"
 }
