@@ -1,38 +1,44 @@
 {
-  "lang": "es", 
-  "pipeline": [
-    "tagger", 
-    "parser", 
-    "ner"
-  ], 
-  "name": "core_news_sm", 
-  "license": "GPL", 
-  "author": "Explosion AI", 
-  "url": "https://explosion.ai", 
-  "checksum": "3e8a0ceb8c9ba433b0049fb63000f82d2655f2ac8e49bd1b34d82c05f0115b6a", 
-  "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.", 
-  "vectors": {
-    "keys": 0, 
-    "width": 0, 
-    "vectors": 0
-  }, 
-  "sources": [
-    "AnCora", 
-    "Wikipedia"
-  ], 
-  "version": "2.1.0a0", 
-  "size": "28 MB", 
-  "spacy_version": ">=2.1.0a0", 
-  "description": "Spanish multi-task CNN trained on the AnCora and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.", 
-  "parent_package": "spacy", 
-  "email": "contact@explosion.ai", 
   "accuracy": {
-    "token_acc": 100.0, 
-    "ents_p": 89.2587081915, 
-    "ents_r": 89.1297268694, 
-    "uas": 90.2893527322, 
-    "tags_acc": 96.863465106, 
-    "ents_f": 89.1941709014, 
-    "las": 87.3056403681
-  }
+    "ents_f": 89.429619067,
+    "ents_p": 89.5098478979,
+    "ents_r": 89.3495339276,
+    "las": 87.1736366896,
+    "tags_acc": 96.911278138,
+    "token_acc": 100.0,
+    "uas": 90.1289698708
+  },
+  "author": "Explosion AI",
+  "description": "Spanish multi-task CNN trained on the AnCora and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.",
+  "email": "contact@explosion.ai",
+  "lang": "es",
+  "license": "GPL",
+  "name": "core_news_sm",
+  "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.",
+  "parent_package": "spacy-nightly",
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "sources": [
+    "AnCora",
+    "Wikipedia"
+  ],
+  "spacy_version": ">=2.1.0a0",
+  "speed": {
+    "cpu": 6742.9786769837,
+    "gpu": null,
+    "nwords": 699524
+  },
+  "url": "https://explosion.ai",
+  "vectors": {
+    "keys": 0,
+    "name": "es_model.vectors",
+    "vectors": 0,
+    "width": 0
+  },
+  "version": "2.1.0a0",
+  "size": "86 MB",
+  "checksum": "7a5c77a641bb426977f06a5ff3ca39426e913916df2ed1ceb51b4056ce5a4efa"
 }
