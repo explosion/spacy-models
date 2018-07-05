@@ -1,38 +1,44 @@
 {
-  "lang": "fr", 
-  "pipeline": [
-    "tagger", 
-    "parser", 
-    "ner"
-  ], 
-  "name": "core_news_sm", 
-  "license": "LGPL", 
-  "author": "Explosion AI", 
-  "url": "https://explosion.ai", 
-  "checksum": "04530285a5ab0e201fd78338ca39f94100fb331225c6538af7ec0560e1f5f73e", 
-  "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.", 
-  "vectors": {
-    "keys": 0, 
-    "width": 0, 
-    "vectors": 0
-  }, 
-  "sources": [
-    "Sequoia Corpus (UD)", 
-    "Wikipedia"
-  ], 
-  "version": "2.1.0a0", 
-  "size": "31 MB", 
-  "spacy_version": ">=2.1.0a0", 
-  "description": "French multi-task CNN trained on the French Sequoia (Universal Dependencies) and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.", 
-  "parent_package": "spacy", 
-  "email": "contact@explosion.ai", 
   "accuracy": {
-    "token_acc": 100.0, 
-    "ents_p": 68.2575489903, 
-    "ents_r": 67.0385991138, 
-    "uas": 87.1820728291, 
-    "tags_acc": 94.41, 
-    "ents_f": 67.642582991, 
-    "las": 84.5378151261
-  }
+    "ents_f": 67.3155255623,
+    "ents_p": 67.8050101557,
+    "ents_r": 66.8330574983,
+    "las": 85.6518572469,
+    "tags_acc": 94.42,
+    "token_acc": 100.0,
+    "uas": 88.7892879153
+  },
+  "author": "Explosion AI",
+  "description": "French multi-task CNN trained on the French Sequoia (Universal Dependencies) and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.",
+  "email": "contact@explosion.ai",
+  "lang": "fr",
+  "license": "LGPL",
+  "name": "core_news_sm",
+  "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.",
+  "parent_package": "spacy-nightly",
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "sources": [
+    "Sequoia Corpus (UD)",
+    "Wikipedia"
+  ],
+  "spacy_version": ">=2.1.0a0",
+  "speed": {
+    "cpu": 8127.0091240012,
+    "gpu": null,
+    "nwords": 514820
+  },
+  "url": "https://explosion.ai",
+  "vectors": {
+    "keys": 0,
+    "name": "fr_model.vectors",
+    "vectors": 0,
+    "width": 0
+  },
+  "version": "2.1.0a0",
+  "size": "98 MB",
+  "checksum": "e9d0c3b61886eadc3c76aa19bb753484d7f68ef9cb759803547eb909d09e2d34"
 }
