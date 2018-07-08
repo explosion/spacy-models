@@ -32,13 +32,7 @@
     "nwords": 699524
   },
   "url": "https://explosion.ai",
-  "vectors": {
-    "keys": 0,
-    "name": "es_model.vectors",
-    "vectors": 0,
-    "width": 0
-  },
   "version": "2.1.0a0",
-  "size": "86 MB",
-  "checksum": "77c046e0af2606f6db0c777a64948ff12577c262f8547748a69ac31edd8ea179"
+  "size": "27 MB",
+  "checksum": "9198c75af6a9415075fdfd67bc9382a0efde2d12cc2cfdc34c48e4f414e12605"
 }
