@@ -149,3 +149,10 @@ def test_en_tagger_lemma_issue717(NLP, text1, text2):
 def test_en_tagger_lemma_issue781(lemmatizer, word, lemmas):
     result = lemmatizer(word, 'noun', morphology={'Number': 'plur'})
     assert sorted(result) == sorted(lemmas)
+
+
+@pytest.mark.parametrize('text', ["He is the man", "he is the man"])
+def test_en_tagger_lemma_issue686(NLP, text):
+    """Test that pronoun lemmas are assigned correctly."""
+    tokens = NLP(text)
+    assert tokens[0].lemma_ == "-PRON-"

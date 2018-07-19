@@ -5,7 +5,7 @@ import pytest
 
 
 def test_de_vocab_lex_attrs(NLP):
-    doc = nlp("Nettoeinkommen war 9000 $ (neuntausend). example.com")
+    doc = NLP("Nettoeinkommen war 9000 $ (neuntausend). example.com")
     assert doc[0].is_title
     assert doc[1].is_stop
     assert doc[2].is_digit
@@ -17,5 +17,5 @@ def test_de_vocab_lex_attrs(NLP):
 
 
 def test_de_vocab_stop_words(NLP):
-    doc = nlp("Dementsprechend ehrlich durfte ich zunächst später gehen")
+    doc = NLP("Dementsprechend ehrlich durfte ich zunächst später gehen")
     assert all(t.is_stop for t in doc)

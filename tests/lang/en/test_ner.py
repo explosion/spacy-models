@@ -23,6 +23,12 @@ def test_en_ner_simple_types(NLP):
     assert doc.ents[1].label_ == 'GPE'
 
 
+def test_en_ner_beam_parse(NLP):
+    doc = NLP('Australia is a country', disable=['ner'])
+    ner = NLP.get_pipe('ner')
+    ents = ner(doc, beam_width=2)
+
+
 #def test_en_ner_issue514(nlp):
 #    """Test serializing after adding entity."""
 #    ner = nlp.get_pipe('ner')
