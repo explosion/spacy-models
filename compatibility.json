@@ -1,6 +1,6 @@
 {
     "spacy": {
-       "2.0.13.dev0": {
+       "2.0.13": {
             "en_vectors_web_lg": ["2.0.0"],
             "en_core_web_sm": ["2.0.0"],
             "en_core_web_md": ["2.0.0"],
