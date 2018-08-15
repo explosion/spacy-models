@@ -9,7 +9,7 @@
     "uas": 84.4468085106
   },
   "author": "Giannis Daras",
-  "description": "Vocabulary, Syntax, Entities",
+  "description": "Greek pipeline with word vectors, POS tags, dependencies and named entities. Word vectors use Facebook's FastText Common Crawl vectors, pruned to a vocabulary of 20,000 items. Words outside the most frequent were mapped to the nearest neighbouring vector within the 20,000 rows retained. Syntax (dependencies and POS tags) trained from the Universal Dependencies conversion of the Greek Dependency Treebank (v2.2). Named entity annotations were created by Giannis Daras using Prodigy, using the OntoNotes 5 annotation schema.",
   "email": "daras.giannhs@gmail.com",
   "lang": "el",
   "license": "CC BY-NC 4.0",
@@ -20,14 +20,18 @@
     "parser",
     "ner"
   ],
+  "sources": [
+    "Greek Dependency Treebank",
+    "Daras GSOC 2018"
+  ],
   "spacy_version": ">=2.1.0a0",
   "speed": {
     "cpu": 5406.7305328808,
     "gpu": null,
     "nwords": 6191
   },
-  "url": "https://explosion.ai",
+  "url": "https://github.com/eellak/gsoc2018-spacy",
   "version": "2.1.0a0",
   "size": "27 MB",
-  "checksum": "dc4a754351169f38089cf8c6bbdfbb1da207b226a71c6c58b0ca9177c25e4cf9"
+  "checksum": "8128b7ec4b7388397e04df2939ae492aecc1ad9e48be76376f9e0cee5612e090"
 }
