@@ -1,0 +1,33 @@
+{
+  "accuracy": {
+    "ents_f": 73.5294117647,
+    "ents_p": 73.5294117647,
+    "ents_r": 73.5294117647,
+    "las": 81.0319148936,
+    "tags_acc": 94.9727089917,
+    "token_acc": 100.0,
+    "uas": 84.4468085106
+  },
+  "author": "Giannis Daras",
+  "description": "Vocabulary, Syntax, Entities",
+  "email": "daras.giannhs@gmail.com",
+  "lang": "el",
+  "license": "CC BY-NC 4.0",
+  "name": "core_news_sm",
+  "parent_package": "spacy-nightly",
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "spacy_version": ">=2.1.0a0",
+  "speed": {
+    "cpu": 5406.7305328808,
+    "gpu": null,
+    "nwords": 6191
+  },
+  "url": "https://explosion.ai",
+  "version": "2.1.0a0",
+  "size": "27 MB",
+  "checksum": "aa2ada888ad08b166a9d1eb732e415d73983044c806f85cc46879b9b35ad916d"
+}
