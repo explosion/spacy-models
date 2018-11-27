@@ -24,7 +24,7 @@ def test_en_parser_norm_exceptions(NLP, text):
         assert [t.dep_ for t in NLP(text1)] == [t.dep_ for t in NLP(text2)]
 
 
-# NB: test currently causes segfault
+# NB: test currently causes segfault on en_core_web_sm
 # @pytest.mark.xfail
 # def test_en_parser_sbd_serialization_projective(nlp):
 #     """Test that before and after serialization, the sentence boundaries are
