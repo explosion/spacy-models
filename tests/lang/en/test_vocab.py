@@ -24,8 +24,8 @@ def test_en_vocab_stop_words(NLP):
 
 
 @pytest.mark.xfail
-@pytest.mark.requires('vectors')
-@pytest.mark.parametrize('word', ['number', 'mark', 'root', 'agent'])
+@pytest.mark.requires("vectors")
+@pytest.mark.parametrize("word", ["number", "mark", "root", "agent"])
 def test_issue2461(NLP, word):
     """Test that special symbols that are also common words are in vocab."""
     assert word in NLP.vocab

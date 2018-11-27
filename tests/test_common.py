@@ -17,23 +17,23 @@ def test_common_doc_tokens(NLP):
 
 
 def test_common_vocab_lex_attrs(NLP):
-    doc = Doc(NLP.vocab, words=['Lorem', 'IPSUM', 'dolor', '.'])
+    doc = Doc(NLP.vocab, words=["Lorem", "IPSUM", "dolor", "."])
     assert doc[0].is_title
     assert doc[1].is_upper
     assert doc[2].is_lower
     assert doc[3].is_punct
 
 
-@pytest.mark.requires('parser')
+@pytest.mark.requires("parser")
 def test_common_parser(NLP):
     """Ensure that parser exists and Doc.is_parsed."""
-    assert 'parser' in NLP.pipe_names
+    assert "parser" in NLP.pipe_names
     doc = NLP("Lorem ipsum dolor sit amet.")
     assert doc.is_parsed
 
 
-@pytest.mark.requires('parser')
-@pytest.mark.parametrize('text', ['Lorem ipsum.'])
+@pytest.mark.requires("parser")
+@pytest.mark.parametrize("text", ["Lorem ipsum."])
 def test_common_parser_no_empty(NLP, text):
     """Ensure that labels aren't empty."""
     doc = NLP(text)
@@ -42,19 +42,18 @@ def test_common_parser_no_empty(NLP, text):
     assert any(t.dep != i for i, t in enumerate(doc))
 
 
-@pytest.mark.requires('tagger')
+@pytest.mark.requires("tagger")
 def test_common_tagger(NLP):
     """Ensure that tagger exists and Doc.is_tagged."""
-    assert 'tagger' in NLP.pipe_names
+    assert "tagger" in NLP.pipe_names
     doc = NLP("Lorem ipsum dolor sit amet.")
     assert doc.is_tagged
 
 
-@pytest.mark.requires('tagger')
-@pytest.mark.parametrize('text', [
-    'Lorem ipsum.',
-    pytest.param('Lorem — ipsum.', marks=pytest.mark.xfail())
-])
+@pytest.mark.requires("tagger")
+@pytest.mark.parametrize(
+    "text", ["Lorem ipsum.", pytest.param("Lorem — ipsum.", marks=pytest.mark.xfail())]
+)
 def test_common_tagger_no_empty(NLP, text):
     """Ensure that tags aren't empty."""
     doc = NLP(text)
@@ -64,29 +63,29 @@ def test_common_tagger_no_empty(NLP, text):
     assert all(t.tag_ for t in doc)
 
 
-@pytest.mark.requires('ner')
+@pytest.mark.requires("ner")
 def test_common_ner(NLP):
-    assert 'ner' in NLP.pipe_names
+    assert "ner" in NLP.pipe_names
 
 
 def test_common_issue1242_issue1380(NLP):
-    doc = NLP('')
+    doc = NLP("")
     assert len(doc) == 0
-    docs = list(NLP.pipe(['', 'hello']))
+    docs = list(NLP.pipe(["", "hello"]))
     assert len(docs[0]) == 0
     assert len(docs[1]) == 1
 
 
 @pytest.mark.xfail(reason="Currently fails on Spanish. Investigate!")
-@pytest.mark.requires('tagger', 'parser')
+@pytest.mark.requires("tagger", "parser")
 def test_common_issue1253(NLP):
     def iter_doc(doc):
         for i in range(len(doc) - 1):
             for j in range(i + 1, len(doc)):
                 doc[i:j].root
 
-    tagger = NLP.get_pipe('tagger')
-    parser = NLP.get_pipe('parser')
+    tagger = NLP.get_pipe("tagger")
+    parser = NLP.get_pipe("parser")
     doc = NLP.tokenizer("Highly rated - I'll definitely")
     tagger(doc)
     parser(doc)

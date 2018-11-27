@@ -9,44 +9,46 @@ from ...util import apply_transition_sequence
 
 def test_en_parser_example(NLP):
     doc = NLP("Apple is looking at buying U.K. startup")
-    deps = ['nsubj', 'aux', 'ROOT', 'prep', 'pcomp', 'compound', 'dobj']
+    deps = ["nsubj", "aux", "ROOT", "prep", "pcomp", "compound", "dobj"]
     for token, expected_dep in zip(doc, deps):
         assert token.dep_ == expected_dep
 
 
-@pytest.mark.parametrize('text', ['My grandfather was laid to rest last Saturday'])
+@pytest.mark.parametrize("text", ["My grandfather was laid to rest last Saturday"])
 def test_en_parser_norm_exceptions(NLP, text):
     """Test that the parser isn't sensitive to different unicode variations
     that are reset in the new NORM exceptions."""
     if not NLP.vocab.vectors.size:
         text1 = '"{}"'.format(text)
-        text2 = '“{}”'.format(text)
+        text2 = "“{}”".format(text)
         assert [t.dep_ for t in NLP(text1)] == [t.dep_ for t in NLP(text2)]
 
 
-#@pytest.mark.xfail
-#def test_en_parser_sbd_serialization_projective(nlp):
-#    """Test that before and after serialization, the sentence boundaries are
-#    the same."""
-#    text = "I bought a couch from IKEA It wasn't very comfortable."
-#    transition = ['L-nsubj', 'S', 'L-det', 'R-dobj', 'D', 'R-prep', 'R-pobj',
-#                  'B-ROOT', 'L-nsubj', 'R-neg', 'D', 'S', 'L-advmod',
-#                  'R-acomp', 'D', 'R-punct']
-#
-#    doc = nlp.tokenizer(text)
-#    apply_transition_sequence(nlp.get_pipe('parser'), doc, transition)
-#    doc_serialized = Doc(nlp.vocab).from_bytes(doc.to_bytes())
-#    assert doc.is_parsed == True
-#    assert doc_serialized.is_parsed == True
-#    assert doc.to_bytes() == doc_serialized.to_bytes()
-#    assert [s.text for s in doc.sents] == [s.text for s in doc_serialized.sents]
+@pytest.mark.xfail
+def test_en_parser_sbd_serialization_projective(nlp):
+    """Test that before and after serialization, the sentence boundaries are
+    the same."""
+    # fmt: off
+    text = "I bought a couch from IKEA It wasn't very comfortable."
+    transition = ["L-nsubj", "S", "L-det", "R-dobj", "D", "R-prep", "R-pobj",
+                  "B-ROOT", "L-nsubj", "R-neg", "D", "S", "L-advmod",
+                  "R-acomp", "D", "R-punct"]
+    # fmt: on
+
+    doc = nlp.tokenizer(text)
+    apply_transition_sequence(nlp.get_pipe("parser"), doc, transition)
+    doc_serialized = Doc(nlp.vocab).from_bytes(doc.to_bytes())
+    assert doc.is_parsed
+    assert doc_serialized.is_parsed
+    assert doc.to_bytes() == doc_serialized.to_bytes()
+    assert [s.text for s in doc.sents] == [s.text for s in doc_serialized.sents]
 
 
 def test_en_parser_issue1207(NLP):
     doc = NLP("Employees are recruiting talented staffers from overseas.")
-    assert [i.text for i in doc.noun_chunks] == ['Employees', 'talented staffers']
+    assert [i.text for i in doc.noun_chunks] == ["Employees", "talented staffers"]
     sent = list(doc.sents)[0]
-    assert [i.text for i in sent.noun_chunks] == ['Employees', 'talented staffers']
+    assert [i.text for i in sent.noun_chunks] == ["Employees", "talented staffers"]
 
 
 def test_en_parser_issue693(NLP):
@@ -64,7 +66,7 @@ def test_en_parser_issue693(NLP):
 @pytest.mark.xfail
 def test_en_parser_issue704(NLP):
     """Test that sentence boundaries are detected correctly."""
-    text = '“Atticus said to Jem one day, “I’d rather you shot at tin cans in the backyard, but I know you’ll go after birds. Shoot all the blue jays you want, if you can hit ‘em, but remember it’s a sin to kill a mockingbird.”'
+    text = "“Atticus said to Jem one day, “I’d rather you shot at tin cans in the backyard, but I know you’ll go after birds. Shoot all the blue jays you want, if you can hit ‘em, but remember it’s a sin to kill a mockingbird.”"
     doc = NLP(text)
     assert len(list(doc.sents)) == 3
 
@@ -81,8 +83,8 @@ def test_en_parser_issue955(NLP):
             seen_tokens.add(key)
 
 
-@pytest.mark.skip
-@pytest.mark.parametrize('text,expected_sents', [
+# fmt: off
+TEST_CASES_SBD = [
     pytest.param("Hello World. My name is Jonas.", ["Hello World.", "My name is Jonas."], marks=pytest.mark.xfail()),
     ("What is your name? My name is Jonas.", ["What is your name?", "My name is Jonas."]),
     ("There it is! I found it.", ["There it is!", "I found it."]),
@@ -135,11 +137,18 @@ def test_en_parser_issue955(NLP):
     pytest.param("I wasn’t really ... well, what I mean...see . . . what I'm saying, the thing is . . . I didn’t mean it.", ["I wasn’t really ... well, what I mean...see . . . what I'm saying, the thing is . . . I didn’t mean it."], marks=pytest.mark.xfail()),
     pytest.param("One further habit which was somewhat weakened . . . was that of combining words into self-interpreting compounds. . . . The practice was not abandoned. . . .", ["One further habit which was somewhat weakened . . . was that of combining words into self-interpreting compounds.", ". . . The practice was not abandoned. . . ."], marks=pytest.mark.xfail()),
     pytest.param("Hello world.Today is Tuesday.Mr. Smith went to the store and bought 1,000.That is a lot.", ["Hello world.", "Today is Tuesday.", "Mr. Smith went to the store and bought 1,000.", "That is a lot."], marks=pytest.mark.xfail())
-])
+]
+# fmt: on
+
+
+@pytest.mark.skip
+@pytest.mark.parametrize("text,expected_sents", TEST_CASES_SBD)
 def test_en_sbd_prag(NLP, text, expected_sents):
     """SBD tests from Pragmatic Segmenter"""
     doc = NLP(text)
     sents = []
     for sent in doc.sents:
-        sents.append(''.join(doc[i].string for i in range(sent.start, sent.end)).strip())
+        sents.append(
+            "".join(doc[i].string for i in range(sent.start, sent.end)).strip()
+        )
     assert sents == expected_sents

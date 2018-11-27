@@ -7,11 +7,11 @@ import pytest
 @pytest.mark.xfail
 def test_fr_tagger_issue2251(NLP):
     doc = NLP("Tu vas bien.")
-    assert doc[0].tag_ == 'PRON__Number=Sing|Person=2'
+    assert doc[0].tag_ == "PRON__Number=Sing|Person=2"
     doc = NLP("Comment vas-tu?")
     print(doc[3].tag_, doc[3].lemma_)
-    assert doc[3].tag_ == 'PRON__Number=Sing|Person=2'
-    assert doc[3].lemma_ == 'tu'
+    assert doc[3].tag_ == "PRON__Number=Sing|Person=2"
+    assert doc[3].lemma_ == "tu"
 
 
 @pytest.mark.xfail
