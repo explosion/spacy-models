@@ -1,4 +1,4 @@
 spacy>=2.1.0,<3.0.0
-pytest>=3.6.0,<4.0.0
+pytest>=4.0.0,<5.0.0
 hypothesis>=2.0.0,<3.0.0
 pathlib==1.0.1; python_version < "3.4"

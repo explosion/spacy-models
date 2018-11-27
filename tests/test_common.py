@@ -53,7 +53,7 @@ def test_common_tagger(NLP):
 @pytest.mark.requires('tagger')
 @pytest.mark.parametrize('text', [
     'Lorem ipsum.',
-    pytest.mark.xfail('Lorem — ipsum.')
+    pytest.param('Lorem — ipsum.', marks=pytest.mark.xfail())
 ])
 def test_common_tagger_no_empty(NLP, text):
     """Ensure that tags aren't empty."""
