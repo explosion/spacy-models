@@ -47,9 +47,7 @@ def pytest_ignore_collect(path, config):
 
 def pytest_collection_modifyitems(config, items):
     for item in items:
-        features = item.get_marker("requires")
-        feature_args = features.args if features else []
-        for arg in feature_args:
+        for arg in item.iter_markers("requires"):
             expect = OPT_MAPPING.get(arg)
             if expect and not item.config.getoption(expect):
                 reason = "requires {} but --{} not set".format(arg, expect)
