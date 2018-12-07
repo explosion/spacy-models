@@ -27,7 +27,7 @@ python -m spacy download [model]
 
 * [spaCy v2.x models directory](https://alpha.spacy.io/models/)
 * [spaCy v2.x model comparison](https://alpha.spacy.io/models/comparison)
-* [Individual release notes](https://github.com/spacy-models/releases)
+* [Individual release notes](https://github.com/explosion/spacy-models/releases)
 
 ### spaCy v1.x
 
