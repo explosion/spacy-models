@@ -19,7 +19,7 @@ def test_en_tagger_tag_names(NLP):
     assert type(doc[2].pos) == int
     assert isinstance(doc[2].pos_, unicode_)
     assert isinstance(doc[2].dep_, unicode_)
-    assert doc[2].tag_ == "NNS"
+    assert doc[-2].tag_ == "NNS"
 
 
 def test_en_tagger_example(NLP):
