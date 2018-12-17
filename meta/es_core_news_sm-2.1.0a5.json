@@ -1,0 +1,38 @@
+{
+  "accuracy": {
+    "ents_f": 87.2807330473,
+    "ents_p": 87.4206260081,
+    "ents_r": 87.1412870924,
+    "las": 86.6931058836,
+    "tags_acc": 96.6397001167,
+    "token_acc": 100.0,
+    "uas": 89.9266583365
+  },
+  "author": "Explosion AI",
+  "description": "Spanish multi-task CNN trained on the AnCora and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.",
+  "email": "contact@explosion.ai",
+  "lang": "es",
+  "license": "GPL",
+  "name": "core_news_sm",
+  "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.",
+  "parent_package": "spacy-nightly",
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "sources": [
+    "AnCora",
+    "Wikipedia"
+  ],
+  "spacy_version": ">=2.1.0a4",
+  "speed": {
+    "cpu": 7477.7182524667,
+    "gpu": null,
+    "nwords": 699524
+  },
+  "url": "https://explosion.ai",
+  "version": "2.1.0a5",
+  "size": "10 MB",
+  "checksum": "33efafbed816b3368159ed544a601ef259681115ba3fc901e7a92940b7106b41"
+}
