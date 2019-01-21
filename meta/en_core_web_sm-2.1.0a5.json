@@ -1,0 +1,36 @@
+{
+  "accuracy": {
+    "ents_f": 85.6328742632,
+    "ents_p": 85.6065683646,
+    "ents_r": 85.6591963338,
+    "las": 89.2886383216,
+    "tags_acc": 96.8820501154,
+    "token_acc": 99.0646795541,
+    "uas": 91.2150848582
+  },
+  "author": "Explosion AI",
+  "description": "English multi-task CNN trained on OntoNotes. Assigns context-specific token vectors, POS tags, dependency parse and named entities.",
+  "email": "contact@explosion.ai",
+  "lang": "en",
+  "license": "MIT",
+  "name": "core_web_sm",
+  "parent_package": "spacy-nightly",
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "sources": [
+    "OntoNotes 5"
+  ],
+  "spacy_version": ">=2.1.0a4",
+  "speed": {
+    "cpu": 7029.2409878,
+    "gpu": null,
+    "nwords": 291344
+  },
+  "url": "https://explosion.ai",
+  "version": "2.1.0a5",
+  "size": "10 MB",
+  "checksum": "c98e070fbe268446e089f570ab94e0c6c533f8a05fe87a6a98b6de3790016ef5"
+}

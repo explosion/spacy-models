@@ -1,0 +1,38 @@
+{
+  "accuracy": {
+    "ents_f": 80.9463659148,
+    "ents_p": 81.0878123243,
+    "ents_r": 80.8054121132,
+    "las": 84.4417054177,
+    "tags_acc": 94.4,
+    "token_acc": 100.0,
+    "uas": 87.3326236764
+  },
+  "author": "Explosion AI",
+  "description": "French multi-task CNN trained on the French Sequoia (Universal Dependencies) and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.",
+  "email": "contact@explosion.ai",
+  "lang": "fr",
+  "license": "LGPL",
+  "name": "core_news_sm",
+  "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.",
+  "parent_package": "spacy-nightly",
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "sources": [
+    "Sequoia Corpus (UD)",
+    "Wikipedia"
+  ],
+  "spacy_version": ">=2.1.0a4",
+  "speed": {
+    "cpu": 7903.8796559117,
+    "gpu": null,
+    "nwords": 689875
+  },
+  "url": "https://explosion.ai",
+  "version": "2.1.0a5",
+  "size": "14 MB",
+  "checksum": "6b78d375f4706d527f6a750f941e5fa96616fc1f8e81cce9e43abb4d406bb403"
+}

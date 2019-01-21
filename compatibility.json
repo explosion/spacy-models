@@ -464,6 +464,24 @@
             "de_core_news_md": ["1.0.0"],
             "en_vectors_glove_md": ["1.0.0"]
         },
+        "2.1.0a6": {
+            "en_vectors_web_lg": ["2.0.0"],
+            "en_core_web_sm": ["2.1.0a5"],
+            "en_core_web_md": ["2.1.0a5"],
+            "en_core_web_lg": ["2.1.0a5"],
+            "de_core_news_sm": ["2.1.0a5"],
+            "de_core_news_md": ["2.1.0a5"],
+            "es_core_news_sm": ["2.1.0a5"],
+            "es_core_news_md": ["2.1.0a5"],
+            "pt_core_news_sm": ["2.1.0a5"],
+            "fr_core_news_sm": ["2.1.0a5"],
+            "fr_core_news_md": ["2.1.0a5"],
+            "el_core_news_sm": ["2.1.0a5"],
+            "el_core_news_md": ["2.1.0a5"],
+            "it_core_news_sm": ["2.1.0a5"],
+            "nl_core_news_sm": ["2.1.0a5"],
+            "xx_ent_wiki_sm": ["2.1.0a5"]
+        },
         "2.1.0a5": {
             "en_vectors_web_lg": ["2.0.0"],
             "en_core_web_sm": ["2.1.0a5"],
