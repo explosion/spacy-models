@@ -1,0 +1,44 @@
+{
+  "accuracy": {
+    "ents_f": 83.8971731371,
+    "ents_p": 84.725523799,
+    "ents_r": 83.084863007,
+    "las": 90.3313400502,
+    "tags_acc": 97.4595722142,
+    "token_acc": 99.4792618308,
+    "uas": 92.1905835918
+  },
+  "author": "Explosion AI",
+  "description": "German multi-task CNN trained on the TIGER and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.",
+  "email": "contact@explosion.ai",
+  "lang": "de",
+  "license": "MIT",
+  "name": "core_news_md",
+  "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.",
+  "parent_package": "spacy-nightly",
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "sources": [
+    "TIGER Corpus",
+    "Wikipedia"
+  ],
+  "spacy_version": ">=2.1.0a4",
+  "speed": {
+    "cpu": 6860.2096209861,
+    "gpu": null,
+    "nwords": 696811
+  },
+  "url": "https://explosion.ai",
+  "vectors": {
+    "keys": 276087,
+    "name": "de_model.vectors",
+    "vectors": 20000,
+    "width": 300
+  },
+  "version": "2.1.0a6",
+  "size": "210 MB",
+  "checksum": "4338d30cbf5f8c2c25d05e2d830d5d2783024c16f436fabcb397b61fa3a40a92"
+}
