@@ -1,12 +1,12 @@
 {
   "accuracy": {
-    "ents_f": 83.3615601231,
-    "ents_p": 83.476166583,
-    "ents_r": 83.2472679236,
-    "las": 86.4840643029,
-    "tags_acc": 95.12,
+    "ents_f": 83.3376745677,
+    "ents_p": 83.4262676508,
+    "ents_r": 83.2492694448,
+    "las": 86.197624916,
+    "tags_acc": 95.28,
     "token_acc": 100.0,
-    "uas": 89.1390802666
+    "uas": 89.099260587
   },
   "author": "Explosion AI",
   "description": "French multi-task CNN trained on the French Sequoia (Universal Dependencies) and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.",
@@ -27,7 +27,7 @@
   ],
   "spacy_version": ">=2.1.0a4",
   "speed": {
-    "cpu": 6078.2320832288,
+    "cpu": 8195.8604535779,
     "gpu": null,
     "nwords": 689875
   },
@@ -38,7 +38,7 @@
     "vectors": 20000,
     "width": 300
   },
-  "version": "2.1.0a6",
+  "version": "2.1.0a7",
   "size": "81 MB",
-  "checksum": "723beb4b4da2be61109c0de54effca370e4ff2398245608f707a667a2e15b09f"
+  "checksum": "b18a388fae63d0dac45b0bb2aef6ce6f6833af4b29e11030325c3c58972afd21"
 }

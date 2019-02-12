@@ -1,8 +1,8 @@
 {
   "accuracy": {
-    "ents_f": 81.5836809951,
-    "ents_p": 82.1686799426,
-    "ents_r": 81.0069529491
+    "ents_f": 81.6414869606,
+    "ents_p": 82.2272758597,
+    "ents_r": 81.0639853682
   },
   "author": "Explosion AI",
   "description": "Multi-lingual CNN trained on Nothman et al. (2010) Wikipedia corpus. Assigns named entities. Supports identification of PER, LOC, ORG and MISC entities for English, German, Spanish, French, Italian, Portuguese and Russian.",
@@ -20,12 +20,12 @@
   ],
   "spacy_version": ">=2.1.0a4",
   "speed": {
-    "cpu": 21692.2158143442,
+    "cpu": 22044.5162896246,
     "gpu": null,
     "nwords": 6210136
   },
   "url": "https://explosion.ai",
-  "version": "2.1.0a6",
+  "version": "2.1.0a7",
   "size": "3 MB",
-  "checksum": "226320aec9b686b41a6d1d8e9f92e96f92cd1bd2e9bdfacbe780530b2adae15f"
+  "checksum": "1d07e7a7acbc1750c680c687725eabc836f094b8eeaf1a1b7c7901d5e4b67fdc"
 }

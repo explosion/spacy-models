@@ -1,12 +1,12 @@
 {
   "accuracy": {
-    "ents_f": 85.494302433,
-    "ents_p": 85.6597845601,
-    "ents_r": 85.3294584474,
-    "las": 89.6400460442,
-    "tags_acc": 96.7982889278,
+    "ents_f": 85.5099988828,
+    "ents_p": 85.4670314332,
+    "ents_r": 85.5530095568,
+    "las": 89.682797403,
+    "tags_acc": 96.8320691599,
     "token_acc": 99.0646795541,
-    "uas": 91.5273154342
+    "uas": 91.5689404737
   },
   "author": "Explosion AI",
   "description": "English multi-task CNN trained on OntoNotes. Assigns context-specific token vectors, POS tags, dependency parse and named entities.",
@@ -25,12 +25,12 @@
   ],
   "spacy_version": ">=2.1.0a4",
   "speed": {
-    "cpu": 7435.3852845254,
+    "cpu": 7436.9320951768,
     "gpu": null,
     "nwords": 291344
   },
   "url": "https://explosion.ai",
-  "version": "2.1.0a6",
+  "version": "2.1.0a7",
   "size": "10 MB",
-  "checksum": "5298d86a0f24fa41aaa9900eda33c43ee7565a1a8eb6146c9573bea5ca208954"
+  "checksum": "0b6264abb56aa6163dc431c98f625791945f225738c0906c09abfd763f655ec2"
 }

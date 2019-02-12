@@ -1,18 +1,18 @@
 {
   "accuracy": {
-    "ents_f": 88.9798828622,
-    "ents_p": 89.0642523603,
-    "ents_r": 88.8956730574,
-    "las": 87.2841853643,
-    "tags_acc": 97.0298544571,
+    "ents_f": 86.3061057073,
+    "ents_p": 86.4817786824,
+    "ents_r": 86.1311449846,
+    "las": 87.1954430137,
+    "tags_acc": 95.9662447257,
     "token_acc": 100.0,
-    "uas": 90.3286793068
+    "uas": 91.0918577378
   },
   "author": "Explosion AI",
-  "description": "Spanish multi-task CNN trained on the AnCora and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.",
+  "description": "Italian multi-task CNN trained on the Universal Dependencies and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.",
   "email": "contact@explosion.ai",
-  "lang": "es",
-  "license": "GPL",
+  "lang": "it",
+  "license": "CC BY-NC-SA 3.0",
   "name": "core_news_sm",
   "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.",
   "parent_package": "spacy-nightly",
@@ -22,17 +22,17 @@
     "ner"
   ],
   "sources": [
-    "AnCora",
+    "Universal Dependencies",
     "Wikipedia"
   ],
   "spacy_version": ">=2.1.0a4",
   "speed": {
-    "cpu": 7465.7480361921,
+    "cpu": 7454.6882915252,
     "gpu": null,
-    "nwords": 699524
+    "nwords": 687510
   },
   "url": "https://explosion.ai",
-  "version": "2.1.0a6",
+  "version": "2.1.0a7",
   "size": "10 MB",
-  "checksum": "3e057aad71c7ba9252253139db21d090681ca71e6b7fcb44a283e368c5394600"
+  "checksum": "87c9839a78977388d0d2503779c1cbda1373237e9b434f72623eb19b5c3cc32c"
 }

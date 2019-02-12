@@ -1,12 +1,12 @@
 {
   "accuracy": {
-    "ents_f": 86.6234201991,
-    "ents_p": 86.6767388507,
-    "ents_r": 86.5701671045,
-    "las": 90.2009214654,
-    "tags_acc": 97.0161369547,
+    "ents_f": 86.588195823,
+    "ents_p": 86.6342172989,
+    "ents_r": 86.5422232158,
+    "las": 90.1349443146,
+    "tags_acc": 96.9861483814,
     "token_acc": 99.0646795541,
-    "uas": 91.9664476128
+    "uas": 91.8959501146
   },
   "author": "Explosion AI",
   "description": "English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.",
@@ -26,7 +26,7 @@
   ],
   "spacy_version": ">=2.1.0a4",
   "speed": {
-    "cpu": 7064.0263326354,
+    "cpu": 7295.5874793726,
     "gpu": null,
     "nwords": 291344
   },
@@ -37,7 +37,7 @@
     "vectors": 684831,
     "width": 300
   },
-  "version": "2.1.0a6",
+  "version": "2.1.0a7",
   "size": "788 MB",
-  "checksum": "2f98997a41eccaa55fdbacbe701a87d2b22af8e24641bdb2b7c97f3249830169"
+  "checksum": "10b9ad440f66acc406013d7878f5dc73791849ca126d135e0c28c6c49abeedf5"
 }

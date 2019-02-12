@@ -1,12 +1,12 @@
 {
   "accuracy": {
-    "ents_f": 83.3361633136,
-    "ents_p": 84.2093028404,
-    "ents_r": 82.4809445848,
-    "las": 89.5520616147,
-    "tags_acc": 97.2045485755,
+    "ents_f": 83.4213339913,
+    "ents_p": 84.3822792111,
+    "ents_r": 82.4820288189,
+    "las": 89.5184388217,
+    "tags_acc": 97.2620923709,
     "token_acc": 99.4792618308,
-    "uas": 91.623693173
+    "uas": 91.6539289159
   },
   "author": "Explosion AI",
   "description": "German multi-task CNN trained on the TIGER and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.",
@@ -27,12 +27,12 @@
   ],
   "spacy_version": ">=2.1.0a4",
   "speed": {
-    "cpu": 7351.1354011755,
+    "cpu": 7094.2460338307,
     "gpu": null,
     "nwords": 696811
   },
   "url": "https://explosion.ai",
-  "version": "2.1.0a6",
+  "version": "2.1.0a7",
   "size": "10 MB",
-  "checksum": "913233a0c6e286b1965fe20a847447334791b87c7e9a5f7d6f17a99dfaf7a4f5"
+  "checksum": "b123755ebe4b59c55afd86c074d5f37e15fd3331dca3f2d403cc544cde1d0b25"
 }

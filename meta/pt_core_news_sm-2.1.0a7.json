@@ -1,17 +1,17 @@
 {
   "accuracy": {
-    "ents_f": 87.0472773635,
-    "ents_p": 86.5570870495,
-    "ents_r": 87.5430513933,
-    "las": 77.5605168061,
-    "tags_acc": 91.4732064933,
+    "ents_f": 88.9780072521,
+    "ents_p": 89.0991613222,
+    "ents_r": 88.8571822171,
+    "las": 86.2032425559,
+    "tags_acc": 80.646944982,
     "token_acc": 100.0,
-    "uas": 83.7186277907
+    "uas": 89.4457984529
   },
   "author": "Explosion AI",
-  "description": "Dutch multi-task CNN trained on the Universal Dependencies and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.",
+  "description": "Portuguese multi-task CNN trained on the Universal Dependencies and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.",
   "email": "contact@explosion.ai",
-  "lang": "nl",
+  "lang": "pt",
   "license": "CC BY-SA 4.0",
   "name": "core_news_sm",
   "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.",
@@ -27,12 +27,12 @@
   ],
   "spacy_version": ">=2.1.0a4",
   "speed": {
-    "cpu": 7061.7339209385,
+    "cpu": 3983.7983697548,
     "gpu": null,
-    "nwords": 686179
+    "nwords": 676043
   },
   "url": "https://explosion.ai",
-  "version": "2.1.0a6",
-  "size": "10 MB",
-  "checksum": "68d7adb63a59e3c26d96921afc0adaf37653febc9ab63c3b0edd6d0b0971f7a8"
+  "version": "2.1.0a7",
+  "size": "12 MB",
+  "checksum": "75e9d7ec03b5be522124a8b4e504cf636860c0466fc24a59c0b00928b29e0df1"
 }
