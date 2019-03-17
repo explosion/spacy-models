@@ -25,6 +25,8 @@ python -m spacy download [model]
 * [spaCy v2.x model comparison](https://alpha.spacy.io/models/comparison)
 * [Individual release notes](https://github.com/explosion/spacy-models/releases)
 
+For the spaCy v1.x models, [see here](#spacy-v1x-releases).
+
 ## Model naming conventions
 
 In general, spaCy expects all model packages to follow the naming convention of
@@ -74,31 +76,26 @@ links" to load models by name from within spaCy. For more info on this, see the
 new [models documentation](https://spacy.io/usage/models).
 
 ```bash
-# out-of-the-box: download best-matching default model
-python -m spacy download en
-
 # download best-matching version of specific model for your spaCy installation
 python -m spacy download en_core_web_sm
 
+# out-of-the-box: download best-matching default model
+python -m spacy download en
+
 # pip install .tar.gz archive from path or URL
-pip install /Users/you/en_core_web_sm-2.0.0.tar.gz
-pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0/en_core_web_sm-2.0.0.tar.gz
-
-# set up shortcut link to load installed package as "en_default"
-python -m spacy link en_core_web_sm en_default
-
-# set up shortcut link to load local model as "my_amazing_model"
-python -m spacy link /Users/you/data my_amazing_model
+pip install /Users/you/en_core_web_sm-2.1.0.tar.gz
+pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.1.0/en_core_web_sm-2.1.0.tar.gz
 ```
 
 ## Loading and using models
 
-To load a model, use `spacy.load()` with the model's shortcut link:
+To load a model, use `spacy.load()` with the model name, a shortcut link or
+a path to the model data directory.
 
 ```python
 import spacy
-nlp = spacy.load('en')
-doc = nlp(u'This is a sentence.')
+nlp = spacy.load("en_core_web_sm")
+doc = nlp(u"This is a sentence.")
 ```
 
 If you've installed a model via pip, you can also `import` it directly and
@@ -110,7 +107,7 @@ import spacy
 import en_core_web_sm
 
 nlp = en_core_web_sm.load()
-doc = nlp(u'This is a sentence.')
+doc = nlp(u"This is a sentence.")
 ```
 
 ## Manual download and installation
@@ -132,7 +129,8 @@ consists of a model directory that contains another directory with the model dat
 ```
 
 You can place the model data directory anywhere on your local file system. To
-use it with spaCy, simply assign it a name by createing a shortcut link for the data directory.
+use it with spaCy, simply assign it a name by creating a shortcut link for the 
+data directory.
 
 **📖 For more info and examples, check out the [models documentation](https://spacy.io/usage/models).**
 
