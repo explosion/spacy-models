@@ -1,0 +1,44 @@
+{
+  "accuracy": {
+    "ents_f": 81.0590631365,
+    "ents_p": 78.6561264822,
+    "ents_r": 83.6134453782,
+    "las": 85.0031908105,
+    "tags_acc": 96.5622905295,
+    "token_acc": 100.0,
+    "uas": 88.2897255903
+  },
+  "author": "Giannis Daras",
+  "description": "Greek pipeline with word vectors, POS tags, dependencies and named entities. Word vectors use Facebook's FastText Common Crawl vectors, pruned to a vocabulary of 20,000 items. Words outside the most frequent were mapped to the nearest neighbouring vector within the 20,000 rows retained. Syntax (dependencies and POS tags) trained from the Universal Dependencies conversion of the Greek Dependency Treebank (v2.2). Named entity annotations were created by Giannis Daras using Prodigy, using the OntoNotes 5 annotation schema.",
+  "email": "daras.giannhs@gmail.com",
+  "lang": "el",
+  "license": "CC BY-NC 4.0",
+  "name": "core_news_md",
+  "parent_package": "spacy",
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "sources": [
+    "Common Crawl",
+    "Greek Dependency Treebank",
+    "Daras GSOC 2018"
+  ],
+  "spacy_version": ">=2.1.0",
+  "speed": {
+    "cpu": 7537.0232116305,
+    "gpu": null,
+    "nwords": 6191
+  },
+  "url": "https://github.com/eellak/gsoc2018-spacy",
+  "vectors": {
+    "keys": 1999938,
+    "name": "el_model.vectors",
+    "vectors": 20000,
+    "width": 300
+  },
+  "version": "2.1.0",
+  "size": "126 MB",
+  "checksum": "7ae074564e262a954ae5c0be18949058eb7e10f421b5c917855589b4284cfee5"
+}

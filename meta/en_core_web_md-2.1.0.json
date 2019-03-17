@@ -1,0 +1,43 @@
+{
+  "accuracy": {
+    "ents_f": 86.5604666816,
+    "ents_p": 86.8772166864,
+    "ents_r": 86.2460179959,
+    "las": 89.9815852978,
+    "tags_acc": 96.9231617736,
+    "token_acc": 99.0697323163,
+    "uas": 91.7829981935
+  },
+  "author": "Explosion AI",
+  "description": "English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.",
+  "email": "contact@explosion.ai",
+  "lang": "en",
+  "license": "MIT",
+  "name": "core_web_md",
+  "parent_package": "spacy",
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "sources": [
+    "OntoNotes 5",
+    "Common Crawl"
+  ],
+  "spacy_version": ">=2.1.0",
+  "speed": {
+    "cpu": 7170.1448289297,
+    "gpu": null,
+    "nwords": 291314
+  },
+  "url": "https://explosion.ai",
+  "vectors": {
+    "keys": 684830,
+    "name": "en_model.vectors",
+    "vectors": 20000,
+    "width": 300
+  },
+  "version": "2.1.0",
+  "size": "91 MB",
+  "checksum": "b84c7e5d57840d6ad9160cfb746ebffde0c5fd04ee69ddfaa1ed36d37ac06f83"
+}
