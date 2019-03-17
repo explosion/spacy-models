@@ -98,9 +98,9 @@ nlp = spacy.load("en_core_web_sm")
 doc = nlp(u"This is a sentence.")
 ```
 
-If you've installed a model via pip, you can also `import` it directly and
-then call its `load()` method with no arguments. This should also work for
-older models in previous versions of spaCy.
+You can also `import` a model directly via its full name and then call its
+`load()` method with no arguments. This should also work for older models 
+in previous versions of spaCy.
 
 ```python
 import spacy
