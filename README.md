@@ -21,8 +21,8 @@ To install a specific model, run the following command with the model name
 python -m spacy download [model]
 ```
 
-* [spaCy v2.x models directory](https://alpha.spacy.io/models/)
-* [spaCy v2.x model comparison](https://alpha.spacy.io/models/comparison)
+* [spaCy v2.x models directory](https://spacy.io/models)
+* [spaCy v2.x model comparison](https://spacy.io/usage/facts-figures#spacy-models)
 * [Individual release notes](https://github.com/explosion/spacy-models/releases)
 
 For the spaCy v1.x models, [see here](#spacy-v1x-releases).
