@@ -87,12 +87,13 @@ def test_en_tagger_lemma_nouns(lemmatizer, text, lemmas, morphology):
     assert sorted(lemmatizer.noun(text, morphology=morphology)) == lemmas
 
 
+@pytest.mark.xfail
 @pytest.mark.parametrize(
     "text,lemmas",
     [("bleed", ["bleed"]), ("feed", ["feed"]), ("need", ["need"]), ("ring", ["ring"])],
 )
 def test_en_tagger_lemma_verbs(lemmatizer, text, lemmas):
-    assert lemmatizer.noun(text) == lemmas
+    assert lemmatizer.verb(text) == lemmas
 
 
 def test_en_tagger_lemma_base_forms(lemmatizer):
