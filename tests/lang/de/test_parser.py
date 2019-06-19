@@ -14,6 +14,8 @@ TEST_FILES_DIR = os.path.join(
     'test_files',
     )
 
+
+@pytest.mark.xfail
 @pytest.mark.parametrize(
     "test_file",
     [("de_pud-ud-test.stts.json"),]
