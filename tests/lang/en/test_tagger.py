@@ -1,13 +1,20 @@
 # coding: utf-8
 from __future__ import unicode_literals
 
+import os
 import pytest
 from spacy.tokens import Doc
 from spacy.compat import unicode_
 from spacy.parts_of_speech import SPACE
+from spacy.gold import GoldCorpus
+from spacy import util
 
 # from spacy.lemmatizer import lemmatize
 
+TEST_FILES_DIR = os.path.join(
+    os.path.dirname(os.path.realpath(__file__)),
+    'test_files',
+    )
 
 @pytest.fixture
 def lemmatizer(NLP):
@@ -19,7 +26,7 @@ def test_en_tagger_tag_names(NLP):
     assert type(doc[2].pos) == int
     assert isinstance(doc[2].pos_, unicode_)
     assert isinstance(doc[2].dep_, unicode_)
-    assert doc[-2].tag_ == "NNS"
+    assert doc[2].tag_ == "NNS"
 
 
 def test_en_tagger_example(NLP):
@@ -31,6 +38,23 @@ def test_en_tagger_example(NLP):
     for token, expected_tag in zip(doc, tags):
         assert token.tag_ == expected_tag
 
+@pytest.mark.parametrize(
+    "test_file,accuracy_threshold",
+    [
+        ("en_pud-ud-test.json", 94), 
+        ("masc-penn-treebank-sample.json", 87)
+    ],
+)
+def test_en_tagger_corpus(NLP, test_file, accuracy_threshold):
+    data_path = os.path.join(TEST_FILES_DIR, test_file)
+    data_path = util.ensure_path(data_path)
+    if not data_path.exists():
+        raise FileNotFoundError("Test corpus not found", data_path)
+    corpus = GoldCorpus(data_path, data_path)
+    dev_docs = list(corpus.dev_docs(NLP, gold_preproc=False))
+    scorer = NLP.evaluate(dev_docs)
+
+    assert scorer.tags_acc > accuracy_threshold
 
 @pytest.mark.xfail
 def test_en_tagger_spaces(NLP):
@@ -107,7 +131,9 @@ def test_en_tagger_lemma_base_form_verb(lemmatizer):
 
 def test_en_tagger_lemma_punct(lemmatizer):
     assert lemmatizer.punct("“") == ['"']
-    assert lemmatizer.punct("“") == ['"']
+    assert lemmatizer.punct("”") == ['"']
+    assert lemmatizer.punct("‘") == ["'"]
+    assert lemmatizer.punct("’") == ["'"]
 
 
 def test_en_tagger_lemma_assignment(NLP):
