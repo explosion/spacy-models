@@ -12,7 +12,7 @@
   "description": "Japanese multi-task CNN trained on UD_Japanese-PUD v2.4-NE. Assigns word2vec token vectors, POS tags, dependency parse and named entities with SudachiPy. Compatible with Python 3.5+",
   "email": "ginza@megagon.ai",
   "lang": "ja",
-  "license": "CC-BY-SA",
+  "license": "CC BY-SA 3.0",
   "name": "core_web_md",
   "parent_package": "spacy",
   "pipeline": [
@@ -25,7 +25,7 @@
     "jawiki-cirrussearch-content",
     "UD_Japanese-PUD v2.4-NE"
   ],
-  "spacy_version": ">=2.1.4",
+  "spacy_version": ">=2.1.0",
   "speed": {
     "cpu": 12736.487325228,
     "gpu": null,
