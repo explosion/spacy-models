@@ -14,7 +14,8 @@ from spacy import util
 TEST_FILES_DIR = os.path.join(
     os.path.dirname(os.path.realpath(__file__)),
     'test_files',
-    )
+)
+
 
 @pytest.fixture
 def lemmatizer(NLP):
@@ -39,7 +40,7 @@ def test_de_tagger_example(NLP):
 # This threshold is artificially low due to problems with spacy 2.1. (#3830)
 @pytest.mark.parametrize(
     "test_file,accuracy_threshold",
-    [("de_pud-ud-test.stts.json", 93),]
+    [("de_pud-ud-test.stts.json", 93)]
 )
 def test_de_tagger_corpus(NLP, test_file, accuracy_threshold):
     data_path = os.path.join(TEST_FILES_DIR, test_file)
@@ -55,11 +56,15 @@ def test_de_tagger_corpus(NLP, test_file, accuracy_threshold):
 
 @pytest.mark.parametrize(
     "test_file",
-    [("de_pud-ud-test.stts.json"),]
+    ["de_pud-ud-test.stts.json"]
 )
 def test_de_tagger_tagset(NLP, test_file):
     """Check that no tags outside the tagset are used."""
-    gold_tags = set(["$(", "$,", "$.", "ADJA", "ADJD", "ADV", "APPO", "APPR", "APPRART", "APZR", "ART", "CARD", "FM", "ITJ", "KOKOM", "KON", "KOUI", "KOUS", "NE", "NN", "NNE", "PDAT", "PDS", "PIAT", "PIS", "PPER", "PPOSAT", "PPOSS", "PRELAT", "PRELS", "PRF", "PROAV", "PTKA", "PTKANT", "PTKNEG", "PTKVZ", "PTKZU", "PWAT", "PWAV", "PWS", "TRUNC", "VAFIN", "VAIMP", "VAINF", "VAPP", "VMFIN", "VMINF", "VMPP", "VVFIN", "VVIMP", "VVINF", "VVIZU", "VVPP", "XY"])
+    gold_tags = {"$(", "$,", "$.", "ADJA", "ADJD", "ADV", "APPO", "APPR", "APPRART", "APZR", "ART", "CARD", "FM", "ITJ",
+                 "KOKOM", "KON", "KOUI", "KOUS", "NE", "NN", "NNE", "PDAT", "PDS", "PIAT", "PIS", "PPER", "PPOSAT",
+                 "PPOSS", "PRELAT", "PRELS", "PRF", "PROAV", "PTKA", "PTKANT", "PTKNEG", "PTKVZ", "PTKZU", "PWAT",
+                 "PWAV", "PWS", "TRUNC", "VAFIN", "VAIMP", "VAINF", "VAPP", "VMFIN", "VMINF", "VMPP", "VVFIN", "VVIMP",
+                 "VVINF", "VVIZU", "VVPP", "XY"}
 
     data_path = os.path.join(TEST_FILES_DIR, test_file)
     data_path = util.ensure_path(data_path)
@@ -91,6 +96,7 @@ def test_de_tagger_spaces(NLP):
     assert doc[3].pos != SPACE
     assert doc[4].pos == SPACE
 
+
 def test_de_tagger_return_char(NLP):
     """Ensure spaces are assigned the POS tag SPACE"""
     text = (
@@ -108,19 +114,23 @@ def test_de_tagger_return_char(NLP):
 
 @pytest.mark.xfail
 @pytest.mark.parametrize(
-    "text,tags", 
+    "text,pos,tags",
     [
-        ('"Altbau-Wohnung".', 
-            ["$(", "NN", "$(", "$."]),
+        ('"Altbau-Wohnung".',
+         ["PUNCT", "NOUN", "PUNCT", "PUNCT"],
+         ["$(", "NN", "$(", "$."]),
         ("„Altbau-Wohnung“ — „Neubau-Wohnung“",
-            ["$(", "NN", "$(", "$(", "$(", "NN", "$("]),
+         ["PUNCT", "NOUN", "PUNCT", "PUNCT", "PUNCT", "NOUN", "PUNCT"],
+         ["$(", "NN", "$(", "$(", "$(", "NN", "$("]),
         ("Du und ich –",
-            ["PPER", "KON", "PPER", "$("]),
+         ["PRON", "CONJ", "PRON", "PUNCT"],
+         ["PPER", "KON", "PPER", "$("]),
         ("Farben: rot, blau! (Auch lila?)",
-            ["NN", "$.", "ADJD", "$,", "ADJD", "$.", "$(", "ADV", "ADJD", "$.", "$("]),
+         ["NOUN", "PUNCT", "ADJ", "PUNCT", "ADJ", "PUNCT", "PUNCT", "ADV", "ADJ", "PUNCT", "PUNCT"],
+         ["NN", "$.", "ADJD", "$,", "ADJD", "$.", "$(", "ADV", "ADJD", "$.", "$("]),
     ],
 )
-def test_de_tagger_punctuation(NLP, text, tags):
+def test_de_tagger_punctuation(NLP, text, pos, tags):
     """Ensure punctuation is tagged correctly"""
     doc = NLP(text)
     for token, expected_pos in zip(doc, pos):
