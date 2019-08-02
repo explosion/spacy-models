@@ -16,7 +16,10 @@
             "el_core_news_md": ["2.1.0"],
             "it_core_news_sm": ["2.1.0"],
             "nl_core_news_sm": ["2.1.0"],
-            "xx_ent_wiki_sm": ["2.1.0"]
+            "xx_ent_wiki_sm": ["2.1.0"],
+            "en_pytt_bertbaseuncased_lg": ["2.1.0"],
+            "en_pytt_xlnetbasecased_lg": ["2.1.0"],
+            "de_pytt_bertbasecased_lg": ["2.1.0"]
         },
         "2.1.6": {
             "en_vectors_web_lg": ["2.1.0"],
