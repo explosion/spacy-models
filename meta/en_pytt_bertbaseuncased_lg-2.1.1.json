@@ -1,0 +1,16 @@
+{
+    "lang": "en",
+    "lang_factory": "pytt",
+    "requirements": ["spacy-pytorch-transformers>=0.0.1"],
+    "name": "pytt_bertbaseuncased_lg",
+    "version": "2.1.1",
+    "spacy_version": ">=2.1.7",
+    "description": "Provides weights and configuration for the pretrained transformer model `bert-base-uncased`, published by Google Research. The package uses HuggingFace's `pytorch-transformers` implementation of the model. Pretrained transformer models assign detailed contextual word representations, using knowledge drawn from a large corpus of unlabelled text. You can use the contextual word representations as features in a variety of pipeline components that can be trained on your own data.",
+    "notes": "Requires the `spacy-pytorch-transformers` package to be installed. A CUDA-compatible GPU is advised for reasonable performance.",
+    "author": "Google Research (repackaged by Explosion)",
+    "email": "contact@explosion.ai",
+    "url": "https://github.com/explosion/spacy-pytorch-transformers",
+    "license": "MIT",
+    "pipeline": ["sentencizer", "pytt_wordpiecer", "pytt_tok2vec"],
+    "sources": ["bert-base-uncased"]
+}
