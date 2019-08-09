@@ -1,7 +1,7 @@
 {
     "lang": "en",
     "lang_factory": "pytt",
-    "requirements": ["spacy-pytorch-transformers>=0.0.1"],
+    "requirements": ["spacy-pytorch-transformers>=0.1.0"],
     "name": "pytt_bertbaseuncased_lg",
     "version": "2.1.1",
     "spacy_version": ">=2.1.7",
@@ -12,5 +12,6 @@
     "url": "https://github.com/explosion/spacy-pytorch-transformers",
     "license": "MIT",
     "pipeline": ["sentencizer", "pytt_wordpiecer", "pytt_tok2vec"],
-    "sources": ["bert-base-uncased"]
+    "sources": ["bert-base-uncased"],
+    "size": "406 MB"
 }
