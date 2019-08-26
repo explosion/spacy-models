@@ -42,7 +42,7 @@ def test_en_tagger_example(NLP):
     "test_file,accuracy_threshold",
     [
         ("en_pud-ud-test.json", 94), 
-        ("masc-penn-treebank-sample.json", 87)
+        ("masc-penn-treebank-sample.json", 89)
     ],
 )
 def test_en_tagger_corpus(NLP, test_file, accuracy_threshold):
