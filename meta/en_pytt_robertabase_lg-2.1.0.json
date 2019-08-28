@@ -1,7 +1,7 @@
 {
     "lang": "en",
     "lang_factory": "pytt",
-    "requirements": ["spacy-pytorch-transformers>=0.2.0"],
+    "requirements": ["spacy-pytorch-transformers>=0.3.0"],
     "name": "pytt_robertabase_lg",
     "version": "2.1.0",
     "spacy_version": ">=2.1.7",
