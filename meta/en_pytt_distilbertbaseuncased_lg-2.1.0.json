@@ -1,0 +1,17 @@
+{
+    "lang": "en",
+    "lang_factory": "pytt",
+    "requirements": ["spacy-pytorch-transformers>=0.4.0"],
+    "name": "pytt_distilbertbaseuncased_lg",
+    "version": "2.1.0",
+    "spacy_version": ">=2.1.7",
+    "description": "Provides weights and configuration for the pretrained transformer model `distilbert-base-uncased`, published by Hugging Face. The package uses Hugging Face's `pytorch_transformers` implementation of the model. Pretrained transformer models assign detailed contextual word representations, using knowledge drawn from a large corpus of unlabelled text. You can use the contextual word representations as features in a variety of pipeline components that can be trained on your own data.",
+    "notes": "Requires the `spacy-pytorch-transformers` package to be installed. A CUDA-compatible GPU is advised for reasonable performance.",
+    "author": "Hugging Face (repackaged by Explosion)",
+    "email": "contact@explosion.ai",
+    "url": "https://github.com/explosion/spacy-pytorch-transformers",
+    "license": "MIT",
+    "pipeline": ["sentencizer", "pytt_wordpiecer", "pytt_tok2vec"],
+    "sources": ["distilbert-base-uncased"],
+    "size": "245 MB"
+}
