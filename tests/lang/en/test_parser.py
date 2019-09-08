@@ -37,7 +37,6 @@ def test_en_parser_corpus(NLP, test_file, uas_threshold, las_threshold):
     assert scorer.las > las_threshold
 
 
-@pytest.mark.xfail
 @pytest.mark.parametrize(
     "test_file", 
     [
@@ -63,7 +62,6 @@ def test_en_parser_depset(NLP, test_file):
         parser(doc)
         pred_deps = pred_deps.union(set([t.dep_ for t in doc]))
 
-    print(pred_deps - gold_deps)
     assert len(pred_deps - gold_deps) == 0
 
 
