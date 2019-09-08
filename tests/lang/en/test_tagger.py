@@ -18,7 +18,8 @@ TEST_FILES_DIR = os.path.join(
 
 @pytest.fixture
 def lemmatizer(NLP):
-    return NLP.Defaults.create_lemmatizer()
+    lookups = NLP.Defaults.create_lookups(NLP)
+    return NLP.Defaults.create_lemmatizer(lookups=lookups)
 
 
 def test_en_tagger_tag_names(NLP):
@@ -31,7 +32,7 @@ def test_en_tagger_tag_names(NLP):
 
 def test_en_tagger_example(NLP):
     doc = NLP("Apple is looking at buying U.K. startup")
-    pos = ["PROPN", "VERB", "VERB", "ADP", "VERB", "PROPN", "NOUN"]
+    pos = ["PROPN", "AUX", "VERB", "ADP", "VERB", "PROPN", "NOUN"]
     tags = ["NNP", "VBZ", "VBG", "IN", "VBG", "NNP", "NN"]
     for token, expected_pos in zip(doc, pos):
         assert token.pos_ == expected_pos
@@ -106,7 +107,6 @@ def test_en_tagger_lemma_nouns(lemmatizer, text, lemmas, morphology):
     # ambiguity? ("axes", ["ax", "axes", "axis"])
     # noun_index = lemmatizer.index["noun"]
     # noun_exc = lemmatizer.exc["noun"]
-    # noun_rules = lemmatizer.rules["noun"]
     lemmas.sort()
     assert sorted(lemmatizer.noun(text, morphology=morphology)) == lemmas
 
