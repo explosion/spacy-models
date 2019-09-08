@@ -57,7 +57,6 @@ def test_en_tagger_corpus(NLP, test_file, accuracy_threshold):
 
     assert scorer.tags_acc > accuracy_threshold
 
-@pytest.mark.xfail
 def test_en_tagger_spaces(NLP):
     """Ensure spaces are assigned the POS tag SPACE"""
     doc = NLP("Some\nspaces are\tnecessary.")
@@ -65,7 +64,7 @@ def test_en_tagger_spaces(NLP):
     assert doc[0].pos_ != "SPACE"
     assert doc[1].pos == SPACE
     assert doc[1].pos_ == "SPACE"
-    assert doc[1].tag_ == "SP"
+    assert doc[1].tag_ == "_SP"
     assert doc[2].pos != SPACE
     assert doc[3].pos != SPACE
     assert doc[4].pos == SPACE
@@ -111,13 +110,12 @@ def test_en_tagger_lemma_nouns(lemmatizer, text, lemmas, morphology):
     assert sorted(lemmatizer.noun(text, morphology=morphology)) == lemmas
 
 
-@pytest.mark.xfail
 @pytest.mark.parametrize(
     "text,lemmas",
     [("bleed", ["bleed"]), ("feed", ["feed"]), ("need", ["need"]), ("ring", ["ring"])],
 )
 def test_en_tagger_lemma_verbs(lemmatizer, text, lemmas):
-    assert lemmatizer.verb(text) == lemmas
+    assert lemmatizer.verb(text, morphology={"VerbForm": "inf"}) == lemmas
 
 
 def test_en_tagger_lemma_base_forms(lemmatizer):
