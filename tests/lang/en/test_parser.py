@@ -22,7 +22,7 @@ def test_en_parser_example(NLP):
 
 @pytest.mark.parametrize(
     "test_file,uas_threshold,las_threshold",
-    [("masc-penn-treebank-sample.json", 82, 79)],
+    [("masc-penn-treebank-sample.json", 82, 78)],
 )
 def test_en_parser_corpus(NLP, test_file, uas_threshold, las_threshold):
     data_path = os.path.join(TEST_FILES_DIR, test_file)
