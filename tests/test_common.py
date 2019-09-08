@@ -32,7 +32,6 @@ def test_common_parser(NLP):
     assert doc.is_parsed
 
 
-@pytest.mark.requires("parser")
 @pytest.mark.parametrize("text", ["Lorem ipsum."])
 def test_common_parser_no_empty(NLP, text):
     """Ensure that labels aren't empty."""
