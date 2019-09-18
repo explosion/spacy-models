@@ -1,0 +1,45 @@
+{
+  "accuracy": {
+    "ents_f": 72.1088435374,
+    "ents_p": 78.3251231527,
+    "ents_r": 66.8067226891,
+    "las": 81.1466255385,
+    "tags_acc": 94.7524657665,
+    "token_acc": 100.0,
+    "uas": 84.9226187311
+  },
+  "author": "Explosion and Giannis Daras",
+  "description": "Greek pipeline with POS tags, dependencies and named entities. Syntax (dependencies and POS tags) trained from the Universal Dependencies conversion of the Greek Dependency Treebank (v2.2). Named entity annotations were created by Giannis Daras using Prodigy, using the OntoNotes 5 annotation schema.",
+  "email": "contact@explosion.ai",
+  "lang": "el",
+  "license": "CC BY-NC-SA 3.0",
+  "name": "core_news_sm",
+  "parent_package": "spacy",
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "sources": [
+    {
+      "license": "CC BY-NC-SA 3.0",
+      "name": "Greek UD Treebank",
+      "url": "https://github.com/UniversalDependencies/UD_Greek-GDT"
+    },
+    {
+      "author": "Giannis Daras",
+      "name": "Greek NER Corpus (Google Summer of Code 2018)",
+      "url": "https://github.com/eellak/gsoc2018-spacy"
+    }
+  ],
+  "spacy_version": ">=2.2.0",
+  "speed": {
+    "cpu": 3378.4109094316,
+    "gpu": null,
+    "nwords": 6191
+  },
+  "url": "https://github.com/eellak/gsoc2018-spacy",
+  "version": "2.2.0",
+  "size": "10 MB",
+  "checksum": "97b9a4130712d574c7b89af13c620a41c06ff79ea3a7d8030b792a554a41aff9"
+}
