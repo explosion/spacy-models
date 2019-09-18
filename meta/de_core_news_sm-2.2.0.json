@@ -1,0 +1,46 @@
+{
+  "accuracy": {
+    "ents_f": 83.2546899633,
+    "ents_p": 83.7779680741,
+    "ents_r": 82.7379080786,
+    "las": 88.6777490602,
+    "tags_acc": 96.2342599192,
+    "token_acc": 95.8825112452,
+    "uas": 90.7733200188
+  },
+  "author": "Explosion",
+  "description": "German multi-task CNN trained on the TIGER and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.",
+  "email": "contact@explosion.ai",
+  "lang": "de",
+  "license": "MIT",
+  "name": "core_news_sm",
+  "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.",
+  "parent_package": "spacy",
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "sources": [
+    {
+      "license": "commercial (licensed by Explosion)",
+      "name": "TIGER Corpus",
+      "url": "https://www.ims.uni-stuttgart.de/forschung/ressourcen/korpora/tiger.html"
+    },
+    {
+      "license": "CC BY 4.0",
+      "name": "WikiNER",
+      "url": "https://figshare.com/articles/Learning_multilingual_named_entity_recognition_from_Wikipedia/5462500"
+    }
+  ],
+  "spacy_version": ">=2.2.0",
+  "speed": {
+    "cpu": 7184.3775257515,
+    "gpu": null,
+    "nwords": 696811
+  },
+  "url": "https://explosion.ai",
+  "version": "2.2.0",
+  "size": "10 MB",
+  "checksum": "eac2cd2927894d313b34aabf4a15be41d1b48311dd5af3f32724e45b89fc8871"
+}
