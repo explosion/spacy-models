@@ -11,6 +11,7 @@
   "author": "Explosion and Giannis Daras",
   "description": "Greek pipeline with POS tags, dependencies and named entities. Syntax (dependencies and POS tags) trained from the Universal Dependencies conversion of the Greek Dependency Treebank (v2.2). Named entity annotations were created by Giannis Daras using Prodigy, using the OntoNotes 5 annotation schema.",
   "email": "contact@explosion.ai",
+  "labels": {},
   "lang": "el",
   "license": "CC BY-NC-SA 3.0",
   "name": "core_news_sm",
@@ -41,5 +42,5 @@
   "url": "https://github.com/eellak/gsoc2018-spacy",
   "version": "2.2.0",
   "size": "10 MB",
-  "checksum": "97b9a4130712d574c7b89af13c620a41c06ff79ea3a7d8030b792a554a41aff9"
+  "checksum": "3d766c51efa04533da816bc33e7e90ec68ee4db98b0de9dac078dca8b7760ed9"
 }
