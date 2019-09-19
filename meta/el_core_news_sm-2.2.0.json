@@ -1,17 +1,84 @@
 {
   "accuracy": {
-    "ents_f": 72.1088435374,
-    "ents_p": 78.3251231527,
-    "ents_r": 66.8067226891,
-    "las": 81.1466255385,
-    "tags_acc": 94.7524657665,
+    "ents_f": 72.1603563474,
+    "ents_p": 76.7772511848,
+    "ents_r": 68.0672268908,
+    "las": 81.1080980486,
+    "tags_acc": 94.5513741262,
     "token_acc": 100.0,
-    "uas": 84.9226187311
+    "uas": 84.6599670336
   },
   "author": "Explosion and Giannis Daras",
   "description": "Greek pipeline with POS tags, dependencies and named entities. Syntax (dependencies and POS tags) trained from the Universal Dependencies conversion of the Greek Dependency Treebank (v2.2). Named entity annotations were created by Giannis Daras using Prodigy, using the OntoNotes 5 annotation schema.",
   "email": "contact@explosion.ai",
-  "labels": {},
+  "labels": {
+    "ner": {
+      "ner": [
+        "EVENT",
+        "GPE",
+        "LOC",
+        "ORG",
+        "PERSON",
+        "PRODUCT"
+      ]
+    },
+    "parser": {
+      "parser": [
+        "ROOT",
+        "acl",
+        "acl:relcl",
+        "advcl",
+        "advmod",
+        "amod",
+        "appos",
+        "aux",
+        "case",
+        "cc",
+        "ccomp",
+        "conj",
+        "cop",
+        "csubj",
+        "dep",
+        "det",
+        "fixed",
+        "flat",
+        "iobj",
+        "mark",
+        "nmod",
+        "nsubj",
+        "nummod",
+        "obj",
+        "obl",
+        "parataxis",
+        "punct",
+        "vocative",
+        "xcomp"
+      ]
+    },
+    "tagger": {
+      "tagger": [
+        "ADJ",
+        "ADP",
+        "ADV",
+        "AUX",
+        "AsPpSp",
+        "AtDf",
+        "CCONJ",
+        "DET",
+        "NOUN",
+        "NUM",
+        "PART",
+        "PRON",
+        "PROPN",
+        "PUNCT",
+        "SCONJ",
+        "SYM",
+        "VERB",
+        "X",
+        "_SP"
+      ]
+    }
+  },
   "lang": "el",
   "license": "CC BY-NC-SA 3.0",
   "name": "core_news_sm",
@@ -35,12 +102,12 @@
   ],
   "spacy_version": ">=2.2.0",
   "speed": {
-    "cpu": 3378.4109094316,
+    "cpu": 3668.0110264416,
     "gpu": null,
     "nwords": 6191
   },
   "url": "https://github.com/eellak/gsoc2018-spacy",
   "version": "2.2.0",
   "size": "10 MB",
-  "checksum": "3d766c51efa04533da816bc33e7e90ec68ee4db98b0de9dac078dca8b7760ed9"
+  "checksum": "ebd565dc3758d428211454c3d0a5c625862e8b070e5e0186796688fa97856068"
 }
