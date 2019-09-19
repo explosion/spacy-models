@@ -1,24 +1,66 @@
 {
+  "name": "core_news_sm",
+  "lang": "el",
+  "description": "Greek pipeline with POS tags, dependencies and named entities. Syntax (dependencies and POS tags) trained from the Universal Dependencies conversion of the Greek Dependency Treebank (v2.2). Named entity annotations were created by Giannis Daras using Prodigy, using the OntoNotes 5 annotation schema.",
+  "author": "Explosion and Giannis Daras",
+  "email": "contact@explosion.ai",
+  "license": "CC BY-NC-SA 3.0",
+  "sources": [
+    {
+      "name": "Greek UD Treebank",
+      "url": "https://github.com/UniversalDependencies/UD_Greek-GDT",
+      "license": "CC BY-NC-SA 3.0"
+    },
+    {
+      "name": "Greek NER Corpus (Google Summer of Code 2018)",
+      "author": "Giannis Daras",
+      "url": "https://github.com/eellak/gsoc2018-spacy"
+    }
+  ],
+  "url": "https://github.com/eellak/gsoc2018-spacy",
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "version": "2.2.0",
+  "spacy_version": ">=2.2.0",
+  "parent_package": "spacy",
   "accuracy": {
+    "las": 81.1080980486,
+    "uas": 84.6599670336,
+    "token_acc": 100.0,
+    "tags_acc": 94.5513741262,
     "ents_f": 72.1603563474,
     "ents_p": 76.7772511848,
-    "ents_r": 68.0672268908,
-    "las": 81.1080980486,
-    "tags_acc": 94.5513741262,
-    "token_acc": 100.0,
-    "uas": 84.6599670336
+    "ents_r": 68.0672268908
   },
-  "author": "Explosion and Giannis Daras",
-  "description": "Greek pipeline with POS tags, dependencies and named entities. Syntax (dependencies and POS tags) trained from the Universal Dependencies conversion of the Greek Dependency Treebank (v2.2). Named entity annotations were created by Giannis Daras using Prodigy, using the OntoNotes 5 annotation schema.",
-  "email": "contact@explosion.ai",
+  "speed": {
+    "cpu": 3668.0110264416,
+    "gpu": null,
+    "nwords": 6191
+  },
   "labels": {
-    "ner": [
-      "EVENT",
-      "GPE",
-      "LOC",
-      "ORG",
-      "PERSON",
-      "PRODUCT"
+    "tagger": [
+      "ADJ",
+      "ADP",
+      "ADV",
+      "AUX",
+      "AsPpSp",
+      "AtDf",
+      "CCONJ",
+      "DET",
+      "NOUN",
+      "NUM",
+      "PART",
+      "PRON",
+      "PROPN",
+      "PUNCT",
+      "SCONJ",
+      "SYM",
+      "VERB",
+      "X",
+      "_SP"
     ],
     "parser": [
       "ROOT",
@@ -51,57 +93,15 @@
       "vocative",
       "xcomp"
     ],
-    "tagger": [
-      "ADJ",
-      "ADP",
-      "ADV",
-      "AUX",
-      "AsPpSp",
-      "AtDf",
-      "CCONJ",
-      "DET",
-      "NOUN",
-      "NUM",
-      "PART",
-      "PRON",
-      "PROPN",
-      "PUNCT",
-      "SCONJ",
-      "SYM",
-      "VERB",
-      "X",
-      "_SP"
+    "ner": [
+      "EVENT",
+      "GPE",
+      "LOC",
+      "ORG",
+      "PERSON",
+      "PRODUCT"
     ]
   },
-  "lang": "el",
-  "license": "CC BY-NC-SA 3.0",
-  "name": "core_news_sm",
-  "parent_package": "spacy",
-  "pipeline": [
-    "tagger",
-    "parser",
-    "ner"
-  ],
-  "sources": [
-    {
-      "license": "CC BY-NC-SA 3.0",
-      "name": "Greek UD Treebank",
-      "url": "https://github.com/UniversalDependencies/UD_Greek-GDT"
-    },
-    {
-      "author": "Giannis Daras",
-      "name": "Greek NER Corpus (Google Summer of Code 2018)",
-      "url": "https://github.com/eellak/gsoc2018-spacy"
-    }
-  ],
-  "spacy_version": ">=2.2.0",
-  "speed": {
-    "cpu": 3668.0110264416,
-    "gpu": null,
-    "nwords": 6191
-  },
-  "url": "https://github.com/eellak/gsoc2018-spacy",
-  "version": "2.2.0",
   "size": "10 MB",
-  "checksum": "a029e19df0aaac14dd18d992ef357270aa55118e4ba60c4f6dc44e24db17f1bf"
+  "checksum": "e24bc106aee9ef7750a03f07fe29466ea4cff2ed963d0af385271c74e2275699"
 }
