@@ -11,6 +11,7 @@
   "author": "Explosion",
   "description": "German multi-task CNN trained on the TIGER and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.",
   "email": "contact@explosion.ai",
+  "labels": {},
   "lang": "de",
   "license": "MIT",
   "name": "core_news_md",
@@ -48,5 +49,5 @@
   },
   "version": "2.2.0",
   "size": "210 MB",
-  "checksum": "9bef9b797b237feb9c29373684afd9016667418eac1b5105aae9809a4b1c2c96"
+  "checksum": "526d8235a996c9fee5b28c153063291fc26827f12ea8b14fc0fc9ddd46a2f24b"
 }
