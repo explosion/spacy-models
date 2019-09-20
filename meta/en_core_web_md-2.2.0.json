@@ -1,49 +1,123 @@
 {
-  "accuracy": {
-    "ents_f": 86.4840643029,
-    "ents_p": 86.6782686802,
-    "ents_r": 86.2907282177,
-    "las": 90.0553646133,
-    "tags_acc": 96.9267758809,
-    "token_acc": 99.0700692042,
-    "uas": 91.8302203698
-  },
-  "author": "Explosion",
-  "description": "English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.",
-  "email": "contact@explosion.ai",
   "lang": "en",
-  "license": "MIT",
   "name": "core_web_md",
-  "parent_package": "spacy",
-  "pipeline": [
-    "tagger",
-    "parser",
-    "ner"
-  ],
+  "license": "MIT",
+  "author": "Explosion",
+  "url": "https://explosion.ai",
+  "email": "contact@explosion.ai",
+  "description": "English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.",
   "sources": [
     {
-      "license": "commercial (licensed by Explosion)",
       "name": "OntoNotes 5",
-      "url": "https://catalog.ldc.upenn.edu/LDC2013T19"
+      "url": "https://catalog.ldc.upenn.edu/LDC2013T19",
+      "license": "commercial (licensed by Explosion)"
     },
     {
       "name": "Common Crawl"
     }
   ],
-  "spacy_version": ">=2.2.0",
-  "speed": {
-    "cpu": 6750.0298093131,
-    "gpu": null,
-    "nwords": 291312
-  },
-  "url": "https://explosion.ai",
-  "vectors": {
-    "keys": 684830,
-    "name": "en_model.vectors",
-    "vectors": 20000,
-    "width": 300
-  },
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
   "version": "2.2.0",
+  "spacy_version": ">=2.2.0",
+  "parent_package": "spacy",
+  "accuracy": {
+    "las": 90.0553646133,
+    "uas": 91.8302203698,
+    "token_acc": 99.0700692042,
+    "tags_acc": 96.8562998097,
+    "ents_f": 86.1730398053,
+    "ents_p": 86.2623207885,
+    "ents_r": 86.0839434416
+  },
+  "speed": {
+    "cpu": 7016.8510121842,
+    "gpu": null,
+    "nwords": 291314
+  },
+  "labels": {
+    "tagger": [
+      "$",
+      "''",
+      ",",
+      "-LRB-",
+      "-RRB-",
+      ".",
+      ":",
+      "ADD",
+      "AFX",
+      "CC",
+      "CD",
+      "DT",
+      "EX",
+      "FW",
+      "HYPH",
+      "IN",
+      "JJ",
+      "JJR",
+      "JJS",
+      "LS",
+      "MD",
+      "NFP",
+      "NN",
+      "NNP",
+      "NNPS",
+      "NNS",
+      "PDT",
+      "POS",
+      "PRP",
+      "PRP$",
+      "RB",
+      "RBR",
+      "RBS",
+      "RP",
+      "SYM",
+      "TO",
+      "UH",
+      "VB",
+      "VBD",
+      "VBG",
+      "VBN",
+      "VBP",
+      "VBZ",
+      "WDT",
+      "WP",
+      "WP$",
+      "WRB",
+      "XX",
+      "_SP",
+      "``"
+    ],
+    "ner": [
+      "CARDINAL",
+      "DATE",
+      "EVENT",
+      "FAC",
+      "GPE",
+      "LANGUAGE",
+      "LAW",
+      "LOC",
+      "MONEY",
+      "NORP",
+      "ORDINAL",
+      "ORG",
+      "PERCENT",
+      "PERSON",
+      "PRODUCT",
+      "QUANTITY",
+      "TIME",
+      "WORK_OF_ART"
+    ]
+  },
+  "vectors": {
+    "width": 300,
+    "vectors": 20000,
+    "keys": 684830,
+    "name": "en_model.vectors"
+  },
   "size": "91 MB",
-  "checksum": "bd3d183c2b72e120cbfeaf6daaa93c62eb8479deb509797a4b9242c147edacf2"
+  "checksum": "9ec87c7d3a08b45e9315f0a38b510cce7f2a1801be2fef6e79afd16cff8227fe"
 }
