@@ -22,16 +22,16 @@
   "spacy_version": ">=2.2.0",
   "parent_package": "spacy",
   "accuracy": {
-    "las": 89.6192843058,
-    "uas": 91.4927213258,
-    "token_acc": 99.0704188607,
-    "tags_acc": 96.7401345724,
-    "ents_f": 85.2651929058,
-    "ents_p": 85.4927519946,
-    "ents_r": 85.0388420053
+    "las": 89.7147886913,
+    "uas": 91.6138605763,
+    "token_acc": 99.7579930934,
+    "tags_acc": 97.0270228491,
+    "ents_f": 85.0709905066,
+    "ents_p": 85.2548271217,
+    "ents_r": 84.8879450064
   },
   "speed": {
-    "cpu": 7382.6792127044,
+    "cpu": 6825.8829681767,
     "gpu": null,
     "nwords": 291314
   },
@@ -157,5 +157,5 @@
     ]
   },
   "size": "11 MB",
-  "checksum": "ca2bead473e3fbc1653232bec11d2e113b6d0b1e51160d94fdc0f3f353aac1c3"
+  "checksum": "580859ee129995359392aad2e3364a9ac5b6b7fd467aca17c2718c9d17aa7b5a"
 }
