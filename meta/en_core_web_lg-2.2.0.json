@@ -25,16 +25,16 @@
   "spacy_version": ">=2.2.0",
   "parent_package": "spacy",
   "accuracy": {
-    "las": 90.1453367402,
-    "uas": 91.9662268062,
-    "token_acc": 99.0704188607,
-    "tags_acc": 96.93971817,
-    "ents_f": 86.522639503,
-    "ents_p": 86.6487304523,
-    "ents_r": 86.3969149947
+    "las": 90.1644260278,
+    "uas": 91.9835496082,
+    "token_acc": 99.7579930934,
+    "tags_acc": 97.2056522464,
+    "ents_f": 86.3045056111,
+    "ents_p": 86.217859334,
+    "ents_r": 86.391326217
   },
   "speed": {
-    "cpu": 7158.0163536498,
+    "cpu": 7127.1086034688,
     "gpu": null,
     "nwords": 291314
   },
@@ -163,8 +163,8 @@
     "width": 300,
     "vectors": 684831,
     "keys": 684830,
-    "name": "en_model.vectors"
+    "name": "en_core_web_lg.vectors"
   },
   "size": "789 MB",
-  "checksum": "057721b1c8a5fee93a64c4c7eb24335c2706d7e091f109059073662ea68f133b"
+  "checksum": "475cb9e03cb20aa65c4403112d50529984e2861dfdc95d1b4063af32343ef1d6"
 }
