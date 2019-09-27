@@ -1,0 +1,43 @@
+{
+  "lang": "xx",
+  "name": "ent_wiki_sm",
+  "license": "MIT",
+  "author": "Explosion",
+  "url": "https://explosion.ai",
+  "email": "contact@explosion.ai",
+  "description": "Multi-lingual CNN trained on Nothman et al. (2010) Wikipedia corpus. Assigns named entities. Supports identification of PER, LOC, ORG and MISC entities for English, German, Spanish, French, Italian, Portuguese and Russian.",
+  "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text.",
+  "sources": [
+    {
+      "name": "WikiNER",
+      "url": "https://figshare.com/articles/Learning_multilingual_named_entity_recognition_from_Wikipedia/5462500",
+      "license": "CC BY 4.0"
+    }
+  ],
+  "pipeline": [
+    "ner"
+  ],
+  "version": "2.2.0",
+  "spacy_version": ">=2.2.0",
+  "parent_package": "spacy",
+  "accuracy": {
+    "ents_f": 79.877621561,
+    "ents_p": 80.2665285041,
+    "ents_r": 79.4924651056
+  },
+  "speed": {
+    "cpu": 20890.792620576,
+    "gpu": null,
+    "nwords": 6210136
+  },
+  "labels": {
+    "ner": [
+      "LOC",
+      "MISC",
+      "ORG",
+      "PER"
+    ]
+  },
+  "size": "3 MB",
+  "checksum": "4b43fff832b3e690f1ba37ace5d57d40100e725d1a3771bd4851aa5643b33c5a"
+}
