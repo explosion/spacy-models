@@ -30,16 +30,16 @@
   "spacy_version": ">=2.2.0",
   "parent_package": "spacy",
   "accuracy": {
-    "las": 84.1735800893,
-    "uas": 87.4813869389,
+    "las": 84.8832881374,
+    "uas": 87.9566118998,
     "token_acc": 100.0,
-    "tags_acc": 96.6484726611,
-    "ents_f": 77.1186440678,
-    "ents_p": 77.7777777778,
-    "ents_r": 76.4705882353
+    "tags_acc": 96.380350474,
+    "ents_f": 77.5862068966,
+    "ents_p": 79.6460176991,
+    "ents_r": 75.6302521008
   },
   "speed": {
-    "cpu": 3256.3209650551,
+    "cpu": 3798.2527858182,
     "gpu": null,
     "nwords": 6191
   },
@@ -109,8 +109,8 @@
     "width": 300,
     "vectors": 20000,
     "keys": 1999938,
-    "name": "el_model.vectors"
+    "name": "el_core_news_md.vectors"
   },
   "size": "126 MB",
-  "checksum": "bef1475b194f32a63676e84abbc622d8581e996deea48006c40d54ee162b2c94"
+  "checksum": "fee16c57bbd93e980f3bd44e41177e1aeed6415e07a85aa8c21db131a0bce17e"
 }
