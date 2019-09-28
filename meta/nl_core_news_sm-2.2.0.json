@@ -28,16 +28,16 @@
   "spacy_version": ">=2.2.0",
   "parent_package": "spacy",
   "accuracy": {
-    "las": 70.9807244228,
-    "uas": 77.6106757043,
+    "las": 69.5334427792,
+    "uas": 76.7886458719,
     "token_acc": 100.0,
-    "tags_acc": 90.6103709039,
-    "ents_f": 75.0784245382,
-    "ents_p": 75.8450704225,
-    "ents_r": 74.3271221532
+    "tags_acc": 90.0972272236,
+    "ents_f": 68.792547474,
+    "ents_p": 71.375464684,
+    "ents_r": 66.3900414938
   },
   "speed": {
-    "cpu": 8419.0996453632,
+    "cpu": 8328.2637579271,
     "gpu": null,
     "nwords": 11247
   },
@@ -234,11 +234,26 @@
       "xcomp"
     ],
     "ner": [
+      "CARDINAL",
+      "DATE",
+      "EVENT",
+      "FAC",
+      "GPE",
+      "LANGUAGE",
+      "LAW",
       "LOC",
-      "MISC",
-      "ORG"
+      "MONEY",
+      "NORP",
+      "ORDINAL",
+      "ORG",
+      "PERCENT",
+      "PERSON",
+      "PRODUCT",
+      "QUANTITY",
+      "TIME",
+      "WORK_OF_ART"
     ]
   },
   "size": "14 MB",
-  "checksum": "7ec3a20aba6b3c3ef50ea684c78d831d0f45569dc56d7bf5e767bfe416115c4e"
+  "checksum": "30a57411bb4d2c12f5c4dea699d3f37b5b96716ded9e0d655b05825d0bb305ea"
 }
