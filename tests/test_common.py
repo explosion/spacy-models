@@ -94,4 +94,4 @@ def test_common_issue1253(NLP):
 
 
 def test_common_issue1919(nlp):
-    opt = nlp.begin_training()
+    nlp.begin_training()

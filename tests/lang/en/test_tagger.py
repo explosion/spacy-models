@@ -1,25 +1,20 @@
 # coding: utf-8
 from __future__ import unicode_literals
 
-import os
 import pytest
 from spacy.tokens import Doc
 from spacy.compat import unicode_
 from spacy.parts_of_speech import SPACE
 from spacy.gold import GoldCorpus
-from spacy import util
+from pathlib import Path
 
-# from spacy.lemmatizer import lemmatize
 
-TEST_FILES_DIR = os.path.join(
-    os.path.dirname(os.path.realpath(__file__)),
-    'test_files',
-    )
+TEST_FILES_DIR = Path(__file__).parent / "test_files"
+
 
 @pytest.fixture
 def lemmatizer(NLP):
-    lookups = NLP.Defaults.create_lookups(NLP)
-    return NLP.Defaults.create_lemmatizer(lookups=lookups)
+    return NLP.vocab.morphology.lemmatizer
 
 
 def test_en_tagger_tag_names(NLP):
@@ -39,16 +34,13 @@ def test_en_tagger_example(NLP):
     for token, expected_tag in zip(doc, tags):
         assert token.tag_ == expected_tag
 
+
 @pytest.mark.parametrize(
     "test_file,accuracy_threshold",
-    [
-        ("en_pud-ud-test.json", 94), 
-        ("masc-penn-treebank-sample.json", 89)
-    ],
+    [("en_pud-ud-test.json", 94), ("masc-penn-treebank-sample.json", 89)],
 )
 def test_en_tagger_corpus(NLP, test_file, accuracy_threshold):
-    data_path = os.path.join(TEST_FILES_DIR, test_file)
-    data_path = util.ensure_path(data_path)
+    data_path = TEST_FILES_DIR / test_file
     if not data_path.exists():
         raise FileNotFoundError("Test corpus not found", data_path)
     corpus = GoldCorpus(data_path, data_path)
@@ -56,6 +48,7 @@ def test_en_tagger_corpus(NLP, test_file, accuracy_threshold):
     scorer = NLP.evaluate(dev_docs)
 
     assert scorer.tags_acc > accuracy_threshold
+
 
 def test_en_tagger_spaces(NLP):
     """Ensure spaces are assigned the POS tag SPACE"""

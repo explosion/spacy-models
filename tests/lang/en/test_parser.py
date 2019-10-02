@@ -1,18 +1,13 @@
 # coding: utf-8
 from __future__ import unicode_literals
 
-import os
 import pytest
-# from spacy.tokens import Doc
 from spacy.gold import GoldCorpus
-from spacy import util
+from pathlib import Path
 
-# from ...util import apply_transition_sequence
 
-TEST_FILES_DIR = os.path.join(
-    os.path.dirname(os.path.realpath(__file__)),
-    'test_files',
-    )
+TEST_FILES_DIR = Path(__file__).parent / "test_files"
+
 
 def test_en_parser_example(NLP):
     doc = NLP("Apple is looking at buying U.K. startup")
@@ -20,48 +15,46 @@ def test_en_parser_example(NLP):
     for token, expected_dep in zip(doc, deps):
         assert token.dep_ == expected_dep
 
+
 @pytest.mark.parametrize(
     "test_file,uas_threshold,las_threshold",
     [("masc-penn-treebank-sample.json", 82, 78)],
 )
 def test_en_parser_corpus(NLP, test_file, uas_threshold, las_threshold):
-    data_path = os.path.join(TEST_FILES_DIR, test_file)
-    data_path = util.ensure_path(data_path)
+    data_path = TEST_FILES_DIR / test_file
     if not data_path.exists():
         raise FileNotFoundError("Test corpus not found", data_path)
     corpus = GoldCorpus(data_path, data_path)
     dev_docs = list(corpus.dev_docs(NLP, gold_preproc=False))
     scorer = NLP.evaluate(dev_docs)
-
     assert scorer.uas > uas_threshold
     assert scorer.las > las_threshold
 
 
 @pytest.mark.parametrize(
-    "test_file", 
-    [
-        ("en_pud-ud-test.json"),
-        ("masc-penn-treebank-sample.json"),
-    ]
+    "test_file", [("en_pud-ud-test.json"), ("masc-penn-treebank-sample.json")]
 )
 def test_en_parser_depset(NLP, test_file):
     """Check that no tags outside the tagset are produced."""
-    gold_deps = set(["ROOT", "acl", "acomp", "advcl", "advmod", "agent", "amod", "appos", "attr", "aux", "auxpass", "case", "cc", "ccomp", "compound", "conj", "csubj", "csubjpass", "dative", "dep", "det", "dobj", "expl", "intj", "mark", "meta", "neg", "nmod", "npadvmod", "nsubj", "nsubjpass", "nummod", "oprd", "parataxis", "pcomp", "pobj", "poss", "preconj", "predet", "prep", "prt", "punct", "quantmod", "relcl", "root", "xcomp"])
-
-    data_path = os.path.join(TEST_FILES_DIR, test_file)
-    data_path = util.ensure_path(data_path)
+    # fmt: off
+    gold_deps = set(["ROOT", "acl", "acomp", "advcl", "advmod", "agent", "amod",
+                     "appos", "attr", "aux", "auxpass", "case", "cc", "ccomp",
+                     "compound", "conj", "csubj", "csubjpass", "dative", "dep",
+                     "det", "dobj", "expl", "intj", "mark", "meta", "neg",
+                     "nmod", "npadvmod", "nsubj", "nsubjpass", "nummod", "oprd",
+                     "parataxis", "pcomp", "pobj", "poss", "preconj", "predet",
+                     "prep", "prt", "punct", "quantmod", "relcl", "root", "xcomp"])
+    # fmt: on
+    data_path = TEST_FILES_DIR / test_file
     if not data_path.exists():
         raise FileNotFoundError("Test corpus not found", data_path)
     corpus = GoldCorpus(data_path, data_path)
     dev_docs = list(corpus.dev_docs(NLP, gold_preproc=False))
-
     pred_deps = set()
-    parser = NLP.get_pipe('parser')
-
+    parser = NLP.get_pipe("parser")
     for doc, _ in dev_docs:
         parser(doc)
         pred_deps = pred_deps.union(set([t.dep_ for t in doc]))
-
     assert len(pred_deps - gold_deps) == 0
 
 

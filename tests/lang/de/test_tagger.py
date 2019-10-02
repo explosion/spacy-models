@@ -1,25 +1,20 @@
 # coding: utf-8
 from __future__ import unicode_literals
 
-import os
 import pytest
 from spacy.tokens import Doc
 from spacy.compat import unicode_
 from spacy.parts_of_speech import SPACE
 from spacy.gold import GoldCorpus
-from spacy import util
+from pathlib import Path
 
-# from spacy.lemmatizer import lemmatize
 
-TEST_FILES_DIR = os.path.join(
-    os.path.dirname(os.path.realpath(__file__)),
-    'test_files',
-)
+TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
 @pytest.fixture
 def lemmatizer(NLP):
-    return NLP.Defaults.create_lemmatizer()
+    return NLP.vocab.morphology.lemmatizer
 
 
 def test_de_tagger_tag_names(NLP):
@@ -39,47 +34,41 @@ def test_de_tagger_example(NLP):
 
 # This threshold is artificially low due to problems with spacy 2.1. (#3830)
 @pytest.mark.parametrize(
-    "test_file,accuracy_threshold",
-    [("de_pud-ud-test.stts.json", 93)]
+    "test_file,accuracy_threshold", [("de_pud-ud-test.stts.json", 93)]
 )
 def test_de_tagger_corpus(NLP, test_file, accuracy_threshold):
-    data_path = os.path.join(TEST_FILES_DIR, test_file)
-    data_path = util.ensure_path(data_path)
+    data_path = TEST_FILES_DIR / test_file
     if not data_path.exists():
         raise FileNotFoundError("Test corpus not found", data_path)
     corpus = GoldCorpus(data_path, data_path)
     dev_docs = list(corpus.dev_docs(NLP, gold_preproc=False))
     scorer = NLP.evaluate(dev_docs)
-
     assert scorer.tags_acc > accuracy_threshold
 
 
-@pytest.mark.parametrize(
-    "test_file",
-    ["de_pud-ud-test.stts.json"]
-)
+@pytest.mark.parametrize("test_file", ["de_pud-ud-test.stts.json"])
 def test_de_tagger_tagset(NLP, test_file):
     """Check that no tags outside the tagset are used."""
-    gold_tags = {"$(", "$,", "$.", "ADJA", "ADJD", "ADV", "APPO", "APPR", "APPRART", "APZR", "ART", "CARD", "FM", "ITJ",
-                 "KOKOM", "KON", "KOUI", "KOUS", "NE", "NN", "NNE", "PDAT", "PDS", "PIAT", "PIS", "PPER", "PPOSAT",
-                 "PPOSS", "PRELAT", "PRELS", "PRF", "PROAV", "PTKA", "PTKANT", "PTKNEG", "PTKVZ", "PTKZU", "PWAT",
-                 "PWAV", "PWS", "TRUNC", "VAFIN", "VAIMP", "VAINF", "VAPP", "VMFIN", "VMINF", "VMPP", "VVFIN", "VVIMP",
-                 "VVINF", "VVIZU", "VVPP", "XY"}
-
-    data_path = os.path.join(TEST_FILES_DIR, test_file)
-    data_path = util.ensure_path(data_path)
+    # fmt: off
+    gold_tags = {"$(", "$,", "$.", "ADJA", "ADJD", "ADV", "APPO", "APPR",
+                 "APPRART", "APZR", "ART", "CARD", "FM", "ITJ", "KOKOM", "KON",
+                 "KOUI", "KOUS", "NE", "NN", "NNE", "PDAT", "PDS", "PIAT",
+                 "PIS", "PPER", "PPOSAT", "PPOSS", "PRELAT", "PRELS", "PRF",
+                 "PROAV", "PTKA", "PTKANT", "PTKNEG", "PTKVZ", "PTKZU", "PWAT",
+                 "PWAV", "PWS", "TRUNC", "VAFIN", "VAIMP", "VAINF", "VAPP",
+                 "VMFIN", "VMINF", "VMPP", "VVFIN", "VVIMP", "VVINF", "VVIZU",
+                 "VVPP", "XY"}
+    # fmt: on
+    data_path = TEST_FILES_DIR / test_file
     if not data_path.exists():
         raise FileNotFoundError("Test corpus not found", data_path)
     corpus = GoldCorpus(data_path, data_path)
     dev_docs = list(corpus.dev_docs(NLP, gold_preproc=False))
-
     pred_tags = set()
-    tagger = NLP.get_pipe('tagger')
-
+    tagger = NLP.get_pipe("tagger")
     for doc, _ in dev_docs:
         tagger(doc)
         pred_tags = pred_tags.union(set([t.tag_ for t in doc]))
-
     assert len(pred_tags - gold_tags) == 0
 
 
@@ -115,6 +104,7 @@ def test_de_tagger_return_char(NLP):
 @pytest.mark.xfail
 @pytest.mark.parametrize(
     "text,pos,tags",
+    # fmt: off
     [
         ('"Altbau-Wohnung".',
          ["PUNCT", "NOUN", "PUNCT", "PUNCT"],
@@ -129,6 +119,7 @@ def test_de_tagger_return_char(NLP):
          ["NOUN", "PUNCT", "ADJ", "PUNCT", "ADJ", "PUNCT", "PUNCT", "ADV", "ADJ", "PUNCT", "PUNCT"],
          ["NN", "$.", "ADJD", "$,", "ADJD", "$.", "$(", "ADV", "ADJD", "$.", "$("]),
     ],
+    # fmt: on
 )
 def test_de_tagger_punctuation(NLP, text, pos, tags):
     """Ensure punctuation is tagged correctly"""
@@ -167,7 +158,7 @@ def test_de_tagger_lemma_punct(lemmatizer):
 # Both inconsistent and weird:
 #
 #    mir -> sich / Mir -> ich
-# 
+#
 # While a token-based lookup lemmatizer is never going to work that well for
 # German, it looks like a lot of weirdness and inconsistencies were introduced
 # in https://github.com/michmech/lemmatization-lists/ . (The original resources
@@ -188,10 +179,7 @@ def test_de_tagger_lemma_issue686(NLP, text):
 
 @pytest.mark.xfail
 @pytest.mark.parametrize(
-    "text1,text2",
-    [
-        ("Dort gibt's einen Bäcker", "Dort gibt es einen Bäcker"),
-    ],
+    "text1,text2", [("Dort gibt's einen Bäcker", "Dort gibt es einen Bäcker")]
 )
 def test_de_tagger_lemma_issue717(NLP, text1, text2):
     """Test that contractions are assigned the correct lemma."""
