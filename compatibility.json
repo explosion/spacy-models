@@ -19,11 +19,11 @@
             "nb_core_news_sm": ["2.2.0"],
             "lt_core_news_sm": ["2.2.0"],
             "xx_ent_wiki_sm": ["2.2.0"],
-            "en_pytt_bertbaseuncased_lg": ["2.1.1", "2.1.0"],
-            "en_pytt_xlnetbasecased_lg": ["2.1.1", "2.1.0"],
-            "en_pytt_robertabase_lg": ["2.1.0"],
-            "en_pytt_distilbertbaseuncased_lg": ["2.1.0"],
-            "de_pytt_bertbasecased_lg": ["2.1.1", "2.1.0"]
+            "en_trf_bertbaseuncased_lg": ["2.2.0"],
+            "en_trf_xlnetbasecased_lg": ["2.2.0"],
+            "en_trf_robertabase_lg": ["2.2.0"],
+            "en_trf_distilbertbaseuncased_lg": ["2.2.0"],
+            "de_pytt_bertbasecased_lg": ["2.2.0"]
         },
         "2.2.0": {
             "en_vectors_web_lg": ["2.1.0"],
@@ -44,11 +44,11 @@
             "nb_core_news_sm": ["2.2.0"],
             "lt_core_news_sm": ["2.2.0"],
             "xx_ent_wiki_sm": ["2.2.0"],
-            "en_pytt_bertbaseuncased_lg": ["2.1.1", "2.1.0"],
-            "en_pytt_xlnetbasecased_lg": ["2.1.1", "2.1.0"],
-            "en_pytt_robertabase_lg": ["2.1.0"],
-            "en_pytt_distilbertbaseuncased_lg": ["2.1.0"],
-            "de_pytt_bertbasecased_lg": ["2.1.1", "2.1.0"]
+            "en_trf_bertbaseuncased_lg": ["2.2.0"],
+            "en_trf_xlnetbasecased_lg": ["2.2.0"],
+            "en_trf_robertabase_lg": ["2.2.0"],
+            "en_trf_distilbertbaseuncased_lg": ["2.2.0"],
+            "de_pytt_bertbasecased_lg": ["2.2.0"]
         },
         "2.1.8": {
             "en_vectors_web_lg": ["2.1.0"],
