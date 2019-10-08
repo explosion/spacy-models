@@ -17,7 +17,7 @@
   ],
   "version": "2.2.1",
   "requirements": [
-    "spacy-transformers>=0.5.0.dev1"
+    "spacy-transformers>=0.5.0"
   ],
   "spacy_version": ">=2.2.1",
   "vectors": {
@@ -33,5 +33,5 @@
   ],
   "labels": {},
   "size": "387 MB",
-  "checksum": "ca3128af4161edd2a47b026a20f644f3465e9025f30b1839cc94a5e76cef601b"
+  "checksum": "ad8265d74075e438ccd59f02bfc7590626b8e64c22a8ca1bbafac4deb037a623"
 }
