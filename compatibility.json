@@ -5,7 +5,7 @@
             "en_core_web_sm": ["2.2.0"],
             "en_core_web_md": ["2.2.0"],
             "en_core_web_lg": ["2.2.0"],
-            "de_core_news_sm": ["2.2.1", "2.2.0"],
+            "de_core_news_sm": ["2.2.0"],
             "de_core_news_md": ["2.2.1", "2.2.0"],
             "es_core_news_sm": ["2.2.0"],
             "es_core_news_md": ["2.2.0"],
