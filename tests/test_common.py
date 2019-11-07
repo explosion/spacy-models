@@ -2,7 +2,16 @@
 from __future__ import unicode_literals
 
 import pytest
+import importlib
 from spacy.tokens import Doc, Token
+
+
+@pytest.fixture
+def example_text(NLP):
+    examples = importlib.import_module("spacy.lang." + NLP.lang + ".examples")
+    # TODO: need a language-specific setting since space is not appropriate for
+    # all languages
+    return " ".join(examples.sentences)
 
 
 def test_common_installs(NLP):
@@ -91,6 +100,41 @@ def test_common_issue1253(NLP):
     parser(doc)
     parser(doc)
     iter_doc(doc)
+
+
+@pytest.mark.requires("tagger")
+def test_tagger_sanity_checks(NLP, example_text):
+    doc = NLP(example_text)
+    # check that the labels are a subset of the meta model labels
+    model_labels = set(NLP.meta["labels"]["tagger"])
+    assert set([t.tag_ for t in doc]) <= model_labels
+    # check that the labels are a subset of the pipe model labels
+    model_labels = set(NLP.get_pipe("tagger").labels)
+    assert set([t.tag_ for t in doc]) <= model_labels
+
+
+@pytest.mark.requires("parser")
+def test_parser_sanity_checks(NLP, example_text):
+    doc = NLP(example_text)
+    # check that sentences are split
+    assert len(list(doc.sents)) > 1
+    # check that the labels are a subset of the meta model labels
+    model_labels = set(NLP.meta["labels"]["parser"])
+    assert set([t.dep_ for t in doc]) <= model_labels | {''}
+    # check that the labels are a subset of the pipe model labels
+    model_labels = set(NLP.get_pipe("parser").labels)
+    assert set([t.dep_ for t in doc]) <= model_labels | {''}
+
+
+@pytest.mark.requires("ner")
+def test_ner_sanity_checks(NLP, example_text):
+    doc = NLP(example_text)
+    # check that the labels are a subset of the meta model labels
+    model_labels = set(NLP.meta["labels"]["ner"])
+    assert set([t.ent_type_ for t in doc]) <= model_labels | {''}
+    # check that the labels are a subset of the pipe model labels
+    model_labels = set(NLP.get_pipe("ner").labels)
+    assert set([t.ent_type_ for t in doc]) <= model_labels | {''}
 
 
 def test_common_issue1919(nlp):
