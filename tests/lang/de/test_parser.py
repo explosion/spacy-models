@@ -13,13 +13,7 @@ TEST_FILES_DIR = Path(__file__).parent / "test_files"
 @pytest.mark.parametrize("test_file", [("de_pud-ud-test.stts.json")])
 def test_de_parser_depset(NLP, test_file):
     """Check that no tags outside the tagset are used."""
-    # fmt: off
-    gold_deps = set(["ROOT", "ac", "adc", "ag", "ams", "app", "avc", "cc", "cd",
-                     "cj", "cm", "cp", "cvc", "da", "dm", "ep", "ju", "mnr",
-                     "mo", "ng", "nk", "nmc", "oa", "oc", "og", "op", "par",
-                     "pd", "pg", "ph", "pm", "pnc", "punct", "rc", "re", "rs",
-                     "sb", "sbp", "sp", "svp", "uc", "vo"])
-    # fmt: on
+    gold_deps = set(NLP.get_pipe("parser").labels)
     data_path = TEST_FILES_DIR / test_file
     if not data_path.exists():
         raise FileNotFoundError("Test corpus not found", data_path)
