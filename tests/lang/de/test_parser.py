@@ -9,7 +9,6 @@ from pathlib import Path
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
-@pytest.mark.xfail
 @pytest.mark.parametrize("test_file", [("de_pud-ud-test.stts.json")])
 def test_de_parser_depset(NLP, test_file):
     """Check that no tags outside the tagset are used."""

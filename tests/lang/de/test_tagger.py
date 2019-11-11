@@ -72,7 +72,6 @@ def test_de_tagger_tagset(NLP, test_file):
     assert len(pred_tags - gold_tags) == 0
 
 
-@pytest.mark.xfail
 def test_de_tagger_spaces(NLP):
     """Ensure spaces are assigned the POS tag SPACE"""
     doc = NLP("Manche\nLeerzeichen sind\terforderlich.")
@@ -80,7 +79,7 @@ def test_de_tagger_spaces(NLP):
     assert doc[0].pos_ != "SPACE"
     assert doc[1].pos == SPACE
     assert doc[1].pos_ == "SPACE"
-    assert doc[1].tag_ == "SP"
+    assert doc[1].tag_ == "_SP"
     assert doc[2].pos != SPACE
     assert doc[3].pos != SPACE
     assert doc[4].pos == SPACE
@@ -101,7 +100,6 @@ def test_de_tagger_return_char(NLP):
     assert doc[3].pos == SPACE
 
 
-@pytest.mark.xfail
 @pytest.mark.parametrize(
     "text,pos,tags",
     # fmt: off
@@ -141,7 +139,6 @@ def test_de_tagger_lemma_assignment(NLP):
     assert all(t.lemma_ != "" for t in doc)
 
 
-@pytest.mark.xfail
 def test_de_tagger_lemma_punct(lemmatizer):
     assert lemmatizer.punct("“") == ['"']
     assert lemmatizer.punct("”") == ['"']
@@ -163,13 +160,11 @@ def test_de_tagger_lemma_punct(lemmatizer):
 # German, it looks like a lot of weirdness and inconsistencies were introduced
 # in https://github.com/michmech/lemmatization-lists/ . (The original resources
 # look more consistent and also include POS information.)
-@pytest.mark.xfail
 def test_de_tagger_lemma_base_forms(lemmatizer):
     assert lemmatizer.noun("Schimmel") == ["Schimmel"]
     assert lemmatizer.noun("Schimmeln") == ["Schimmel"]
 
 
-@pytest.mark.xfail
 @pytest.mark.parametrize("text", ["Er ist wieder da", "er ist wieder da"])
 def test_de_tagger_lemma_issue686(NLP, text):
     """Test that pronoun lemmas are assigned correctly."""
@@ -177,7 +172,6 @@ def test_de_tagger_lemma_issue686(NLP, text):
     assert tokens[0].lemma_ == "er"
 
 
-@pytest.mark.xfail
 @pytest.mark.parametrize(
     "text1,text2", [("Dort gibt's einen Bäcker", "Dort gibt es einen Bäcker")]
 )
