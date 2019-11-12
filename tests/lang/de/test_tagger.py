@@ -72,7 +72,6 @@ def test_de_tagger_tagset(NLP, test_file):
     assert len(pred_tags - gold_tags) == 0
 
 
-@pytest.mark.xfail
 def test_de_tagger_spaces(NLP):
     """Ensure spaces are assigned the POS tag SPACE"""
     doc = NLP("Manche\nLeerzeichen sind\terforderlich.")
@@ -80,7 +79,7 @@ def test_de_tagger_spaces(NLP):
     assert doc[0].pos_ != "SPACE"
     assert doc[1].pos == SPACE
     assert doc[1].pos_ == "SPACE"
-    assert doc[1].tag_ == "SP"
+    assert doc[1].tag_ == "_SP"
     assert doc[2].pos != SPACE
     assert doc[3].pos != SPACE
     assert doc[4].pos == SPACE
@@ -101,7 +100,6 @@ def test_de_tagger_return_char(NLP):
     assert doc[3].pos == SPACE
 
 
-@pytest.mark.xfail
 @pytest.mark.parametrize(
     "text,pos,tags",
     # fmt: off
@@ -113,7 +111,7 @@ def test_de_tagger_return_char(NLP):
          ["PUNCT", "NOUN", "PUNCT", "PUNCT", "PUNCT", "NOUN", "PUNCT"],
          ["$(", "NN", "$(", "$(", "$(", "NN", "$("]),
         ("Du und ich –",
-         ["PRON", "CONJ", "PRON", "PUNCT"],
+         ["PRON", "CCONJ", "PRON", "PUNCT"],
          ["PPER", "KON", "PPER", "$("]),
         ("Farben: rot, blau! (Auch lila?)",
          ["NOUN", "PUNCT", "ADJ", "PUNCT", "ADJ", "PUNCT", "PUNCT", "ADV", "ADJ", "PUNCT", "PUNCT"],
@@ -124,18 +122,23 @@ def test_de_tagger_return_char(NLP):
 def test_de_tagger_punctuation(NLP, text, pos, tags):
     """Ensure punctuation is tagged correctly"""
     doc = NLP(text)
+    doc_data = [(w.text, w.tag_, w.pos_) for w in doc]
     for token, expected_pos in zip(doc, pos):
-        assert token.pos_ == expected_pos
+        if token.is_punct:
+            assert token.pos_ == expected_pos, doc_data
     for token, expected_tag in zip(doc, tags):
-        assert token.tag_ == expected_tag
+        if token.is_punct:
+            assert token.tag_ == expected_tag, doc_data
 
 
+@pytest.mark.xfail
 def test_de_tagger_lemma_doc(NLP, lemmatizer):
     doc = Doc(NLP.vocab, words=["gegessen"])
     doc[0].tag_ = "VVPP"
     assert doc[0].lemma_ == "essen"
 
 
+@pytest.mark.xfail
 def test_de_tagger_lemma_assignment(NLP):
     doc = NLP("Bananen in Schlafanzügen sind Gänse.")
     assert all(t.lemma_ != "" for t in doc)
@@ -175,7 +178,6 @@ def test_de_tagger_lemma_issue686(NLP, text):
     """Test that pronoun lemmas are assigned correctly."""
     tokens = NLP(text)
     assert tokens[0].lemma_ == "er"
-
 
 @pytest.mark.xfail
 @pytest.mark.parametrize(

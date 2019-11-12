@@ -1,0 +1,116 @@
+{
+  "name": "core_news_md",
+  "lang": "el",
+  "description": "Greek pipeline with word vectors, POS tags, dependencies and named entities. Word vectors use Facebook's FastText Common Crawl vectors, pruned to a vocabulary of 20,000 items. Words outside the most frequent were mapped to the nearest neighbouring vector within the 20,000 rows retained. Syntax (dependencies and POS tags) trained from the Universal Dependencies conversion of the Greek Dependency Treebank (v2.2). Named entity annotations were created by Giannis Daras using Prodigy, using the OntoNotes 5 annotation schema.",
+  "author": "Explosion and Giannis Daras",
+  "email": "contact@explosion.ai",
+  "license": "CC BY-NC-SA 3.0",
+  "sources": [
+    {
+      "name": "Greek UD Treebank",
+      "url": "https://github.com/UniversalDependencies/UD_Greek-GDT",
+      "license": "CC BY-NC-SA 3.0"
+    },
+    {
+      "name": "Greek NER Corpus (Google Summer of Code 2018)",
+      "author": "Giannis Daras",
+      "url": "https://github.com/eellak/gsoc2018-spacy"
+    },
+    {
+      "name": "Common Crawl"
+    }
+  ],
+  "url": "https://github.com/eellak/gsoc2018-spacy",
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "version": "2.2.2",
+  "spacy_version": ">=2.2.0",
+  "parent_package": "spacy",
+  "accuracy": {
+    "las": 84.576532511,
+    "uas": 87.8834600457,
+    "token_acc": 100.0,
+    "tags_acc": 96.5144115676,
+    "ents_f": 78.5714285714,
+    "ents_p": 78.5714285714,
+    "ents_r": 78.5714285714
+  },
+  "speed": {
+    "cpu": 8004.3027777219,
+    "gpu": null,
+    "nwords": 6191
+  },
+  "labels": {
+    "tagger": [
+      "ADJ",
+      "ADP",
+      "ADV",
+      "AUX",
+      "AsPpSp",
+      "AtDf",
+      "CCONJ",
+      "DET",
+      "NOUN",
+      "NUM",
+      "PART",
+      "PRON",
+      "PROPN",
+      "PUNCT",
+      "SCONJ",
+      "SYM",
+      "VERB",
+      "X",
+      "_SP"
+    ],
+    "parser": [
+      "ROOT",
+      "acl",
+      "acl:relcl",
+      "advcl",
+      "advmod",
+      "amod",
+      "appos",
+      "aux",
+      "case",
+      "cc",
+      "ccomp",
+      "conj",
+      "cop",
+      "csubj",
+      "dep",
+      "det",
+      "fixed",
+      "flat",
+      "iobj",
+      "mark",
+      "nmod",
+      "nsubj",
+      "nummod",
+      "obj",
+      "obl",
+      "parataxis",
+      "punct",
+      "vocative",
+      "xcomp"
+    ],
+    "ner": [
+      "EVENT",
+      "GPE",
+      "LOC",
+      "ORG",
+      "PERSON",
+      "PRODUCT"
+    ]
+  },
+  "vectors": {
+    "width": 300,
+    "vectors": 20000,
+    "keys": 1999938,
+    "name": "el_core_news_md.vectors"
+  },
+  "size": "126 MB",
+  "checksum": "874be2269a67bdca731586ce1deec96c7b9531df2772fc424aefe100bfc8ff8d"
+}

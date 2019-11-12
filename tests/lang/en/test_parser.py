@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 import pytest
 from spacy.gold import GoldCorpus
 from pathlib import Path
+from ...util import apply_transition_sequence
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
@@ -50,7 +51,6 @@ def test_en_parser_depset(NLP, test_file):
     assert len(pred_deps - gold_deps) == 0
 
 
-@pytest.mark.xfail
 @pytest.mark.parametrize("text", ["My grandfather was laid to rest last Saturday"])
 def test_en_parser_norm_exceptions(NLP, text):
     """Test that the parser isn't sensitive to different unicode variations
@@ -63,25 +63,26 @@ def test_en_parser_norm_exceptions(NLP, text):
         assert [t.dep_ for t in NLP(text1)] == [t.dep_ for t in NLP(text2)]
 
 
-# NB: test currently causes segfault on en_core_web_sm
-# @pytest.mark.xfail
-# def test_en_parser_sbd_serialization_projective(nlp):
-#     """Test that before and after serialization, the sentence boundaries are
-#     the same."""
-#     # fmt: off
-#     text = "I bought a couch from IKEA It wasn't very comfortable."
-#     transition = ["L-nsubj", "S", "L-det", "R-dobj", "D", "R-prep", "R-pobj",
-#                   "B-ROOT", "L-nsubj", "R-neg", "D", "S", "L-advmod",
-#                   "R-acomp", "D", "R-punct"]
-#     # fmt: on
+@pytest.mark.skip
+def test_en_parser_sbd_serialization_projective(nlp):
+    """Test that before and after serialization, the sentence boundaries are
+     the same."""
+    # NB: This was marked as causing segfault previously.
+    # fmt: off
+    text = "I bought a couch from IKEA It wasn't very comfortable."
+    transition = ["L-nsubj", "S", "L-det", "R-dobj", "D", "R-prep", "R-pobj",
+                  "B-ROOT", "L-nsubj", "R-neg", "D", "S", "L-advmod",
+                  "R-acomp", "D", "R-punct"]
+    # fmt: on
 
-#     doc = nlp.tokenizer(text)
-#     apply_transition_sequence(nlp.get_pipe("parser"), doc, transition)
-#     doc_serialized = Doc(nlp.vocab).from_bytes(doc.to_bytes())
-#     assert doc.is_parsed
-#     assert doc_serialized.is_parsed
-#     assert doc.to_bytes() == doc_serialized.to_bytes()
-#     assert [s.text for s in doc.sents] == [s.text for s in doc_serialized.sents]
+    doc = nlp.tokenizer(text)
+    # This utility function needs to be updated I think?
+    apply_transition_sequence(nlp.get_pipe("parser"), doc, transition)
+    doc_serialized = Doc(nlp.vocab).from_bytes(doc.to_bytes())
+    assert doc.is_parsed
+    assert doc_serialized.is_parsed
+    assert doc.to_bytes() == doc_serialized.to_bytes()
+    assert [s.text for s in doc.sents] == [s.text for s in doc_serialized.sents]
 
 
 def test_en_parser_issue1207(NLP):
@@ -101,7 +102,6 @@ def test_en_parser_issue693(NLP):
     chunks2 = [chunk for chunk in doc2.noun_chunks]
     assert len(chunks1) == 2
     assert len(chunks2) == 2
-
 
 @pytest.mark.xfail
 def test_en_parser_issue704(NLP):
