@@ -37,15 +37,7 @@ def test_en_parser_corpus(NLP, test_file, uas_threshold, las_threshold):
 )
 def test_en_parser_depset(NLP, test_file):
     """Check that no tags outside the tagset are produced."""
-    # fmt: off
-    gold_deps = set(["ROOT", "acl", "acomp", "advcl", "advmod", "agent", "amod",
-                     "appos", "attr", "aux", "auxpass", "case", "cc", "ccomp",
-                     "compound", "conj", "csubj", "csubjpass", "dative", "dep",
-                     "det", "dobj", "expl", "intj", "mark", "meta", "neg",
-                     "nmod", "npadvmod", "nsubj", "nsubjpass", "nummod", "oprd",
-                     "parataxis", "pcomp", "pobj", "poss", "preconj", "predet",
-                     "prep", "prt", "punct", "quantmod", "relcl", "root", "xcomp"])
-    # fmt: on
+    gold_deps = set(NLP.get_pipe("parser").labels)
     data_path = TEST_FILES_DIR / test_file
     if not data_path.exists():
         raise FileNotFoundError("Test corpus not found", data_path)
