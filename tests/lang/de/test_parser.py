@@ -29,4 +29,5 @@ def test_de_parser_depset(NLP, test_file):
     for doc, _ in dev_docs:
         parser(doc)
         pred_deps = pred_deps.union(set([t.dep_ for t in doc]))
-    assert len(pred_deps - gold_deps) == 0
+    unexpected_labels = pred_deps - gold_deps
+    assert not unexpected_labels
