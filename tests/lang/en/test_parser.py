@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import pytest
 from spacy.gold import GoldCorpus
 from pathlib import Path
-from ..util import apply_transition_sequence
+from ...util import apply_transition_sequence
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
