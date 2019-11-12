@@ -11,7 +11,12 @@ def example_text(NLP):
     examples = importlib.import_module("spacy.lang." + NLP.lang + ".examples")
     # TODO: need a language-specific setting since space is not appropriate for
     # all languages
-    return " ".join(examples.sentences)
+    punct_fixed = []
+    for sent in examples.sentences:
+        if not sent.endswith("."):
+            sent += "."
+        punct_fixed.append(sent)
+    return " ".join(punct_fixed)
 
 
 def test_common_installs(NLP):
@@ -115,9 +120,6 @@ def test_tagger_sanity_checks(NLP, example_text):
 
 @pytest.mark.requires("parser")
 def test_parser_sanity_checks(NLP, example_text):
-    # The Italian model is failing on SBD if we have ellipsis. Help it out by
-    # replacing with a period.
-    example_text = example_text.replace("...", ". ")
     doc = NLP(example_text)
     # check that sentences are split
     assert len(list(doc.sents)) > 1
