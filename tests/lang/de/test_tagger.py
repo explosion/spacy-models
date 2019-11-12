@@ -111,7 +111,7 @@ def test_de_tagger_return_char(NLP):
          ["PUNCT", "NOUN", "PUNCT", "PUNCT", "PUNCT", "NOUN", "PUNCT"],
          ["$(", "NN", "$(", "$(", "$(", "NN", "$("]),
         ("Du und ich –",
-         ["PRON", "CONJ", "PRON", "PUNCT"],
+         ["PRON", "CCONJ", "PRON", "PUNCT"],
          ["PPER", "KON", "PPER", "$("]),
         ("Farben: rot, blau! (Auch lila?)",
          ["NOUN", "PUNCT", "ADJ", "PUNCT", "ADJ", "PUNCT", "PUNCT", "ADV", "ADJ", "PUNCT", "PUNCT"],
