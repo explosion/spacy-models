@@ -122,10 +122,11 @@ def test_de_tagger_return_char(NLP):
 def test_de_tagger_punctuation(NLP, text, pos, tags):
     """Ensure punctuation is tagged correctly"""
     doc = NLP(text)
+    doc_data = [(w.text, w.tag_, w.pos_) for w in doc]
     for token, expected_pos in zip(doc, pos):
-        assert token.pos_ == expected_pos
+        assert token.pos_ == expected_pos, doc_data
     for token, expected_tag in zip(doc, tags):
-        assert token.tag_ == expected_tag
+        assert token.tag_ == expected_tag, doc_data
 
 
 @pytest.mark.xfail
