@@ -118,7 +118,7 @@ def test_tagger_sanity_checks(NLP, example_text):
     model_labels = set(NLP.get_pipe("tagger").labels)
     assert set([t.tag_ for t in doc]) <= model_labels
     # check that the labels are all in the tag_map
-    tag_map = importlib.import_module("spacy.lang." + NLP.lang + ".tag_map").TAG_MAP
+    tag_map = NLP.vocab.morphology.tag_map
     tag_map_keys = set([key for key in tag_map.keys()])
     model_labels -= set(["_SP"])
     assert model_labels <= tag_map_keys
