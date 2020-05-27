@@ -48,7 +48,8 @@
             "en_trf_xlnetbasecased_lg": ["2.3.0"],
             "en_trf_robertabase_lg": ["2.3.0"],
             "en_trf_distilbertbaseuncased_lg": ["2.3.0"],
-            "de_trf_bertbasecased_lg": ["2.3.0"]
+            "de_trf_bertbasecased_lg": ["2.3.0"],
+	    "en_vectors_web_lg": ["2.3.0"]
         },
         "2.2.4": {
             "en_vectors_web_lg": ["2.1.0"],
