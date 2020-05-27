@@ -19,7 +19,7 @@ def lemmatizer(NLP):
 
 @pytest.mark.parametrize(
     "test_file,accuracy_threshold",
-    [("zh_gsd-ud-dev_sample.json", 33)],
+    [("zh_gsd-ud-dev_sample.json", 29)],
 )
 def test_zh_tagger_corpus(NLP, test_file, accuracy_threshold):
     data_path = TEST_FILES_DIR / test_file
