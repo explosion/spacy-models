@@ -1,0 +1,213 @@
+[{
+"id": 0,
+"paragraphs": [{
+"raw": "Kaczmarek broni ustawy o Narodowych Funduszach Inwestycyjnych przed zakusami Unii Pracy. - Jak powiedzie\u0107 zak\u0142adom, kt\u00f3re chc\u0105 si\u0119 prywatyzowa\u0107, \u017ce im nie wolno? Wcze\u015bniej zar\u00f3wno SLD, jak i PSL wysuwa\u0142y istotne zastrze\u017cenia wobec zbli\u017cenia Polski z NATO. Trzeba te\u017c spotka\u0107 si\u0119 z fachowcami, uzyska\u0107 pozwolenia, odby\u0107 konsultacje. Je\u017celi buduj\u0105c dom od razu zaplanowali\u015bmy przysz\u0142e wykorzystanie poddasza i uwzgl\u0119dnili\u015bmy to w projekcie architektonicznym, ominie nas kilka wizyt w urz\u0119dach. Jeszcze w czasie studi\u00f3w zainteresowa\u0142 si\u0119 finansami i bankowo\u015bci\u0105. Kiedy jesieni\u0105 ubieg\u0142ego roku Komisja Papier\u00f3w Warto\u015bciowych og\u0142osi\u0142a egzamin na doradc\u00f3w inwestycyjnych, zaryzykowa\u0142. W Waszyngtonie m\u00f3wi si\u0119 zupe\u0142nie wyra\u017anie, \u017ce ostatnie ust\u0119pstwo wobec pacyfistycznie nastawionych europejskich sojusznik\u00f3w mo\u017ce w zdominowanym przez Republikan\u00f3w Kongresie podsyci\u0107 nastroje izolacjonistyczne. Aktywn\u0105 rol\u0119 w mediacjach mi\u0119dzy stronami konfliktu pe\u0142ni\u0105 \u015bwieccy i religijni przedstawiciele 800 tysi\u0119cy mieszkaj\u0105cych w Izraelu Arab\u00f3w. Przygotowuj\u0105 si\u0119 oni do wsp\u00f3lnego udzia\u0142u w wyborach do Knesetu w 1996 roku i obawiaj\u0105 si\u0119 roz\u0142am\u00f3w wewn\u0119trznych.",
+"sentences": [{
+"tokens": [
+{"id": 0,"orth": "Kaczmarek","tag": "subst:sg:nom:m1","pos": "PROPN","lemma": "Kaczmarek","morph": "Animacy=Hum|Case=Nom|Gender=Masc|Number=Sing","head": 1,"dep": "nsubj"},
+{"id": 1,"orth": "broni","tag": "fin:sg:ter:imperf","pos": "VERB","lemma": "broni\u0107","morph": "Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin","head": 0,"dep": "ROOT"},
+{"id": 2,"orth": "ustawy","tag": "subst:sg:gen:f","pos": "NOUN","lemma": "ustawa","morph": "Case=Gen|Gender=Fem|Number=Sing","head": -1,"dep": "obj"},
+{"id": 3,"orth": "o","tag": "prep:loc","pos": "ADP","lemma": "o","morph": "AdpType=Prep|Case=Loc","head": 2,"dep": "case"},
+{"id": 4,"orth": "Narodowych","tag": "adj:pl:loc:m3:pos","pos": "ADJ","lemma": "narodowy","morph": "Animacy=Inan|Case=Loc|Degree=Pos|Gender=Masc|Number=Plur","head": 1,"dep": "amod"},
+{"id": 5,"orth": "Funduszach","tag": "subst:pl:loc:m3","pos": "NOUN","lemma": "fundusz","morph": "Animacy=Inan|Case=Loc|Gender=Masc|Number=Plur","head": -3,"dep": "nmod"},
+{"id": 6,"orth": "Inwestycyjnych","tag": "adj:pl:loc:m3:pos","pos": "ADJ","lemma": "inwestycyjny","morph": "Animacy=Inan|Case=Loc|Degree=Pos|Gender=Masc|Number=Plur","head": -1,"dep": "amod"},
+{"id": 7,"orth": "przed","tag": "prep:inst:nwok","pos": "ADP","lemma": "przed","morph": "AdpType=Prep|Case=Ins|Variant=Short","head": 1,"dep": "case"},
+{"id": 8,"orth": "zakusami","tag": "subst:pl:inst:n","pos": "NOUN","lemma": "zakusy","morph": "Case=Ins|Gender=Neut|Number=Plur","head": -7,"dep": "obl:arg"},
+{"id": 9,"orth": "Unii","tag": "subst:sg:gen:f","pos": "NOUN","lemma": "unia","morph": "Case=Gen|Gender=Fem|Number=Sing","head": -1,"dep": "nmod"},
+{"id": 10,"orth": "Pracy","tag": "subst:sg:gen:f","pos": "NOUN","lemma": "praca","morph": "Case=Gen|Gender=Fem|Number=Sing","head": -1,"dep": "nmod"},
+{"id": 11,"orth": ".","tag": "interp","pos": "PUNCT","lemma": ".","morph": "","head": -10,"dep": "punct"}
+]
+},
+{
+"tokens": [
+{"id": 0,"orth": "-","tag": "interp","pos": "PUNCT","lemma": "-","morph": "","head": 2,"dep": "punct"},
+{"id": 1,"orth": "Jak","tag": "adv","pos": "ADV","lemma": "jak","morph": "","head": 1,"dep": "advmod"},
+{"id": 2,"orth": "powiedzie\u0107","tag": "inf:perf","pos": "VERB","lemma": "powiedzie\u0107","morph": "Aspect=Perf|VerbForm=Inf","head": 0,"dep": "ROOT"},
+{"id": 3,"orth": "zak\u0142adom","tag": "subst:pl:dat:m3","pos": "NOUN","lemma": "zak\u0142ad","morph": "Animacy=Inan|Case=Dat|Gender=Masc|Number=Plur","head": -1,"dep": "iobj"},
+{"id": 4,"orth": ",","tag": "interp","pos": "PUNCT","lemma": ",","morph": "","head": 2,"dep": "punct"},
+{"id": 5,"orth": "kt\u00f3re","tag": "adj:pl:nom:m3:pos","pos": "DET","lemma": "kt\u00f3ry","morph": "Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur|PronType=Int,Rel","head": 1,"dep": "nsubj"},
+{"id": 6,"orth": "chc\u0105","tag": "fin:pl:ter:imperf","pos": "VERB","lemma": "chcie\u0107","morph": "Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin","head": -3,"dep": "acl"},
+{"id": 7,"orth": "si\u0119","tag": "qub","pos": "PRON","lemma": "si\u0119","morph": "PronType=Prs|Reflex=Yes","head": 1,"dep": "expl:pv"},
+{"id": 8,"orth": "prywatyzowa\u0107","tag": "inf:imperf","pos": "VERB","lemma": "prywatyzowa\u0107","morph": "Aspect=Imp|VerbForm=Inf","head": -2,"dep": "xcomp"},
+{"id": 9,"orth": ",","tag": "interp","pos": "PUNCT","lemma": ",","morph": "","head": 4,"dep": "punct"},
+{"id": 10,"orth": "\u017ce","tag": "comp","pos": "SCONJ","lemma": "\u017ce","morph": "","head": 3,"dep": "mark"},
+{"id": 11,"orth": "im","tag": "ppron3:pl:dat:m3:ter:akc:npraep","pos": "PRON","lemma": "on","morph": "Animacy=Inan|Case=Dat|Gender=Masc|Number=Plur|Person=3|PrepCase=Npr|PronType=Prs|Variant=Long","head": 2,"dep": "obj"},
+{"id": 12,"orth": "nie","tag": "qub","pos": "PART","lemma": "nie","morph": "","head": 1,"dep": "advmod"},
+{"id": 13,"orth": "wolno","tag": "pred","pos": "VERB","lemma": "wolno","morph": "","head": -11,"dep": "ccomp"},
+{"id": 14,"orth": "?","tag": "interp","pos": "PUNCT","lemma": "?","morph": "","head": -12,"dep": "punct"}
+]
+},
+{
+"tokens": [
+{"id": 0,"orth": "Wcze\u015bniej","tag": "adv:com","pos": "ADV","lemma": "wcze\u015bnie","morph": "","head": 7,"dep": "advmod"},
+{"id": 1,"orth": "zar\u00f3wno","tag": "conj","pos": "CCONJ","lemma": "zar\u00f3wno","morph": "","head": 1,"dep": "cc"},
+{"id": 2,"orth": "SLD","tag": "subst:sg:nom:m3","pos": "PROPN","lemma": "SLD","morph": "Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing","head": 5,"dep": "nsubj"},
+{"id": 3,"orth": ",","tag": "interp","pos": "PUNCT","lemma": ",","morph": "","head": 3,"dep": "punct"},
+{"id": 4,"orth": "jak","tag": "conj","pos": "CCONJ","lemma": "jak","morph": "","head": 2,"dep": "cc"},
+{"id": 5,"orth": "i","tag": "qub","pos": "PART","lemma": "i","morph": "","head": -3,"dep": "case"},
+{"id": 6,"orth": "PSL","tag": "subst:sg:nom:n","pos": "PROPN","lemma": "PSL","morph": "Case=Nom|Gender=Neut|Number=Sing","head": -4,"dep": "conj"},
+{"id": 7,"orth": "wysuwa\u0142y","tag": "praet:pl:n:imperf","pos": "VERB","lemma": "wysuwa\u0107","morph": "Aspect=Imp|Gender=Neut|Number=Plur|Tense=Past|VerbForm=Part|Voice=Act","head": 0,"dep": "ROOT"},
+{"id": 8,"orth": "istotne","tag": "adj:pl:acc:n:pos","pos": "ADJ","lemma": "istotny","morph": "Case=Acc|Degree=Pos|Gender=Neut|Number=Plur","head": 1,"dep": "amod"},
+{"id": 9,"orth": "zastrze\u017cenia","tag": "subst:pl:acc:n","pos": "NOUN","lemma": "zastrze\u017cenie","morph": "Case=Acc|Gender=Neut|Number=Plur","head": -2,"dep": "obj"},
+{"id": 10,"orth": "wobec","tag": "prep:gen","pos": "ADP","lemma": "wobec","morph": "AdpType=Prep|Case=Gen","head": 1,"dep": "case"},
+{"id": 11,"orth": "zbli\u017cenia","tag": "subst:sg:gen:n","pos": "NOUN","lemma": "zbli\u017cenie","morph": "Case=Gen|Gender=Neut|Number=Sing","head": -2,"dep": "nmod"},
+{"id": 12,"orth": "Polski","tag": "subst:sg:gen:f","pos": "PROPN","lemma": "Polska","morph": "Case=Gen|Gender=Fem|Number=Sing","head": -1,"dep": "nmod"},
+{"id": 13,"orth": "z","tag": "prep:inst:nwok","pos": "ADP","lemma": "z","morph": "AdpType=Prep|Case=Ins|Variant=Short","head": 1,"dep": "case"},
+{"id": 14,"orth": "NATO","tag": "subst:sg:inst:f","pos": "PROPN","lemma": "NATO","morph": "Case=Ins|Gender=Fem|Number=Sing","head": -3,"dep": "nmod"},
+{"id": 15,"orth": ".","tag": "interp","pos": "PUNCT","lemma": ".","morph": "","head": -8,"dep": "punct"}
+]
+},
+{
+"tokens": [
+{"id": 0,"orth": "Trzeba","tag": "pred","pos": "VERB","lemma": "trzeba","morph": "","head": 0,"dep": "ROOT"},
+{"id": 1,"orth": "te\u017c","tag": "qub","pos": "PART","lemma": "te\u017c","morph": "","head": -1,"dep": "advmod"},
+{"id": 2,"orth": "spotka\u0107","tag": "inf:perf","pos": "VERB","lemma": "spotka\u0107","morph": "Aspect=Perf|VerbForm=Inf","head": -2,"dep": "xcomp"},
+{"id": 3,"orth": "si\u0119","tag": "qub","pos": "PRON","lemma": "si\u0119","morph": "PronType=Prs|Reflex=Yes","head": -1,"dep": "expl:pv"},
+{"id": 4,"orth": "z","tag": "prep:inst:nwok","pos": "ADP","lemma": "z","morph": "AdpType=Prep|Case=Ins|Variant=Short","head": 1,"dep": "case"},
+{"id": 5,"orth": "fachowcami","tag": "subst:pl:inst:m1","pos": "NOUN","lemma": "fachowiec","morph": "Animacy=Hum|Case=Ins|Gender=Masc|Number=Plur","head": -3,"dep": "obl:arg"},
+{"id": 6,"orth": ",","tag": "interp","pos": "PUNCT","lemma": ",","morph": "","head": 1,"dep": "punct"},
+{"id": 7,"orth": "uzyska\u0107","tag": "inf:perf","pos": "VERB","lemma": "uzyska\u0107","morph": "Aspect=Perf|VerbForm=Inf","head": -7,"dep": "conj"},
+{"id": 8,"orth": "pozwolenia","tag": "subst:pl:acc:n","pos": "NOUN","lemma": "pozwolenie","morph": "Case=Acc|Gender=Neut|Number=Plur","head": -1,"dep": "obj"},
+{"id": 9,"orth": ",","tag": "interp","pos": "PUNCT","lemma": ",","morph": "","head": 1,"dep": "punct"},
+{"id": 10,"orth": "odby\u0107","tag": "inf:perf","pos": "VERB","lemma": "odby\u0107","morph": "Aspect=Perf|VerbForm=Inf","head": -10,"dep": "conj"},
+{"id": 11,"orth": "konsultacje","tag": "subst:pl:acc:f","pos": "NOUN","lemma": "konsultacja","morph": "Case=Acc|Gender=Fem|Number=Plur","head": -1,"dep": "obj"},
+{"id": 12,"orth": ".","tag": "interp","pos": "PUNCT","lemma": ".","morph": "","head": -12,"dep": "punct"}
+]
+},
+{
+"tokens": [
+{"id": 0,"orth": "Je\u017celi","tag": "comp","pos": "SCONJ","lemma": "je\u017celi","morph": "","head": 5,"dep": "mark"},
+{"id": 1,"orth": "buduj\u0105c","tag": "pcon:imperf","pos": "VERB","lemma": "budowa\u0107","morph": "Aspect=Imp|Tense=Pres|VerbForm=Conv","head": 4,"dep": "advcl"},
+{"id": 2,"orth": "dom","tag": "subst:sg:acc:m3","pos": "NOUN","lemma": "dom","morph": "Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing","head": -1,"dep": "obj"},
+{"id": 3,"orth": "od","tag": "prep:gen:nwok","pos": "ADP","lemma": "od","morph": "AdpType=Prep|Case=Gen|Variant=Short","head": 2,"dep": "advmod"},
+{"id": 4,"orth": "razu","tag": "subst:sg:gen:m3","pos": "NOUN","lemma": "raz","morph": "Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing","head": -1,"dep": "case"},
+{"id": 5,"orth": "zaplanowali\u015bmy","tag": "praet:pl:m1:perf_aglt:pl:pri:imperf:nwok","pos": "VERB","lemma": "zaplanowa\u0107 by\u0107","morph": "Animacy=Hum|Aspect=Imp,Perf|Gender=Masc|Mood=Ind|Number=Plur|Person=1|Tense=Past,Pres|Variant=Short|VerbForm=Fin,Part|Voice=Act","head": 11,"dep": "advcl"},
+{"id": 6,"orth": "przysz\u0142e","tag": "adj:sg:acc:n:pos","pos": "ADJ","lemma": "przysz\u0142y","morph": "Case=Acc|Degree=Pos|Gender=Neut|Number=Sing","head": 1,"dep": "amod"},
+{"id": 7,"orth": "wykorzystanie","tag": "subst:sg:acc:n","pos": "NOUN","lemma": "wykorzystanie","morph": "Case=Acc|Gender=Neut|Number=Sing","head": -2,"dep": "obj"},
+{"id": 8,"orth": "poddasza","tag": "subst:sg:gen:n","pos": "NOUN","lemma": "poddasze","morph": "Case=Gen|Gender=Neut|Number=Sing","head": -1,"dep": "nmod"},
+{"id": 9,"orth": "i","tag": "conj","pos": "CCONJ","lemma": "i","morph": "","head": 1,"dep": "cc"},
+{"id": 10,"orth": "uwzgl\u0119dnili\u015bmy","tag": "praet:pl:m1:perf_aglt:pl:pri:imperf:nwok","pos": "VERB","lemma": "uwzgl\u0119dni\u0107 by\u0107","morph": "Animacy=Hum|Aspect=Imp,Perf|Gender=Masc|Mood=Ind|Number=Plur|Person=1|Tense=Past,Pres|Variant=Short|VerbForm=Fin,Part|Voice=Act","head": -5,"dep": "conj"},
+{"id": 11,"orth": "to","tag": "subst:sg:acc:n","pos": "PRON","lemma": "to","morph": "Case=Acc|Gender=Neut|Number=Sing|PronType=Dem","head": -1,"dep": "obj"},
+{"id": 12,"orth": "w","tag": "prep:loc:nwok","pos": "ADP","lemma": "w","morph": "AdpType=Prep|Case=Loc|Variant=Short","head": 1,"dep": "case"},
+{"id": 13,"orth": "projekcie","tag": "subst:sg:loc:m3","pos": "NOUN","lemma": "projekt","morph": "Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing","head": -3,"dep": "obl"},
+{"id": 14,"orth": "architektonicznym","tag": "adj:sg:loc:m3:pos","pos": "ADJ","lemma": "architektoniczny","morph": "Animacy=Inan|Case=Loc|Degree=Pos|Gender=Masc|Number=Sing","head": -1,"dep": "amod"},
+{"id": 15,"orth": ",","tag": "interp","pos": "PUNCT","lemma": ",","morph": "","head": -10,"dep": "punct"},
+{"id": 16,"orth": "ominie","tag": "fin:sg:ter:perf","pos": "VERB","lemma": "omin\u0105\u0107","morph": "Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin","head": 0,"dep": "ROOT"},
+{"id": 17,"orth": "nas","tag": "ppron12:pl:acc:m1:pri","pos": "PRON","lemma": "my","morph": "Animacy=Hum|Case=Acc|Gender=Masc|Number=Plur|Person=1|PronType=Prs","head": -1,"dep": "obj"},
+{"id": 18,"orth": "kilka","tag": "num:pl:nom:f:rec","pos": "DET","lemma": "kilka","morph": "Case=Nom|Gender=Fem|Number=Plur|NumType=Card|PronType=Ind","head": 1,"dep": "det:numgov"},
+{"id": 19,"orth": "wizyt","tag": "subst:pl:gen:f","pos": "NOUN","lemma": "wizyta","morph": "Case=Gen|Gender=Fem|Number=Plur","head": -3,"dep": "nsubj"},
+{"id": 20,"orth": "w","tag": "prep:loc:nwok","pos": "ADP","lemma": "w","morph": "AdpType=Prep|Case=Loc|Variant=Short","head": 1,"dep": "case"},
+{"id": 21,"orth": "urz\u0119dach","tag": "subst:pl:loc:m3","pos": "NOUN","lemma": "urz\u0105d","morph": "Animacy=Inan|Case=Loc|Gender=Masc|Number=Plur","head": -2,"dep": "nmod"},
+{"id": 22,"orth": ".","tag": "interp","pos": "PUNCT","lemma": ".","morph": "","head": -6,"dep": "punct"}
+]
+},
+{
+"tokens": [
+{"id": 0,"orth": "Jeszcze","tag": "qub","pos": "PART","lemma": "jeszcze","morph": "","head": 1,"dep": "nmod"},
+{"id": 1,"orth": "w","tag": "prep:loc:nwok","pos": "ADP","lemma": "w","morph": "AdpType=Prep|Case=Loc|Variant=Short","head": 3,"dep": "advmod"},
+{"id": 2,"orth": "czasie","tag": "subst:sg:loc:m3","pos": "NOUN","lemma": "czas","morph": "Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing","head": 1,"dep": "case"},
+{"id": 3,"orth": "studi\u00f3w","tag": "subst:pl:gen:n","pos": "NOUN","lemma": "studia","morph": "Case=Gen|Gender=Neut|Number=Plur","head": -2,"dep": "nmod"},
+{"id": 4,"orth": "zainteresowa\u0142","tag": "praet:sg:m1:perf","pos": "VERB","lemma": "zainteresowa\u0107","morph": "Animacy=Hum|Aspect=Perf|Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part|Voice=Act","head": 0,"dep": "ROOT"},
+{"id": 5,"orth": "si\u0119","tag": "qub","pos": "PRON","lemma": "si\u0119","morph": "PronType=Prs|Reflex=Yes","head": -1,"dep": "expl:pv"},
+{"id": 6,"orth": "finansami","tag": "subst:pl:inst:n","pos": "NOUN","lemma": "finanse","morph": "Case=Ins|Gender=Neut|Number=Plur","head": -2,"dep": "obj"},
+{"id": 7,"orth": "i","tag": "conj","pos": "CCONJ","lemma": "i","morph": "","head": 1,"dep": "cc"},
+{"id": 8,"orth": "bankowo\u015bci\u0105","tag": "subst:sg:inst:f","pos": "NOUN","lemma": "bankowo\u015b\u0107","morph": "Case=Ins|Gender=Fem|Number=Sing","head": -2,"dep": "conj"},
+{"id": 9,"orth": ".","tag": "interp","pos": "PUNCT","lemma": ".","morph": "","head": -5,"dep": "punct"}
+]
+},
+{
+"tokens": [
+{"id": 0,"orth": "Kiedy","tag": "adv","pos": "ADV","lemma": "kiedy","morph": "","head": 7,"dep": "advmod"},
+{"id": 1,"orth": "jesieni\u0105","tag": "subst:sg:inst:f","pos": "NOUN","lemma": "jesie\u0144","morph": "Case=Ins|Gender=Fem|Number=Sing","head": 6,"dep": "obl"},
+{"id": 2,"orth": "ubieg\u0142ego","tag": "adj:sg:gen:m3:pos","pos": "ADJ","lemma": "ubieg\u0142y","morph": "Animacy=Inan|Case=Gen|Degree=Pos|Gender=Masc|Number=Sing","head": 1,"dep": "amod"},
+{"id": 3,"orth": "roku","tag": "subst:sg:gen:m3","pos": "NOUN","lemma": "rok","morph": "Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing","head": -2,"dep": "nmod"},
+{"id": 4,"orth": "Komisja","tag": "subst:sg:nom:f","pos": "NOUN","lemma": "komisja","morph": "Case=Nom|Gender=Fem|Number=Sing","head": 3,"dep": "nsubj"},
+{"id": 5,"orth": "Papier\u00f3w","tag": "subst:pl:gen:m3","pos": "NOUN","lemma": "papier","morph": "Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur","head": -1,"dep": "nmod"},
+{"id": 6,"orth": "Warto\u015bciowych","tag": "adj:pl:gen:m3:pos","pos": "ADJ","lemma": "warto\u015bciowy","morph": "Animacy=Inan|Case=Gen|Degree=Pos|Gender=Masc|Number=Plur","head": -1,"dep": "amod"},
+{"id": 7,"orth": "og\u0142osi\u0142a","tag": "praet:sg:f:perf","pos": "VERB","lemma": "og\u0142osi\u0107","morph": "Aspect=Perf|Gender=Fem|Number=Sing|Tense=Past|VerbForm=Part|Voice=Act","head": 6,"dep": "advcl"},
+{"id": 8,"orth": "egzamin","tag": "subst:sg:acc:m3","pos": "NOUN","lemma": "egzamin","morph": "Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing","head": -1,"dep": "obj"},
+{"id": 9,"orth": "na","tag": "prep:acc","pos": "ADP","lemma": "na","morph": "AdpType=Prep|Case=Acc","head": 1,"dep": "case"},
+{"id": 10,"orth": "doradc\u00f3w","tag": "subst:pl:acc:m1","pos": "NOUN","lemma": "doradca","morph": "Animacy=Hum|Case=Acc|Gender=Masc|Number=Plur","head": -2,"dep": "nmod"},
+{"id": 11,"orth": "inwestycyjnych","tag": "adj:pl:acc:m1:pos","pos": "ADJ","lemma": "inwestycyjny","morph": "Animacy=Hum|Case=Acc|Degree=Pos|Gender=Masc|Number=Plur","head": -1,"dep": "amod"},
+{"id": 12,"orth": ",","tag": "interp","pos": "PUNCT","lemma": ",","morph": "","head": -5,"dep": "punct"},
+{"id": 13,"orth": "zaryzykowa\u0142","tag": "praet:sg:m1:perf","pos": "VERB","lemma": "zaryzykowa\u0107","morph": "Animacy=Hum|Aspect=Perf|Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part|Voice=Act","head": 0,"dep": "ROOT"},
+{"id": 14,"orth": ".","tag": "interp","pos": "PUNCT","lemma": ".","morph": "","head": -1,"dep": "punct"}
+]
+},
+{
+"tokens": [
+{"id": 0,"orth": "W","tag": "prep:loc:nwok","pos": "ADP","lemma": "w","morph": "AdpType=Prep|Case=Loc|Variant=Short","head": 1,"dep": "case"},
+{"id": 1,"orth": "Waszyngtonie","tag": "subst:sg:loc:m3","pos": "PROPN","lemma": "Waszyngton","morph": "Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing","head": 1,"dep": "obl"},
+{"id": 2,"orth": "m\u00f3wi","tag": "fin:sg:ter:imperf","pos": "VERB","lemma": "m\u00f3wi\u0107","morph": "Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin","head": 0,"dep": "ROOT"},
+{"id": 3,"orth": "si\u0119","tag": "qub","pos": "PRON","lemma": "si\u0119","morph": "PronType=Prs|Reflex=Yes","head": -1,"dep": "expl:pv"},
+{"id": 4,"orth": "zupe\u0142nie","tag": "adv:pos","pos": "ADV","lemma": "zupe\u0142nie","morph": "Degree=Pos","head": 1,"dep": "advmod"},
+{"id": 5,"orth": "wyra\u017anie","tag": "adv:pos","pos": "ADV","lemma": "wyra\u017anie","morph": "Degree=Pos","head": -3,"dep": "advmod"},
+{"id": 6,"orth": ",","tag": "interp","pos": "PUNCT","lemma": ",","morph": "","head": 9,"dep": "punct"},
+{"id": 7,"orth": "\u017ce","tag": "comp","pos": "SCONJ","lemma": "\u017ce","morph": "","head": 8,"dep": "mark"},
+{"id": 8,"orth": "ostatnie","tag": "adj:sg:nom:n:pos","pos": "ADJ","lemma": "ostatni","morph": "Case=Nom|Degree=Pos|Gender=Neut|Number=Sing","head": 1,"dep": "amod"},
+{"id": 9,"orth": "ust\u0119pstwo","tag": "subst:sg:nom:n","pos": "NOUN","lemma": "ust\u0119pstwo","morph": "Case=Nom|Gender=Neut|Number=Sing","head": 6,"dep": "nsubj"},
+{"id": 10,"orth": "wobec","tag": "prep:gen","pos": "ADP","lemma": "wobec","morph": "AdpType=Prep|Case=Gen","head": 4,"dep": "case"},
+{"id": 11,"orth": "pacyfistycznie","tag": "adv:pos","pos": "ADV","lemma": "pacyfistycznie","morph": "Degree=Pos","head": 1,"dep": "advmod"},
+{"id": 12,"orth": "nastawionych","tag": "ppas:pl:gen:m1:perf:aff","pos": "ADJ","lemma": "nastawiony","morph": "Animacy=Hum|Aspect=Perf|Case=Gen|Gender=Masc|Number=Plur|Polarity=Pos|VerbForm=Part|Voice=Pass","head": 2,"dep": "amod"},
+{"id": 13,"orth": "europejskich","tag": "adj:pl:gen:m1:pos","pos": "ADJ","lemma": "europejski","morph": "Animacy=Hum|Case=Gen|Degree=Pos|Gender=Masc|Number=Plur","head": 1,"dep": "amod"},
+{"id": 14,"orth": "sojusznik\u00f3w","tag": "subst:pl:gen:m1","pos": "NOUN","lemma": "sojusznik","morph": "Animacy=Hum|Case=Gen|Gender=Masc|Number=Plur","head": -5,"dep": "nmod"},
+{"id": 15,"orth": "mo\u017ce","tag": "fin:sg:ter:imperf","pos": "VERB","lemma": "m\u00f3c","morph": "Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin","head": -13,"dep": "ccomp"},
+{"id": 16,"orth": "w","tag": "prep:loc:nwok","pos": "ADP","lemma": "w","morph": "AdpType=Prep|Case=Loc|Variant=Short","head": 4,"dep": "case"},
+{"id": 17,"orth": "zdominowanym","tag": "ppas:sg:loc:m3:perf:aff","pos": "ADJ","lemma": "zdominowany","morph": "Animacy=Inan|Aspect=Perf|Case=Loc|Gender=Masc|Number=Sing|Polarity=Pos|VerbForm=Part|Voice=Pass","head": 3,"dep": "amod"},
+{"id": 18,"orth": "przez","tag": "prep:acc:nwok","pos": "ADP","lemma": "przez","morph": "AdpType=Prep|Case=Acc|Variant=Short","head": 1,"dep": "case"},
+{"id": 19,"orth": "Republikan\u00f3w","tag": "subst:pl:acc:m1","pos": "NOUN","lemma": "republikanin","morph": "Animacy=Hum|Case=Acc|Gender=Masc|Number=Plur","head": -2,"dep": "obl"},
+{"id": 20,"orth": "Kongresie","tag": "subst:sg:loc:m3","pos": "NOUN","lemma": "kongres","morph": "Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing","head": 1,"dep": "obl"},
+{"id": 21,"orth": "podsyci\u0107","tag": "inf:perf","pos": "VERB","lemma": "podsyci\u0107","morph": "Aspect=Perf|VerbForm=Inf","head": -6,"dep": "xcomp"},
+{"id": 22,"orth": "nastroje","tag": "subst:pl:acc:m3","pos": "NOUN","lemma": "nastr\u00f3j","morph": "Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur","head": -1,"dep": "obj"},
+{"id": 23,"orth": "izolacjonistyczne","tag": "adj:pl:acc:m3:pos","pos": "ADJ","lemma": "izolacjonistyczny","morph": "Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Plur","head": -1,"dep": "amod"},
+{"id": 24,"orth": ".","tag": "interp","pos": "PUNCT","lemma": ".","morph": "","head": -22,"dep": "punct"}
+]
+},
+{
+"tokens": [
+{"id": 0,"orth": "Aktywn\u0105","tag": "adj:sg:acc:f:pos","pos": "ADJ","lemma": "aktywny","morph": "Case=Acc|Degree=Pos|Gender=Fem|Number=Sing","head": 1,"dep": "amod"},
+{"id": 1,"orth": "rol\u0119","tag": "subst:sg:acc:f","pos": "NOUN","lemma": "rola","morph": "Case=Acc|Gender=Fem|Number=Sing","head": 6,"dep": "obj"},
+{"id": 2,"orth": "w","tag": "prep:loc:nwok","pos": "ADP","lemma": "w","morph": "AdpType=Prep|Case=Loc|Variant=Short","head": 1,"dep": "case"},
+{"id": 3,"orth": "mediacjach","tag": "subst:pl:loc:f","pos": "NOUN","lemma": "mediacja","morph": "Case=Loc|Gender=Fem|Number=Plur","head": -2,"dep": "nmod"},
+{"id": 4,"orth": "mi\u0119dzy","tag": "prep:inst","pos": "ADP","lemma": "mi\u0119dzy","morph": "AdpType=Prep|Case=Ins","head": 1,"dep": "case"},
+{"id": 5,"orth": "stronami","tag": "subst:pl:inst:f","pos": "NOUN","lemma": "strona","morph": "Case=Ins|Gender=Fem|Number=Plur","head": -2,"dep": "nmod"},
+{"id": 6,"orth": "konfliktu","tag": "subst:sg:gen:m3","pos": "NOUN","lemma": "konflikt","morph": "Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing","head": -1,"dep": "nmod"},
+{"id": 7,"orth": "pe\u0142ni\u0105","tag": "fin:pl:ter:imperf","pos": "VERB","lemma": "pe\u0142ni\u0107","morph": "Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin","head": 0,"dep": "ROOT"},
+{"id": 8,"orth": "\u015bwieccy","tag": "adj:pl:nom:m1:pos","pos": "ADJ","lemma": "\u015bwiecki","morph": "Animacy=Hum|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur","head": 3,"dep": "amod"},
+{"id": 9,"orth": "i","tag": "conj","pos": "CCONJ","lemma": "i","morph": "","head": 1,"dep": "cc"},
+{"id": 10,"orth": "religijni","tag": "adj:pl:nom:m1:pos","pos": "ADJ","lemma": "religijny","morph": "Animacy=Hum|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur","head": -2,"dep": "conj"},
+{"id": 11,"orth": "przedstawiciele","tag": "subst:pl:nom:m1","pos": "NOUN","lemma": "przedstawiciel","morph": "Animacy=Hum|Case=Nom|Gender=Masc|Number=Plur","head": -4,"dep": "nsubj"},
+{"id": 12,"orth": "800","tag": "num:pl:gen:m3:congr","pos": "NUM","lemma": "800","morph": "Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur","head": 5,"dep": "nummod"},
+{"id": 13,"orth": "tysi\u0119cy","tag": "subst:pl:gen:m3","pos": "NOUN","lemma": "tysi\u0105c","morph": "Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur","head": 4,"dep": "case"},
+{"id": 14,"orth": "mieszkaj\u0105cych","tag": "pact:pl:gen:m1:imperf:aff","pos": "ADJ","lemma": "mieszkaj\u0105cy","morph": "Animacy=Hum|Aspect=Imp|Case=Gen|Gender=Masc|Number=Plur|Polarity=Pos|Tense=Pres|VerbForm=Part|Voice=Act","head": 3,"dep": "amod"},
+{"id": 15,"orth": "w","tag": "prep:loc:nwok","pos": "ADP","lemma": "w","morph": "AdpType=Prep|Case=Loc|Variant=Short","head": 1,"dep": "case"},
+{"id": 16,"orth": "Izraelu","tag": "subst:sg:loc:m3","pos": "PROPN","lemma": "Izrael","morph": "Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing","head": -2,"dep": "obl:arg"},
+{"id": 17,"orth": "Arab\u00f3w","tag": "subst:pl:gen:m1","pos": "PROPN","lemma": "Arab","morph": "Animacy=Hum|Case=Gen|Gender=Masc|Number=Plur","head": -6,"dep": "nmod"},
+{"id": 18,"orth": ".","tag": "interp","pos": "PUNCT","lemma": ".","morph": "","head": -11,"dep": "punct"}
+]
+},
+{
+"tokens": [
+{"id": 0,"orth": "Przygotowuj\u0105","tag": "fin:pl:ter:imperf","pos": "VERB","lemma": "przygotowywa\u0107","morph": "Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin","head": 0,"dep": "ROOT"},
+{"id": 1,"orth": "si\u0119","tag": "qub","pos": "PRON","lemma": "si\u0119","morph": "PronType=Prs|Reflex=Yes","head": -1,"dep": "expl:pv"},
+{"id": 2,"orth": "oni","tag": "ppron3:pl:nom:m1:ter:akc:npraep","pos": "PRON","lemma": "on","morph": "Animacy=Hum|Case=Nom|Gender=Masc|Number=Plur|Person=3|PrepCase=Npr|PronType=Prs|Variant=Long","head": -2,"dep": "nsubj"},
+{"id": 3,"orth": "do","tag": "prep:gen","pos": "ADP","lemma": "do","morph": "AdpType=Prep|Case=Gen","head": 2,"dep": "case"},
+{"id": 4,"orth": "wsp\u00f3lnego","tag": "adj:sg:gen:m3:pos","pos": "ADJ","lemma": "wsp\u00f3lny","morph": "Animacy=Inan|Case=Gen|Degree=Pos|Gender=Masc|Number=Sing","head": 1,"dep": "amod"},
+{"id": 5,"orth": "udzia\u0142u","tag": "subst:sg:gen:m3","pos": "NOUN","lemma": "udzia\u0142","morph": "Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing","head": -5,"dep": "obl:arg"},
+{"id": 6,"orth": "w","tag": "prep:loc:nwok","pos": "ADP","lemma": "w","morph": "AdpType=Prep|Case=Loc|Variant=Short","head": 1,"dep": "case"},
+{"id": 7,"orth": "wyborach","tag": "subst:pl:loc:n","pos": "NOUN","lemma": "wybory","morph": "Case=Loc|Gender=Neut|Number=Plur","head": -2,"dep": "nmod"},
+{"id": 8,"orth": "do","tag": "prep:gen","pos": "ADP","lemma": "do","morph": "AdpType=Prep|Case=Gen","head": 1,"dep": "case"},
+{"id": 9,"orth": "Knesetu","tag": "subst:sg:gen:m3","pos": "PROPN","lemma": "Kneset","morph": "Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing","head": -2,"dep": "nmod"},
+{"id": 10,"orth": "w","tag": "prep:loc:nwok","pos": "ADP","lemma": "w","morph": "AdpType=Prep|Case=Loc|Variant=Short","head": 1,"dep": "case"},
+{"id": 11,"orth": "1996","tag": "adj:sg:loc:m3:pos","pos": "ADJ","lemma": "1996","morph": "Animacy=Inan|Case=Loc|Degree=Pos|Gender=Masc|Number=Sing","head": -4,"dep": "amod"},
+{"id": 12,"orth": "roku","tag": "subst:sg:loc:m3","pos": "NOUN","lemma": "rok","morph": "Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing","head": -1,"dep": "nmod"},
+{"id": 13,"orth": "i","tag": "conj","pos": "CCONJ","lemma": "i","morph": "","head": 1,"dep": "cc"},
+{"id": 14,"orth": "obawiaj\u0105","tag": "fin:pl:ter:imperf","pos": "VERB","lemma": "obawia\u0107","morph": "Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin","head": -14,"dep": "conj"},
+{"id": 15,"orth": "si\u0119","tag": "qub","pos": "PRON","lemma": "si\u0119","morph": "PronType=Prs|Reflex=Yes","head": -1,"dep": "expl:pv"},
+{"id": 16,"orth": "roz\u0142am\u00f3w","tag": "subst:pl:gen:m3","pos": "NOUN","lemma": "roz\u0142am","morph": "Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur","head": -2,"dep": "obj"},
+{"id": 17,"orth": "wewn\u0119trznych","tag": "adj:pl:gen:m3:pos","pos": "ADJ","lemma": "wewn\u0119trzny","morph": "Animacy=Inan|Case=Gen|Degree=Pos|Gender=Masc|Number=Plur","head": -1,"dep": "amod"},
+{"id": 18,"orth": ".","tag": "interp","pos": "PUNCT","lemma": ".","morph": "","head": -18,"dep": "punct"}
+]
+}]
+}]
+}]
