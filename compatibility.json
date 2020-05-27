@@ -1,6 +1,6 @@
 {
     "spacy": {
-	"2.3.0": {
+        "2.3.0": {
             "zh_core_web_sm": ["2.3.0"],
             "zh_core_web_md": ["2.3.0"],
             "zh_core_web_lg": ["2.3.0"],
@@ -49,7 +49,7 @@
             "en_trf_robertabase_lg": ["2.3.0"],
             "en_trf_distilbertbaseuncased_lg": ["2.3.0"],
             "de_trf_bertbasecased_lg": ["2.3.0"],
-	    "en_vectors_web_lg": ["2.3.0"]
+            "en_vectors_web_lg": ["2.3.0"]
         },
         "2.2.4": {
             "en_vectors_web_lg": ["2.1.0"],
