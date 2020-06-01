@@ -19,7 +19,7 @@ def lemmatizer(NLP):
 
 @pytest.mark.parametrize(
     "test_file,accuracy_threshold",
-    [("es_ancora-ud-dev001_10.json", 96)],
+    [("es_ancora-ud-dev001_10.json", 95)],
 )
 def test_es_tagger_corpus(NLP, test_file, accuracy_threshold):
     data_path = TEST_FILES_DIR / test_file

@@ -12,7 +12,7 @@ TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 @pytest.mark.parametrize(
     "test_file,uas_threshold,las_threshold",
-    [("pl_sz-ud-dev036_360.json", 81, 78)],
+    [("pl_sz-ud-dev036_360.json", 79, 78)],
 )
 def test_pl_parser_corpus(NLP, test_file, uas_threshold, las_threshold):
     data_path = TEST_FILES_DIR / test_file
