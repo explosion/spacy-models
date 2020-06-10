@@ -1,0 +1,400 @@
+{
+  "lang": "de",
+  "name": "core_news_lg",
+  "license": "MIT",
+  "author": "Explosion",
+  "url": "https://explosion.ai",
+  "email": "contact@explosion.ai",
+  "sources": [
+    {
+      "name": "TIGER Corpus",
+      "url": "https://www.ims.uni-stuttgart.de/forschung/ressourcen/korpora/tiger.html",
+      "license": "commercial (licensed by Explosion)"
+    },
+    {
+      "name": "WikiNER",
+      "url": "https://figshare.com/articles/Learning_multilingual_named_entity_recognition_from_Wikipedia/5462500",
+      "license": "CC BY 4.0"
+    },
+    {
+      "name": "OSCAR (Common Crawl)",
+      "url": "https://oscar-corpus.com/",
+      "license": "CC0"
+    },
+    {
+      "name": "Wikipedia (20200201)",
+      "url": "https://dumps.wikimedia.org/",
+      "license": "CC BY-SA 3.0"
+    }
+  ],
+  "description": "German multi-task CNN trained on the TIGER and WikiNER corpora. Assigns word vectors, POS tags, dependency parses and named entities. Word vectors trained using FastText CBOW on Wikipedia and OSCAR (Common Crawl).",
+  "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.",
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "version": "2.3.0",
+  "spacy_version": ">=2.3.0,<2.4.0",
+  "parent_package": "spacy",
+  "accuracy": {
+    "las": 91.1502913775,
+    "uas": 92.9913514717,
+    "token_acc": 99.9191582022,
+    "las_per_type": {
+      "root": {
+        "p": 97.0215934475,
+        "r": 96.4113947466,
+        "f": 96.7155316385
+      },
+      "nk": {
+        "p": 97.9010797913,
+        "r": 98.1750344716,
+        "f": 98.0378657487
+      },
+      "sb": {
+        "p": 93.1511648275,
+        "r": 93.0045470444,
+        "f": 93.0777981973
+      },
+      "rs": {
+        "p": 83.3333333333,
+        "r": 32.2580645161,
+        "f": 46.511627907
+      },
+      "oc": {
+        "p": 92.8402366864,
+        "r": 94.0647482014,
+        "f": 93.4484812388
+      },
+      "mnr": {
+        "p": 76.7925328808,
+        "r": 75.8909853249,
+        "f": 76.3390974272
+      },
+      "mo": {
+        "p": 80.0395843642,
+        "r": 81.6392449783,
+        "f": 80.8315010993
+      },
+      "op": {
+        "p": 76.9673704415,
+        "r": 59.6726190476,
+        "f": 67.2254819782
+      },
+      "cj": {
+        "p": 87.7419354839,
+        "r": 86.6242038217,
+        "f": 87.1794871795
+      },
+      "cd": {
+        "p": 87.7564102564,
+        "r": 88.038585209,
+        "f": 87.8972712681
+      },
+      "oa": {
+        "p": 86.0596546311,
+        "r": 90.1644736842,
+        "f": 88.0642570281
+      },
+      "pnc": {
+        "p": 84.5953002611,
+        "r": 82.7586206897,
+        "f": 83.6668818593
+      },
+      "app": {
+        "p": 68.4210526316,
+        "r": 70.0336700337,
+        "f": 69.2179700499
+      },
+      "ag": {
+        "p": 95.6616052061,
+        "r": 97.4047487576,
+        "f": 96.5253077975
+      },
+      "svp": {
+        "p": 94.2084942085,
+        "r": 93.4865900383,
+        "f": 93.8461538462
+      },
+      "pm": {
+        "p": 99.7142857143,
+        "r": 99.7142857143,
+        "f": 99.7142857143
+      },
+      "cm": {
+        "p": 88.7804878049,
+        "r": 87.5,
+        "f": 88.1355932203
+      },
+      "pd": {
+        "p": 85.5161787365,
+        "r": 81.3782991202,
+        "f": 83.3959429001
+      },
+      "da": {
+        "p": 83.6879432624,
+        "r": 59.8984771574,
+        "f": 69.8224852071
+      },
+      "ep": {
+        "p": 78.9115646259,
+        "r": 87.2180451128,
+        "f": 82.8571428571
+      },
+      "par": {
+        "p": 54.3859649123,
+        "r": 29.9516908213,
+        "f": 38.6292834891
+      },
+      "ju": {
+        "p": 91.1764705882,
+        "r": 93.9393939394,
+        "f": 92.5373134328
+      },
+      "cc": {
+        "p": 73.0337078652,
+        "r": 65.3266331658,
+        "f": 68.9655172414
+      },
+      "nmc": {
+        "p": 97.4842767296,
+        "r": 97.9462875197,
+        "f": 97.7147360126
+      },
+      "ams": {
+        "p": 74.6478873239,
+        "r": 77.9411764706,
+        "f": 76.2589928058
+      },
+      "ng": {
+        "p": 84.6153846154,
+        "r": 84.8404255319,
+        "f": 84.7277556441
+      },
+      "re": {
+        "p": 69.5364238411,
+        "r": 62.1301775148,
+        "f": 65.625
+      },
+      "ac": {
+        "p": 96.0396039604,
+        "r": 82.905982906,
+        "f": 88.9908256881
+      },
+      "pg": {
+        "p": 87.5,
+        "r": 88.3280757098,
+        "f": 87.9120879121
+      },
+      "rc": {
+        "p": 70.7589285714,
+        "r": 71.0762331839,
+        "f": 70.9172259508
+      },
+      "cp": {
+        "p": 96.5641952984,
+        "r": 97.0909090909,
+        "f": 96.8268359021
+      },
+      "cvc": {
+        "p": 75.7575757576,
+        "r": 63.2911392405,
+        "f": 68.9655172414
+      },
+      "sbp": {
+        "p": 86.0655737705,
+        "r": 90.5172413793,
+        "f": 88.2352941176
+      },
+      "uc": {
+        "p": 90.0,
+        "r": 30.0,
+        "f": 45.0
+      },
+      "ph": {
+        "p": 80.0,
+        "r": 57.1428571429,
+        "f": 66.6666666667
+      },
+      "adc": {
+        "p": 60.0,
+        "r": 100.0,
+        "f": 75.0
+      },
+      "dm": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "dep": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "oa2": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "og": {
+        "p": 100.0,
+        "r": 28.5714285714,
+        "f": 44.4444444444
+      },
+      "vo": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    },
+    "tags_acc": 98.1237160466,
+    "ents_f": 86.1088025204,
+    "ents_p": 86.2808064095,
+    "ents_r": 85.9374830588,
+    "ents_per_type": {
+      "MISC": {
+        "p": 80.7676518883,
+        "r": 73.6937386853,
+        "f": 77.0687122572
+      },
+      "ORG": {
+        "p": 80.9647262157,
+        "r": 77.4654239327,
+        "f": 79.1764299159
+      },
+      "LOC": {
+        "p": 87.6902480271,
+        "r": 89.4144413843,
+        "f": 88.5439518089
+      },
+      "PER": {
+        "p": 90.3021464704,
+        "r": 93.6746560772,
+        "f": 91.9574902543
+      }
+    }
+  },
+  "speed": {
+    "cpu": 6909.7653613035,
+    "gpu": null,
+    "nwords": 696811
+  },
+  "labels": {
+    "tagger": [
+      "$(",
+      "$,",
+      "$.",
+      "ADJA",
+      "ADJD",
+      "ADV",
+      "APPO",
+      "APPR",
+      "APPRART",
+      "APZR",
+      "ART",
+      "CARD",
+      "FM",
+      "ITJ",
+      "KOKOM",
+      "KON",
+      "KOUI",
+      "KOUS",
+      "NE",
+      "NN",
+      "NNE",
+      "PDAT",
+      "PDS",
+      "PIAT",
+      "PIS",
+      "PPER",
+      "PPOSAT",
+      "PPOSS",
+      "PRELAT",
+      "PRELS",
+      "PRF",
+      "PROAV",
+      "PTKA",
+      "PTKANT",
+      "PTKNEG",
+      "PTKVZ",
+      "PTKZU",
+      "PWAT",
+      "PWAV",
+      "PWS",
+      "TRUNC",
+      "VAFIN",
+      "VAIMP",
+      "VAINF",
+      "VAPP",
+      "VMFIN",
+      "VMINF",
+      "VMPP",
+      "VVFIN",
+      "VVIMP",
+      "VVINF",
+      "VVIZU",
+      "VVPP",
+      "XY",
+      "_SP"
+    ],
+    "parser": [
+      "ROOT",
+      "ac",
+      "adc",
+      "ag",
+      "ams",
+      "app",
+      "avc",
+      "cc",
+      "cd",
+      "cj",
+      "cm",
+      "cp",
+      "cvc",
+      "da",
+      "dep",
+      "dm",
+      "ep",
+      "ju",
+      "mnr",
+      "mo",
+      "ng",
+      "nk",
+      "nmc",
+      "oa",
+      "oc",
+      "og",
+      "op",
+      "par",
+      "pd",
+      "pg",
+      "ph",
+      "pm",
+      "pnc",
+      "punct",
+      "rc",
+      "re",
+      "rs",
+      "sb",
+      "sbp",
+      "svp",
+      "uc",
+      "vo"
+    ],
+    "ner": [
+      "LOC",
+      "MISC",
+      "ORG",
+      "PER"
+    ]
+  },
+  "vectors": {
+    "width": 300,
+    "vectors": 500000,
+    "keys": 500000,
+    "name": "de_core_news_lg.vectors"
+  },
+  "size": "544 MB",
+  "checksum": "cd3c565cfb6dd3df535b109077466685986059b18387259cc1fa7cf2db833d66"
+}
