@@ -1,0 +1,338 @@
+{
+  "lang": "ja",
+  "name": "core_news_lg",
+  "license": "CC BY-SA 4.0",
+  "author": "Explosion and Megagon Labs Tokyo",
+  "url": "https://explosion.ai",
+  "email": "contact@explosion.ai",
+  "description": "Japanese multi-task CNN trained on UD_Japanese-GSD v2.6-NE. Assigns word2vec token vectors, POS tags, dependency parses and named entities.",
+  "sources": [
+    {
+      "name": "UD_Japanese-GSD v2.6",
+      "author": "Omura, Mai; Miyao, Yusuke; Kanayama, Hiroshi; Matsuda, Hiroshi; Wakasa, Aya; Yamashita, Kayo; Asahara, Masayuki; Tanaka, Takaaki; Murawaki, Yugo; Matsumoto, Yuji; Mori, Shinsuke; Uematsu, Sumire; McDonald, Ryan; Nivre, Joakim; Zeman, Daniel",
+      "url": "https://github.com/UniversalDependencies/UD_Japanese-GSD",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "name": "UD_Japanese-GSD v2.6-NE",
+      "author": "Megagon Labs Tokyo",
+      "url": "https://github.com/megagonlabs/UD_Japanese-GSD",
+      "license": "CC BY-SA 4.0",
+      "citation": "Matsuda, Omura, Asahara, et al. UD Japanese GSD \u306e\u518d\u6574\u5099\u3068\u56fa\u6709\u8868\u73fe\u60c5\u5831\u4ed8\u4e0e. \u8a00\u8a9e\u51e6\u7406\u5b66\u4f1a\u7b2c26\u56de\u5e74\u6b21\u5927\u4f1a\u767a\u8868, 2020"
+    },
+    {
+      "name": "chiVe: Japanese Word Embedding with Sudachi & NWJC (chive-1.1-mc90-500k)",
+      "author": "Works Applications",
+      "url": "https://github.com/WorksApplications/chiVe",
+      "license": "Apache License, Version 2.0",
+      "citation": "Kawamura, Manabe, et at. chiVe 2.0: Sudachi\u3068NWJC\u3092\u7528\u3044\u305f\u5b9f\u7528\u7684\u306a\u65e5\u672c\u8a9e\u5358\u8a9e\u30d9\u30af\u30c8\u30eb\u306e\u5b9f\u73fe\u3078\u5411\u3051\u3066. \u8a00\u8a9e\u51e6\u7406\u5b66\u4f1a\u7b2c26\u56de\u5e74\u6b21\u5927\u4f1a, 2020"
+    },
+    {
+      "name": "SudachiPy",
+      "author": "Works Applications",
+      "url": "https://github.com/WorksApplications/SudachiPy",
+      "license": "Apache License, Version 2.0",
+      "citation": "Takaoka, Hisamoto, et al. Sudachi: a Japanese Tokenizer for Business. LREC, 2018"
+    },
+    {
+      "name": "SudachiDict",
+      "author": "Works Applications",
+      "url": "https://github.com/WorksApplications/SudachiDict",
+      "license": "Apache License, Version 2.0",
+      "citation": "Sakamoto, Kawahara, et al. \u5f62\u614b\u7d20\u89e3\u6790\u5668\u300eSudachi\u300f\u306e\u305f\u3081\u306e\u5927\u898f\u6a21\u8f9e\u66f8\u958b\u767a. \u8a00\u8a9e\u8cc7\u6e90\u6d3b\u7528\u30ef\u30fc\u30af\u30b7\u30e7\u30c3\u30d7, 2018"
+    }
+  ],
+  "pipeline": [
+    "parser",
+    "ner"
+  ],
+  "version": "2.3.0",
+  "spacy_version": ">=2.3.0,<2.4.0",
+  "parent_package": "spacy",
+  "accuracy": {
+    "las": 87.5547045952,
+    "uas": 88.9405543399,
+    "token_acc": 97.6652091412,
+    "las_per_type": {
+      "nummod": {
+        "p": 98.0769230769,
+        "r": 87.6288659794,
+        "f": 92.5589836661
+      },
+      "nmod": {
+        "p": 88.4665792923,
+        "r": 81.3253012048,
+        "f": 84.7457627119
+      },
+      "case": {
+        "p": 98.1102362205,
+        "r": 95.150820924,
+        "f": 96.6078697422
+      },
+      "obl": {
+        "p": 81.5498154982,
+        "r": 79.6875,
+        "f": 80.6079027356
+      },
+      "dislocated": {
+        "p": 20.8333333333,
+        "r": 52.6315789474,
+        "f": 29.8507462687
+      },
+      "compound": {
+        "p": 95.7180500659,
+        "r": 90.1924270639,
+        "f": 92.8731224033
+      },
+      "nsubj": {
+        "p": 83.1140350877,
+        "r": 78.9583333333,
+        "f": 80.9829059829
+      },
+      "obj": {
+        "p": 96.0132890365,
+        "r": 88.1097560976,
+        "f": 91.8918918919
+      },
+      "root": {
+        "p": 87.6404494382,
+        "r": 93.4131736527,
+        "f": 90.4347826087
+      },
+      "aux": {
+        "p": 96.6165413534,
+        "r": 93.115942029,
+        "f": 94.8339483395
+      },
+      "det": {
+        "p": 100.0,
+        "r": 100.0,
+        "f": 100.0
+      },
+      "advcl": {
+        "p": 70.2564102564,
+        "r": 63.8694638695,
+        "f": 66.9108669109
+      },
+      "mark": {
+        "p": 96.2577962578,
+        "r": 91.1417322835,
+        "f": 93.6299292214
+      },
+      "ccomp": {
+        "p": 100.0,
+        "r": 77.2727272727,
+        "f": 87.1794871795
+      },
+      "acl": {
+        "p": 83.2535885167,
+        "r": 76.6519823789,
+        "f": 79.8165137615
+      },
+      "cop": {
+        "p": 97.0930232558,
+        "r": 91.7582417582,
+        "f": 94.3502824859
+      },
+      "advmod": {
+        "p": 69.0721649485,
+        "r": 53.1746031746,
+        "f": 60.0896860987
+      },
+      "fixed": {
+        "p": 95.1351351351,
+        "r": 96.7032967033,
+        "f": 95.9128065395
+      },
+      "amod": {
+        "p": 89.6551724138,
+        "r": 65.0,
+        "f": 75.3623188406
+      },
+      "csubj": {
+        "p": 100.0,
+        "r": 76.9230769231,
+        "f": 86.9565217391
+      },
+      "dep": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "cc": {
+        "p": 77.7777777778,
+        "r": 76.0869565217,
+        "f": 76.9230769231
+      }
+    },
+    "ents_f": 70.4811443433,
+    "ents_p": 71.7880794702,
+    "ents_r": 69.220945083,
+    "ents_per_type": {
+      "DATE": {
+        "p": 92.7927927928,
+        "r": 95.3703703704,
+        "f": 94.0639269406
+      },
+      "ORDINAL": {
+        "p": 65.0,
+        "r": 68.4210526316,
+        "f": 66.6666666667
+      },
+      "NORP": {
+        "p": 70.3703703704,
+        "r": 59.375,
+        "f": 64.406779661
+      },
+      "PERSON": {
+        "p": 75.1773049645,
+        "r": 76.2589928058,
+        "f": 75.7142857143
+      },
+      "QUANTITY": {
+        "p": 81.8181818182,
+        "r": 81.8181818182,
+        "f": 81.8181818182
+      },
+      "PRODUCT": {
+        "p": 52.7777777778,
+        "r": 46.3414634146,
+        "f": 49.3506493506
+      },
+      "ORG": {
+        "p": 62.9921259843,
+        "r": 61.0687022901,
+        "f": 62.015503876
+      },
+      "FAC": {
+        "p": 54.8387096774,
+        "r": 45.9459459459,
+        "f": 50.0
+      },
+      "GPE": {
+        "p": 69.3181818182,
+        "r": 64.8936170213,
+        "f": 67.032967033
+      },
+      "LAW": {
+        "p": 100.0,
+        "r": 33.3333333333,
+        "f": 50.0
+      },
+      "LOC": {
+        "p": 46.6666666667,
+        "r": 70.0,
+        "f": 56.0
+      },
+      "EVENT": {
+        "p": 76.0,
+        "r": 73.0769230769,
+        "f": 74.5098039216
+      },
+      "MOVEMENT": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "TITLE_AFFIX": {
+        "p": 74.0740740741,
+        "r": 66.6666666667,
+        "f": 70.1754385965
+      },
+      "PERCENT": {
+        "p": 100.0,
+        "r": 28.5714285714,
+        "f": 44.4444444444
+      },
+      "TIME": {
+        "p": 66.6666666667,
+        "r": 100.0,
+        "f": 80.0
+      },
+      "WORK_OF_ART": {
+        "p": 47.0588235294,
+        "r": 47.0588235294,
+        "f": 47.0588235294
+      },
+      "MONEY": {
+        "p": 42.8571428571,
+        "r": 42.8571428571,
+        "f": 42.8571428571
+      },
+      "LANGUAGE": {
+        "p": 100.0,
+        "r": 100.0,
+        "f": 100.0
+      },
+      "CARDINAL": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    }
+  },
+  "speed": {
+    "cpu": 8988.5670441364,
+    "gpu": null,
+    "nwords": 12121
+  },
+  "labels": {
+    "parser": [
+      "ROOT",
+      "acl",
+      "advcl",
+      "advmod",
+      "amod",
+      "aux",
+      "case",
+      "cc",
+      "ccomp",
+      "compound",
+      "cop",
+      "csubj",
+      "dep",
+      "det",
+      "dislocated",
+      "fixed",
+      "mark",
+      "nmod",
+      "nsubj",
+      "nummod",
+      "obj",
+      "obl",
+      "punct"
+    ],
+    "ner": [
+      "CARDINAL",
+      "DATE",
+      "EVENT",
+      "FAC",
+      "GPE",
+      "LANGUAGE",
+      "LAW",
+      "LOC",
+      "MONEY",
+      "MOVEMENT",
+      "NORP",
+      "ORDINAL",
+      "ORG",
+      "PERCENT",
+      "PERSON",
+      "PET_NAME",
+      "PHONE",
+      "PRODUCT",
+      "QUANTITY",
+      "TIME",
+      "TITLE_AFFIX",
+      "WORK_OF_ART"
+    ]
+  },
+  "vectors": {
+    "width": 300,
+    "vectors": 480443,
+    "keys": 480443,
+    "name": "ja_core_news_lg.vectors"
+  },
+  "size": "526 MB",
+  "checksum": "607aaef70e011b35b15470ac3fc8a9a40dc76ffe1fce03a8f4f2fbc12b30d8d2"
+}
