@@ -1,0 +1,42 @@
+{
+  "lang": "en",
+  "lang_factory": "trf",
+  "name": "trf_xlnetbasecased_lg",
+  "description": "Provides weights and configuration for the pretrained transformer model `xlnet-base-cased`, published by CMU and Google Brain. The package uses HuggingFace's `transformers` implementation of the model. Pretrained transformer models assign detailed contextual word representations, using knowledge drawn from a large corpus of unlabelled text. You can use the contextual word representations as features in a variety of pipeline components that can be trained on your own data.",
+  "notes": "Requires the `spacy-transformers` package to be installed. A CUDA-compatible GPU is advised for reasonable performance.",
+  "author": "CMU & Google Brain (repackaged by Explosion)",
+  "email": "contact@explosion.ai",
+  "url": "https://github.com/explosion/spacy-transformers",
+  "license": "MIT",
+  "sources": [
+    {
+      "name": "xlnet-base-cased",
+      "author": "CMU & Google Brain",
+      "url": "https://github.com/zihangdai/xlnet/"
+    }
+  ],
+  "version": "2.3.0",
+  "requirements": [
+    "spacy-transformers>=0.6.1,<0.7.0"
+  ],
+  "spacy_version": ">=2.3.0,<2.4.0",
+  "vectors": {
+    "width": 0,
+    "vectors": 0,
+    "keys": 0,
+    "name": null
+  },
+  "pipeline": [
+    "sentencizer",
+    "trf_wordpiecer",
+    "trf_tok2vec"
+  ],
+  "factories": {
+    "sentencizer": "sentencizer",
+    "trf_wordpiecer": "trf_wordpiecer",
+    "trf_tok2vec": "trf_tok2vec"
+  },
+  "labels": {},
+  "size": "413 MB",
+  "checksum": "7fa5c191ff32e1479b21f6ff79f95fe1eb6513c89ccf727b1e10c16175cb3850"
+}
