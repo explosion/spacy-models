@@ -25,6 +25,9 @@
             "it_core_news_sm": ["2.3.0"],
             "it_core_news_md": ["2.3.0"],
             "it_core_news_lg": ["2.3.0"],
+            "ja_core_news_sm": ["2.3.0"],
+            "ja_core_news_md": ["2.3.0"],
+            "ja_core_news_lg": ["2.3.0"],
             "lt_core_news_sm": ["2.3.0"],
             "lt_core_news_md": ["2.3.0"],
             "lt_core_news_lg": ["2.3.0"],
@@ -43,7 +46,13 @@
             "es_core_news_sm": ["2.3.0"],
             "es_core_news_md": ["2.3.0"],
             "es_core_news_lg": ["2.3.0"],
-            "xx_ent_wiki_sm": ["2.3.0"]
+            "xx_ent_wiki_sm": ["2.3.0"],
+            "en_vectors_web_lg": ["2.3.0"],
+            "en_trf_bertbaseuncased_lg": ["2.3.0"],
+            "en_trf_xlnetbasecased_lg": ["2.3.0"],
+            "en_trf_robertabase_lg": ["2.3.0"],
+            "en_trf_distilbertbaseuncased_lg": ["2.3.0"],
+            "de_trf_bertbasecased_lg": ["2.3.0"]
         },
         "2.2.4": {
             "en_vectors_web_lg": ["2.1.0"],
