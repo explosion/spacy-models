@@ -1,0 +1,42 @@
+{
+  "lang": "en",
+  "lang_factory": "trf",
+  "name": "trf_distilbertbaseuncased_lg",
+  "description": "Provides weights and configuration for the pretrained transformer model `distilbert-base-uncased`, published by Hugging Face. The package uses HuggingFace's `transformers` implementation of the model. Pretrained transformer models assign detailed contextual word representations, using knowledge drawn from a large corpus of unlabelled text. You can use the contextual word representations as features in a variety of pipeline components that can be trained on your own data.",
+  "notes": "Requires the `spacy-transformers` package to be installed. A CUDA-compatible GPU is advised for reasonable performance.",
+  "author": "Hugging Face (repackaged by Explosion)",
+  "email": "contact@explosion.ai",
+  "url": "https://github.com/explosion/spacy-transformers",
+  "license": "MIT",
+  "sources": [
+    {
+      "name": "distilbert-base-uncased",
+      "author": "Hugging Face",
+      "url": "https://medium.com/huggingface/distilbert-8cf3380435b5"
+    }
+  ],
+  "version": "2.3.0",
+  "requirements": [
+    "spacy-transformers>=0.6.1,<0.7.0"
+  ],
+  "spacy_version": ">=2.3.0,<2.4.0",
+  "vectors": {
+    "width": 0,
+    "vectors": 0,
+    "keys": 0,
+    "name": null
+  },
+  "pipeline": [
+    "sentencizer",
+    "trf_wordpiecer",
+    "trf_tok2vec"
+  ],
+  "factories": {
+    "sentencizer": "sentencizer",
+    "trf_wordpiecer": "trf_wordpiecer",
+    "trf_tok2vec": "trf_tok2vec"
+  },
+  "labels": {},
+  "size": "233 MB",
+  "checksum": "a244180b0d66f0fd9f781547cd284156e1789621f4ef5f96c4320d8a18964ac8"
+}
