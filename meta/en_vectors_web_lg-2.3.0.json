@@ -9,7 +9,7 @@
   "url":"https://nlp.stanford.edu/projects/glove",
   "description":"1.2m 300d vectors trained on Common Crawl with GloVe",
   "version":"2.3.0",
-  "spacy_version":">=2.3.0,<3.0.0",
+  "spacy_version":">=2.3.0,<2.4.0",
   "email":"contact@explosion.ai",
   "parent_package":"spacy",
   "vectors":{
