@@ -1,0 +1,552 @@
+{
+  "lang": "fr",
+  "name": "core_news_md",
+  "license": "LGPL",
+  "author": "Explosion",
+  "url": "https://explosion.ai",
+  "email": "contact@explosion.ai",
+  "description": "French multi-task CNN trained on UD French Sequoia and WikiNER. Assigns word vectors, POS tags, dependency parse and named entities. Word vectors trained using FastText CBOW on Wikipedia and OSCAR (Common Crawl).",
+  "notes": "Because the model is trained on Wikipedia, it may perform inconsistently on many genres, such as social media text. The NER accuracy refers to the \"silver standard\" annotations in the WikiNER corpus. Accuracy on these annotations tends to be higher than correct human annotations.",
+  "sources": [
+    {
+      "name": "UD French Sequoia v2.5",
+      "url": "https://github.com/UniversalDependencies/UD_French-Sequoia",
+      "license": "LGPL-LR",
+      "author": "Candito, Marie; Seddah, Djam\u00e9; Perrier, Guy; Guillaume, Bruno"
+    },
+    {
+      "name": "WikiNER",
+      "url": "https://figshare.com/articles/Learning_multilingual_named_entity_recognition_from_Wikipedia/5462500",
+      "license": "CC BY 4.0"
+    },
+    {
+      "name": "OSCAR (Common Crawl)",
+      "url": "https://oscar-corpus.com/",
+      "license": "CC0"
+    },
+    {
+      "name": "Wikipedia (20200301)",
+      "url": "https://dumps.wikimedia.org/",
+      "license": "CC BY-SA 3.0"
+    }
+  ],
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "version": "2.3.0",
+  "spacy_version": ">=2.3.0,<2.4.0",
+  "parent_package": "spacy",
+  "accuracy": {
+    "las": 85.4391326913,
+    "uas": 88.8991407647,
+    "token_acc": 98.5157129696,
+    "las_per_type": {
+      "root": {
+        "p": 89.2344497608,
+        "r": 90.5339805825,
+        "f": 89.8795180723
+      },
+      "amod": {
+        "p": 93.2960893855,
+        "r": 91.4233576642,
+        "f": 92.3502304147
+      },
+      "nmod": {
+        "p": 84.3530591775,
+        "r": 83.9321357285,
+        "f": 84.1420710355
+      },
+      "det": {
+        "p": 98.37000815,
+        "r": 97.4172719935,
+        "f": 97.8913219789
+      },
+      "nsubj:pass": {
+        "p": 84.0909090909,
+        "r": 87.0588235294,
+        "f": 85.549132948
+      },
+      "aux:tense": {
+        "p": 93.8461538462,
+        "r": 97.6,
+        "f": 95.6862745098
+      },
+      "aux:pass": {
+        "p": 95.5752212389,
+        "r": 96.4285714286,
+        "f": 96.0
+      },
+      "acl:relcl": {
+        "p": 72.972972973,
+        "r": 62.7906976744,
+        "f": 67.5
+      },
+      "advmod": {
+        "p": 84.6394984326,
+        "r": 84.6394984326,
+        "f": 84.6394984326
+      },
+      "fixed": {
+        "p": 83.5294117647,
+        "r": 70.297029703,
+        "f": 76.3440860215
+      },
+      "case": {
+        "p": 96.9283276451,
+        "r": 96.7302452316,
+        "f": 96.8291851347
+      },
+      "dep": {
+        "p": 28.5714285714,
+        "r": 51.6129032258,
+        "f": 36.7816091954
+      },
+      "cc": {
+        "p": 89.1509433962,
+        "r": 87.0967741935,
+        "f": 88.1118881119
+      },
+      "conj": {
+        "p": 60.5150214592,
+        "r": 55.5118110236,
+        "f": 57.9055441478
+      },
+      "obl:mod": {
+        "p": 62.6865671642,
+        "r": 62.5,
+        "f": 62.5931445604
+      },
+      "nummod": {
+        "p": 90.3225806452,
+        "r": 83.3333333333,
+        "f": 86.6873065015
+      },
+      "acl": {
+        "p": 70.5882352941,
+        "r": 69.3641618497,
+        "f": 69.970845481
+      },
+      "cop": {
+        "p": 90.5882352941,
+        "r": 85.5555555556,
+        "f": 88.0
+      },
+      "xcomp": {
+        "p": 90.0709219858,
+        "r": 84.1059602649,
+        "f": 86.9863013699
+      },
+      "nsubj": {
+        "p": 88.0195599022,
+        "r": 86.7469879518,
+        "f": 87.3786407767
+      },
+      "obj": {
+        "p": 85.628742515,
+        "r": 84.8664688427,
+        "f": 85.2459016393
+      },
+      "obl:arg": {
+        "p": 73.5849056604,
+        "r": 70.9090909091,
+        "f": 72.2222222222
+      },
+      "mark": {
+        "p": 90.0452488688,
+        "r": 87.6651982379,
+        "f": 88.8392857143
+      },
+      "advcl": {
+        "p": 47.2527472527,
+        "r": 55.1282051282,
+        "f": 50.8875739645
+      },
+      "expl:comp": {
+        "p": 66.6666666667,
+        "r": 93.3333333333,
+        "f": 77.7777777778
+      },
+      "appos": {
+        "p": 52.6315789474,
+        "r": 60.2409638554,
+        "f": 56.1797752809
+      },
+      "ccomp": {
+        "p": 68.5185185185,
+        "r": 72.5490196078,
+        "f": 70.4761904762
+      },
+      "parataxis": {
+        "p": 70.0,
+        "r": 50.0,
+        "f": 58.3333333333
+      },
+      "obl:agent": {
+        "p": 89.7435897436,
+        "r": 83.3333333333,
+        "f": 86.4197530864
+      },
+      "expl:pass": {
+        "p": 33.3333333333,
+        "r": 14.2857142857,
+        "f": 20.0
+      },
+      "flat:name": {
+        "p": 93.8144329897,
+        "r": 86.6666666667,
+        "f": 90.099009901
+      },
+      "iobj": {
+        "p": 77.7777777778,
+        "r": 56.0,
+        "f": 65.1162790698
+      },
+      "expl:subj": {
+        "p": 75.7575757576,
+        "r": 78.125,
+        "f": 76.9230769231
+      },
+      "csubj": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "nsubj:caus": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "aux:caus": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "orphan": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "vocative": {
+        "p": 100.0,
+        "r": 62.5,
+        "f": 76.9230769231
+      },
+      "advcl:cleft": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "obj:agent": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "flat:foreign": {
+        "p": 75.0,
+        "r": 42.8571428571,
+        "f": 54.5454545455
+      },
+      "goeswith": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "dislocated": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    },
+    "tags_acc": 95.7196029777,
+    "ents_f": 84.6739064978,
+    "ents_p": 84.9210822999,
+    "ents_r": 84.4281654057,
+    "ents_per_type": {
+      "ORG": {
+        "p": 78.696839641,
+        "r": 76.9847328244,
+        "f": 77.8313717924
+      },
+      "LOC": {
+        "p": 85.0568984135,
+        "r": 85.6688697398,
+        "f": 85.3617872624
+      },
+      "MISC": {
+        "p": 75.7330309412,
+        "r": 68.1586237061,
+        "f": 71.7464702271
+      },
+      "PER": {
+        "p": 90.8919202518,
+        "r": 93.093071577,
+        "f": 91.9793288971
+      }
+    }
+  },
+  "speed": {
+    "cpu": 4641.869116538,
+    "gpu": null,
+    "nwords": 689875
+  },
+  "labels": {
+    "tagger": [
+      "ADJ",
+      "ADJ__Gender=Fem|Number=Plur",
+      "ADJ__Gender=Fem|Number=Plur|NumType=Ord",
+      "ADJ__Gender=Fem|Number=Sing",
+      "ADJ__Gender=Fem|Number=Sing|NumType=Ord",
+      "ADJ__Gender=Masc",
+      "ADJ__Gender=Masc|Number=Plur",
+      "ADJ__Gender=Masc|Number=Plur|NumType=Ord",
+      "ADJ__Gender=Masc|Number=Sing",
+      "ADJ__Gender=Masc|Number=Sing|NumType=Ord",
+      "ADJ__NumType=Ord",
+      "ADJ__Number=Plur",
+      "ADJ__Number=Sing",
+      "ADJ__Number=Sing|NumType=Ord",
+      "ADP",
+      "ADP_DET__Definite=Def|Gender=Masc|Number=Sing|PronType=Art",
+      "ADP_DET__Definite=Def|Number=Plur|PronType=Art",
+      "ADP_PRON__Gender=Fem|Number=Plur",
+      "ADP_PRON__Gender=Masc|Number=Plur",
+      "ADP_PRON__Gender=Masc|Number=Sing",
+      "ADV",
+      "ADV__Gender=Fem",
+      "ADV__Polarity=Neg",
+      "ADV__PronType=Int",
+      "AUX__Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part",
+      "AUX__Mood=Cnd|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin",
+      "AUX__Mood=Cnd|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin",
+      "AUX__Mood=Cnd|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin",
+      "AUX__Mood=Ind|Number=Plur|Person=1|Tense=Fut|VerbForm=Fin",
+      "AUX__Mood=Ind|Number=Plur|Person=1|Tense=Imp|VerbForm=Fin",
+      "AUX__Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin",
+      "AUX__Mood=Ind|Number=Plur|Person=2|Tense=Pres|VerbForm=Fin",
+      "AUX__Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin",
+      "AUX__Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin",
+      "AUX__Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin",
+      "AUX__Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin",
+      "AUX__Mood=Ind|Number=Sing|Person=1|Tense=Imp|VerbForm=Fin",
+      "AUX__Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin",
+      "AUX__Mood=Ind|Number=Sing|Person=2|Tense=Imp|VerbForm=Fin",
+      "AUX__Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin",
+      "AUX__Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin",
+      "AUX__Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin",
+      "AUX__Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin",
+      "AUX__Mood=Sub|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin",
+      "AUX__Mood=Sub|Number=Plur|Person=2|Tense=Pres|VerbForm=Fin",
+      "AUX__Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin",
+      "AUX__Mood=Sub|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin",
+      "AUX__Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin",
+      "AUX__Tense=Past|VerbForm=Part",
+      "AUX__Tense=Pres|VerbForm=Part",
+      "AUX__VerbForm=Inf",
+      "CCONJ",
+      "DET",
+      "DET__Definite=Def|Gender=Fem|Number=Sing|PronType=Art",
+      "DET__Definite=Def|Gender=Masc|Number=Sing|PronType=Art",
+      "DET__Definite=Def|Number=Plur|PronType=Art",
+      "DET__Definite=Def|Number=Sing|PronType=Art",
+      "DET__Definite=Ind|Gender=Fem|Number=Plur|PronType=Art",
+      "DET__Definite=Ind|Gender=Fem|Number=Sing|PronType=Art",
+      "DET__Definite=Ind|Gender=Masc|Number=Plur|PronType=Art",
+      "DET__Definite=Ind|Gender=Masc|Number=Sing|PronType=Art",
+      "DET__Definite=Ind|Number=Plur|PronType=Art",
+      "DET__Definite=Ind|Number=Sing|PronType=Art",
+      "DET__Gender=Fem|Number=Plur",
+      "DET__Gender=Fem|Number=Plur|PronType=Int",
+      "DET__Gender=Fem|Number=Sing",
+      "DET__Gender=Fem|Number=Sing|Poss=Yes",
+      "DET__Gender=Fem|Number=Sing|PronType=Dem",
+      "DET__Gender=Fem|Number=Sing|PronType=Int",
+      "DET__Gender=Masc|Number=Plur",
+      "DET__Gender=Masc|Number=Sing",
+      "DET__Gender=Masc|Number=Sing|PronType=Dem",
+      "DET__Gender=Masc|Number=Sing|PronType=Int",
+      "DET__Number=Plur",
+      "DET__Number=Plur|Poss=Yes",
+      "DET__Number=Plur|PronType=Dem",
+      "DET__Number=Sing",
+      "DET__Number=Sing|Poss=Yes",
+      "INTJ",
+      "NOUN",
+      "NOUN__Gender=Fem",
+      "NOUN__Gender=Fem|Number=Plur",
+      "NOUN__Gender=Fem|Number=Sing",
+      "NOUN__Gender=Masc",
+      "NOUN__Gender=Masc|Number=Plur",
+      "NOUN__Gender=Masc|Number=Plur|NumType=Card",
+      "NOUN__Gender=Masc|Number=Sing",
+      "NOUN__Gender=Masc|Number=Sing|NumType=Card",
+      "NOUN__NumType=Card",
+      "NOUN__Number=Plur",
+      "NOUN__Number=Sing",
+      "NUM",
+      "NUM__Gender=Masc|NumType=Card",
+      "NUM__NumType=Card",
+      "PART",
+      "PRON",
+      "PRON__Gender=Fem",
+      "PRON__Gender=Fem|Number=Plur",
+      "PRON__Gender=Fem|Number=Plur|Person=3",
+      "PRON__Gender=Fem|Number=Plur|Person=3|PronType=Prs",
+      "PRON__Gender=Fem|Number=Plur|PronType=Dem",
+      "PRON__Gender=Fem|Number=Plur|PronType=Rel",
+      "PRON__Gender=Fem|Number=Sing",
+      "PRON__Gender=Fem|Number=Sing|Person=3",
+      "PRON__Gender=Fem|Number=Sing|Person=3|PronType=Prs",
+      "PRON__Gender=Fem|Number=Sing|PronType=Dem",
+      "PRON__Gender=Fem|Number=Sing|PronType=Rel",
+      "PRON__Gender=Masc",
+      "PRON__Gender=Masc|Number=Plur",
+      "PRON__Gender=Masc|Number=Plur|Person=3",
+      "PRON__Gender=Masc|Number=Plur|Person=3|PronType=Prs",
+      "PRON__Gender=Masc|Number=Plur|PronType=Dem",
+      "PRON__Gender=Masc|Number=Plur|PronType=Rel",
+      "PRON__Gender=Masc|Number=Sing",
+      "PRON__Gender=Masc|Number=Sing|Person=3",
+      "PRON__Gender=Masc|Number=Sing|Person=3|PronType=Dem",
+      "PRON__Gender=Masc|Number=Sing|Person=3|PronType=Prs",
+      "PRON__Gender=Masc|Number=Sing|PronType=Dem",
+      "PRON__Gender=Masc|Number=Sing|PronType=Rel",
+      "PRON__NumType=Card",
+      "PRON__Number=Plur",
+      "PRON__Number=Plur|Person=1",
+      "PRON__Number=Plur|Person=1|PronType=Prs",
+      "PRON__Number=Plur|Person=1|Reflex=Yes",
+      "PRON__Number=Plur|Person=2",
+      "PRON__Number=Plur|Person=2|PronType=Prs",
+      "PRON__Number=Plur|Person=2|Reflex=Yes",
+      "PRON__Number=Plur|Person=3",
+      "PRON__Number=Sing",
+      "PRON__Number=Sing|Person=1",
+      "PRON__Number=Sing|Person=1|PronType=Prs",
+      "PRON__Number=Sing|Person=1|Reflex=Yes",
+      "PRON__Number=Sing|Person=2|PronType=Prs",
+      "PRON__Number=Sing|Person=3",
+      "PRON__Number=Sing|PronType=Dem",
+      "PRON__Person=3",
+      "PRON__Person=3|Reflex=Yes",
+      "PRON__PronType=Int",
+      "PRON__PronType=Rel",
+      "PROPN",
+      "PROPN__Gender=Fem|Number=Plur",
+      "PROPN__Gender=Fem|Number=Sing",
+      "PROPN__Gender=Masc",
+      "PROPN__Gender=Masc|Number=Plur",
+      "PROPN__Gender=Masc|Number=Sing",
+      "PROPN__Number=Plur",
+      "PROPN__Number=Sing",
+      "PUNCT",
+      "SCONJ",
+      "SYM",
+      "VERB__Gender=Fem|Number=Plur|Tense=Past|VerbForm=Part",
+      "VERB__Gender=Fem|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass",
+      "VERB__Gender=Fem|Number=Sing|Tense=Past|VerbForm=Part",
+      "VERB__Gender=Fem|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass",
+      "VERB__Gender=Masc|Number=Plur|Tense=Past|VerbForm=Part",
+      "VERB__Gender=Masc|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass",
+      "VERB__Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part",
+      "VERB__Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass",
+      "VERB__Gender=Masc|Tense=Past|VerbForm=Part",
+      "VERB__Gender=Masc|Tense=Past|VerbForm=Part|Voice=Pass",
+      "VERB__Mood=Cnd|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin",
+      "VERB__Mood=Cnd|Number=Plur|Person=2|Tense=Pres|VerbForm=Fin",
+      "VERB__Mood=Cnd|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin",
+      "VERB__Mood=Cnd|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin",
+      "VERB__Mood=Cnd|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin",
+      "VERB__Mood=Imp|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin",
+      "VERB__Mood=Imp|Number=Plur|Person=2|Tense=Pres|VerbForm=Fin",
+      "VERB__Mood=Imp|Tense=Pres|VerbForm=Fin",
+      "VERB__Mood=Ind|Number=Plur|Person=1|Tense=Fut|VerbForm=Fin",
+      "VERB__Mood=Ind|Number=Plur|Person=1|Tense=Imp|VerbForm=Fin",
+      "VERB__Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin",
+      "VERB__Mood=Ind|Number=Plur|Person=2|Tense=Fut|VerbForm=Fin",
+      "VERB__Mood=Ind|Number=Plur|Person=2|Tense=Imp|VerbForm=Fin",
+      "VERB__Mood=Ind|Number=Plur|Person=2|Tense=Pres|VerbForm=Fin",
+      "VERB__Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin",
+      "VERB__Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin",
+      "VERB__Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin",
+      "VERB__Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin",
+      "VERB__Mood=Ind|Number=Sing|Person=1|Tense=Fut|VerbForm=Fin",
+      "VERB__Mood=Ind|Number=Sing|Person=1|Tense=Imp|VerbForm=Fin",
+      "VERB__Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin",
+      "VERB__Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin",
+      "VERB__Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin",
+      "VERB__Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin",
+      "VERB__Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin",
+      "VERB__Mood=Ind|Person=3|Tense=Pres|VerbForm=Fin",
+      "VERB__Mood=Ind|Person=3|VerbForm=Fin",
+      "VERB__Mood=Ind|VerbForm=Fin",
+      "VERB__Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin",
+      "VERB__Mood=Sub|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin",
+      "VERB__Mood=Sub|Number=Sing|Person=3|Tense=Past|VerbForm=Fin",
+      "VERB__Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin",
+      "VERB__Number=Plur|Tense=Past|VerbForm=Part",
+      "VERB__Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass",
+      "VERB__Number=Sing|Tense=Past|VerbForm=Part",
+      "VERB__Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass",
+      "VERB__Tense=Past|VerbForm=Part",
+      "VERB__Tense=Past|VerbForm=Part|Voice=Pass",
+      "VERB__Tense=Pres|VerbForm=Part",
+      "VERB__VerbForm=Inf",
+      "X",
+      "_SP"
+    ],
+    "parser": [
+      "ROOT",
+      "acl",
+      "acl:relcl",
+      "advcl",
+      "advmod",
+      "amod",
+      "appos",
+      "aux:pass",
+      "aux:tense",
+      "case",
+      "cc",
+      "ccomp",
+      "conj",
+      "cop",
+      "dep",
+      "det",
+      "expl:comp",
+      "expl:pass",
+      "expl:subj",
+      "fixed",
+      "flat:foreign",
+      "flat:name",
+      "iobj",
+      "mark",
+      "nmod",
+      "nsubj",
+      "nsubj:pass",
+      "nummod",
+      "obj",
+      "obl:agent",
+      "obl:arg",
+      "obl:mod",
+      "parataxis",
+      "punct",
+      "vocative",
+      "xcomp"
+    ],
+    "ner": [
+      "LOC",
+      "MISC",
+      "ORG",
+      "PER"
+    ]
+  },
+  "vectors": {
+    "width": 300,
+    "vectors": 20000,
+    "keys": 500000,
+    "name": "fr_core_news_md.vectors"
+  },
+  "size": "43 MB",
+  "checksum": "ab81567673eba7cd5a332ceaea9f5e152fcb9afeb51dd9d25d83293d4510d311"
+}

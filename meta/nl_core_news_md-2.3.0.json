@@ -1,0 +1,629 @@
+{
+  "lang": "nl",
+  "name": "core_news_md",
+  "license": "CC BY-SA 4.0",
+  "author": "Explosion and NLP Town",
+  "url": "https://explosion.ai",
+  "email": "contact@explosion.ai",
+  "description": "Dutch multi-task CNN trained on UD Alpino and LassySmall. POS tags and dependency parses from Alpino and LassySmall and NER for LassySmall by NLP Town using the OntoNotes 5 scheme. Assigns word vectors, POS tags, dependency parse and named entities. Word vectors trained using FastText CBOW on Wikipedia and OSCAR (Common Crawl).",
+  "sources": [
+    {
+      "name": "UD Dutch Alpino v2.5",
+      "url": "https://github.com/UniversalDependencies/UD_Dutch-Alpino",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "name": "UD Dutch LassySmall v2.5",
+      "url": "https://github.com/UniversalDependencies/UD_Dutch-LassySmall",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "name": "Dutch NER Annotations for UD LassySmall",
+      "author": "NLP Town",
+      "url": "https://nlp.town",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "name": "OSCAR (Common Crawl)",
+      "url": "https://oscar-corpus.com/",
+      "license": "CC0"
+    },
+    {
+      "name": "Wikipedia (20200301)",
+      "url": "https://dumps.wikimedia.org/",
+      "license": "CC BY-SA 3.0"
+    }
+  ],
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "version": "2.3.0",
+  "spacy_version": ">=2.3.0,<2.4.0",
+  "parent_package": "spacy",
+  "accuracy": {
+    "las": 83.1179362425,
+    "uas": 87.5373777305,
+    "token_acc": 99.7471885625,
+    "las_per_type": {
+      "nsubj": {
+        "p": 86.925566343,
+        "r": 88.2971729126,
+        "f": 87.6060013046
+      },
+      "root": {
+        "p": 86.5762711864,
+        "r": 91.6068866571,
+        "f": 89.0205646567
+      },
+      "mark": {
+        "p": 88.2142857143,
+        "r": 89.9817850638,
+        "f": 89.0892696123
+      },
+      "nsubj:pass": {
+        "p": 82.9411764706,
+        "r": 88.679245283,
+        "f": 85.7142857143
+      },
+      "case": {
+        "p": 93.4845360825,
+        "r": 96.0593220339,
+        "f": 94.7544409613
+      },
+      "det": {
+        "p": 94.1913915587,
+        "r": 97.4492001729,
+        "f": 95.7926051849
+      },
+      "amod": {
+        "p": 87.7192982456,
+        "r": 89.605734767,
+        "f": 88.6524822695
+      },
+      "obl": {
+        "p": 78.3505154639,
+        "r": 77.7096114519,
+        "f": 78.0287474333
+      },
+      "nmod": {
+        "p": 72.8870292887,
+        "r": 76.1363636364,
+        "f": 74.4762719111
+      },
+      "aux:pass": {
+        "p": 90.0,
+        "r": 95.0,
+        "f": 92.4324324324
+      },
+      "ccomp": {
+        "p": 64.6464646465,
+        "r": 59.8130841121,
+        "f": 62.1359223301
+      },
+      "cc": {
+        "p": 86.4915572233,
+        "r": 87.4762808349,
+        "f": 86.9811320755
+      },
+      "advmod": {
+        "p": 78.3305227656,
+        "r": 81.7781690141,
+        "f": 80.0172265289
+      },
+      "conj": {
+        "p": 65.9400544959,
+        "r": 65.8503401361,
+        "f": 65.8951667801
+      },
+      "aux": {
+        "p": 92.0265780731,
+        "r": 91.1184210526,
+        "f": 91.5702479339
+      },
+      "obj": {
+        "p": 78.4962406015,
+        "r": 79.5731707317,
+        "f": 79.0310370931
+      },
+      "fixed": {
+        "p": 76.5432098765,
+        "r": 42.6850258176,
+        "f": 54.8066298343
+      },
+      "appos": {
+        "p": 72.5552050473,
+        "r": 69.696969697,
+        "f": 71.0973724884
+      },
+      "obl:agent": {
+        "p": 96.2962962963,
+        "r": 89.6551724138,
+        "f": 92.8571428571
+      },
+      "acl:relcl": {
+        "p": 69.9386503067,
+        "r": 71.6981132075,
+        "f": 70.8074534161
+      },
+      "nummod": {
+        "p": 80.8049535604,
+        "r": 87.0,
+        "f": 83.7881219904
+      },
+      "cop": {
+        "p": 78.6713286713,
+        "r": 82.7205882353,
+        "f": 80.6451612903
+      },
+      "nmod:poss": {
+        "p": 94.5454545455,
+        "r": 94.8905109489,
+        "f": 94.7176684882
+      },
+      "parataxis": {
+        "p": 42.4083769634,
+        "r": 29.5620437956,
+        "f": 34.8387096774
+      },
+      "flat": {
+        "p": 82.7464788732,
+        "r": 76.6304347826,
+        "f": 79.5711060948
+      },
+      "compound:prt": {
+        "p": 81.4814814815,
+        "r": 70.9677419355,
+        "f": 75.8620689655
+      },
+      "xcomp": {
+        "p": 65.9793814433,
+        "r": 70.5882352941,
+        "f": 68.2060390764
+      },
+      "advcl": {
+        "p": 55.8823529412,
+        "r": 51.3513513514,
+        "f": 53.5211267606
+      },
+      "expl:pv": {
+        "p": 76.5957446809,
+        "r": 81.8181818182,
+        "f": 79.1208791209
+      },
+      "iobj": {
+        "p": 64.2857142857,
+        "r": 27.2727272727,
+        "f": 38.2978723404
+      },
+      "acl": {
+        "p": 52.8571428571,
+        "r": 38.1443298969,
+        "f": 44.3113772455
+      },
+      "csubj": {
+        "p": 46.6666666667,
+        "r": 35.0,
+        "f": 40.0
+      },
+      "expl": {
+        "p": 40.0,
+        "r": 28.5714285714,
+        "f": 33.3333333333
+      },
+      "orphan": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "dep": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    },
+    "tags_acc": 94.622670333,
+    "ents_f": 75.8287292818,
+    "ents_p": 75.724137931,
+    "ents_r": 75.9336099585,
+    "ents_per_type": {
+      "ORG": {
+        "p": 67.3202614379,
+        "r": 60.9467455621,
+        "f": 63.9751552795
+      },
+      "GPE": {
+        "p": 72.4444444444,
+        "r": 89.5604395604,
+        "f": 80.0982800983
+      },
+      "DATE": {
+        "p": 92.5081433225,
+        "r": 92.2077922078,
+        "f": 92.3577235772
+      },
+      "TIME": {
+        "p": 50.0,
+        "r": 100.0,
+        "f": 66.6666666667
+      },
+      "WORK_OF_ART": {
+        "p": 61.0169491525,
+        "r": 40.0,
+        "f": 48.322147651
+      },
+      "PERSON": {
+        "p": 78.2874617737,
+        "r": 82.8478964401,
+        "f": 80.5031446541
+      },
+      "NORP": {
+        "p": 71.8446601942,
+        "r": 89.156626506,
+        "f": 79.5698924731
+      },
+      "CARDINAL": {
+        "p": 88.1578947368,
+        "r": 95.7142857143,
+        "f": 91.7808219178
+      },
+      "LOC": {
+        "p": 37.5,
+        "r": 17.6470588235,
+        "f": 24.0
+      },
+      "ORDINAL": {
+        "p": 91.1764705882,
+        "r": 93.9393939394,
+        "f": 92.5373134328
+      },
+      "EVENT": {
+        "p": 38.4615384615,
+        "r": 43.4782608696,
+        "f": 40.8163265306
+      },
+      "LAW": {
+        "p": 75.0,
+        "r": 100.0,
+        "f": 85.7142857143
+      },
+      "PERCENT": {
+        "p": 66.6666666667,
+        "r": 100.0,
+        "f": 80.0
+      },
+      "FAC": {
+        "p": 14.2857142857,
+        "r": 28.5714285714,
+        "f": 19.0476190476
+      },
+      "PRODUCT": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "LANGUAGE": {
+        "p": 80.0,
+        "r": 72.7272727273,
+        "f": 76.1904761905
+      },
+      "QUANTITY": {
+        "p": 100.0,
+        "r": 83.3333333333,
+        "f": 90.9090909091
+      },
+      "MONEY": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    }
+  },
+  "speed": {
+    "cpu": 3191.5828633669,
+    "gpu": null,
+    "nwords": 11247
+  },
+  "labels": {
+    "tagger": [
+      "ADJ|nom|basis|met-e|mv-n__Degree=Pos",
+      "ADJ|nom|basis|met-e|zonder-n|bijz__Degree=Pos",
+      "ADJ|nom|basis|met-e|zonder-n|stan__Degree=Pos",
+      "ADJ|nom|basis|zonder|mv-n__Degree=Pos",
+      "ADJ|nom|basis|zonder|zonder-n__Degree=Pos",
+      "ADJ|nom|comp|met-e|mv-n__Degree=Cmp",
+      "ADJ|nom|comp|met-e|zonder-n|stan__Degree=Cmp",
+      "ADJ|nom|sup|met-e|mv-n__Degree=Sup",
+      "ADJ|nom|sup|met-e|zonder-n|stan__Degree=Sup",
+      "ADJ|nom|sup|zonder|zonder-n__Degree=Sup",
+      "ADJ|postnom|basis|met-s__Degree=Pos",
+      "ADJ|postnom|basis|zonder",
+      "ADJ|postnom|basis|zonder__Degree=Pos",
+      "ADJ|postnom|comp|met-s__Degree=Cmp",
+      "ADJ|prenom|basis|met-e|bijz__Degree=Pos",
+      "ADJ|prenom|basis|met-e|stan",
+      "ADJ|prenom|basis|met-e|stan__Degree=Pos",
+      "ADJ|prenom|basis|zonder",
+      "ADJ|prenom|basis|zonder__Degree=Pos",
+      "ADJ|prenom|comp|met-e|stan__Degree=Cmp",
+      "ADJ|prenom|comp|zonder__Degree=Cmp",
+      "ADJ|prenom|sup|met-e|stan__Degree=Sup",
+      "ADJ|vrij|basis|zonder",
+      "ADJ|vrij|basis|zonder__Degree=Pos",
+      "ADJ|vrij|comp|zonder__Degree=Cmp",
+      "ADJ|vrij|dim|zonder__Degree=Pos",
+      "ADJ|vrij|sup|zonder__Degree=Sup",
+      "BW",
+      "LET",
+      "LID|bep|dat|evmo__Definite=Def",
+      "LID|bep|gen|evmo__Definite=Def",
+      "LID|bep|gen|rest3__Definite=Def",
+      "LID|bep|stan|evon__Definite=Def",
+      "LID|bep|stan|rest__Definite=Def",
+      "LID|onbep|stan|agr__Definite=Ind",
+      "N|eigen|ev|basis|gen__Number=Sing",
+      "N|eigen|ev|basis|genus|stan__Gender=Com,Neut|Number=Sing",
+      "N|eigen|ev|basis|onz|stan__Gender=Neut|Number=Sing",
+      "N|eigen|ev|basis|zijd|stan__Gender=Com|Number=Sing",
+      "N|eigen|ev|dim|onz|stan__Gender=Neut|Number=Sing",
+      "N|eigen|mv|basis__Number=Plur",
+      "N|soort|ev|basis|dat__Number=Sing",
+      "N|soort|ev|basis|gen__Number=Sing",
+      "N|soort|ev|basis|genus|stan__Gender=Com,Neut|Number=Sing",
+      "N|soort|ev|basis|onz|stan__Gender=Neut|Number=Sing",
+      "N|soort|ev|basis|zijd|stan__Gender=Com|Number=Sing",
+      "N|soort|ev|dim|onz|stan__Gender=Neut|Number=Sing",
+      "N|soort|mv|basis__Number=Plur",
+      "N|soort|mv|dim__Number=Plur",
+      "SPEC|afgebr",
+      "SPEC|afk__Abbr=Yes",
+      "SPEC|deeleigen",
+      "SPEC|enof",
+      "SPEC|meta",
+      "SPEC|symb",
+      "SPEC|vreemd__Foreign=Yes",
+      "TSW",
+      "TW|hoofd|nom|mv-n|basis",
+      "TW|hoofd|nom|mv-n|dim",
+      "TW|hoofd|nom|zonder-n|basis",
+      "TW|hoofd|nom|zonder-n|dim",
+      "TW|hoofd|prenom|stan",
+      "TW|hoofd|vrij",
+      "TW|rang|nom|mv-n",
+      "TW|rang|nom|zonder-n",
+      "TW|rang|prenom|stan",
+      "VG|neven",
+      "VG|onder",
+      "VNW|aanw|adv-pron|obl|vol|3o|getal",
+      "VNW|aanw|adv-pron|stan|red|3|getal",
+      "VNW|aanw|adv-pron|stan|red|3|getal__Person=3|PronType=Dem",
+      "VNW|aanw|det|dat|nom|met-e|zonder-n__Case=Dat|PronType=Dem",
+      "VNW|aanw|det|dat|prenom|met-e|evmo",
+      "VNW|aanw|det|dat|prenom|met-e|evmo__Case=Dat|PronType=Dem",
+      "VNW|aanw|det|gen|prenom|met-e|rest3",
+      "VNW|aanw|det|stan|nom|met-e|mv-n__PronType=Dem",
+      "VNW|aanw|det|stan|nom|met-e|zonder-n",
+      "VNW|aanw|det|stan|nom|met-e|zonder-n__PronType=Dem",
+      "VNW|aanw|det|stan|prenom|met-e|rest",
+      "VNW|aanw|det|stan|prenom|met-e|rest__PronType=Dem",
+      "VNW|aanw|det|stan|prenom|zonder|agr",
+      "VNW|aanw|det|stan|prenom|zonder|agr__PronType=Dem",
+      "VNW|aanw|det|stan|prenom|zonder|evon",
+      "VNW|aanw|det|stan|prenom|zonder|rest",
+      "VNW|aanw|det|stan|vrij|zonder",
+      "VNW|aanw|det|stan|vrij|zonder__PronType=Dem",
+      "VNW|aanw|pron|gen|vol|3m|ev",
+      "VNW|aanw|pron|stan|vol|3o|ev",
+      "VNW|aanw|pron|stan|vol|3o|ev__Person=3|PronType=Dem",
+      "VNW|aanw|pron|stan|vol|3|getal__Person=3|PronType=Dem",
+      "VNW|betr|det|stan|nom|met-e|zonder-n__PronType=Rel",
+      "VNW|betr|det|stan|nom|zonder|zonder-n__PronType=Rel",
+      "VNW|betr|pron|stan|vol|3|ev__Person=3|PronType=Rel",
+      "VNW|betr|pron|stan|vol|persoon|getal__PronType=Rel",
+      "VNW|bez|det|gen|vol|3|ev|prenom|met-e|rest3__Case=Gen|Person=3|Poss=Yes|PronType=Prs",
+      "VNW|bez|det|stan|nadr|2v|mv|prenom|zonder|agr__Person=2|Poss=Yes|PronType=Prs",
+      "VNW|bez|det|stan|red|1|ev|prenom|zonder|agr__Person=1|Poss=Yes|PronType=Prs",
+      "VNW|bez|det|stan|red|2v|ev|prenom|zonder|agr",
+      "VNW|bez|det|stan|red|2v|ev|prenom|zonder|agr__Person=2|Poss=Yes|PronType=Prs",
+      "VNW|bez|det|stan|red|3|ev|prenom|zonder|agr",
+      "VNW|bez|det|stan|red|3|ev|prenom|zonder|agr__Person=3|Poss=Yes|PronType=Prs",
+      "VNW|bez|det|stan|vol|1|ev|prenom|zonder|agr",
+      "VNW|bez|det|stan|vol|1|ev|prenom|zonder|agr__Person=1|Poss=Yes|PronType=Prs",
+      "VNW|bez|det|stan|vol|1|mv|prenom|met-e|rest",
+      "VNW|bez|det|stan|vol|1|mv|prenom|met-e|rest__Person=1|Poss=Yes|PronType=Prs",
+      "VNW|bez|det|stan|vol|1|mv|prenom|zonder|evon__Person=1|Poss=Yes|PronType=Prs",
+      "VNW|bez|det|stan|vol|2v|ev|prenom|zonder|agr__Person=2|Poss=Yes|PronType=Prs",
+      "VNW|bez|det|stan|vol|2|getal|prenom|zonder|agr",
+      "VNW|bez|det|stan|vol|2|getal|prenom|zonder|agr__Person=2|Poss=Yes|PronType=Prs",
+      "VNW|bez|det|stan|vol|3m|ev|nom|met-e|zonder-n__Person=3|Poss=Yes|PronType=Prs",
+      "VNW|bez|det|stan|vol|3m|ev|prenom|met-e|rest__Person=3|Poss=Yes|PronType=Prs",
+      "VNW|bez|det|stan|vol|3p|mv|prenom|met-e|rest__Person=3|Poss=Yes|PronType=Prs",
+      "VNW|bez|det|stan|vol|3v|ev|nom|met-e|zonder-n__Person=3|Poss=Yes|PronType=Prs",
+      "VNW|bez|det|stan|vol|3v|ev|prenom|met-e|rest__Person=3|Poss=Yes|PronType=Prs",
+      "VNW|bez|det|stan|vol|3|ev|prenom|zonder|agr",
+      "VNW|bez|det|stan|vol|3|ev|prenom|zonder|agr__Person=3|Poss=Yes|PronType=Prs",
+      "VNW|bez|det|stan|vol|3|mv|prenom|zonder|agr",
+      "VNW|bez|det|stan|vol|3|mv|prenom|zonder|agr__Person=3|Poss=Yes|PronType=Prs",
+      "VNW|onbep|adv-pron|gen|red|3|getal",
+      "VNW|onbep|adv-pron|obl|vol|3o|getal",
+      "VNW|onbep|det|stan|nom|met-e|mv-n__PronType=Ind",
+      "VNW|onbep|det|stan|nom|met-e|zonder-n__PronType=Ind",
+      "VNW|onbep|det|stan|prenom|met-e|agr",
+      "VNW|onbep|det|stan|prenom|met-e|agr__PronType=Ind",
+      "VNW|onbep|det|stan|prenom|met-e|evz",
+      "VNW|onbep|det|stan|prenom|met-e|evz__PronType=Ind",
+      "VNW|onbep|det|stan|prenom|met-e|mv",
+      "VNW|onbep|det|stan|prenom|met-e|mv__PronType=Ind",
+      "VNW|onbep|det|stan|prenom|met-e|rest",
+      "VNW|onbep|det|stan|prenom|met-e|rest__PronType=Ind",
+      "VNW|onbep|det|stan|prenom|zonder|agr",
+      "VNW|onbep|det|stan|prenom|zonder|agr__PronType=Ind",
+      "VNW|onbep|det|stan|prenom|zonder|evon",
+      "VNW|onbep|det|stan|prenom|zonder|evon__PronType=Ind",
+      "VNW|onbep|det|stan|vrij|zonder",
+      "VNW|onbep|det|stan|vrij|zonder__PronType=Ind",
+      "VNW|onbep|grad|gen|nom|met-e|mv-n|basis",
+      "VNW|onbep|grad|stan|nom|met-e|mv-n|basis__PronType=Ind",
+      "VNW|onbep|grad|stan|nom|met-e|mv-n|sup__PronType=Ind",
+      "VNW|onbep|grad|stan|nom|met-e|zonder-n|basis",
+      "VNW|onbep|grad|stan|nom|met-e|zonder-n|basis__PronType=Ind",
+      "VNW|onbep|grad|stan|nom|met-e|zonder-n|sup__PronType=Ind",
+      "VNW|onbep|grad|stan|prenom|met-e|agr|basis",
+      "VNW|onbep|grad|stan|prenom|met-e|agr|comp",
+      "VNW|onbep|grad|stan|prenom|met-e|agr|sup",
+      "VNW|onbep|grad|stan|prenom|met-e|mv|basis",
+      "VNW|onbep|grad|stan|prenom|zonder|agr|basis",
+      "VNW|onbep|grad|stan|prenom|zonder|agr|basis__PronType=Ind",
+      "VNW|onbep|grad|stan|prenom|zonder|agr|comp",
+      "VNW|onbep|grad|stan|prenom|zonder|agr|comp__PronType=Ind",
+      "VNW|onbep|grad|stan|vrij|zonder|basis",
+      "VNW|onbep|grad|stan|vrij|zonder|basis__PronType=Ind",
+      "VNW|onbep|grad|stan|vrij|zonder|comp",
+      "VNW|onbep|grad|stan|vrij|zonder|comp__PronType=Ind",
+      "VNW|onbep|grad|stan|vrij|zonder|sup",
+      "VNW|onbep|grad|stan|vrij|zonder|sup__PronType=Ind",
+      "VNW|onbep|pron|gen|vol|3p|ev",
+      "VNW|onbep|pron|stan|vol|3o|ev",
+      "VNW|onbep|pron|stan|vol|3o|ev__Person=3|PronType=Ind",
+      "VNW|onbep|pron|stan|vol|3p|ev__Person=3|PronType=Ind",
+      "VNW|pers|pron|gen|vol|2|getal__Case=Gen|Person=2|PronType=Prs",
+      "VNW|pers|pron|nomin|nadr|3m|ev|masc__Case=Nom|Person=3|PronType=Prs",
+      "VNW|pers|pron|nomin|nadr|3v|ev|fem__Case=Nom|Person=3|PronType=Prs",
+      "VNW|pers|pron|nomin|red|1|mv__Case=Nom|Person=1|PronType=Prs",
+      "VNW|pers|pron|nomin|red|2v|ev__Case=Nom|Person=2|PronType=Prs",
+      "VNW|pers|pron|nomin|red|2|getal__Case=Nom|Person=2|PronType=Prs",
+      "VNW|pers|pron|nomin|red|3p|ev|masc__Case=Nom|Person=3|PronType=Prs",
+      "VNW|pers|pron|nomin|red|3|ev|masc__Case=Nom|Person=3|PronType=Prs",
+      "VNW|pers|pron|nomin|vol|1|ev__Case=Nom|Person=1|PronType=Prs",
+      "VNW|pers|pron|nomin|vol|1|mv__Case=Nom|Person=1|PronType=Prs",
+      "VNW|pers|pron|nomin|vol|2b|getal__Case=Nom|Person=2|PronType=Prs",
+      "VNW|pers|pron|nomin|vol|2v|ev__Case=Nom|Person=2|PronType=Prs",
+      "VNW|pers|pron|nomin|vol|2|getal__Case=Nom|Person=2|PronType=Prs",
+      "VNW|pers|pron|nomin|vol|3p|mv__Case=Nom|Person=3|PronType=Prs",
+      "VNW|pers|pron|nomin|vol|3v|ev|fem__Case=Nom|Person=3|PronType=Prs",
+      "VNW|pers|pron|nomin|vol|3|ev|masc__Case=Nom|Person=3|PronType=Prs",
+      "VNW|pers|pron|obl|nadr|3m|ev|masc__Case=Acc|Person=3|PronType=Prs",
+      "VNW|pers|pron|obl|red|3|ev|masc__Case=Acc|Person=3|PronType=Prs",
+      "VNW|pers|pron|obl|vol|2v|ev__Case=Acc|Person=2|PronType=Prs",
+      "VNW|pers|pron|obl|vol|3p|mv__Case=Acc|Person=3|PronType=Prs",
+      "VNW|pers|pron|obl|vol|3|ev|masc__Case=Acc|Person=3|PronType=Prs",
+      "VNW|pers|pron|obl|vol|3|getal|fem__Case=Acc|Person=3|PronType=Prs",
+      "VNW|pers|pron|stan|nadr|2v|mv__Person=2|PronType=Prs",
+      "VNW|pers|pron|stan|red|3|ev|fem__Person=3|PronType=Prs",
+      "VNW|pers|pron|stan|red|3|ev|onz__Person=3|PronType=Prs",
+      "VNW|pers|pron|stan|red|3|mv__Person=3|PronType=Prs",
+      "VNW|pr|pron|obl|nadr|1|ev__Case=Acc|Person=1|PronType=Prs",
+      "VNW|pr|pron|obl|nadr|2v|getal__Case=Acc|Person=2|PronType=Prs",
+      "VNW|pr|pron|obl|nadr|2|getal__Case=Acc|Person=2|PronType=Prs",
+      "VNW|pr|pron|obl|red|1|ev__Case=Acc|Person=1|PronType=Prs",
+      "VNW|pr|pron|obl|red|2v|getal__Case=Acc|Person=2|PronType=Prs",
+      "VNW|pr|pron|obl|vol|1|ev__Case=Acc|Person=1|PronType=Prs",
+      "VNW|pr|pron|obl|vol|1|mv__Case=Acc|Person=1|PronType=Prs",
+      "VNW|pr|pron|obl|vol|2|getal__Case=Acc|Person=2|PronType=Prs",
+      "VNW|recip|pron|gen|vol|persoon|mv",
+      "VNW|recip|pron|obl|vol|persoon|mv__Case=Acc|PronType=Rcp",
+      "VNW|refl|pron|obl|nadr|3|getal__Case=Acc|Person=3|PronType=Prs|Reflex=Yes",
+      "VNW|refl|pron|obl|red|3|getal__Case=Acc|Person=3|PronType=Prs|Reflex=Yes",
+      "VNW|vb|adv-pron|obl|vol|3o|getal",
+      "VNW|vb|det|stan|nom|met-e|zonder-n__PronType=Int",
+      "VNW|vb|det|stan|prenom|met-e|rest",
+      "VNW|vb|det|stan|prenom|zonder|evon",
+      "VNW|vb|pron|gen|vol|3m|ev",
+      "VNW|vb|pron|gen|vol|3p|mv",
+      "VNW|vb|pron|gen|vol|3v|ev",
+      "VNW|vb|pron|stan|vol|3o|ev__Person=3|PronType=Int",
+      "VNW|vb|pron|stan|vol|3p|getal",
+      "VNW|vb|pron|stan|vol|3p|getal__Person=3|PronType=Int",
+      "VZ|fin",
+      "VZ|init",
+      "VZ|versm",
+      "WW|inf|nom|zonder|zonder-n__VerbForm=Inf",
+      "WW|inf|prenom|met-e__VerbForm=Inf",
+      "WW|inf|vrij|zonder__VerbForm=Inf",
+      "WW|od|nom|met-e|mv-n__VerbForm=Part",
+      "WW|od|nom|met-e|zonder-n__VerbForm=Part",
+      "WW|od|prenom|met-e__VerbForm=Part",
+      "WW|od|prenom|zonder__VerbForm=Part",
+      "WW|od|vrij|zonder__VerbForm=Part",
+      "WW|pv|conj|ev__Number=Sing|Tense=Pres|VerbForm=Fin",
+      "WW|pv|tgw|ev__Number=Sing|Tense=Pres|VerbForm=Fin",
+      "WW|pv|tgw|met-t__Number=Sing|Tense=Pres|VerbForm=Fin",
+      "WW|pv|tgw|mv__Number=Plur|Tense=Pres|VerbForm=Fin",
+      "WW|pv|verl|ev__Number=Sing|Tense=Past|VerbForm=Fin",
+      "WW|pv|verl|mv__Number=Plur|Tense=Past|VerbForm=Fin",
+      "WW|vd|nom|met-e|mv-n__VerbForm=Part",
+      "WW|vd|nom|met-e|zonder-n__VerbForm=Part",
+      "WW|vd|prenom|met-e__VerbForm=Part",
+      "WW|vd|prenom|zonder__VerbForm=Part",
+      "WW|vd|vrij|zonder__VerbForm=Part",
+      "_SP"
+    ],
+    "parser": [
+      "ROOT",
+      "acl",
+      "acl:relcl",
+      "advcl",
+      "advmod",
+      "amod",
+      "appos",
+      "aux",
+      "aux:pass",
+      "case",
+      "cc",
+      "ccomp",
+      "compound:prt",
+      "conj",
+      "cop",
+      "csubj",
+      "dep",
+      "det",
+      "expl",
+      "expl:pv",
+      "fixed",
+      "flat",
+      "iobj",
+      "mark",
+      "nmod",
+      "nmod:poss",
+      "nsubj",
+      "nsubj:pass",
+      "nummod",
+      "obj",
+      "obl",
+      "obl:agent",
+      "orphan",
+      "parataxis",
+      "punct",
+      "xcomp"
+    ],
+    "ner": [
+      "CARDINAL",
+      "DATE",
+      "EVENT",
+      "FAC",
+      "GPE",
+      "LANGUAGE",
+      "LAW",
+      "LOC",
+      "MONEY",
+      "NORP",
+      "ORDINAL",
+      "ORG",
+      "PERCENT",
+      "PERSON",
+      "PRODUCT",
+      "QUANTITY",
+      "TIME",
+      "WORK_OF_ART"
+    ]
+  },
+  "vectors": {
+    "width": 300,
+    "vectors": 20000,
+    "keys": 500000,
+    "name": "nl_core_news_md.vectors"
+  },
+  "size": "44 MB",
+  "checksum": "8f8a0902ae7292843a6c0886884181e3bab8ebd66f31a049986986515e84ceaa"
+}

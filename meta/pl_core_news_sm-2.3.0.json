@@ -1,0 +1,310 @@
+{
+  "lang": "pl",
+  "name": "core_news_sm",
+  "license": "GPL",
+  "author": "Explosion and Ryszard Tuora",
+  "url": "https://explosion.ai",
+  "email": "contact@explosion.ai",
+  "description": "Polish multi-task CNN trained on the National Corpus of Polish and UD Polish PDB. Assigns context-specific token vectors, POS tags, lemmas, dependency parses and named entities.",
+  "sources": [
+    {
+      "name": "National Corpus of Polish",
+      "url": "http://nkjp.pl/",
+      "license": "GNU GPL 3.0",
+      "author": "Miros\u0142aw Ba\u0144ko, Rafa\u0142 L. G\u00f3rski, Barbara Lewandowska-Tomaszczyk, Marek \u0141azi\u0144ski, Piotr P\u0119zik, Adam Przepi\u00f3rkowski"
+    },
+    {
+      "name": "UD Polish SZ v2.3",
+      "url": "https://github.com/UniversalDependencies/UD_Polish-PDB/",
+      "license": "GNU GPL 3.0",
+      "author": "Wr\u00f3blewska, Alina; Zeman, Daniel; Ma\u0161ek, Jan; Rosa, Rudolf"
+    },
+    {
+      "name": "Morfeusz 2 Lemmas from the Grammatical Dictionary of Polish (SGJP)",
+      "url": "http://sgjp.pl/o-slowniku/",
+      "license": "BSD-2-Clause",
+      "author": "Marcin Woli\u0144ski, Zbigniew Bronk, W\u0142odzimierz Gruszczy\u0144ski, Witold Kiera\u015b, Zygmunt Saloni, Danuta Skowro\u0144ska, Robert Wo\u0142osz"
+    }
+  ],
+  "pipeline": [
+    "tagger",
+    "parser",
+    "ner"
+  ],
+  "version": "2.3.0",
+  "spacy_version": ">=2.3.0,<2.4.0",
+  "parent_package": "spacy",
+  "accuracy": {
+    "las": 78.087089023,
+    "uas": 85.6121432339,
+    "token_acc": 99.833120644,
+    "las_per_type": {
+      "nsubj": {
+        "p": 72.3435225619,
+        "r": 72.6608187135,
+        "f": 72.5018234865
+      },
+      "case": {
+        "p": 92.5858951175,
+        "r": 91.5921288014,
+        "f": 92.0863309353
+      },
+      "nmod": {
+        "p": 67.1261930011,
+        "r": 73.348783314,
+        "f": 70.0996677741
+      },
+      "appos": {
+        "p": 67.5675675676,
+        "r": 43.8596491228,
+        "f": 53.1914893617
+      },
+      "obl": {
+        "p": 59.9067599068,
+        "r": 51.503006012,
+        "f": 55.3879310345
+      },
+      "root": {
+        "p": 91.1219512195,
+        "r": 90.9444985394,
+        "f": 91.0331384016
+      },
+      "iobj": {
+        "p": 48.1481481481,
+        "r": 30.2325581395,
+        "f": 37.1428571429
+      },
+      "obj": {
+        "p": 70.1538461538,
+        "r": 70.1538461538,
+        "f": 70.1538461538
+      },
+      "ccomp": {
+        "p": 73.8095238095,
+        "r": 86.1111111111,
+        "f": 79.4871794872
+      },
+      "cc": {
+        "p": 88.9423076923,
+        "r": 87.2641509434,
+        "f": 88.0952380952
+      },
+      "conj": {
+        "p": 65.8192090395,
+        "r": 68.5294117647,
+        "f": 67.1469740634
+      },
+      "amod": {
+        "p": 82.637075718,
+        "r": 81.1538461538,
+        "f": 81.8887451488
+      },
+      "obl:arg": {
+        "p": 63.6363636364,
+        "r": 64.6739130435,
+        "f": 64.1509433962
+      },
+      "cop": {
+        "p": 69.0476190476,
+        "r": 72.5,
+        "f": 70.7317073171
+      },
+      "xcomp": {
+        "p": 81.6666666667,
+        "r": 84.9710982659,
+        "f": 83.2861189802
+      },
+      "det": {
+        "p": 85.1428571429,
+        "r": 88.1656804734,
+        "f": 86.6279069767
+      },
+      "advmod": {
+        "p": 81.1420982736,
+        "r": 82.3450134771,
+        "f": 81.7391304348
+      },
+      "aux": {
+        "p": 86.8421052632,
+        "r": 80.487804878,
+        "f": 83.5443037975
+      },
+      "expl:pv": {
+        "p": 93.2038834951,
+        "r": 93.6585365854,
+        "f": 93.4306569343
+      },
+      "nummod": {
+        "p": 67.5675675676,
+        "r": 71.4285714286,
+        "f": 69.4444444444
+      },
+      "mark": {
+        "p": 83.7837837838,
+        "r": 86.1111111111,
+        "f": 84.9315068493
+      },
+      "nsubj:pass": {
+        "p": 75.0,
+        "r": 54.5454545455,
+        "f": 63.1578947368
+      },
+      "aux:pass": {
+        "p": 86.0465116279,
+        "r": 86.0465116279,
+        "f": 86.0465116279
+      },
+      "acl": {
+        "p": 62.5,
+        "r": 59.5238095238,
+        "f": 60.9756097561
+      },
+      "advcl": {
+        "p": 65.2777777778,
+        "r": 60.2564102564,
+        "f": 62.6666666667
+      },
+      "det:numgov": {
+        "p": 88.8888888889,
+        "r": 80.0,
+        "f": 84.2105263158
+      },
+      "dep": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "det:nummod": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "fixed": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    },
+    "tags_acc": 98.0336564844,
+    "ents_f": 81.3222079589,
+    "ents_p": 81.9004524887,
+    "ents_r": 80.752071383,
+    "ents_per_type": {
+      "orgName": {
+        "p": 76.5273311897,
+        "r": 76.2820512821,
+        "f": 76.404494382
+      },
+      "persName": {
+        "p": 87.4570446735,
+        "r": 86.1252115059,
+        "f": 86.7860187553
+      },
+      "placeName": {
+        "p": 81.0096153846,
+        "r": 78.738317757,
+        "f": 79.8578199052
+      },
+      "date": {
+        "p": 91.2621359223,
+        "r": 87.037037037,
+        "f": 89.0995260664
+      },
+      "geogName": {
+        "p": 61.1111111111,
+        "r": 62.8571428571,
+        "f": 61.9718309859
+      },
+      "time": {
+        "p": 85.1851851852,
+        "r": 92.0,
+        "f": 88.4615384615
+      }
+    }
+  },
+  "speed": {
+    "cpu": 8953.7664117109,
+    "gpu": null,
+    "nwords": 33151
+  },
+  "labels": {
+    "tagger": [
+      "ADJ",
+      "ADJA",
+      "ADJC",
+      "ADJP",
+      "ADV",
+      "AGLT",
+      "BEDZIE",
+      "BREV",
+      "BURK",
+      "COMP",
+      "CONJ",
+      "DEPR",
+      "FIN",
+      "GER",
+      "IMPS",
+      "IMPT",
+      "INF",
+      "INTERJ",
+      "INTERP",
+      "NUM",
+      "NUMCOL",
+      "PACT",
+      "PANT",
+      "PCON",
+      "PPAS",
+      "PPRON12",
+      "PPRON3",
+      "PRAET",
+      "PRED",
+      "PREP",
+      "QUB",
+      "SIEBIE",
+      "SUBST",
+      "WINIEN",
+      "XXX",
+      "_SP"
+    ],
+    "parser": [
+      "ROOT",
+      "acl",
+      "advcl",
+      "advmod",
+      "amod",
+      "appos",
+      "aux",
+      "aux:pass",
+      "case",
+      "cc",
+      "ccomp",
+      "conj",
+      "cop",
+      "dep",
+      "det",
+      "det:numgov",
+      "expl:pv",
+      "iobj",
+      "mark",
+      "nmod",
+      "nsubj",
+      "nsubj:pass",
+      "nummod",
+      "obj",
+      "obl",
+      "obl:arg",
+      "punct",
+      "xcomp"
+    ],
+    "ner": [
+      "date",
+      "geogName",
+      "orgName",
+      "persName",
+      "placeName",
+      "time"
+    ]
+  },
+  "size": "46 MB",
+  "checksum": "513a5a5c8c0ee0166d5001352b8447c8a71cb5c9553c0e0d635fc7371dc5d598"
+}
