@@ -1,0 +1,329 @@
+{
+  "lang": "ja",
+  "name": "core_news_sm",
+  "license": "CC BY-SA 4.0",
+  "author": "Explosion and Megagon Labs Tokyo",
+  "url": "https://explosion.ai",
+  "email": "contact@explosion.ai",
+  "description": "Japanese multi-task CNN trained on UD_Japanese-GSD v2.6-NE. Assigns context-specific token vectors, POS tags, dependency parses and named entities.",
+  "sources": [
+    {
+      "name": "UD_Japanese-GSD v2.6",
+      "author": "Omura, Mai; Miyao, Yusuke; Kanayama, Hiroshi; Matsuda, Hiroshi; Wakasa, Aya; Yamashita, Kayo; Asahara, Masayuki; Tanaka, Takaaki; Murawaki, Yugo; Matsumoto, Yuji; Mori, Shinsuke; Uematsu, Sumire; McDonald, Ryan; Nivre, Joakim; Zeman, Daniel",
+      "url": "https://github.com/UniversalDependencies/UD_Japanese-GSD",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "name": "UD_Japanese-GSD v2.6-NE",
+      "author": "Megagon Labs Tokyo",
+      "url": "https://github.com/megagonlabs/UD_Japanese-GSD",
+      "license": "CC BY-SA 4.0",
+      "citation": "Matsuda, Omura, Asahara, et al. UD Japanese GSD \u306e\u518d\u6574\u5099\u3068\u56fa\u6709\u8868\u73fe\u60c5\u5831\u4ed8\u4e0e. \u8a00\u8a9e\u51e6\u7406\u5b66\u4f1a\u7b2c26\u56de\u5e74\u6b21\u5927\u4f1a\u767a\u8868, 2020"
+    },
+    {
+      "name": "SudachiPy",
+      "author": "Works Applications",
+      "url": "https://github.com/WorksApplications/SudachiPy",
+      "license": "Apache License, Version 2.0",
+      "citation": "Takaoka, Hisamoto, et al. Sudachi: a Japanese Tokenizer for Business. LREC, 2018"
+    },
+    {
+      "name": "SudachiDict",
+      "author": "Works Applications",
+      "url": "https://github.com/WorksApplications/SudachiDict",
+      "license": "Apache License, Version 2.0",
+      "citation": "Sakamoto, Kawahara, et al. \u5f62\u614b\u7d20\u89e3\u6790\u5668\u300eSudachi\u300f\u306e\u305f\u3081\u306e\u5927\u898f\u6a21\u8f9e\u66f8\u958b\u767a. \u8a00\u8a9e\u8cc7\u6e90\u6d3b\u7528\u30ef\u30fc\u30af\u30b7\u30e7\u30c3\u30d7, 2018"
+    }
+  ],
+  "requirements": [
+    "sudachipy>=0.4.5",
+    "sudachidict_core>=20200330"
+  ],
+  "pipeline": [
+    "parser",
+    "ner"
+  ],
+  "version": "2.3.1",
+  "spacy_version": ">=2.3.0,<2.4.0",
+  "parent_package": "spacy",
+  "accuracy": {
+    "las": 86.8724636359,
+    "uas": 88.6781268524,
+    "token_acc": 97.6652091412,
+    "las_per_type": {
+      "cc": {
+        "p": 77.7777777778,
+        "r": 76.0869565217,
+        "f": 76.9230769231
+      },
+      "nummod": {
+        "p": 98.4496124031,
+        "r": 87.2852233677,
+        "f": 92.5318761384
+      },
+      "compound": {
+        "p": 92.6688102894,
+        "r": 89.4475481068,
+        "f": 91.0296904611
+      },
+      "obl": {
+        "p": 78.1664656212,
+        "r": 77.8846153846,
+        "f": 78.0252859723
+      },
+      "case": {
+        "p": 98.382642998,
+        "r": 95.2271859488,
+        "f": 96.7792006209
+      },
+      "dislocated": {
+        "p": 23.6842105263,
+        "r": 47.3684210526,
+        "f": 31.5789473684
+      },
+      "nmod": {
+        "p": 88.9920424403,
+        "r": 80.843373494,
+        "f": 84.7222222222
+      },
+      "nsubj": {
+        "p": 81.1403508772,
+        "r": 77.0833333333,
+        "f": 79.0598290598
+      },
+      "root": {
+        "p": 88.783269962,
+        "r": 93.2135728543,
+        "f": 90.9444985394
+      },
+      "aux": {
+        "p": 96.0269865067,
+        "r": 92.8260869565,
+        "f": 94.3994104643
+      },
+      "advcl": {
+        "p": 67.3575129534,
+        "r": 60.6060606061,
+        "f": 63.8036809816
+      },
+      "mark": {
+        "p": 95.4166666667,
+        "r": 90.157480315,
+        "f": 92.7125506073
+      },
+      "acl": {
+        "p": 82.6603325416,
+        "r": 76.6519823789,
+        "f": 79.5428571429
+      },
+      "obj": {
+        "p": 94.0397350993,
+        "r": 86.5853658537,
+        "f": 90.1587301587
+      },
+      "fixed": {
+        "p": 93.6507936508,
+        "r": 97.2527472527,
+        "f": 95.4177897574
+      },
+      "advmod": {
+        "p": 67.0454545455,
+        "r": 46.8253968254,
+        "f": 55.1401869159
+      },
+      "amod": {
+        "p": 87.0967741935,
+        "r": 67.5,
+        "f": 76.0563380282
+      },
+      "cop": {
+        "p": 97.0414201183,
+        "r": 90.1098901099,
+        "f": 93.4472934473
+      },
+      "ccomp": {
+        "p": 95.0,
+        "r": 86.3636363636,
+        "f": 90.4761904762
+      },
+      "dep": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "csubj": {
+        "p": 83.3333333333,
+        "r": 76.9230769231,
+        "f": 80.0
+      },
+      "det": {
+        "p": 98.0392156863,
+        "r": 98.0392156863,
+        "f": 98.0392156863
+      }
+    },
+    "ents_f": 59.9312714777,
+    "ents_p": 64.880952381,
+    "ents_r": 55.6832694764,
+    "ents_per_type": {
+      "QUANTITY": {
+        "p": 81.8181818182,
+        "r": 81.8181818182,
+        "f": 81.8181818182
+      },
+      "ORDINAL": {
+        "p": 73.6842105263,
+        "r": 73.6842105263,
+        "f": 73.6842105263
+      },
+      "DATE": {
+        "p": 95.2830188679,
+        "r": 93.5185185185,
+        "f": 94.3925233645
+      },
+      "ORG": {
+        "p": 48.3870967742,
+        "r": 45.8015267176,
+        "f": 47.0588235294
+      },
+      "GPE": {
+        "p": 62.3376623377,
+        "r": 51.0638297872,
+        "f": 56.1403508772
+      },
+      "PRODUCT": {
+        "p": 39.3939393939,
+        "r": 31.7073170732,
+        "f": 35.1351351351
+      },
+      "PERSON": {
+        "p": 53.3333333333,
+        "r": 46.0431654676,
+        "f": 49.4208494208
+      },
+      "FAC": {
+        "p": 50.0,
+        "r": 18.9189189189,
+        "f": 27.4509803922
+      },
+      "EVENT": {
+        "p": 75.0,
+        "r": 46.1538461538,
+        "f": 57.1428571429
+      },
+      "TITLE_AFFIX": {
+        "p": 85.0,
+        "r": 56.6666666667,
+        "f": 68.0
+      },
+      "NORP": {
+        "p": 81.8181818182,
+        "r": 56.25,
+        "f": 66.6666666667
+      },
+      "WORK_OF_ART": {
+        "p": 50.0,
+        "r": 41.1764705882,
+        "f": 45.1612903226
+      },
+      "LAW": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "LOC": {
+        "p": 41.1764705882,
+        "r": 70.0,
+        "f": 51.8518518519
+      },
+      "CARDINAL": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "MONEY": {
+        "p": 42.8571428571,
+        "r": 42.8571428571,
+        "f": 42.8571428571
+      },
+      "MOVEMENT": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "LANGUAGE": {
+        "p": 100.0,
+        "r": 83.3333333333,
+        "f": 90.9090909091
+      },
+      "TIME": {
+        "p": 57.1428571429,
+        "r": 100.0,
+        "f": 72.7272727273
+      },
+      "PERCENT": {
+        "p": 100.0,
+        "r": 28.5714285714,
+        "f": 44.4444444444
+      }
+    }
+  },
+  "speed": {
+    "cpu": 9594.1969180691,
+    "gpu": null,
+    "nwords": 12121
+  },
+  "labels": {
+    "parser": [
+      "ROOT",
+      "acl",
+      "advcl",
+      "advmod",
+      "amod",
+      "aux",
+      "case",
+      "cc",
+      "ccomp",
+      "compound",
+      "cop",
+      "csubj",
+      "dep",
+      "det",
+      "dislocated",
+      "fixed",
+      "mark",
+      "nmod",
+      "nsubj",
+      "nummod",
+      "obj",
+      "obl",
+      "punct"
+    ],
+    "ner": [
+      "CARDINAL",
+      "DATE",
+      "EVENT",
+      "FAC",
+      "GPE",
+      "LANGUAGE",
+      "LAW",
+      "LOC",
+      "MONEY",
+      "MOVEMENT",
+      "NORP",
+      "ORDINAL",
+      "ORG",
+      "PERCENT",
+      "PERSON",
+      "PET_NAME",
+      "PHONE",
+      "PRODUCT",
+      "QUANTITY",
+      "TIME",
+      "TITLE_AFFIX",
+      "WORK_OF_ART"
+    ]
+  },
+  "size": "7 MB",
+  "checksum": "14ff817486950d0c950d0d3e47ca7ba397311afaba8f34797478723d51fb8331"
+}
