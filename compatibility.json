@@ -1,9 +1,9 @@
 {
     "spacy": {
 	"2.3.0": {
-            "zh_core_web_sm": ["2.3.0"],
-            "zh_core_web_md": ["2.3.0"],
-            "zh_core_web_lg": ["2.3.0"],
+            "zh_core_web_sm": ["2.3.1", "2.3.0"],
+            "zh_core_web_md": ["2.3.1", "2.3.0"],
+            "zh_core_web_lg": ["2.3.1", "2.3.0"],
             "da_core_news_sm": ["2.3.0"],
             "da_core_news_md": ["2.3.0"],
             "da_core_news_lg": ["2.3.0"],
