@@ -2,7 +2,7 @@
   "lang": "da",
   "name": "core_news_sm",
   "version": "3.0.0a0",
-  "description": "Danish pipeline optimized for CPU. Components: tok2vec, morphologizer, parser, senter, ner, lemmatizer, attribute_ruler.",
+  "description": "Danish pipeline optimized for CPU. Components: tok2vec, morphologizer, tagger, parser, senter, ner, lemmatizer, attribute_ruler.",
   "author": "Explosion",
   "email": "contact@explosion.ai",
   "url": "https://explosion.ai",
@@ -21,7 +21,7 @@
       "author": "Rasmus Hvingelby, Amalie B. Pauli, Maria Barrett, Christina Rosted, Lasse M. Lidegaard, Anders S\u00f8gaard"
     }
   ],
-  "spacy_version": ">=3.0.0a18,<3.1.0",
+  "spacy_version": ">=3.0.0a19,<3.1.0",
   "vectors": {
     "width": 0,
     "vectors": 0,
@@ -29,6 +29,6 @@
     "name": null
   },
   "parent_package": "spacy-nightly",
-  "size": "41 MB",
-  "checksum": "d093f67b8176498a5fec4847807a7066f8509ee6e44f0dc413da565a66d6cecc"
+  "size": "23 MB",
+  "checksum": "911bde1af5d30103953d4f8acae4b137038dfe9188108bd8301a8ce58fe635ba"
 }
