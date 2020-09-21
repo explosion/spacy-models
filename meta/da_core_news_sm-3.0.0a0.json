@@ -262,20 +262,20 @@
     "senter"
   ],
   "performance": {
-    "tag_acc": 0.9475060533,
-    "dep_uas": 0.7832058512,
-    "dep_las": 0.7318407682,
-    "sents_f": 0.8563829787,
+    "tag_acc": 0.9533171913,
+    "dep_uas": 0.8166638745,
+    "dep_las": 0.7726587368,
+    "sents_f": 0.868940754,
     "ents_f": 0.0,
     "ents_p": 0.0,
     "ents_r": 0.0,
-    "morph_acc": 0.9329782082,
-    "speed": 14446.1497648858,
-    "tok2vec_loss": 15317.0069457067,
-    "morphologizer_loss": 8491.2695462704,
-    "tagger_loss": 5456.2273785472,
-    "parser_loss": 39557.5045229192,
-    "senter_loss": 754.6403140311
+    "morph_acc": 0.9420823245,
+    "speed": 17217.6778654259,
+    "tok2vec_loss": 129962.2781780236,
+    "morphologizer_loss": 1104.4046614076,
+    "tagger_loss": 801.0336355792,
+    "parser_loss": 9603.6120608609,
+    "senter_loss": 87.5124262194
   },
   "sources": [
     {
@@ -293,21 +293,21 @@
   ],
   "accuracy": {
     "tok": 99.95,
-    "tag": 95.14,
-    "pos": 95.13,
-    "morph": 93.3,
+    "tag": 95.52,
+    "pos": 95.51,
+    "morph": 94.21,
     "lemma": 84.91,
-    "uas": 78.32,
-    "las": 73.18,
-    "ner_p": 72.61,
-    "ner_r": 69.58,
-    "ner_f": 71.06,
-    "sent_p": 85.64,
-    "sent_r": 85.64,
-    "sent_f": 85.64,
-    "speed": 8709.0
+    "uas": 81.67,
+    "las": 77.27,
+    "ner_p": 72.1,
+    "ner_r": 70.0,
+    "ner_f": 71.04,
+    "sent_p": 88.0,
+    "sent_r": 85.82,
+    "sent_f": 86.89,
+    "speed": 8803.0
   },
   "parent_package": "spacy-nightly",
   "size": "23 MB",
-  "checksum": "5ba303025908be96c41748437e540838518be80ce26616027364bae27c037634"
+  "checksum": "507b8ee7482fdd148ee3bc4ce54736e2e43d9efd8d6b7b093217560b7fc09f7c"
 }
