@@ -2,13 +2,13 @@
   "lang": "da",
   "name": "core_news_sm",
   "version": "3.0.0a0",
-  "description": "Danish pipeline optimized for CPU. Components: tok2vec, morphologizer, tagger, parser, senter, ner, lemmatizer, attribute_ruler.",
+  "description": "Danish pipeline optimized for CPU. Components: tok2vec, morphologizer, parser, senter, ner, lemmatizer, attribute_ruler.",
   "author": "Explosion",
   "email": "contact@explosion.ai",
   "url": "https://explosion.ai",
   "license": "CC BY-SA 4.0",
   "spacy_version": ">=3.0.0a19,<3.1.0",
-  "spacy_git_version": "dd1858a6c",
+  "spacy_git_version": "8fb59d958",
   "vectors": {
     "width": 0,
     "vectors": 0,
@@ -270,7 +270,7 @@
     "ents_p": 0.0,
     "ents_r": 0.0,
     "morph_acc": 0.9420823245,
-    "speed": 17217.6778654259,
+    "speed": 17268.4808016377,
     "tok2vec_loss": 129962.2781780236,
     "morphologizer_loss": 1104.4046614076,
     "tagger_loss": 801.0336355792,
@@ -305,9 +305,9 @@
     "sent_p": 88.0,
     "sent_r": 85.82,
     "sent_f": 86.89,
-    "speed": 8803.0
+    "speed": 10378.0
   },
   "parent_package": "spacy-nightly",
   "size": "23 MB",
-  "checksum": "507b8ee7482fdd148ee3bc4ce54736e2e43d9efd8d6b7b093217560b7fc09f7c"
+  "checksum": "f41cf560814092a6f78a90eba1ce3aba6676050c813d4a5a304ef207dfc1c610"
 }
