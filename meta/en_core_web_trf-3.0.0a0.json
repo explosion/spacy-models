@@ -2,7 +2,7 @@
   "lang": "en",
   "name": "core_web_trf",
   "version": "3.0.0a0",
-  "description": "English pipeline optimized for CPU. Components: transformer, tagger, parser, ner.",
+  "description": "English transformer pipeline (roberta-base). Components: transformer, tagger, parser, ner.",
   "author": "Explosion",
   "email": "contact@explosion.ai",
   "url": "https://explosion.ai",
@@ -181,9 +181,9 @@
     "sent_p": 91.52,
     "sent_r": 91.8,
     "sent_f": 91.66,
-    "speed": 5550.0
+    "speed": 6153.0
   },
   "parent_package": "spacy-nightly",
   "size": "437 MB",
-  "checksum": "fc31d482aa22fe679fa3c670a216b769612e80d7577f283e2cec45baad1842d0"
+  "checksum": "d4fd07836b3d20354b47d420ff2ce31bf226882a65da008fdcda1db745dc9536"
 }
