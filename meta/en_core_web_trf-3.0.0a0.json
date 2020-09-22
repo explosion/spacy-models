@@ -181,9 +181,9 @@
     "sent_p": 91.52,
     "sent_r": 91.8,
     "sent_f": 91.66,
-    "speed": 6153.0
+    "speed": 5945.0
   },
   "parent_package": "spacy-nightly",
   "size": "437 MB",
-  "checksum": "d4fd07836b3d20354b47d420ff2ce31bf226882a65da008fdcda1db745dc9536"
+  "checksum": "b8fcf890a760573c9dbdaffc8cadad319c088755c84bf7d3bab6744afc5e0e2f"
 }
