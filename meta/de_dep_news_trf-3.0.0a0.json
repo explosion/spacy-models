@@ -2,7 +2,7 @@
   "lang": "de",
   "name": "dep_news_trf",
   "version": "3.0.0a0",
-  "description": "German pipeline optimized for CPU. Components: transformer, tagger, parser.",
+  "description": "German transformer pipeline (bert-base-german-cased). Components: transformer, tagger, parser.",
   "author": "Explosion",
   "email": "contact@explosion.ai",
   "url": "https://explosion.ai",
@@ -157,9 +157,9 @@
     "sent_p": 95.22,
     "sent_r": 94.99,
     "sent_f": 95.1,
-    "speed": 3753.0
+    "speed": 4517.0
   },
   "parent_package": "spacy-nightly",
   "size": "388 MB",
-  "checksum": "8e90d88a8fd81c27428e0e56656f4a4c869236402351a06e360109630a278a3c"
+  "checksum": "e5cd7aa607b4ff804efb246430f333bc08e6f826705ea18ab4a79254127469df"
 }
