@@ -176,25 +176,6 @@
       "Number=Plur|Number[psor]=Plur|POS=PRON|Person=1|Poss=Yes|PronType=Prs|Style=Form",
       "Number[psor]=Plur|POS=PRON|Person=3|Poss=Yes|PronType=Prs"
     ],
-    "tagger": [
-      "ADJ",
-      "ADP",
-      "ADV",
-      "AUX",
-      "CCONJ",
-      "DET",
-      "INTJ",
-      "NOUN",
-      "NUM",
-      "PART",
-      "PRON",
-      "PROPN",
-      "PUNCT",
-      "SCONJ",
-      "SYM",
-      "VERB",
-      "X"
-    ],
     "parser": [
       "ROOT",
       "acl:relcl",
@@ -242,7 +223,6 @@
   "pipeline": [
     "tok2vec",
     "morphologizer",
-    "tagger",
     "parser",
     "ner",
     "lemmatizer",
@@ -251,7 +231,6 @@
   "components": [
     "tok2vec",
     "morphologizer",
-    "tagger",
     "parser",
     "senter",
     "ner",
@@ -262,20 +241,19 @@
     "senter"
   ],
   "performance": {
-    "tag_acc": 0.9533171913,
-    "dep_uas": 0.8166638745,
-    "dep_las": 0.7726587368,
-    "sents_f": 0.868940754,
+    "tag_acc": 0.0,
+    "dep_uas": 0.8112817649,
+    "dep_las": 0.7656651402,
+    "sents_f": 0.8771300448,
     "ents_f": 0.0,
     "ents_p": 0.0,
     "ents_r": 0.0,
-    "morph_acc": 0.9420823245,
-    "speed": 17268.4808016377,
-    "tok2vec_loss": 129962.2781780236,
-    "morphologizer_loss": 1104.4046614076,
-    "tagger_loss": 801.0336355792,
-    "parser_loss": 9603.6120608609,
-    "senter_loss": 87.5124262194
+    "morph_acc": 0.9398547215,
+    "speed": 17734.5473986889,
+    "tok2vec_loss": 95090.783856268,
+    "morphologizer_loss": 1974.7502804322,
+    "parser_loss": 13754.0364570899,
+    "senter_loss": 145.2237408118
   },
   "sources": [
     {
@@ -293,21 +271,21 @@
   ],
   "accuracy": {
     "tok": 99.95,
-    "tag": 95.52,
-    "pos": 95.51,
-    "morph": 94.21,
+    "tag": 95.21,
+    "pos": 95.21,
+    "morph": 93.99,
     "lemma": 84.91,
-    "uas": 81.67,
-    "las": 77.27,
-    "ner_p": 72.1,
-    "ner_r": 70.0,
-    "ner_f": 71.04,
-    "sent_p": 88.0,
-    "sent_r": 85.82,
-    "sent_f": 86.89,
-    "speed": 10378.0
+    "uas": 81.13,
+    "las": 76.57,
+    "ner_p": 72.32,
+    "ner_r": 70.21,
+    "ner_f": 71.25,
+    "sent_p": 88.75,
+    "sent_r": 86.7,
+    "sent_f": 87.71,
+    "speed": 8198.0
   },
   "parent_package": "spacy-nightly",
   "size": "23 MB",
-  "checksum": "f41cf560814092a6f78a90eba1ce3aba6676050c813d4a5a304ef207dfc1c610"
+  "checksum": "a240ae831b7ab834a22589c16809b408982c2cd03e3a42193c9ccce1d4f416f4"
 }
