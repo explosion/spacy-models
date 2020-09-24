@@ -1,0 +1,115 @@
+{
+  "lang": "ja",
+  "name": "core_news_lg",
+  "version": "3.0.0a0",
+  "description": "Japanese pipeline optimized for CPU. Components: tok2vec, parser, senter, ner, attribute_ruler.",
+  "author": "Explosion",
+  "email": "contact@explosion.ai",
+  "url": "https://explosion.ai",
+  "license": "All rights reserved",
+  "spacy_version": ">=3.0.0a23,<3.1.0",
+  "spacy_git_version": "02008e9a5",
+  "vectors": {
+    "width": 300,
+    "vectors": 480443,
+    "keys": 480443,
+    "name": "ja_vectors"
+  },
+  "labels": {
+    "parser": [
+      "ROOT",
+      "acl",
+      "advcl",
+      "advmod",
+      "amod",
+      "aux",
+      "case",
+      "cc",
+      "ccomp",
+      "compound",
+      "cop",
+      "csubj",
+      "dep",
+      "det",
+      "dislocated",
+      "fixed",
+      "mark",
+      "nmod",
+      "nsubj",
+      "nummod",
+      "obj",
+      "obl",
+      "punct"
+    ],
+    "senter": [
+      "I",
+      "S"
+    ],
+    "ner": [
+      "CARDINAL",
+      "DATE",
+      "EVENT",
+      "FAC",
+      "GPE",
+      "LANGUAGE",
+      "LAW",
+      "LOC",
+      "MONEY",
+      "MOVEMENT",
+      "NORP",
+      "ORDINAL",
+      "ORG",
+      "PERCENT",
+      "PERSON",
+      "PET_NAME",
+      "PHONE",
+      "PRODUCT",
+      "QUANTITY",
+      "TIME",
+      "TITLE_AFFIX",
+      "WORK_OF_ART"
+    ]
+  },
+  "pipeline": [
+    "tok2vec",
+    "parser",
+    "ner"
+  ],
+  "components": [
+    "tok2vec",
+    "parser",
+    "senter",
+    "ner"
+  ],
+  "disabled": [
+    "senter"
+  ],
+  "performance": {
+    "tag_acc": 0.0,
+    "dep_uas": 0.9035328574,
+    "dep_las": 0.8862877783,
+    "sents_f": 0.875,
+    "ents_f": 0.0,
+    "ents_p": 0.0,
+    "ents_r": 0.0,
+    "speed": 7266.0616329861,
+    "tok2vec_loss": 20871.7415446204,
+    "parser_loss": 17088.4303370165,
+    "senter_loss": 58.2463937438
+  },
+  "sources": [],
+  "accuracy": {
+    "uas": 90.31,
+    "las": 88.56,
+    "ner_p": 75.61,
+    "ner_r": 71.65,
+    "ner_f": 73.57,
+    "sent_p": 84.6,
+    "sent_r": 91.02,
+    "sent_f": 87.69,
+    "speed": 4803.0
+  },
+  "parent_package": "spacy-nightly",
+  "size": "536 MB",
+  "checksum": "7683ae086862751ed97b53fb27b3c6326035b5f1ac7cb4718e5ab4955f11eac3"
+}
