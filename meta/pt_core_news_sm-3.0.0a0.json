@@ -7,8 +7,8 @@
   "email": "contact@explosion.ai",
   "url": "https://explosion.ai",
   "license": "CC BY-SA 4.0",
-  "spacy_version": ">=3.0.0a19,<3.1.0",
-  "spacy_git_version": "dd1858a6c",
+  "spacy_version": ">=3.0.0a23,<3.1.0",
+  "spacy_git_version": "02008e9a5",
   "vectors": {
     "width": 0,
     "vectors": 0,
@@ -644,8 +644,7 @@
     "ents_f": 0.0,
     "ents_p": 0.0,
     "ents_r": 0.0,
-    "morph_acc": 0.9512158883,
-    "speed": 13136.1017456319,
+    "speed": 12372.6968929808,
     "tok2vec_loss": 130854.8210162462,
     "morphologizer_loss": 32696.1976957321,
     "parser_loss": 119758.5683962866,
@@ -677,9 +676,9 @@
     "sent_p": 91.17,
     "sent_r": 94.62,
     "sent_f": 92.74,
-    "speed": 9000.0
+    "speed": 9723.0
   },
   "parent_package": "spacy-nightly",
   "size": "25 MB",
-  "checksum": "fc675d78c709fc4555495d5c6fb5047a48c822630767f1d455a2a86ac4441023"
+  "checksum": "b06f3a3e31018059123b49894be682e55a508645c2060a5d53b66f26af4678d2"
 }
