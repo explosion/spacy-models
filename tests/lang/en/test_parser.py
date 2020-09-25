@@ -1,10 +1,6 @@
-# coding: utf-8
-from __future__ import unicode_literals
-
 import pytest
-from spacy.gold import GoldCorpus
 from pathlib import Path
-from ...util import apply_transition_sequence
+from ...util import json_path_to_examples
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
@@ -19,17 +15,16 @@ def test_en_parser_example(NLP):
 
 @pytest.mark.parametrize(
     "test_file,uas_threshold,las_threshold",
-    [("masc-penn-treebank-sample.json", 82, 78)],
+    [("masc-penn-treebank-sample.json", 0.82, 0.78)],
 )
 def test_en_parser_corpus(NLP, test_file, uas_threshold, las_threshold):
     data_path = TEST_FILES_DIR / test_file
     if not data_path.exists():
         raise FileNotFoundError("Test corpus not found", data_path)
-    corpus = GoldCorpus(data_path, data_path)
-    dev_docs = list(corpus.dev_docs(NLP, gold_preproc=False))
-    scorer = NLP.evaluate(dev_docs)
-    assert scorer.uas > uas_threshold
-    assert scorer.las > las_threshold
+    examples = json_path_to_examples(data_path, NLP)
+    scores = NLP.evaluate(examples)
+    assert scores["dep_uas"] > uas_threshold
+    assert scores["dep_las"] > las_threshold
 
 
 @pytest.mark.parametrize(
@@ -41,11 +36,11 @@ def test_en_parser_depset(NLP, test_file):
     data_path = TEST_FILES_DIR / test_file
     if not data_path.exists():
         raise FileNotFoundError("Test corpus not found", data_path)
-    corpus = GoldCorpus(data_path, data_path)
-    dev_docs = list(corpus.dev_docs(NLP, gold_preproc=False))
+    examples = json_path_to_examples(data_path, NLP)
     pred_deps = set()
     parser = NLP.get_pipe("parser")
-    for doc, _ in dev_docs:
+    for example in examples:
+        doc = doc.predicted
         parser(doc)
         pred_deps = pred_deps.union(set([t.dep_ for t in doc]))
     assert len(pred_deps - gold_deps) == 0

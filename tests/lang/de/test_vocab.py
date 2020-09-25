@@ -1,7 +1,3 @@
-# coding: utf-8
-from __future__ import unicode_literals
-
-
 def test_de_vocab_lex_attrs(NLP):
     doc = NLP("Nettoeinkommen war 9000 $ (neuntausend). example.com")
     assert doc[0].is_title

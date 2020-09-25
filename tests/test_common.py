@@ -44,7 +44,7 @@ def test_common_parser(NLP):
     """Ensure that parser exists and Doc.is_parsed."""
     assert "parser" in NLP.pipe_names
     doc = NLP("Lorem ipsum dolor sit amet.")
-    assert doc.is_parsed
+    assert doc.has_annotation("DEP", require_complete=True)
 
 
 @pytest.mark.requires("parser")
@@ -62,7 +62,7 @@ def test_common_tagger(NLP):
     """Ensure that tagger exists and Doc.is_tagged."""
     assert "tagger" in NLP.pipe_names
     doc = NLP("Lorem ipsum dolor sit amet.")
-    assert doc.is_tagged
+    assert doc.has_annotation("TAG", require_complete=True)
 
 
 @pytest.mark.requires("tagger")
@@ -72,10 +72,16 @@ def test_common_tagger(NLP):
 def test_common_tagger_no_empty(NLP, text):
     """Ensure that tags aren't empty."""
     doc = NLP(text)
-    assert all(t.pos != 0 for t in doc)
-    assert all(t.pos_ for t in doc)
     assert all(t.tag != 0 for t in doc)
     assert all(t.tag_ for t in doc)
+
+
+@pytest.mark.requires("morphologizer")
+def test_common_morphologizer(NLP):
+    """Ensure that morphologizer exists and Doc.is_tagged."""
+    assert "morphologizer" in NLP.pipe_names
+    doc = NLP("Lorem ipsum dolor sit amet.")
+    assert doc.has_annotation("MORPH", require_complete=True)
 
 
 @pytest.mark.requires("ner")
@@ -117,11 +123,6 @@ def test_tagger_sanity_checks(NLP, example_text):
     # check that the labels are a subset of the pipe model labels
     model_labels = set(NLP.get_pipe("tagger").labels)
     assert set([t.tag_ for t in doc]) <= model_labels
-    # check that the labels are all in the tag_map
-    tag_map = NLP.vocab.morphology.tag_map
-    tag_map_keys = set([key for key in tag_map.keys()])
-    model_labels -= set(["_SP"])
-    assert model_labels <= tag_map_keys
 
 
 @pytest.mark.requires("parser")
@@ -148,5 +149,6 @@ def test_ner_sanity_checks(NLP, example_text):
     assert set([t.ent_type_ for t in doc]) <= model_labels | {''}
 
 
+@pytest.mark.skip(reason="Not the right check for v3")
 def test_common_issue1919(nlp):
     nlp.begin_training()
