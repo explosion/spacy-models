@@ -145,18 +145,18 @@
     "senter"
   ],
   "performance": {
-    "tag": 87.8,
+    "tag": 89.56,
     "pos": 0.0,
     "morph": 0.0,
-    "uas": 64.64,
-    "las": 57.54,
-    "ner_p": 69.58,
-    "ner_r": 59.78,
-    "ner_f": 64.31,
-    "sent_p": 66.18,
-    "sent_r": 69.07,
-    "sent_f": 67.6,
-    "speed": 6120.0
+    "uas": 69.7,
+    "las": 64.28,
+    "ner_p": 72.28,
+    "ner_r": 65.74,
+    "ner_f": 68.85,
+    "sent_p": 62.48,
+    "sent_r": 69.0,
+    "sent_f": 65.58,
+    "speed": 6075.0
   },
   "sources": [
     {
@@ -170,5 +170,5 @@
   ],
   "parent_package": "spacy-nightly",
   "size": "52 MB",
-  "checksum": "13fa00c157c536fb6534af424ddef82f103e90780f7b6b528c7a5f1abb5f2029"
+  "checksum": "fb5ebd3429a5b9e35bd6df310582078dadce380398b83ca26c5eacdee3d164f4"
 }
