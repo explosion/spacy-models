@@ -1,7 +1,7 @@
 import pytest
 from spacy.tokens import Doc
-from spacy.compat import unicode_
 from pathlib import Path
+from ...util import json_path_to_examples
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
