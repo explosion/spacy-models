@@ -7,8 +7,8 @@
   "email": "contact@explosion.ai",
   "url": "https://explosion.ai",
   "license": "MIT",
-  "spacy_version": ">=3.0.0a23,<3.1.0",
-  "spacy_git_version": "02008e9a5",
+  "spacy_version": ">=3.0.0a26,<3.1.0",
+  "spacy_git_version": "702edf52a",
   "vectors": {
     "width": 0,
     "vectors": 0,
@@ -144,8 +144,8 @@
     "tagger",
     "parser",
     "ner",
-    "lemmatizer",
-    "attribute_ruler"
+    "attribute_ruler",
+    "lemmatizer"
   ],
   "components": [
     "tok2vec",
@@ -153,26 +153,27 @@
     "parser",
     "senter",
     "ner",
-    "lemmatizer",
-    "attribute_ruler"
+    "attribute_ruler",
+    "lemmatizer"
   ],
   "disabled": [
     "senter"
   ],
   "performance": {
-    "tag_acc": 0.972398138,
-    "dep_uas": 0.9197618505,
-    "dep_las": 0.9013500249,
-    "sents_f": 0.8819510907,
-    "ents_f": 0.0,
-    "ents_p": 0.0,
-    "ents_r": 0.0,
-    "morph_acc": 0.0,
-    "speed": 18450.3958785354,
-    "tok2vec_loss": 2465787.8112108996,
-    "tagger_loss": 27918.9419158664,
-    "parser_loss": 136618.6525864239,
-    "senter_loss": 5678.6194152719
+    "tok": 99.97,
+    "tag": 97.25,
+    "pos": 0.0,
+    "morph": 0.0,
+    "lemma": 0.0,
+    "uas": 92.01,
+    "las": 90.14,
+    "ner_p": 83.9,
+    "ner_r": 84.35,
+    "ner_f": 84.12,
+    "sent_p": 88.46,
+    "sent_r": 88.37,
+    "sent_f": 88.41,
+    "speed": 7785.0
   },
   "sources": [
     {
@@ -181,23 +182,8 @@
       "license": "commercial (licensed by Explosion)"
     }
   ],
-  "accuracy": {
-    "tok": 99.97,
-    "tag": 97.24,
-    "pos": 0.0,
-    "morph": 0.0,
-    "lemma": 0.0,
-    "uas": 91.98,
-    "las": 90.13,
-    "ner_p": 86.07,
-    "ner_r": 85.77,
-    "ner_f": 85.92,
-    "sent_p": 88.27,
-    "sent_r": 88.12,
-    "sent_f": 88.2,
-    "speed": 9179.0
-  },
+  "requirements": [],
   "parent_package": "spacy-nightly",
   "size": "18 MB",
-  "checksum": "32cdc37941e89610f2b4b48d323a9a04000f157474666b9b0155caada03d916b"
+  "checksum": "cede868fa5554ab085464a1b1c926110ac3b25dc27ee8c91975d754db479337f"
 }
