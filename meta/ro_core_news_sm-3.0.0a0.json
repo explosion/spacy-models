@@ -7,8 +7,8 @@
   "email": "contact@explosion.ai",
   "url": "https://explosion.ai",
   "license": "CC BY-SA 4.0",
-  "spacy_version": ">=3.0.0a23,<3.1.0",
-  "spacy_git_version": "02008e9a5",
+  "spacy_version": ">=3.0.0a26,<3.1.0",
+  "spacy_git_version": "702edf52a",
   "vectors": {
     "width": 0,
     "vectors": 0,
@@ -564,6 +564,7 @@
     "tagger",
     "parser",
     "ner",
+    "attribute_ruler",
     "lemmatizer"
   ],
   "components": [
@@ -572,24 +573,27 @@
     "parser",
     "senter",
     "ner",
+    "attribute_ruler",
     "lemmatizer"
   ],
   "disabled": [
     "senter"
   ],
   "performance": {
-    "tag_acc": 0.9554050488,
-    "dep_uas": 0.8694422941,
-    "dep_las": 0.7956649053,
-    "sents_f": 0.9646902065,
-    "ents_f": 0.0,
-    "ents_p": 0.0,
-    "ents_r": 0.0,
-    "speed": 15389.0594852519,
-    "tok2vec_loss": 78449.2297649671,
-    "tagger_loss": 9148.0894251904,
-    "parser_loss": 89548.6044779372,
-    "senter_loss": 339.2384271344
+    "tok": 99.9,
+    "tag": 95.68,
+    "pos": 95.51,
+    "morph": 95.88,
+    "lemma": 81.87,
+    "uas": 85.29,
+    "las": 79.57,
+    "ner_p": 72.11,
+    "ner_r": 68.73,
+    "ner_f": 70.38,
+    "sent_p": 95.75,
+    "sent_r": 95.88,
+    "sent_f": 95.81,
+    "speed": 8518.0
   },
   "sources": [
     {
@@ -605,21 +609,8 @@
       "license": "MIT"
     }
   ],
-  "accuracy": {
-    "tok": 99.9,
-    "tag": 96.26,
-    "lemma": 81.87,
-    "uas": 87.67,
-    "las": 82.71,
-    "ner_p": 74.17,
-    "ner_r": 71.26,
-    "ner_f": 72.69,
-    "sent_p": 96.66,
-    "sent_r": 96.28,
-    "sent_f": 96.47,
-    "speed": 8856.0
-  },
+  "requirements": [],
   "parent_package": "spacy-nightly",
   "size": "20 MB",
-  "checksum": "fe7aff93210af0c863ea2199b0f3b6b5a92f068eff512fb15126037de517d9d4"
+  "checksum": "6845c01f2dda3b4685c8d5b77deff33efec093a702fc59ce7237bf0c35092a20"
 }

@@ -7,8 +7,8 @@
   "email": "contact@explosion.ai",
   "url": "https://explosion.ai",
   "license": "All rights reserved",
-  "spacy_version": ">=3.0.0a23,<3.1.0",
-  "spacy_git_version": "02008e9a5",
+  "spacy_version": ">=3.0.0a26,<3.1.0",
+  "spacy_git_version": "702edf52a",
   "vectors": {
     "width": 300,
     "vectors": 20000,
@@ -73,43 +73,38 @@
   "pipeline": [
     "tok2vec",
     "parser",
-    "ner"
+    "ner",
+    "attribute_ruler"
   ],
   "components": [
     "tok2vec",
     "parser",
     "senter",
-    "ner"
+    "ner",
+    "attribute_ruler"
   ],
   "disabled": [
     "senter"
   ],
   "performance": {
-    "tag_acc": 0.0,
-    "dep_uas": 0.9014780579,
-    "dep_las": 0.88448,
-    "sents_f": 0.8500477555,
-    "ents_f": 0.0,
-    "ents_p": 0.0,
-    "ents_r": 0.0,
-    "speed": 6470.6905836636,
-    "tok2vec_loss": 24291.1729533467,
-    "parser_loss": 9798.889596947,
-    "senter_loss": 48.1957490254
+    "tag": 97.21,
+    "pos": 96.39,
+    "uas": 90.26,
+    "las": 88.18,
+    "ner_p": 70.16,
+    "ner_r": 63.35,
+    "ner_f": 66.58,
+    "sent_p": 84.64,
+    "sent_r": 90.22,
+    "sent_f": 87.34,
+    "speed": 5567.0
   },
   "sources": [],
-  "accuracy": {
-    "uas": 90.3,
-    "las": 88.53,
-    "ner_p": 75.42,
-    "ner_r": 68.2,
-    "ner_f": 71.63,
-    "sent_p": 81.17,
-    "sent_r": 88.62,
-    "sent_f": 84.73,
-    "speed": 4626.0
-  },
+  "requirements": [
+    "sudachipy>=0.4.9",
+    "sudachidict_core>=20200330"
+  ],
   "parent_package": "spacy-nightly",
   "size": "47 MB",
-  "checksum": "fa637b3205210b7805a982cbf72f62de241f44588df543866c9b5a24e7649616"
+  "checksum": "559e2c88134e63cd33eed47919660e6488e98acd00fa00a55c8273a4d1276267"
 }
