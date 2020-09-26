@@ -1,10 +1,6 @@
-# coding: utf-8
-from __future__ import unicode_literals
-
 import pytest
-from spacy.gold import GoldCorpus
 from pathlib import Path
-from ...util import apply_transition_sequence
+from ...util import json_path_to_examples
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
@@ -12,14 +8,14 @@ TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 @pytest.mark.parametrize(
     "test_file,uas_threshold,las_threshold",
-    [("zh_gsd-ud-dev_sample.json", 20, 3)],
+    [("zh_gsd-ud-dev_sample.json", 0.20, 0.3)],
 )
 def test_zh_parser_corpus(NLP, test_file, uas_threshold, las_threshold):
     data_path = TEST_FILES_DIR / test_file
     if not data_path.exists():
         raise FileNotFoundError("Test corpus not found", data_path)
-    corpus = GoldCorpus(data_path, data_path)
-    dev_docs = list(corpus.dev_docs(NLP, gold_preproc=False))
-    scorer = NLP.evaluate(dev_docs)
-    assert scorer.uas > uas_threshold
-    assert scorer.las > las_threshold
+    examples = json_path_to_examples(data_path, NLP)
+    scores = NLP.evaluate(examples)
+
+    assert scores["dep_uas"] > uas_threshold
+    assert scores["dep_las"] > las_threshold

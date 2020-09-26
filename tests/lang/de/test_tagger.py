@@ -1,27 +1,18 @@
-# coding: utf-8
-from __future__ import unicode_literals
-
 import pytest
 from spacy.tokens import Doc
-from spacy.compat import unicode_
-from spacy.parts_of_speech import SPACE
-from spacy.gold import GoldCorpus
+from spacy.symbols import SPACE
 from pathlib import Path
+from ...util import json_path_to_examples
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
-@pytest.fixture
-def lemmatizer(NLP):
-    return NLP.vocab.morphology.lemmatizer
-
-
 def test_de_tagger_tag_names(NLP):
     doc = NLP("Ich esse eine Pizza mit Tomaten.", disable=["parser"])
     assert type(doc[3].pos) == int
-    assert isinstance(doc[3].pos_, unicode_)
-    assert isinstance(doc[3].dep_, unicode_)
+    assert isinstance(doc[3].pos_, str)
+    assert isinstance(doc[3].dep_, str)
     assert doc[3].tag_ == "NN"
 
 
@@ -34,16 +25,15 @@ def test_de_tagger_example(NLP):
 
 # This threshold is artificially low due to problems with spacy 2.1. (#3830)
 @pytest.mark.parametrize(
-    "test_file,accuracy_threshold", [("de_pud-ud-test.stts.json", 93)]
+    "test_file,accuracy_threshold", [("de_pud-ud-test.stts.json", 0.93)]
 )
 def test_de_tagger_corpus(NLP, test_file, accuracy_threshold):
     data_path = TEST_FILES_DIR / test_file
     if not data_path.exists():
         raise FileNotFoundError("Test corpus not found", data_path)
-    corpus = GoldCorpus(data_path, data_path)
-    dev_docs = list(corpus.dev_docs(NLP, gold_preproc=False))
-    scorer = NLP.evaluate(dev_docs)
-    assert scorer.tags_acc > accuracy_threshold
+    examples = json_path_to_examples(data_path, NLP)
+    scores = NLP.evaluate(examples)
+    assert scores["tag_acc"] > accuracy_threshold
 
 
 @pytest.mark.parametrize("test_file", ["de_pud-ud-test.stts.json"])
@@ -62,11 +52,11 @@ def test_de_tagger_tagset(NLP, test_file):
     data_path = TEST_FILES_DIR / test_file
     if not data_path.exists():
         raise FileNotFoundError("Test corpus not found", data_path)
-    corpus = GoldCorpus(data_path, data_path)
-    dev_docs = list(corpus.dev_docs(NLP, gold_preproc=False))
-    pred_tags = set()
+    examples = json_path_to_examples(data_path, NLP)
     tagger = NLP.get_pipe("tagger")
-    for doc, _ in dev_docs:
+    pred_tags = set()
+    for example in examples:
+        doc = example.predicted
         tagger(doc)
         pred_tags = pred_tags.union(set([t.tag_ for t in doc]))
     assert len(pred_tags - gold_tags) == 0

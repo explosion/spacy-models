@@ -11,10 +11,14 @@ OPT_LANG = "--lang"
 OPT_VECTORS = "--has-vectors"
 OPT_PARSER = "--has-parser"
 OPT_TAGGER = "--has-tagger"
+OPT_MORPHOLOGIZER = "--has-morphologizer"
+OPT_LEMMATIZER = "--has-lemmatizer"
 OPT_NER = "--has-ner"
 
 OPT_MAPPING = {
     "tagger": OPT_TAGGER,
+    "morphologizer": OPT_MORPHOLOGIZER,
+    "lemmatizer": OPT_LEMMATIZER,
     "parser": OPT_PARSER,
     "ner": OPT_NER,
     "vectors": OPT_VECTORS,
@@ -27,6 +31,8 @@ def pytest_addoption(parser):
     parser.addoption(OPT_VECTORS, action="store_true", help="Model has vectors")
     parser.addoption(OPT_PARSER, action="store_true", help="Model has parser")
     parser.addoption(OPT_TAGGER, action="store_true", help="Model has tagger")
+    parser.addoption(OPT_MORPHOLOGIZER, action="store_true", help="Model has morphologizer")
+    parser.addoption(OPT_LEMMATIZER, action="store_true", help="Model has lemmatizer")
     parser.addoption(OPT_NER, action="store_true", help="Model has NER")
 
 

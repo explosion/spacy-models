@@ -1,27 +1,18 @@
-# coding: utf-8
-from __future__ import unicode_literals
-
 import pytest
 from spacy.tokens import Doc
-from spacy.compat import unicode_
-from spacy.parts_of_speech import SPACE
-from spacy.gold import GoldCorpus
+from spacy.symbols import SPACE
 from pathlib import Path
+from ...util import json_path_to_examples
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
-@pytest.fixture
-def lemmatizer(NLP):
-    return NLP.vocab.morphology.lemmatizer
-
-
 def test_en_tagger_tag_names(NLP):
     doc = NLP("I ate pizzas with anchovies.", disable=["parser"])
     assert type(doc[2].pos) == int
-    assert isinstance(doc[2].pos_, unicode_)
-    assert isinstance(doc[2].dep_, unicode_)
+    assert isinstance(doc[2].pos_, str)
+    assert isinstance(doc[2].dep_, str)
     assert doc[2].tag_ == "NNS"
 
 
@@ -37,17 +28,16 @@ def test_en_tagger_example(NLP):
 
 @pytest.mark.parametrize(
     "test_file,accuracy_threshold",
-    [("en_pud-ud-test.json", 94), ("masc-penn-treebank-sample.json", 89)],
+    [("en_pud-ud-test.json", 0.94), ("masc-penn-treebank-sample.json", 0.89)],
 )
 def test_en_tagger_corpus(NLP, test_file, accuracy_threshold):
     data_path = TEST_FILES_DIR / test_file
     if not data_path.exists():
         raise FileNotFoundError("Test corpus not found", data_path)
-    corpus = GoldCorpus(data_path, data_path)
-    dev_docs = list(corpus.dev_docs(NLP, gold_preproc=False))
-    scorer = NLP.evaluate(dev_docs)
+    examples = json_path_to_examples(data_path, NLP)
+    scores = NLP.evaluate(examples)
 
-    assert scorer.tags_acc > accuracy_threshold
+    assert scores["tag_acc"] > accuracy_threshold
 
 
 def test_en_tagger_spaces(NLP):
@@ -72,59 +62,82 @@ def test_en_tagger_return_char(NLP):
     doc = NLP(text)
     for token in doc:
         if token.is_space:
+            print(token.pos_)
             assert token.pos == SPACE
     assert doc[3].text == "\r\n\r\n"
     assert doc[3].is_space
     assert doc[3].pos == SPACE
 
 
-def test_en_tagger_lemma_doc(NLP, lemmatizer):
-    doc = Doc(NLP.vocab, words=["bleed"])
-    doc[0].tag_ = "VBP"
+def test_en_tagger_lemma_doc(NLP):
+    doc = NLP("bleed")
     assert doc[0].lemma_ == "bleed"
 
 
 @pytest.mark.parametrize(
     "text,lemmas,morphology",
     [
-        ("aardwolves", ["aardwolf"], {"Number": "plur"}),
-        ("aardwolf", ["aardwolf"], {"Number": "sing"}),
-        ("planets", ["planet"], {"Number": "plur"}),
-        ("ring", ["ring"], {"Number": "sing"}),
-        ("axes", ["axe", "ax", "axis"], {"Number": "plur"}),
+        ("aardwolves", ["aardwolf"], {"Number": "Plur"}),
+        ("aardwolf", ["aardwolf"], {"Number": "Sing"}),
+        ("planets", ["planet"], {"Number": "Plur"}),
+        ("ring", ["ring"], {"Number": "Sing"}),
+        ("axes", ["axe", "ax", "axis"], {"Number": "Plur"}),
     ],
 )
-def test_en_tagger_lemma_nouns(lemmatizer, text, lemmas, morphology):
+def test_en_tagger_lemma_nouns(NLP, text, lemmas, morphology):
     # Cases like this are problematic - not clear what we should do to resolve
     # ambiguity? ("axes", ["ax", "axes", "axis"])
     # noun_index = lemmatizer.index["noun"]
     # noun_exc = lemmatizer.exc["noun"]
-    lemmas.sort()
-    assert sorted(lemmatizer.noun(text, morphology=morphology)) == lemmas
+    doc = NLP.make_doc(text)
+    doc[0].morph_ = morphology
+    doc[0].pos_ = "NOUN"
+    NLP.get_pipe("lemmatizer")(doc)
+    assert doc[0].lemma_ == lemmas[0]
 
 
 @pytest.mark.parametrize(
     "text,lemmas",
     [("bleed", ["bleed"]), ("feed", ["feed"]), ("need", ["need"]), ("ring", ["ring"])],
 )
-def test_en_tagger_lemma_verbs(lemmatizer, text, lemmas):
-    assert lemmatizer.verb(text, morphology={"VerbForm": "inf"}) == lemmas
+def test_en_tagger_lemma_verbs(NLP, text, lemmas):
+    doc = NLP.make_doc(text)
+    doc[0].morph_ = "VerbForm=Inf"
+    doc[0].pos_ = "VERB"
+    NLP.get_pipe("lemmatizer")(doc)
+    assert doc[0].lemma_ == lemmas[0]
 
 
-def test_en_tagger_lemma_base_forms(lemmatizer):
-    assert lemmatizer.noun("dive", {"Number": "sing"}) == ["dive"]
-    assert lemmatizer.noun("dive", {"Number": "plur"}) == ["diva"]
+def test_en_tagger_lemma_base_forms(NLP):
+    doc = NLP.make_doc("dive")
+    doc[0].morph_ = "Number=Sing"
+    doc[0].pos_ = "NOUN"
+    NLP.get_pipe("lemmatizer")(doc)
+    assert doc[0].lemma_ == "dive"
+    doc = NLP.make_doc("diva")
+    doc[0].morph_ = "Number=Plur"
+    doc[0].pos_ = "NOUN"
+    NLP.get_pipe("lemmatizer")(doc)
+    assert doc[0].lemma_ == "diva"
 
 
-def test_en_tagger_lemma_base_form_verb(lemmatizer):
-    assert lemmatizer.verb("saw", {"verbform": "past"}) == ["see"]
+def test_en_tagger_lemma_base_form_verb(NLP):
+    doc = NLP.make_doc("saw")
+    doc[0].morph_ = "VerbForm=Past"
+    doc[0].pos_ = "VERB"
+    NLP.get_pipe("lemmatizer")(doc)
+    assert doc[0].lemma_ == "see"
 
 
-def test_en_tagger_lemma_punct(lemmatizer):
-    assert lemmatizer.punct("“") == ['"']
-    assert lemmatizer.punct("”") == ['"']
-    assert lemmatizer.punct("‘") == ["'"]
-    assert lemmatizer.punct("’") == ["'"]
+def test_en_tagger_lemma_punct(NLP):
+    doc = NLP.make_doc("“ ” ‘ ’")
+    for token in doc:
+        token.pos_ = "PUNCT"
+    NLP.get_pipe("lemmatizer")(doc)
+    assert doc[0].lemma_ == '"'
+    assert doc[1].lemma_ == '"'
+    assert doc[2].lemma_ == "'"
+    assert doc[3].lemma_ == "'"
 
 
 def test_en_tagger_lemma_assignment(NLP):
@@ -134,8 +147,9 @@ def test_en_tagger_lemma_assignment(NLP):
 
 def test_en_tagger_lemma_issue1305(NLP):
     """Test lemmatization of English VBZ."""
-    assert NLP.vocab.morphology.lemmatizer("works", "verb") == ["work"]
     doc = NLP("This app works well")
+    print([t.pos_ for t in doc])
+    print([t.lemma_ for t in doc])
     assert doc[2].lemma_ == "work"
 
 
@@ -170,14 +184,18 @@ def test_en_tagger_lemma_issue717(NLP, text1, text2):
     [
         ("chromosomes", ["chromosome"]),
         ("endosomes", ["endosome"]),
-        ("colocalizes", ["colocaliz", "colocalize"]),
+        ("colocalizes", ["colocalize"]),
     ],
 )
-def test_en_tagger_lemma_issue781(lemmatizer, word, lemmas):
-    result = lemmatizer(word, "noun", morphology={"Number": "plur"})
-    assert sorted(result) == sorted(lemmas)
+def test_en_tagger_lemma_issue781(NLP, word, lemmas):
+    doc = NLP.make_doc(word)
+    doc[0].pos_ = "NOUN"
+    doc[0].morph_ = "Number=Plur"
+    NLP.get_pipe("lemmatizer")(doc)
+    assert doc[0].lemma_ == lemmas[0]
 
 
+@pytest.mark.skip(reason="No more -PRON- lemmas")
 @pytest.mark.parametrize("text", ["He is the man", "he is the man"])
 def test_en_tagger_lemma_issue686(NLP, text):
     """Test that pronoun lemmas are assigned correctly."""

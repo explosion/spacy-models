@@ -1,35 +1,25 @@
-# coding: utf-8
-from __future__ import unicode_literals
-
 import pytest
 from spacy.tokens import Doc
-from spacy.compat import unicode_
-from spacy.parts_of_speech import SPACE
-from spacy.gold import GoldCorpus
+from spacy.symbols import SPACE
 from pathlib import Path
+from ...util import json_path_to_examples
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
-@pytest.fixture
-def lemmatizer(NLP):
-    return NLP.vocab.morphology.lemmatizer
-
-
 @pytest.mark.parametrize(
     "test_file,accuracy_threshold",
-    [("fr_sequoia-ud-dev01_10.json", 88)],
+    [("fr_sequoia-ud-dev01_10.json", 0.88)],
 )
 def test_fr_tagger_corpus(NLP, test_file, accuracy_threshold):
     data_path = TEST_FILES_DIR / test_file
     if not data_path.exists():
         raise FileNotFoundError("Test corpus not found", data_path)
-    corpus = GoldCorpus(data_path, data_path)
-    dev_docs = list(corpus.dev_docs(NLP, gold_preproc=False))
-    scorer = NLP.evaluate(dev_docs)
+    examples = json_path_to_examples(data_path, NLP)
+    scores = NLP.evaluate(examples)
 
-    assert scorer.tags_acc > accuracy_threshold
+    assert scores["tag_acc"] > accuracy_threshold
 
 
 def test_fr_tagger_spaces(NLP):
@@ -68,7 +58,7 @@ def test_fr_tagger_issue2251(NLP):
     assert doc[3].tag_ == "PRON__Number=Sing|Person=2"
     assert doc[3].lemma_ == "tu"
 
-@pytest.mark.xfail
+
 def test_fr_tagger_issue1958(NLP):
     doc = NLP("Pour poser des congés, qu'est-ce que je fais ?")
     assert all(t.pos != 0 for t in doc)

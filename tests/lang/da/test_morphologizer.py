@@ -1,51 +1,43 @@
-# coding: utf-8
-from __future__ import unicode_literals
-
 import pytest
 from spacy.tokens import Doc
-from spacy.compat import unicode_
-from spacy.parts_of_speech import SPACE
-from spacy.gold import GoldCorpus
+from spacy.symbols import SPACE
 from pathlib import Path
+from ...util import json_path_to_examples
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
-@pytest.fixture
-def lemmatizer(NLP):
-    return NLP.vocab.morphology.lemmatizer
-
-
 @pytest.mark.parametrize(
     "test_file,accuracy_threshold",
-    [("ddt.dev01_10.json", 91)],
+    [("ddt.dev01_10.json", 0.91)],
 )
-def test_da_tagger_corpus(NLP, test_file, accuracy_threshold):
+def test_da_morphologizer_corpus(NLP, test_file, accuracy_threshold):
     data_path = TEST_FILES_DIR / test_file
     if not data_path.exists():
         raise FileNotFoundError("Test corpus not found", data_path)
-    corpus = GoldCorpus(data_path, data_path)
-    dev_docs = list(corpus.dev_docs(NLP, gold_preproc=False))
-    scorer = NLP.evaluate(dev_docs)
+    examples = json_path_to_examples(data_path, NLP)
+    scores = NLP.evaluate(examples)
 
-    assert scorer.tags_acc > accuracy_threshold
+    assert scores["tag_acc"] > accuracy_threshold
+    assert scores["morph_acc"] > accuracy_threshold
 
 
-def test_da_tagger_spaces(NLP):
+def test_da_morphologizer_spaces(NLP):
     """Ensure spaces are assigned the POS tag SPACE"""
     doc = NLP("Some\nspaces are\tnecessary.")
     assert doc[0].pos != SPACE
     assert doc[0].pos_ != "SPACE"
     assert doc[1].pos == SPACE
     assert doc[1].pos_ == "SPACE"
-    assert doc[1].tag_ == "_SP"
     assert doc[2].pos != SPACE
     assert doc[3].pos != SPACE
     assert doc[4].pos == SPACE
+    print([t.pos_ for t in doc])
+    print([t.tag_ for t in doc])
 
 
-def test_da_tagger_return_char(NLP):
+def test_da_morphologizer_return_char(NLP):
     """Ensure spaces are assigned the POS tag SPACE"""
     text = (
         "hi Aaron,\r\n\r\nHow is your schedule today, I was wondering if "
