@@ -4,7 +4,6 @@ from __future__ import unicode_literals
 import pytest
 import importlib
 from spacy.tokens import Doc, Token
-from spacy.symbols import POS, X
 
 
 @pytest.fixture

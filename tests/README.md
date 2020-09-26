@@ -20,6 +20,7 @@ to keep your test environment isolated and clean.
 git clone https://github.com/explosion/spacy-models
 cd spacy-models
 pip install -r tests/requirements.txt
+pip install spacy  # the version of spaCy to test against
 # install models you want to test
 ```
 
@@ -45,6 +46,8 @@ The following settings are available on the command line when running the tests:
 | `--has-parser` | The model has a parser. Will run all applicable parser tests. |
 | `--has-tagger` | The model has a tagger. Will run all applicable tagger tests. |
 | `--has-ner` | The model has an entity recognizer. Will run all applicable NER tests. |
+| `--has-morphologizer` | The model has a morphologizer. Will run all applicable morphologizer tests. |
+| `--has-lemmatizer` | The model has a lemmatizer. Will run all applicable lemmatizer tests. |
 
 ## Writing Tests
 
