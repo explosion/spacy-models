@@ -288,19 +288,19 @@
   ],
   "performance": {
     "tok": 100.0,
-    "tag": 93.4,
-    "pos": 96.29,
-    "morph": 95.21,
-    "lemma": 90.22,
-    "uas": 87.35,
-    "las": 82.34,
-    "ner_p": 70.99,
-    "ner_r": 69.67,
-    "ner_f": 70.32,
-    "sent_p": 86.49,
-    "sent_r": 90.85,
-    "sent_f": 87.79,
-    "speed": 4313.0
+    "tag": 93.46,
+    "pos": 96.35,
+    "morph": 95.34,
+    "lemma": 90.29,
+    "uas": 88.19,
+    "las": 84.19,
+    "ner_p": 81.93,
+    "ner_r": 81.25,
+    "ner_f": 81.59,
+    "sent_p": 84.85,
+    "sent_r": 90.57,
+    "sent_f": 87.53,
+    "speed": 3900.0
   },
   "sources": [
     {
@@ -318,5 +318,5 @@
   "requirements": [],
   "parent_package": "spacy-nightly",
   "size": "20 MB",
-  "checksum": "a861f5716f5b51f300c9da7617466a19945769f56af661ba08be54e59a6bff5e"
+  "checksum": "35b5c341b4b7aed45cd8da7d247bab1cc3f47efb9df58f28bf9efe8c068682c7"
 }
