@@ -17,4 +17,4 @@ def test_ro_ner_corpus(NLP, test_file, ents_f_threshold):
     examples = json_path_to_examples(data_path, NLP)
     scores = NLP.evaluate(examples)
 
-    assert scores["ents_f"] > accuracy_threshold
+    assert scores["ents_f"] > ents_f_threshold
