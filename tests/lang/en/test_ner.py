@@ -25,6 +25,7 @@ def test_en_ner_simple_types(NLP):
     assert doc.ents[1].label_ == "GPE"
 
 
+@pytest.mark.skip(reason="no beam parse at the moment")
 def test_en_ner_beam_parse(NLP):
     doc = NLP("Australia is a country", disable=["ner"])
     ner = NLP.get_pipe("ner")

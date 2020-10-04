@@ -1,6 +1,6 @@
 import pytest
-from spacy.tokens import Doc
 from spacy.symbols import SPACE
+from spacy.tokens import MorphAnalysis
 from pathlib import Path
 from ...util import json_path_to_examples
 
@@ -77,11 +77,11 @@ def test_en_tagger_lemma_doc(NLP):
 @pytest.mark.parametrize(
     "text,lemmas,morphology",
     [
-        ("aardwolves", ["aardwolf"], {"Number": "Plur"}),
-        ("aardwolf", ["aardwolf"], {"Number": "Sing"}),
-        ("planets", ["planet"], {"Number": "Plur"}),
-        ("ring", ["ring"], {"Number": "Sing"}),
-        ("axes", ["axe", "ax", "axis"], {"Number": "Plur"}),
+        ("aardwolves", ["aardwolf"], "Number=Plur"),
+        ("aardwolf", ["aardwolf"], "Number=Sing"),
+        ("planets", ["planet"], "Number=Plur"),
+        ("ring", ["ring"], "Number=Sing"),
+        ("axes", ["axe", "ax", "axis"], "Number=Plur"),
     ],
 )
 def test_en_tagger_lemma_nouns(NLP, text, lemmas, morphology):
@@ -90,7 +90,7 @@ def test_en_tagger_lemma_nouns(NLP, text, lemmas, morphology):
     # noun_index = lemmatizer.index["noun"]
     # noun_exc = lemmatizer.exc["noun"]
     doc = NLP.make_doc(text)
-    doc[0].morph_ = morphology
+    doc[0].morph = MorphAnalysis(NLP.vocab, morphology)
     doc[0].pos_ = "NOUN"
     NLP.get_pipe("lemmatizer")(doc)
     assert doc[0].lemma_ == lemmas[0]
@@ -102,7 +102,7 @@ def test_en_tagger_lemma_nouns(NLP, text, lemmas, morphology):
 )
 def test_en_tagger_lemma_verbs(NLP, text, lemmas):
     doc = NLP.make_doc(text)
-    doc[0].morph_ = "VerbForm=Inf"
+    doc[0].morph = MorphAnalysis(NLP.vocab, "VerbForm=Inf")
     doc[0].pos_ = "VERB"
     NLP.get_pipe("lemmatizer")(doc)
     assert doc[0].lemma_ == lemmas[0]
@@ -110,12 +110,12 @@ def test_en_tagger_lemma_verbs(NLP, text, lemmas):
 
 def test_en_tagger_lemma_base_forms(NLP):
     doc = NLP.make_doc("dive")
-    doc[0].morph_ = "Number=Sing"
+    doc[0].morph = MorphAnalysis(NLP.vocab, "Number=Sing")
     doc[0].pos_ = "NOUN"
     NLP.get_pipe("lemmatizer")(doc)
     assert doc[0].lemma_ == "dive"
     doc = NLP.make_doc("diva")
-    doc[0].morph_ = "Number=Plur"
+    doc[0].morph = MorphAnalysis(NLP.vocab, "Number=Plur")
     doc[0].pos_ = "NOUN"
     NLP.get_pipe("lemmatizer")(doc)
     assert doc[0].lemma_ == "diva"
@@ -123,7 +123,7 @@ def test_en_tagger_lemma_base_forms(NLP):
 
 def test_en_tagger_lemma_base_form_verb(NLP):
     doc = NLP.make_doc("saw")
-    doc[0].morph_ = "VerbForm=Past"
+    doc[0].morph = MorphAnalysis(NLP.vocab, "VerbForm=Past")
     doc[0].pos_ = "VERB"
     NLP.get_pipe("lemmatizer")(doc)
     assert doc[0].lemma_ == "see"
@@ -190,7 +190,7 @@ def test_en_tagger_lemma_issue717(NLP, text1, text2):
 def test_en_tagger_lemma_issue781(NLP, word, lemmas):
     doc = NLP.make_doc(word)
     doc[0].pos_ = "NOUN"
-    doc[0].morph_ = "Number=Plur"
+    doc[0].morph = MorphAnalysis(NLP.vocab, "Number=Plur")
     NLP.get_pipe("lemmatizer")(doc)
     assert doc[0].lemma_ == lemmas[0]
 

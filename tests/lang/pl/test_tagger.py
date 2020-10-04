@@ -2,6 +2,7 @@ import pytest
 from spacy.tokens import Doc
 from spacy.symbols import SPACE
 from pathlib import Path
+from ...util import json_path_to_examples
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
@@ -49,9 +50,12 @@ def test_pl_tagger_return_char(NLP):
     assert doc[3].pos == SPACE
 
 
-def test_pl_tagger_lemma_doc(NLP, lemmatizer):
-    doc = Doc(NLP.vocab, words=["był"])
+@pytest.mark.xfail
+def test_pl_tagger_lemma_doc(NLP):
+    doc = NLP("był", disable=["lemmatizer"])
     doc[0].tag_ = "PRAET"
+    lemmatizer = NLP.get_pipe("lemmatizer")
+    doc = lemmatizer(doc)
     assert doc[0].lemma_ == "być"
 
 

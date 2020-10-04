@@ -1,6 +1,7 @@
 import pytest
 from pathlib import Path
-from ...util import json_path_to_examples
+from spacy.tokens import Doc
+from ...util import json_path_to_examples, apply_transition_sequence
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
@@ -40,7 +41,7 @@ def test_en_parser_depset(NLP, test_file):
     pred_deps = set()
     parser = NLP.get_pipe("parser")
     for example in examples:
-        doc = doc.predicted
+        doc = example.predicted
         parser(doc)
         pred_deps = pred_deps.union(set([t.dep_ for t in doc]))
     assert len(pred_deps - gold_deps) == 0
@@ -97,6 +98,7 @@ def test_en_parser_issue693(NLP):
     chunks2 = [chunk for chunk in doc2.noun_chunks]
     assert len(chunks1) == 2
     assert len(chunks2) == 2
+
 
 @pytest.mark.xfail
 def test_en_parser_issue704(NLP):

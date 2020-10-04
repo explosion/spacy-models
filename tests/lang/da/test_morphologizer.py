@@ -1,5 +1,4 @@
 import pytest
-from spacy.tokens import Doc
 from spacy.symbols import SPACE
 from pathlib import Path
 from ...util import json_path_to_examples
