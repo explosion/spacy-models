@@ -8,9 +8,12 @@ from ...util import json_path_to_examples
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
+# TODO: switch back to nkjp when model config is updated
 @pytest.mark.parametrize(
+    #"test_file,accuracy_threshold",
+    #[("nkjp_60s_dev_sample.json", 0.96)],
     "test_file,accuracy_threshold",
-    [("nkjp_60s_dev_sample.json", 0.96)],
+    [("pl_sz-ud-dev036_360.json", 0.93)],
 )
 def test_pl_tagger_corpus(NLP, test_file, accuracy_threshold):
     data_path = TEST_FILES_DIR / test_file
