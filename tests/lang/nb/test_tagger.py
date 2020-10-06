@@ -28,7 +28,7 @@ def test_nb_tagger_spaces(NLP):
     assert doc[0].pos_ != "SPACE"
     assert doc[1].pos == SPACE
     assert doc[1].pos_ == "SPACE"
-    assert doc[1].tag_ == "_SP"
+    assert doc[1].tag_ == "SPACE"
     assert doc[2].pos != SPACE
     assert doc[3].pos != SPACE
     assert doc[4].pos == SPACE

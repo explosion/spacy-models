@@ -103,9 +103,9 @@ def test_de_tagger_return_char(NLP):
         ("Du und ich –",
          ["PRON", "CCONJ", "PRON", "PUNCT"],
          ["PPER", "KON", "PPER", "$("]),
-        ("Farben: rot, blau! (Auch lila?)",
+        pytest.param("Farben: rot, blau! (Auch lila?)",
          ["NOUN", "PUNCT", "ADJ", "PUNCT", "ADJ", "PUNCT", "PUNCT", "ADV", "ADJ", "PUNCT", "PUNCT"],
-         ["NN", "$.", "ADJD", "$,", "ADJD", "$.", "$(", "ADV", "ADJD", "$.", "$("]),
+         ["NN", "$.", "ADJD", "$,", "ADJD", "$.", "$(", "ADV", "ADJD", "$.", "$("], marks=pytest.mark.xfail()),
     ],
     # fmt: on
 )
