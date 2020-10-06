@@ -9,17 +9,18 @@ TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
 @pytest.mark.parametrize(
-    "test_file,accuracy_threshold",
-    [("zh_gsd-ud-dev_sample.json", 0.29)],
+    "test_file,tag_accuracy_threshold,pos_accuracy_threshold",
+    [("zh_gsd-ud-dev_sample.json", 0.29, 0.62)],
 )
-def test_zh_tagger_corpus(NLP, test_file, accuracy_threshold):
+def test_zh_tagger_corpus(NLP, test_file, tag_accuracy_threshold, pos_accuracy_threshold):
     data_path = TEST_FILES_DIR / test_file
     if not data_path.exists():
         raise FileNotFoundError("Test corpus not found", data_path)
     examples = json_path_to_examples(data_path, NLP)
     scores = NLP.evaluate(examples)
 
-    assert scores["tag_acc"] > accuracy_threshold
+    assert scores["tag_acc"] > tag_accuracy_threshold
+    assert scores["pos_acc"] > pos_accuracy_threshold
 
 
 def test_zh_tagger_spaces(NLP):
