@@ -13,7 +13,7 @@ TEST_FILES_DIR = Path(__file__).parent / "test_files"
     #"test_file,accuracy_threshold",
     #[("nkjp_60s_dev_sample.json", 0.96)],
     "test_file,accuracy_threshold",
-    [("pl_sz-ud-dev036_360.json", 0.93)],
+    [("pl_sz-ud-dev036_360.json", 0.81)],
 )
 def test_pl_tagger_corpus(NLP, test_file, accuracy_threshold):
     data_path = TEST_FILES_DIR / test_file
