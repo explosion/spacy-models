@@ -10,7 +10,7 @@ TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 @pytest.mark.parametrize(
     "test_file,tag_accuracy_threshold,pos_accuracy_threshold",
-    [("zh_gsd-ud-dev_sample.json", 0.29, 0.62)],
+    [("zh_gsd-ud-dev_sample.json", 0.29, 0.59)],
 )
 def test_zh_tagger_corpus(NLP, test_file, tag_accuracy_threshold, pos_accuracy_threshold):
     data_path = TEST_FILES_DIR / test_file
