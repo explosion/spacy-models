@@ -1,0 +1,113 @@
+{
+  "lang": "ja",
+  "name": "core_news_lg",
+  "version": "3.0.0a0",
+  "description": "Japanese pipeline optimized for CPU. Components: tok2vec, parser, senter, ner, attribute_ruler.",
+  "author": "Explosion",
+  "email": "contact@explosion.ai",
+  "url": "https://explosion.ai",
+  "license": "All rights reserved",
+  "spacy_version": ">=3.0.0a34,<3.1.0",
+  "spacy_git_version": "126268ce5",
+  "vectors": {
+    "width": 300,
+    "vectors": 480443,
+    "keys": 480443,
+    "name": "ja_vectors"
+  },
+  "labels": {
+    "tok2vec": [],
+    "parser": [
+      "ROOT",
+      "acl",
+      "advcl",
+      "advmod",
+      "amod",
+      "aux",
+      "case",
+      "cc",
+      "ccomp",
+      "compound",
+      "cop",
+      "csubj",
+      "dep",
+      "det",
+      "dislocated",
+      "fixed",
+      "mark",
+      "nmod",
+      "nsubj",
+      "nummod",
+      "obj",
+      "obl",
+      "punct"
+    ],
+    "senter": [
+      "I",
+      "S"
+    ],
+    "ner": [
+      "CARDINAL",
+      "DATE",
+      "EVENT",
+      "FAC",
+      "GPE",
+      "LANGUAGE",
+      "LAW",
+      "LOC",
+      "MONEY",
+      "MOVEMENT",
+      "NORP",
+      "ORDINAL",
+      "ORG",
+      "PERCENT",
+      "PERSON",
+      "PET_NAME",
+      "PHONE",
+      "PRODUCT",
+      "QUANTITY",
+      "TIME",
+      "TITLE_AFFIX",
+      "WORK_OF_ART"
+    ],
+    "attribute_ruler": []
+  },
+  "pipeline": [
+    "tok2vec",
+    "parser",
+    "ner",
+    "attribute_ruler"
+  ],
+  "components": [
+    "tok2vec",
+    "parser",
+    "senter",
+    "ner",
+    "attribute_ruler"
+  ],
+  "disabled": [
+    "senter"
+  ],
+  "performance": {
+    "tok": 99.69,
+    "tag": 97.21,
+    "pos": 96.39,
+    "uas": 90.06,
+    "las": 88.17,
+    "ner_p": 74.76,
+    "ner_r": 70.37,
+    "ner_f": 72.5,
+    "sent_p": 83.76,
+    "sent_r": 90.62,
+    "sent_f": 87.06,
+    "speed": 5700.0
+  },
+  "sources": [],
+  "requirements": [
+    "sudachipy>=0.4.9",
+    "sudachidict_core>=20200330"
+  ],
+  "parent_package": "spacy-nightly",
+  "size": "536 MB",
+  "checksum": "2c18b77d0c1a02b4ea3b64bf59e4590ed4194aa0519b13bd59437b91130e91c0"
+}
