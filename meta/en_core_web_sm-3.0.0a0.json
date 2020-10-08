@@ -2,13 +2,13 @@
   "lang": "en",
   "name": "core_web_sm",
   "version": "3.0.0a0",
-  "description": "English pipeline optimized for CPU. Components: tok2vec, tagger, parser, senter, ner, lemmatizer, attribute_ruler.",
+  "description": "English pipeline optimized for CPU. Components: tok2vec, tagger, parser, senter, ner, attribute_ruler, lemmatizer.",
   "author": "Explosion",
   "email": "contact@explosion.ai",
   "url": "https://explosion.ai",
   "license": "MIT",
-  "spacy_version": ">=3.0.0a26,<3.1.0",
-  "spacy_git_version": "702edf52a",
+  "spacy_version": ">=3.0.0a35,<3.1.0",
+  "spacy_git_version": "1a500f971",
   "vectors": {
     "width": 0,
     "vectors": 0,
@@ -16,6 +16,7 @@
     "name": null
   },
   "labels": {
+    "tok2vec": [],
     "tagger": [
       "$",
       "''",
@@ -137,7 +138,9 @@
       "QUANTITY",
       "TIME",
       "WORK_OF_ART"
-    ]
+    ],
+    "attribute_ruler": [],
+    "lemmatizer": []
   },
   "pipeline": [
     "tok2vec",
@@ -161,19 +164,19 @@
   ],
   "performance": {
     "tok": 99.97,
-    "tag": 97.25,
+    "tag": 97.21,
     "pos": 0.0,
     "morph": 0.0,
     "lemma": 0.0,
-    "uas": 92.01,
-    "las": 90.14,
-    "ner_p": 83.9,
-    "ner_r": 84.35,
-    "ner_f": 84.12,
-    "sent_p": 88.46,
-    "sent_r": 88.37,
-    "sent_f": 88.41,
-    "speed": 7785.0
+    "uas": 91.81,
+    "las": 89.97,
+    "ner_p": 84.58,
+    "ner_r": 83.03,
+    "ner_f": 83.8,
+    "sent_p": 88.04,
+    "sent_r": 88.03,
+    "sent_f": 88.03,
+    "speed": 6722.0
   },
   "sources": [
     {
@@ -185,5 +188,5 @@
   "requirements": [],
   "parent_package": "spacy-nightly",
   "size": "18 MB",
-  "checksum": "cede868fa5554ab085464a1b1c926110ac3b25dc27ee8c91975d754db479337f"
+  "checksum": "5d91863d60ffa84e07f021d6e956785b7d6edc37e84782aa86e595b5c11cae39"
 }

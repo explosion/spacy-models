@@ -2,13 +2,13 @@
   "lang": "ro",
   "name": "core_news_lg",
   "version": "3.0.0a0",
-  "description": "Romanian pipeline optimized for CPU. Components: tok2vec, tagger, parser, senter, ner, lemmatizer, attribute_ruler.",
+  "description": "Romanian pipeline optimized for CPU. Components: tok2vec, tagger, parser, senter, ner, attribute_ruler, lemmatizer.",
   "author": "Explosion",
   "email": "contact@explosion.ai",
   "url": "https://explosion.ai",
   "license": "CC BY-SA 4.0",
-  "spacy_version": ">=3.0.0a26,<3.1.0",
-  "spacy_git_version": "702edf52a",
+  "spacy_version": ">=3.0.0a35,<3.1.0",
+  "spacy_git_version": "1a500f971",
   "vectors": {
     "width": 300,
     "vectors": 500000,
@@ -16,6 +16,7 @@
     "name": "ro_vectors"
   },
   "labels": {
+    "tok2vec": [],
     "tagger": [
       "ARROW",
       "Af",
@@ -557,7 +558,9 @@
       "PRODUCT",
       "QUANTITY",
       "WORK_OF_ART"
-    ]
+    ],
+    "attribute_ruler": [],
+    "lemmatizer": []
   },
   "pipeline": [
     "tok2vec",
@@ -581,19 +584,19 @@
   ],
   "performance": {
     "tok": 99.9,
-    "tag": 97.48,
-    "pos": 96.53,
-    "morph": 97.57,
+    "tag": 97.0,
+    "pos": 96.18,
+    "morph": 97.11,
     "lemma": 81.87,
-    "uas": 89.25,
-    "las": 84.88,
-    "ner_p": 76.59,
-    "ner_r": 77.3,
-    "ner_f": 76.94,
-    "sent_p": 96.8,
-    "sent_r": 96.68,
-    "sent_f": 96.74,
-    "speed": 7843.0
+    "uas": 88.67,
+    "las": 83.85,
+    "ner_p": 74.93,
+    "ner_r": 75.91,
+    "ner_f": 75.42,
+    "sent_p": 97.19,
+    "sent_r": 96.54,
+    "sent_f": 96.86,
+    "speed": 7903.0
   },
   "sources": [
     {
@@ -612,5 +615,5 @@
   "requirements": [],
   "parent_package": "spacy-nightly",
   "size": "551 MB",
-  "checksum": "f176fd0de04cf9e1c0be3c2ceca87799034745db29ac357c6aed10433d8a5e25"
+  "checksum": "4ec8dd13414a4a9ac834284fd717ecc0cfbfcb864969bef8d8a95574e7073686"
 }

@@ -7,8 +7,8 @@
   "email": "contact@explosion.ai",
   "url": "https://explosion.ai",
   "license": "MIT",
-  "spacy_version": ">=3.0.0a26,<3.1.0",
-  "spacy_git_version": "702edf52a",
+  "spacy_version": ">=3.0.0a35,<3.1.0",
+  "spacy_git_version": "1a500f971",
   "vectors": {
     "width": 300,
     "vectors": 20000,
@@ -16,6 +16,7 @@
     "name": "zh_vectors"
   },
   "labels": {
+    "tok2vec": [],
     "tagger": [
       "AD",
       "AS",
@@ -124,7 +125,8 @@
       "QUANTITY",
       "TIME",
       "WORK_OF_ART"
-    ]
+    ],
+    "attribute_ruler": []
   },
   "pipeline": [
     "tok2vec",
@@ -145,18 +147,19 @@
     "senter"
   ],
   "performance": {
-    "tag": 90.08,
+    "tok": 97.88,
+    "tag": 89.88,
     "pos": 0.0,
     "morph": 0.0,
-    "uas": 70.69,
-    "las": 65.4,
-    "ner_p": 72.57,
-    "ner_r": 68.22,
-    "ner_f": 70.33,
-    "sent_p": 65.29,
-    "sent_r": 70.53,
-    "sent_f": 67.81,
-    "speed": 5922.0
+    "uas": 70.27,
+    "las": 65.04,
+    "ner_p": 71.51,
+    "ner_r": 67.43,
+    "ner_f": 69.41,
+    "sent_p": 63.72,
+    "sent_r": 69.02,
+    "sent_f": 66.26,
+    "speed": 5273.0
   },
   "sources": [
     {
@@ -166,9 +169,9 @@
     }
   ],
   "requirements": [
-    "pkuseg==0.0.25"
+    "spacy-pkuseg>=0.0.27,<0.1.0"
   ],
   "parent_package": "spacy-nightly",
-  "size": "82 MB",
-  "checksum": "a4c4379b7f4d145a0c6de4bc1a8ff6a5a3e278c8bfc6a6906b57d610f78cef4f"
+  "size": "81 MB",
+  "checksum": "ae8f8403f332d35bbb7ae33e703d82fd3656528f25c0094f1c8e93020ec8f1d7"
 }

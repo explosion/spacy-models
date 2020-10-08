@@ -2,13 +2,13 @@
   "lang": "it",
   "name": "core_news_lg",
   "version": "3.0.0a0",
-  "description": "Italian pipeline optimized for CPU. Components: tok2vec, morphologizer, tagger, parser, senter, ner, lemmatizer, attribute_ruler.",
+  "description": "Italian pipeline optimized for CPU. Components: tok2vec, morphologizer, tagger, parser, senter, ner, attribute_ruler, lemmatizer.",
   "author": "Explosion",
   "email": "contact@explosion.ai",
   "url": "https://explosion.ai",
   "license": "CC BY-NC-SA 3.0",
-  "spacy_version": ">=3.0.0a26,<3.1.0",
-  "spacy_git_version": "702edf52a",
+  "spacy_version": ">=3.0.0a34,<3.1.0",
+  "spacy_git_version": "126268ce5",
   "vectors": {
     "width": 300,
     "vectors": 500000,
@@ -16,6 +16,7 @@
     "name": "it_vectors"
   },
   "labels": {
+    "tok2vec": [],
     "morphologizer": [
       "_",
       "POS=PROPN",
@@ -469,7 +470,9 @@
       "MISC",
       "ORG",
       "PER"
-    ]
+    ],
+    "attribute_ruler": [],
+    "lemmatizer": []
   },
   "pipeline": [
     "tok2vec",
@@ -495,19 +498,19 @@
   ],
   "performance": {
     "tok": 100.0,
-    "tag": 97.2,
-    "pos": 97.5,
-    "morph": 97.51,
+    "tag": 97.24,
+    "pos": 97.41,
+    "morph": 97.37,
     "lemma": 73.8,
-    "uas": 91.26,
-    "las": 87.97,
-    "ner_p": 89.36,
-    "ner_r": 88.94,
-    "ner_f": 89.15,
-    "sent_p": 98.23,
+    "uas": 90.77,
+    "las": 87.13,
+    "ner_p": 89.02,
+    "ner_r": 88.64,
+    "ner_f": 88.83,
+    "sent_p": 97.71,
     "sent_r": 98.4,
-    "sent_f": 98.32,
-    "speed": 8246.0
+    "sent_f": 98.06,
+    "speed": 9112.0
   },
   "sources": [
     {
@@ -525,5 +528,5 @@
   "requirements": [],
   "parent_package": "spacy-nightly",
   "size": "551 MB",
-  "checksum": "d61ec845ce4cadeb469510790afa904b4e2a9badbd37284d3be4dee02736f8e2"
+  "checksum": "a835fcf36b4fc18dee014ba8392d33d091de44ce9b22189decdc79ad55a7c2e2"
 }

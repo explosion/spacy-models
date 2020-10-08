@@ -7,8 +7,8 @@
   "email": "contact@explosion.ai",
   "url": "https://explosion.ai",
   "license": "All rights reserved",
-  "spacy_version": ">=3.0.0a26,<3.1.0",
-  "spacy_git_version": "702edf52a",
+  "spacy_version": ">=3.0.0a34,<3.1.0",
+  "spacy_git_version": "126268ce5",
   "vectors": {
     "width": 300,
     "vectors": 20000,
@@ -16,6 +16,7 @@
     "name": "ja_vectors"
   },
   "labels": {
+    "tok2vec": [],
     "parser": [
       "ROOT",
       "acl",
@@ -68,7 +69,8 @@
       "TIME",
       "TITLE_AFFIX",
       "WORK_OF_ART"
-    ]
+    ],
+    "attribute_ruler": []
   },
   "pipeline": [
     "tok2vec",
@@ -87,17 +89,18 @@
     "senter"
   ],
   "performance": {
+    "tok": 99.69,
     "tag": 97.21,
     "pos": 96.39,
-    "uas": 90.67,
-    "las": 88.84,
-    "ner_p": 74.96,
-    "ner_r": 67.31,
-    "ner_f": 70.93,
-    "sent_p": 82.69,
-    "sent_r": 89.62,
-    "sent_f": 86.02,
-    "speed": 5079.0
+    "uas": 90.35,
+    "las": 88.67,
+    "ner_p": 73.95,
+    "ner_r": 67.43,
+    "ner_f": 70.54,
+    "sent_p": 85.63,
+    "sent_r": 90.42,
+    "sent_f": 87.96,
+    "speed": 5624.0
   },
   "sources": [],
   "requirements": [
@@ -106,5 +109,5 @@
   ],
   "parent_package": "spacy-nightly",
   "size": "47 MB",
-  "checksum": "8cb9a54ed6d3625783af9305d9a6ad4783597a5e00f3679dbf2c30f18f42b315"
+  "checksum": "50fa57eab7c26c3368a4909796c49758fbb228396b6b51a02cd782c3de95c333"
 }

@@ -2,13 +2,13 @@
   "lang": "pt",
   "name": "core_news_sm",
   "version": "3.0.0a0",
-  "description": "Portuguese pipeline optimized for CPU. Components: tok2vec, morphologizer, parser, senter, ner, lemmatizer, attribute_ruler.",
+  "description": "Portuguese pipeline optimized for CPU. Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.",
   "author": "Explosion",
   "email": "contact@explosion.ai",
   "url": "https://explosion.ai",
   "license": "CC BY-SA 4.0",
-  "spacy_version": ">=3.0.0a26,<3.1.0",
-  "spacy_git_version": "702edf52a",
+  "spacy_version": ">=3.0.0a35,<3.1.0",
+  "spacy_git_version": "126268ce5",
   "vectors": {
     "width": 0,
     "vectors": 0,
@@ -16,6 +16,7 @@
     "name": null
   },
   "labels": {
+    "tok2vec": [],
     "morphologizer": [
       "_",
       "Definite=Ind|Gender=Masc|Number=Sing|POS=DET|PronType=Art",
@@ -616,7 +617,9 @@
       "MISC",
       "ORG",
       "PER"
-    ]
+    ],
+    "attribute_ruler": [],
+    "lemmatizer": []
   },
   "pipeline": [
     "tok2vec",
@@ -640,19 +643,19 @@
   ],
   "performance": {
     "tok": 100.0,
-    "tag": 89.13,
-    "pos": 96.58,
-    "morph": 95.07,
+    "tag": 89.1,
+    "pos": 96.5,
+    "morph": 94.44,
     "lemma": 76.8,
-    "uas": 89.22,
-    "las": 85.09,
-    "ner_p": 88.55,
-    "ner_r": 88.29,
-    "ner_f": 88.42,
-    "sent_p": 92.36,
-    "sent_r": 94.84,
-    "sent_f": 93.1,
-    "speed": 8952.0
+    "uas": 88.43,
+    "las": 84.12,
+    "ner_p": 88.04,
+    "ner_r": 87.93,
+    "ner_f": 87.98,
+    "sent_p": 91.11,
+    "sent_r": 94.5,
+    "sent_f": 92.69,
+    "speed": 8897.0
   },
   "sources": [
     {
@@ -670,5 +673,5 @@
   "requirements": [],
   "parent_package": "spacy-nightly",
   "size": "25 MB",
-  "checksum": "25a5ea59cc47c8d1546a63eb6f47c7043d39dedf0e20ada779c4d02833ca0d86"
+  "checksum": "61cafd301c8f80e69fa7889cefeac153b59fb3fba2a79eb8c50aba8b8f954180"
 }
