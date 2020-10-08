@@ -6,6 +6,9 @@ import spacy
 from pathlib import Path
 
 
+spacy.prefer_gpu()
+
+
 OPT_MODEL = "--model"
 OPT_LANG = "--lang"
 OPT_VECTORS = "--has-vectors"
