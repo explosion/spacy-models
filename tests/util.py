@@ -17,6 +17,19 @@ def json_path_to_examples(data_path, NLP):
     return examples
 
 
+def evaluate_corpus(data_path, NLP, thresholds):
+    if not data_path.exists():
+        raise FileNotFoundError("Test corpus not found", data_path)
+    examples = json_path_to_examples(data_path, NLP)
+    scores = NLP.evaluate(examples)
+    for score_key, score_val in thresholds.items():
+        assert scores[score_key] > score_val
+    pipe_docs = NLP.pipe([example.predicted.text for example in examples])
+    nopipe_docs = [NLP(example.predicted.text) for example in examples]
+    for pipe_doc, nopipe_doc in zip(pipe_docs, nopipe_docs):
+        assert pipe_doc.to_json() == nopipe_doc.to_json()
+
+
 def apply_transition_sequence(parser, doc, sequence):
     """Perform a series of pre-specified transitions, to put the parser in a
     desired state."""
