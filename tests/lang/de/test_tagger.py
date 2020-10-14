@@ -25,11 +25,11 @@ def test_de_tagger_example(NLP):
 
 # This threshold is artificially low due to problems with spacy 2.1. (#3830)
 @pytest.mark.parametrize(
-    "test_file,accuracy_threshold", [("de_pud-ud-test.stts.json", 0.93)]
+    "test_file,accuracy_threshold", [("de_pud-ud-test.stts.json", 0.94)]
 )
 def test_de_tagger_corpus(NLP, test_file, accuracy_threshold):
     data_path = TEST_FILES_DIR / test_file
-    evaluate_corpus(data_path, NLP, {"tag_acc": accuracy_threshold})
+    evaluate_corpus(NLP, data_path, {"tag_acc": accuracy_threshold})
 
 
 @pytest.mark.parametrize("test_file", ["de_pud-ud-test.stts.json"])
@@ -164,6 +164,7 @@ def test_de_tagger_lemma_issue686(NLP, text):
     """Test that pronoun lemmas are assigned correctly."""
     tokens = NLP(text)
     assert tokens[0].lemma_ == "er"
+
 
 @pytest.mark.xfail
 @pytest.mark.parametrize(
