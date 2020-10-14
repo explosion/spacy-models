@@ -7,8 +7,8 @@
   "email": "contact@explosion.ai",
   "url": "https://explosion.ai",
   "license": "GPL",
-  "spacy_version": ">=3.0.0a35,<3.1.0",
-  "spacy_git_version": "1a500f971",
+  "spacy_version": ">=3.0.0a41,<3.1.0",
+  "spacy_git_version": "f8a1c1afd",
   "vectors": {
     "width": 300,
     "vectors": 20000,
@@ -1767,19 +1767,19 @@
   ],
   "performance": {
     "tok": 100.0,
-    "tag": 86.25,
+    "tag": 85.98,
     "pos": 96.97,
-    "morph": 86.07,
-    "lemma": 88.5,
-    "uas": 89.69,
-    "las": 83.72,
-    "ner_p": 82.99,
-    "ner_r": 82.41,
-    "ner_f": 82.7,
-    "sent_p": 99.12,
-    "sent_r": 99.12,
-    "sent_f": 99.12,
-    "speed": 6324.0
+    "morph": 85.85,
+    "lemma": 88.48,
+    "uas": 89.66,
+    "las": 84.0,
+    "ner_p": 83.08,
+    "ner_r": 82.28,
+    "ner_f": 82.68,
+    "sent_p": 98.83,
+    "sent_r": 98.83,
+    "sent_f": 98.83,
+    "speed": 7302.0
   },
   "sources": [
     {
@@ -1792,5 +1792,5 @@
   "requirements": [],
   "parent_package": "spacy-nightly",
   "size": "83 MB",
-  "checksum": "7fbb60d785a28c58881ae65093e35e2706aecff07eecb13f64d424844469dfb1"
+  "checksum": "772ff4ea9f9f9bc81e9e1f6480f6b844e711161d8581db5e6eef398420229691"
 }
