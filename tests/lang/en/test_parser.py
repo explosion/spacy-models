@@ -56,7 +56,7 @@ def test_en_parser_norm_exceptions(NLP, text):
         assert [t.dep_ for t in NLP(text1)] == [t.dep_ for t in NLP(text2)]
 
 
-@pytest.mark.skip()
+@pytest.mark.skip
 def test_en_parser_sbd_serialization_projective(nlp):
     """Test that before and after serialization, the sentence boundaries are
      the same."""
@@ -97,6 +97,7 @@ def test_en_parser_issue693(NLP):
     assert len(chunks2) == 2
 
 
+@pytest.mark.skip
 def test_en_parser_issue704(NLP):
     """Test that sentence boundaries are detected correctly."""
     text = "“Atticus said to Jem one day, “I’d rather you shot at tin cans in the backyard, but I know you’ll go after birds. Shoot all the blue jays you want, if you can hit ‘em, but remember it’s a sin to kill a mockingbird.”"
