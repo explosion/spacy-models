@@ -7,8 +7,8 @@
   "email": "contact@explosion.ai",
   "url": "https://explosion.ai",
   "license": "GPL",
-  "spacy_version": ">=3.0.0a34,<3.1.0",
-  "spacy_git_version": "126268ce5",
+  "spacy_version": ">=3.0.0a41,<3.1.0",
+  "spacy_git_version": "f8a1c1afd",
   "vectors": {
     "width": 0,
     "vectors": 0,
@@ -477,7 +477,7 @@
     "sent_p": 100.0,
     "sent_r": 100.0,
     "sent_f": 100.0,
-    "speed": 7958.0
+    "speed": 8803.0
   },
   "sources": [
     {
@@ -495,5 +495,5 @@
   "requirements": [],
   "parent_package": "spacy-nightly",
   "size": "22 MB",
-  "checksum": "ae0ea8e49b8a130de6714852d37948f90b9dbb6dffa05e27033c3e594ab4fe54"
+  "checksum": "8274d4305e8ef45de4775865f60cea2e74e69a0821639de9c91f6639e27b316d"
 }
