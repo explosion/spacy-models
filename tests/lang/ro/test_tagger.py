@@ -2,24 +2,29 @@ import pytest
 from spacy.tokens import Doc
 from spacy.symbols import SPACE
 from pathlib import Path
-from ...util import json_path_to_examples
+from ...util import evaluate_corpus
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
 @pytest.mark.parametrize(
-    "test_file,accuracy_threshold",
-    [("ro_rrt-ud-dev01_10.json", 0.95)],
+    "test_file,accuracy_threshold,pos_threshold,morph_threshold",
+    [("ro_rrt-ud-dev01_10.json", 0.95, 0.91, 0.96)],
 )
-def test_ro_tagger_corpus(NLP, test_file, accuracy_threshold):
+def test_ro_tagger_corpus(
+    NLP, test_file, accuracy_threshold, pos_threshold, morph_threshold
+):
     data_path = TEST_FILES_DIR / test_file
-    if not data_path.exists():
-        raise FileNotFoundError("Test corpus not found", data_path)
-    examples = json_path_to_examples(data_path, NLP)
-    scores = NLP.evaluate(examples)
-
-    assert scores["tag_acc"] > accuracy_threshold
+    evaluate_corpus(
+        NLP,
+        data_path,
+        {
+            "tag_acc": accuracy_threshold,
+            "pos_acc": pos_threshold,
+            "morph_acc": morph_threshold,
+        },
+    )
 
 
 def test_ro_tagger_spaces(NLP):

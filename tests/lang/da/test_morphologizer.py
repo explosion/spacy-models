@@ -1,25 +1,20 @@
 import pytest
 from spacy.symbols import SPACE
 from pathlib import Path
-from ...util import json_path_to_examples
+from ...util import evaluate_corpus
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
 @pytest.mark.parametrize(
-    "test_file,accuracy_threshold",
-    [("ddt.dev01_10.json", 0.91)],
+    "test_file,accuracy_threshold", [("ddt.dev01_10.json", 0.96)],
 )
 def test_da_morphologizer_corpus(NLP, test_file, accuracy_threshold):
     data_path = TEST_FILES_DIR / test_file
-    if not data_path.exists():
-        raise FileNotFoundError("Test corpus not found", data_path)
-    examples = json_path_to_examples(data_path, NLP)
-    scores = NLP.evaluate(examples)
-
-    assert scores["tag_acc"] > accuracy_threshold
-    assert scores["morph_acc"] > accuracy_threshold
+    evaluate_corpus(
+        NLP, data_path, {"tag_acc": accuracy_threshold, "morph_acc": accuracy_threshold}
+    )
 
 
 def test_da_morphologizer_spaces(NLP):
@@ -32,8 +27,6 @@ def test_da_morphologizer_spaces(NLP):
     assert doc[2].pos != SPACE
     assert doc[3].pos != SPACE
     assert doc[4].pos == SPACE
-    print([t.pos_ for t in doc])
-    print([t.tag_ for t in doc])
 
 
 def test_da_morphologizer_return_char(NLP):

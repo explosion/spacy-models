@@ -2,25 +2,29 @@ import pytest
 from spacy.tokens import Doc
 from spacy.symbols import SPACE
 from pathlib import Path
-from ...util import json_path_to_examples
+from ...util import evaluate_corpus
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
 @pytest.mark.parametrize(
-    "test_file,tag_accuracy_threshold,pos_accuracy_threshold",
-    [("zh_gsd-ud-dev_sample.json", 0.29, 0.59)],
+    "test_file,tag_threshold,pos_threshold,morph_threshold",
+    [("zh_gsd-ud-dev_sample.json", 0.34, 0.59, 0.74)],
 )
-def test_zh_tagger_corpus(NLP, test_file, tag_accuracy_threshold, pos_accuracy_threshold):
+def test_zh_tagger_corpus(
+    NLP, test_file, tag_threshold, pos_threshold, morph_threshold
+):
     data_path = TEST_FILES_DIR / test_file
-    if not data_path.exists():
-        raise FileNotFoundError("Test corpus not found", data_path)
-    examples = json_path_to_examples(data_path, NLP)
-    scores = NLP.evaluate(examples)
-
-    assert scores["tag_acc"] > tag_accuracy_threshold
-    assert scores["pos_acc"] > pos_accuracy_threshold
+    evaluate_corpus(
+        NLP,
+        data_path,
+        {
+            "tag_acc": tag_threshold,
+            "pos_acc": pos_threshold,
+            "morph_acc": morph_threshold,
+        },
+    )
 
 
 def test_zh_tagger_spaces(NLP):

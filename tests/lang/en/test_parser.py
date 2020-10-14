@@ -1,16 +1,15 @@
 import pytest
 from pathlib import Path
 from spacy.tokens import Doc
-from ...util import json_path_to_examples, apply_transition_sequence
+from ...util import evaluate_corpus, json_path_to_examples, apply_transition_sequence
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
-@pytest.mark.xfail()
 def test_en_parser_example(NLP):
-    doc = NLP("Apple is looking at buying U.K. startup")
-    deps = ["nsubj", "aux", "ROOT", "prep", "pcomp", "compound", "dobj"]
+    doc = NLP("Apple is looking at buying a U.K. startup")
+    deps = ["nsubj", "aux", "ROOT", "prep", "pcomp", "det", "compound", "dobj"]
     for token, expected_dep in zip(doc, deps):
         assert token.dep_ == expected_dep
 
@@ -21,12 +20,9 @@ def test_en_parser_example(NLP):
 )
 def test_en_parser_corpus(NLP, test_file, uas_threshold, las_threshold):
     data_path = TEST_FILES_DIR / test_file
-    if not data_path.exists():
-        raise FileNotFoundError("Test corpus not found", data_path)
-    examples = json_path_to_examples(data_path, NLP)
-    scores = NLP.evaluate(examples)
-    assert scores["dep_uas"] > uas_threshold
-    assert scores["dep_las"] > las_threshold
+    evaluate_corpus(
+        NLP, data_path, {"dep_uas": uas_threshold, "dep_las": las_threshold}
+    )
 
 
 @pytest.mark.parametrize(
@@ -60,7 +56,7 @@ def test_en_parser_norm_exceptions(NLP, text):
         assert [t.dep_ for t in NLP(text1)] == [t.dep_ for t in NLP(text2)]
 
 
-@pytest.mark.skip
+@pytest.mark.skip()
 def test_en_parser_sbd_serialization_projective(nlp):
     """Test that before and after serialization, the sentence boundaries are
      the same."""
@@ -101,7 +97,6 @@ def test_en_parser_issue693(NLP):
     assert len(chunks2) == 2
 
 
-@pytest.mark.xfail
 def test_en_parser_issue704(NLP):
     """Test that sentence boundaries are detected correctly."""
     text = "“Atticus said to Jem one day, “I’d rather you shot at tin cans in the backyard, but I know you’ll go after birds. Shoot all the blue jays you want, if you can hit ‘em, but remember it’s a sin to kill a mockingbird.”"

@@ -10,10 +10,10 @@ are currently rather limited.
 
 **Components:** tagger, parser (minimal)
 
-**Location:** tests/lang/de/test_files/de_pud-ud-test.stts.json
+**Location:** tests/lang/de/test_files/de_pud-ud-test.stts.json, tests/lang/de/test_files/de_pud-ud-test-v2.5.json
 
 **Description:** The [German PUD test
-corpus](https://github.com/UniversalDependencies/UD_German-PUD) v2.4, which
+corpus](https://github.com/UniversalDependencies/UD_German-PUD) v2.4/v2.5, which
 contains news and Wikipedia data (1000 sentences).
 
 **License:** CC BY-SA 3.0
@@ -27,7 +27,7 @@ Applied Linguistics (ÚFAL), Faculty of Mathematics and Physics, Charles
 University, http://hdl.handle.net/11234/1-2988.
 ```
 
-### Data Preparation
+### Data Preparation for de_pud-ud-test.stts.json
 
 1. The expanded multiword tokens such as (`zur` -> `zu`, `dem`) were removed,
 leaving only the original token from the text (`zur`).

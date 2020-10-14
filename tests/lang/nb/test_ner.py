@@ -1,20 +1,14 @@
 import pytest
 from pathlib import Path
-from ...util import json_path_to_examples
+from ...util import evaluate_corpus
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
 @pytest.mark.parametrize(
-    "test_file,ents_f_threshold",
-    [("no_bokmaal-ud-dev132_1320.json", 0.35)],
+    "test_file,ents_f_threshold", [("no_bokmaal-ud-dev132_1320.json", 0.35)],
 )
 def test_nb_ner_corpus(NLP, test_file, ents_f_threshold):
     data_path = TEST_FILES_DIR / test_file
-    if not data_path.exists():
-        raise FileNotFoundError("Test corpus not found", data_path)
-    examples = json_path_to_examples(data_path, NLP)
-    scores = NLP.evaluate(examples)
-
-    assert scores["ents_f"] > ents_f_threshold
+    evaluate_corpus(data_path, NLP, {"ents_f": ents_f_threshold})

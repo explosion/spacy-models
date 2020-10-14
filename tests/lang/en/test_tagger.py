@@ -2,7 +2,7 @@ import pytest
 from spacy.symbols import SPACE
 from spacy.tokens import MorphAnalysis
 from pathlib import Path
-from ...util import evaluate_corpus, json_path_to_examples
+from ...util import evaluate_corpus
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
@@ -16,11 +16,10 @@ def test_en_tagger_tag_names(NLP):
     assert doc[2].tag_ == "NNS"
 
 
-@pytest.mark.xfail()
 def test_en_tagger_example(NLP):
-    doc = NLP("Apple is looking at buying U.K. startup")
-    pos = ["PROPN", "AUX", "VERB", "ADP", "VERB", "PROPN", "NOUN"]
-    tags = ["NNP", "VBZ", "VBG", "IN", "VBG", "NNP", "NN"]
+    doc = NLP("Apple is looking at buying a U.K. startup")
+    pos = ["PROPN", "AUX", "VERB", "ADP", "VERB", "DET", "PROPN", "NOUN"]
+    tags = ["NNP", "VBZ", "VBG", "IN", "VBG", "DT", "NNP", "NN"]
     for token, expected_pos in zip(doc, pos):
         assert token.pos_ == expected_pos
     for token, expected_tag in zip(doc, tags):
@@ -33,7 +32,7 @@ def test_en_tagger_example(NLP):
 )
 def test_en_tagger_corpus(NLP, test_file, accuracy_threshold):
     data_path = TEST_FILES_DIR / test_file
-    evaluate_corpus(data_path, NLP, {"tag_acc": accuracy_threshold})
+    evaluate_corpus(NLP, data_path, {"tag_acc": accuracy_threshold})
 
 
 def test_en_tagger_spaces(NLP):
@@ -77,7 +76,9 @@ def test_en_tagger_lemma_doc(NLP):
         ("aardwolf", ["aardwolf"], "Number=Sing"),
         ("planets", ["planet"], "Number=Plur"),
         ("ring", ["ring"], "Number=Sing"),
-        pytest.param("axes", ["axe", "ax", "axis"], "Number=Plur", marks=pytest.mark.xfail()),
+        pytest.param(
+            "axes", ["axe", "ax", "axis"], "Number=Plur", marks=pytest.mark.xfail()
+        ),
     ],
 )
 def test_en_tagger_lemma_nouns(NLP, text, lemmas, morphology):

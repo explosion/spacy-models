@@ -2,7 +2,7 @@ import pytest
 from spacy.tokens import Doc
 from spacy.symbols import SPACE
 from pathlib import Path
-from ...util import json_path_to_examples
+from ...util import evaluate_corpus
 
 
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
@@ -10,19 +10,14 @@ TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 # TODO: switch back to nkjp when model config is updated
 @pytest.mark.parametrize(
-    #"test_file,accuracy_threshold",
-    #[("nkjp_60s_dev_sample.json", 0.96)],
+    # "test_file,accuracy_threshold",
+    # [("nkjp_60s_dev_sample.json", 0.96)],
     "test_file,accuracy_threshold",
     [("pl_sz-ud-dev036_360.json", 0.81)],
 )
 def test_pl_tagger_corpus(NLP, test_file, accuracy_threshold):
     data_path = TEST_FILES_DIR / test_file
-    if not data_path.exists():
-        raise FileNotFoundError("Test corpus not found", data_path)
-    examples = json_path_to_examples(data_path, NLP)
-    scores = NLP.evaluate(examples)
-
-    assert scores["tag_acc"] > accuracy_threshold
+    evaluate_corpus(NLP, data_path, {"tag_acc": accuracy_threshold})
 
 
 def test_pl_tagger_spaces(NLP):
