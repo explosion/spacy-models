@@ -11,4 +11,4 @@ TEST_FILES_DIR = Path(__file__).parent / "test_files"
 )
 def test_nb_ner_corpus(NLP, test_file, ents_f_threshold):
     data_path = TEST_FILES_DIR / test_file
-    evaluate_corpus(data_path, NLP, {"ents_f": ents_f_threshold})
+    evaluate_corpus(NLP, data_path, {"ents_f": ents_f_threshold})
