@@ -11,6 +11,7 @@
       "nl_core_news_sm": ["3.0.0a0"],
       "nl_core_news_md": ["3.0.0a0"],
       "nl_core_news_lg": ["3.0.0a0"],
+      "nl_core_news_trf": ["3.0.0a0"],
       "en_core_web_sm": ["3.0.0a0"],
       "en_core_web_md": ["3.0.0a0"],
       "en_core_web_lg": ["3.0.0a0"],
