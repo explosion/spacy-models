@@ -10,7 +10,7 @@ TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 @pytest.mark.parametrize(
     "test_file,tag_threshold,pos_threshold,morph_threshold",
-    [("zh_gsd-ud-dev_sample.json", 0.34, 0.59, 0.74)],
+    [("zh_gsd-ud-dev_sample.json", 0.32, 0.59, 0.74)],
 )
 def test_zh_tagger_corpus(
     NLP, test_file, tag_threshold, pos_threshold, morph_threshold
