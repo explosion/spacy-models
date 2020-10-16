@@ -6,7 +6,7 @@
   "author": "Explosion",
   "email": "contact@explosion.ai",
   "url": "https://explosion.ai",
-  "license": "MIT",
+  "license": "LGPL-LR",
   "spacy_version": ">=3.0.0a40,<3.1.0",
   "spacy_git_version": "a0e12c136",
   "vectors": {
@@ -276,16 +276,16 @@
   "disabled": [],
   "performance": {
     "tok": 99.9,
-    "tag": 95.76,
-    "pos": 98.67,
-    "morph": 97.96,
+    "tag": 95.74,
+    "pos": 98.64,
+    "morph": 98.07,
     "lemma": 91.19,
-    "uas": 94.91,
-    "las": 92.76,
-    "sent_p": 91.92,
-    "sent_r": 93.93,
-    "sent_f": 92.92,
-    "speed": 1464.0
+    "uas": 94.79,
+    "las": 92.71,
+    "sent_p": 93.72,
+    "sent_r": 94.17,
+    "sent_f": 93.95,
+    "speed": 950.0
   },
   "sources": [
     {
@@ -300,5 +300,5 @@
   ],
   "parent_package": "spacy-nightly",
   "size": "381 MB",
-  "checksum": "b7d58a2b9fbf56875ab9eda4d13b37096581ad4981f650b62a34aadc9fb7a70c"
+  "checksum": "737ee3bf391cecac75ed0931e32f23fd4d5ea9ad200cfd2af720d323a9e5dc75"
 }
