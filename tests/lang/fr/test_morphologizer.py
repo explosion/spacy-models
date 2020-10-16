@@ -10,7 +10,7 @@ TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 @pytest.mark.parametrize(
     "test_file,pos_threshold,morph_threshold",
-    [("fr_sequoia-ud-dev01_10.json", 0.94, 0.90)],
+    [("fr_sequoia-ud-dev01_10.json", 0.93, 0.90)],
 )
 def test_fr_morphologizer_corpus(NLP, test_file, pos_threshold, morph_threshold):
     data_path = TEST_FILES_DIR / test_file
