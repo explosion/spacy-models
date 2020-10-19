@@ -244,20 +244,20 @@
     "senter"
   ],
   "performance": {
-    "tok": "99.95",
-    "tag": "95.11",
-    "pos": "95.11",
-    "morph": "93.90",
-    "lemma": "84.91",
-    "uas": "80.91",
-    "las": "76.46",
-    "ner_p": "73.42",
-    "ner_r": "70.21",
-    "ner_f": "71.78",
-    "sent_p": "87.23",
-    "sent_r": "84.75",
-    "sent_f": "85.97",
-    "speed": "11085",
+    "token_acc": 0.9994672349,
+    "tag_acc": 0.9510895884,
+    "pos_acc": 0.9510895884,
+    "morph_acc": 0.9389830508,
+    "lemma_acc": 0.8491041162,
+    "dep_uas": 0.8090929401,
+    "dep_las": 0.7645908964,
+    "ents_p": 0.734204793,
+    "ents_r": 0.7020833333,
+    "ents_f": 0.7177848775,
+    "sents_p": 0.8722627737,
+    "sents_r": 0.8475177305,
+    "sents_f": 0.8597122302,
+    "speed": 12104.644642377,
     "morph_per_feat": {
       "Mood": {
         "p": 0.969581749,
@@ -567,5 +567,5 @@
   "requirements": [],
   "parent_package": "spacy-nightly",
   "size": "17 MB",
-  "checksum": "28eae2e5656e42220bab4b54006c49e92a8e0b501423f83c94be5aaac1309388"
+  "checksum": "167db17271e3a7e7fc87d7f964895c5ecfb7886d33077dfb0c4a2e52e4ca47dc"
 }
