@@ -64,6 +64,7 @@ def test_en_tagger_return_char(NLP):
     assert doc[3].pos == SPACE
 
 
+@pytest.mark.skip(reason="Inconsistent tags without context")
 def test_en_tagger_lemma_doc(NLP):
     doc = NLP("bleed")
     assert doc[0].lemma_ == "bleed"
