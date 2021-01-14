@@ -1,5 +1,6 @@
 import pytest
 from pathlib import Path
+from spacy.symbols import SPACE
 from ...util import evaluate_corpus
 
 
@@ -23,7 +24,7 @@ def test_ru_morphologizer_example(NLP):
         "Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing",
         "Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing",
         "Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing",
-        "ADP",
+        "",
         "Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing",
     ]
     for token, expected_pos, expected_morph in zip(doc, pos, morphs):
