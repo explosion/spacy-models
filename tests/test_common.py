@@ -8,11 +8,18 @@ from spacy.tokens import Doc, Token
 
 @pytest.fixture
 def example_text(NLP):
-    examples = importlib.import_module("spacy.lang." + NLP.lang + ".examples")
+    try:
+        examples = importlib.import_module("spacy.lang." + NLP.lang + ".examples")
+        sentences = examples.sentence
+    except Exception:
+        sentences = [
+            "This is a sentence.",
+            "This is another sentence.",
+        ]
     # TODO: need a language-specific setting since space is not appropriate for
     # all languages
     punct_fixed = []
-    for sent in examples.sentences:
+    for sent in sentences:
         if not sent.endswith("."):
             sent += "."
         punct_fixed.append(sent)
@@ -131,10 +138,10 @@ def test_parser_sanity_checks(NLP, example_text):
     assert len(list(doc.sents)) > 1
     # check that the labels are a subset of the meta model labels
     model_labels = set(NLP.meta["labels"]["parser"])
-    assert set([t.dep_ for t in doc]) <= model_labels | {''}
+    assert set([t.dep_ for t in doc]) <= model_labels | {""}
     # check that the labels are a subset of the pipe model labels
     model_labels = set(NLP.get_pipe("parser").labels)
-    assert set([t.dep_ for t in doc]) <= model_labels | {''}
+    assert set([t.dep_ for t in doc]) <= model_labels | {""}
 
 
 @pytest.mark.requires("ner")
@@ -142,10 +149,10 @@ def test_ner_sanity_checks(NLP, example_text):
     doc = NLP(example_text)
     # check that the labels are a subset of the meta model labels
     model_labels = set(NLP.meta["labels"]["ner"])
-    assert set([t.ent_type_ for t in doc]) <= model_labels | {''}
+    assert set([t.ent_type_ for t in doc]) <= model_labels | {""}
     # check that the labels are a subset of the pipe model labels
     model_labels = set(NLP.get_pipe("ner").labels)
-    assert set([t.ent_type_ for t in doc]) <= model_labels | {''}
+    assert set([t.ent_type_ for t in doc]) <= model_labels | {""}
 
 
 @pytest.mark.skip(reason="Not the right check for v3")
