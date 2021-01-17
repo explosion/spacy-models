@@ -10,7 +10,7 @@ from spacy.tokens import Doc, Token
 def example_text(NLP):
     try:
         examples = importlib.import_module("spacy.lang." + NLP.lang + ".examples")
-        sentences = examples.sentence
+        sentences = examples.sentences
     except Exception:
         sentences = [
             "This is a sentence.",
