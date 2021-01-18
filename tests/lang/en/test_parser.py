@@ -50,7 +50,7 @@ def test_en_parser_norm_exceptions(NLP, text):
     that are reset in the new NORM exceptions."""
     # We seem to have lost our NORM invariance, I think due to the token norm
     # vs lex norm changes I made? This should probably be investigated.
-    if not NLP.vocab.vectors.size:
+    if not NLP.vocab.vectors.size and "transformer" not in NLP.pipe_names:
         text1 = '"{}"'.format(text)
         text2 = "“{}”".format(text)
         assert [t.dep_ for t in NLP(text1)] == [t.dep_ for t in NLP(text2)]
