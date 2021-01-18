@@ -56,7 +56,10 @@
       "en_vectors_web_lg": ["3.0.0a1"],
       "ru_core_news_sm": ["3.0.0a1"],
       "ru_core_news_md": ["3.0.0a1"],
-      "ru_core_news_lg": ["3.0.0a1"]
+      "ru_core_news_lg": ["3.0.0a1"],
+      "mk_core_news_sm": ["3.0.0a1"],
+      "mk_core_news_md": ["3.0.0a1"],
+      "mk_core_news_lg": ["3.0.0a1"]
     },
     "2.3.5": {
       "zh_core_web_sm": ["2.3.1", "2.3.0"],
