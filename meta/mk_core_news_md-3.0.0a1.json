@@ -1,0 +1,380 @@
+{
+  "lang": "mk",
+  "name": "core_news_md",
+  "version": "3.0.0a1",
+  "description": "Macedonian pipeline optimized for CPU. Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.",
+  "author": "Explosion",
+  "email": "contact@explosion.ai",
+  "url": "https://explosion.ai",
+  "license": "CC BY-SA 4.0",
+  "spacy_version": ">=3.0.0rc3,<3.1.0",
+  "spacy_git_version": "43a752a2a",
+  "vectors": {
+    "width": 300,
+    "vectors": 20000,
+    "keys": 274587,
+    "name": "mk_vectors"
+  },
+  "labels": {
+    "morphologizer": [
+      "POS=PROPN",
+      "POS=AUX",
+      "POS=ADJ",
+      "POS=NOUN",
+      "POS=ADP",
+      "POS=PUNCT",
+      "POS=CONJ",
+      "POS=NUM",
+      "POS=VERB",
+      "POS=PRON",
+      "POS=ADV",
+      "POS=SCONJ",
+      "POS=PART",
+      "POS=SYM",
+      "POS=X",
+      "POS=INTJ"
+    ],
+    "parser": [
+      "ROOT",
+      "advmod",
+      "att",
+      "aux",
+      "cc",
+      "dep",
+      "det",
+      "dobj",
+      "iobj",
+      "neg",
+      "nsubj",
+      "pobj",
+      "poss",
+      "pozm",
+      "pozv",
+      "prep",
+      "punct",
+      "relcl"
+    ],
+    "senter": [
+      "I",
+      "S"
+    ],
+    "ner": [
+      "CARDINAL",
+      "DATE",
+      "EVENT",
+      "FAC",
+      "GPE",
+      "LANGUAGE",
+      "LAW",
+      "LOC",
+      "MONEY",
+      "NORP",
+      "ORDINAL",
+      "ORG",
+      "PERCENT",
+      "PERSON",
+      "PRODUCT",
+      "QUANTITY",
+      "TIME",
+      "WORK_OF_ART"
+    ],
+    "attribute_ruler": [],
+    "lemmatizer": []
+  },
+  "pipeline": [
+    "morphologizer",
+    "parser",
+    "ner",
+    "attribute_ruler",
+    "lemmatizer"
+  ],
+  "components": [
+    "morphologizer",
+    "parser",
+    "senter",
+    "ner",
+    "attribute_ruler",
+    "lemmatizer"
+  ],
+  "disabled": [
+    "senter"
+  ],
+  "performance": {
+    "token_acc": 1.0,
+    "ents_p": 0.7677304965,
+    "ents_r": 0.7370212766,
+    "ents_f": 0.7520625271,
+    "sents_p": 0.8095238095,
+    "sents_r": 0.6623376623,
+    "sents_f": 0.7285714286,
+    "speed": 1133.631122531,
+    "ents_per_type": {
+      "LOC": {
+        "p": 0.7462686567,
+        "r": 0.5747126437,
+        "f": 0.6493506494
+      },
+      "GPE": {
+        "p": 0.8870588235,
+        "r": 0.8891509434,
+        "f": 0.8881036514
+      },
+      "CARDINAL": {
+        "p": 0.7096774194,
+        "r": 0.7021276596,
+        "f": 0.7058823529
+      },
+      "QUANTITY": {
+        "p": 0.7575757576,
+        "r": 0.6097560976,
+        "f": 0.6756756757
+      },
+      "NORP": {
+        "p": 0.4736842105,
+        "r": 0.4153846154,
+        "f": 0.4426229508
+      },
+      "ORG": {
+        "p": 0.6071428571,
+        "r": 0.693877551,
+        "f": 0.6476190476
+      },
+      "DATE": {
+        "p": 0.7739726027,
+        "r": 0.7957746479,
+        "f": 0.7847222222
+      },
+      "TIME": {
+        "p": 0.625,
+        "r": 0.8333333333,
+        "f": 0.7142857143
+      },
+      "PERCENT": {
+        "p": 0.9411764706,
+        "r": 1.0,
+        "f": 0.9696969697
+      },
+      "FAC": {
+        "p": 0.1176470588,
+        "r": 0.1,
+        "f": 0.1081081081
+      },
+      "MONEY": {
+        "p": 0.5,
+        "r": 0.5,
+        "f": 0.5
+      },
+      "ORDINAL": {
+        "p": 0.5,
+        "r": 0.5454545455,
+        "f": 0.5217391304
+      },
+      "PERSON": {
+        "p": 0.8079470199,
+        "r": 0.8133333333,
+        "f": 0.8106312292
+      },
+      "LANGUAGE": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "WORK_OF_ART": {
+        "p": 0.5,
+        "r": 0.3170731707,
+        "f": 0.3880597015
+      },
+      "EVENT": {
+        "p": 0.6923076923,
+        "r": 0.5294117647,
+        "f": 0.6
+      },
+      "LAW": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "PRODUCT": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    },
+    "pos_acc": 0.9306717022,
+    "dep_uas": 0.6712463199,
+    "dep_las": 0.5122669284,
+    "dep_las_per_type": {
+      "nsubj": {
+        "p": 0.6578947368,
+        "r": 0.6578947368,
+        "f": 0.6578947368
+      },
+      "root": {
+        "p": 0.7142857143,
+        "r": 0.6428571429,
+        "f": 0.6766917293
+      },
+      "cc": {
+        "p": 0.85,
+        "r": 0.6071428571,
+        "f": 0.7083333333
+      },
+      "relcl": {
+        "p": 0.3333333333,
+        "r": 0.3846153846,
+        "f": 0.3571428571
+      },
+      "pozm": {
+        "p": 0.5,
+        "r": 0.2727272727,
+        "f": 0.3529411765
+      },
+      "poss": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "aux": {
+        "p": 0.6285714286,
+        "r": 0.6666666667,
+        "f": 0.6470588235
+      },
+      "prep": {
+        "p": 0.6984126984,
+        "r": 0.7333333333,
+        "f": 0.7154471545
+      },
+      "iobj": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "pozv": {
+        "p": 0.2222222222,
+        "r": 0.1333333333,
+        "f": 0.1666666667
+      },
+      "quantmod": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "att": {
+        "p": 0.8333333333,
+        "r": 0.6730769231,
+        "f": 0.7446808511
+      },
+      "det": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "num": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "dep": {
+        "p": 0.0158730159,
+        "r": 0.3333333333,
+        "f": 0.0303030303
+      },
+      "dobj": {
+        "p": 0.4142857143,
+        "r": 0.4833333333,
+        "f": 0.4461538462
+      },
+      "ppdo": {
+        "p": 0.6666666667,
+        "r": 0.4,
+        "f": 0.5
+      },
+      "neg": {
+        "p": 0.4444444444,
+        "r": 0.3636363636,
+        "f": 0.4
+      },
+      "pobj": {
+        "p": 0.4047619048,
+        "r": 0.53125,
+        "f": 0.4594594595
+      },
+      "mwe": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "ppio": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "appos": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "advmod": {
+        "p": 0.3333333333,
+        "r": 0.5,
+        "f": 0.4
+      },
+      "advcl": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "number": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "amod": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "_": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "acl": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "pozn": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "pozk": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    }
+  },
+  "sources": [
+    {
+      "name": "Macedonian Corpus",
+      "author": "Damjan Zlatinov, Melanija Gerasimovska, Borijan Georgievski, Marija Todosovska",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "name": "Macedonian Corpus",
+      "author": "Damjan Zlatinov, Melanija Gerasimovska, Borijan Georgievski, Marija Todosovska",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "name": "Macedonian Corpus",
+      "author": "Damjan Zlatinov, Melanija Gerasimovska, Borijan Georgievski, Marija Todosovska",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "requirements": [],
+  "parent_package": "spacy-nightly",
+  "size": "44 MB",
+  "checksum": "75c4187054586d0859383cd1369315804c4f95de3dfcd0643e85063c4c58d817"
+}
