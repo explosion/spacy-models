@@ -1,0 +1,589 @@
+{
+  "lang": "fr",
+  "name": "dep_news_trf",
+  "version": "3.0.0a1",
+  "description": "French transformer pipeline (camembert-base). Components: transformer, morphologizer, parser, attribute_ruler, lemmatizer.",
+  "author": "Explosion",
+  "email": "contact@explosion.ai",
+  "url": "https://explosion.ai",
+  "license": "LGPL-LR",
+  "spacy_version": ">=3.0.0rc3,<3.1.0",
+  "spacy_git_version": "b331653ad",
+  "vectors": {
+    "width": 0,
+    "vectors": 0,
+    "keys": 0,
+    "name": null
+  },
+  "labels": {
+    "transformer": [],
+    "morphologizer": [
+      "POS=PROPN",
+      "Gender=Fem|Number=Sing|POS=DET|PronType=Dem",
+      "Gender=Fem|Number=Sing|POS=NOUN",
+      "Number=Plur|POS=PRON|Person=1",
+      "Mood=Ind|Number=Sing|POS=VERB|Person=3|Tense=Pres|VerbForm=Fin",
+      "POS=SCONJ",
+      "POS=ADP",
+      "Definite=Def|Gender=Masc|Number=Sing|POS=DET|PronType=Art",
+      "NumType=Ord|POS=ADJ",
+      "Gender=Masc|Number=Sing|POS=NOUN",
+      "POS=PUNCT",
+      "Gender=Masc|Number=Sing|POS=PROPN",
+      "Number=Plur|POS=ADJ",
+      "Gender=Masc|Number=Plur|POS=NOUN",
+      "Definite=Ind|Gender=Fem|Number=Sing|POS=DET|PronType=Art",
+      "Number=Sing|POS=ADJ",
+      "Mood=Ind|Number=Sing|POS=VERB|Person=3|Tense=Imp|VerbForm=Fin",
+      "POS=ADV",
+      "Mood=Ind|Number=Sing|POS=AUX|Person=3|Tense=Past|VerbForm=Fin",
+      "Gender=Fem|Number=Sing|POS=VERB|Tense=Past|VerbForm=Part|Voice=Pass",
+      "Definite=Def|Gender=Fem|Number=Sing|POS=DET|PronType=Art",
+      "Gender=Fem|Number=Sing|POS=PROPN",
+      "Definite=Def|Number=Sing|POS=DET|PronType=Art",
+      "NumType=Card|POS=NUM",
+      "Definite=Def|Number=Plur|POS=DET|PronType=Art",
+      "Gender=Masc|Number=Plur|POS=ADJ",
+      "POS=CCONJ",
+      "Gender=Fem|Number=Plur|POS=NOUN",
+      "Mood=Ind|Number=Plur|POS=VERB|Person=3|Tense=Past|VerbForm=Fin",
+      "Gender=Masc|Number=Sing|POS=VERB|Tense=Past|VerbForm=Part",
+      "Gender=Fem|Number=Plur|POS=ADJ",
+      "POS=ADJ",
+      "Mood=Ind|Number=Sing|POS=VERB|Person=3|Tense=Past|VerbForm=Fin",
+      "POS=PRON|PronType=Rel",
+      "Number=Sing|POS=DET|Poss=Yes",
+      "Definite=Def|Gender=Masc|Number=Sing|POS=ADP|PronType=Art",
+      "Definite=Def|Number=Plur|POS=ADP|PronType=Art",
+      "Definite=Ind|Number=Plur|POS=DET|PronType=Art",
+      "Mood=Ind|Number=Plur|POS=AUX|Person=3|Tense=Past|VerbForm=Fin",
+      "Gender=Masc|Number=Plur|POS=VERB|Tense=Past|VerbForm=Part|Voice=Pass",
+      "Mood=Ind|Number=Sing|POS=AUX|Person=3|Tense=Pres|VerbForm=Fin",
+      "POS=VERB|VerbForm=Inf",
+      "Gender=Fem|Number=Sing|POS=ADJ",
+      "Gender=Masc|Number=Sing|POS=PRON|Person=3",
+      "Number=Plur|POS=DET",
+      "Mood=Ind|Number=Plur|POS=AUX|Person=3|Tense=Pres|VerbForm=Fin",
+      "Gender=Masc|Number=Sing|POS=ADJ",
+      "Gender=Masc|Number=Sing|POS=DET|PronType=Dem",
+      "POS=ADV|PronType=Int",
+      "POS=VERB|Tense=Pres|VerbForm=Part",
+      "Gender=Fem|Number=Sing|POS=VERB|Tense=Past|VerbForm=Part",
+      "Definite=Ind|Gender=Masc|Number=Sing|POS=DET|PronType=Art",
+      "Gender=Masc|POS=ADJ",
+      "Mood=Ind|Number=Plur|POS=VERB|Person=3|Tense=Fut|VerbForm=Fin",
+      "Number=Plur|POS=DET|Poss=Yes",
+      "POS=AUX|VerbForm=Inf",
+      "Gender=Masc|Number=Sing|POS=VERB|Tense=Past|VerbForm=Part|Voice=Pass",
+      "Gender=Masc|POS=VERB|Tense=Past|VerbForm=Part",
+      "POS=ADV|Polarity=Neg",
+      "Definite=Ind|Number=Sing|POS=DET|PronType=Art",
+      "Gender=Fem|Number=Sing|POS=PRON|Person=3",
+      "POS=PRON|Person=3|Reflex=Yes",
+      "Gender=Masc|POS=NOUN",
+      "POS=AUX|Tense=Past|VerbForm=Part",
+      "POS=PRON|Person=3",
+      "Number=Plur|POS=NOUN",
+      "NumType=Ord|Number=Sing|POS=ADJ",
+      "POS=VERB|Tense=Past|VerbForm=Part",
+      "POS=AUX|Tense=Pres|VerbForm=Part",
+      "Gender=Masc|Number=Plur|POS=VERB|Tense=Past|VerbForm=Part",
+      "Number=Sing|POS=PRON|Person=3",
+      "Number=Sing|POS=NOUN",
+      "Gender=Masc|Number=Plur|POS=PRON|Person=3",
+      "Mood=Ind|Number=Plur|POS=VERB|Person=3|Tense=Imp|VerbForm=Fin",
+      "Gender=Fem|NumType=Ord|Number=Sing|POS=ADJ",
+      "Number=Plur|POS=PROPN",
+      "Number=Sing|POS=PROPN",
+      "Mood=Ind|Number=Sing|POS=AUX|Person=3|Tense=Imp|VerbForm=Fin",
+      "Mood=Ind|Number=Plur|POS=VERB|Person=3|Tense=Pres|VerbForm=Fin",
+      "Gender=Masc|Number=Plur|POS=PRON|PronType=Dem",
+      "Gender=Masc|Number=Sing|POS=DET",
+      "Gender=Fem|Number=Sing|POS=DET|Poss=Yes",
+      "Gender=Masc|POS=PRON",
+      "POS=NOUN",
+      "Mood=Ind|Number=Sing|POS=VERB|Person=3|Tense=Fut|VerbForm=Fin",
+      "Mood=Ind|Number=Sing|POS=AUX|Person=3|Tense=Fut|VerbForm=Fin",
+      "Mood=Ind|Number=Plur|POS=VERB|Person=1|Tense=Pres|VerbForm=Fin",
+      "Number=Plur|POS=PRON",
+      "Gender=Masc|NumType=Ord|Number=Plur|POS=ADJ",
+      "Mood=Ind|Number=Plur|POS=AUX|Person=3|Tense=Fut|VerbForm=Fin",
+      "Gender=Fem|Number=Plur|POS=VERB|Tense=Past|VerbForm=Part|Voice=Pass",
+      "Number=Sing|POS=PRON",
+      "Number=Sing|POS=PRON|PronType=Dem",
+      "Mood=Ind|POS=VERB|VerbForm=Fin",
+      "Number=Plur|POS=DET|PronType=Dem",
+      "Gender=Masc|Number=Sing|POS=PRON|Person=3|PronType=Prs",
+      "Gender=Masc|Number=Plur|POS=PRON|Person=3|PronType=Prs",
+      "Gender=Masc|Number=Sing|POS=PRON",
+      "Gender=Masc|Number=Sing|POS=PRON|Person=3|PronType=Dem",
+      "Number=Sing|POS=PRON|Person=2|PronType=Prs",
+      "Gender=Masc|Number=Sing|POS=PRON|PronType=Rel",
+      "Mood=Ind|Number=Plur|POS=AUX|Person=3|Tense=Imp|VerbForm=Fin",
+      "Mood=Sub|Number=Sing|POS=AUX|Person=3|Tense=Pres|VerbForm=Fin",
+      "Gender=Masc|NumType=Ord|Number=Sing|POS=ADJ",
+      "POS=PRON",
+      "POS=NUM",
+      "Gender=Fem|POS=NOUN",
+      "Gender=Fem|Number=Plur|POS=PRON",
+      "Number=Plur|POS=PRON|Person=3",
+      "Number=Sing|POS=VERB|Tense=Past|VerbForm=Part",
+      "Number=Sing|POS=PRON|Person=1",
+      "Mood=Ind|Number=Sing|POS=VERB|Person=1|Tense=Pres|VerbForm=Fin",
+      "Mood=Sub|Number=Sing|POS=VERB|Person=3|Tense=Past|VerbForm=Fin",
+      "Gender=Fem|Number=Sing|POS=PRON",
+      "Gender=Fem|Number=Sing|POS=PRON|Person=3|PronType=Prs",
+      "Mood=Sub|Number=Sing|POS=VERB|Person=3|Tense=Pres|VerbForm=Fin",
+      "POS=INTJ",
+      "Number=Plur|POS=PRON|Person=2",
+      "NumType=Card|POS=PRON",
+      "Definite=Ind|Gender=Fem|Number=Plur|POS=DET|PronType=Art",
+      "Gender=Fem|Number=Plur|POS=VERB|Tense=Past|VerbForm=Part",
+      "NumType=Card|POS=NOUN",
+      "POS=PRON|PronType=Int",
+      "Gender=Fem|Number=Plur|POS=PRON|Person=3",
+      "Gender=Fem|Number=Sing|POS=DET",
+      "Mood=Cnd|Number=Sing|POS=AUX|Person=3|Tense=Pres|VerbForm=Fin",
+      "Gender=Fem|Number=Plur|POS=DET",
+      "Mood=Sub|Number=Plur|POS=VERB|Person=3|Tense=Pres|VerbForm=Fin",
+      "Definite=Ind|Gender=Masc|Number=Plur|POS=DET|PronType=Art",
+      "Mood=Cnd|Number=Sing|POS=VERB|Person=3|Tense=Pres|VerbForm=Fin",
+      "Gender=Masc|Number=Sing|POS=PRON|PronType=Dem",
+      "Gender=Masc|Number=Plur|POS=PROPN",
+      "Mood=Cnd|Number=Plur|POS=VERB|Person=3|Tense=Pres|VerbForm=Fin",
+      "Gender=Fem|Number=Sing|POS=PRON|PronType=Dem",
+      "Number=Sing|POS=DET",
+      "Gender=Masc|NumType=Card|Number=Plur|POS=NOUN",
+      "Gender=Fem|Number=Plur|POS=PRON|PronType=Dem",
+      "Mood=Ind|POS=VERB|Person=3|Tense=Pres|VerbForm=Fin",
+      "Gender=Fem|POS=PRON",
+      "Gender=Masc|POS=VERB|Tense=Past|VerbForm=Part|Voice=Pass",
+      "Gender=Fem|Number=Sing|POS=PRON|PronType=Rel",
+      "Mood=Ind|Number=Sing|POS=AUX|Person=1|Tense=Imp|VerbForm=Fin",
+      "Mood=Cnd|Number=Plur|POS=VERB|Person=1|Tense=Pres|VerbForm=Fin",
+      "Mood=Ind|Number=Sing|POS=AUX|Person=1|Tense=Pres|VerbForm=Fin",
+      "Gender=Masc|Number=Sing|POS=AUX|Tense=Past|VerbForm=Part",
+      "POS=X",
+      "POS=SYM",
+      "Mood=Imp|Number=Plur|POS=VERB|Person=2|Tense=Pres|VerbForm=Fin",
+      "Mood=Ind|Number=Plur|POS=VERB|Person=2|Tense=Pres|VerbForm=Fin",
+      "Gender=Masc|Number=Sing|POS=DET|PronType=Int",
+      "Gender=Fem|Number=Plur|POS=DET|PronType=Int",
+      "POS=DET",
+      "Gender=Masc|Number=Plur|POS=PRON",
+      "POS=PART",
+      "Mood=Sub|Number=Plur|POS=AUX|Person=3|Tense=Pres|VerbForm=Fin",
+      "Mood=Ind|POS=VERB|Person=3|VerbForm=Fin",
+      "Number=Sing|POS=VERB|Tense=Past|VerbForm=Part|Voice=Pass",
+      "Mood=Cnd|Number=Plur|POS=VERB|Person=2|Tense=Pres|VerbForm=Fin",
+      "Mood=Ind|Number=Plur|POS=AUX|Person=2|Tense=Pres|VerbForm=Fin",
+      "Gender=Fem|Number=Sing|POS=DET|PronType=Int",
+      "Gender=Masc|Number=Plur|POS=DET",
+      "Gender=Fem|Number=Plur|POS=PRON|PronType=Rel",
+      "Number=Plur|POS=VERB|Tense=Past|VerbForm=Part|Voice=Pass",
+      "Gender=Masc|Number=Plur|POS=PRON|PronType=Rel",
+      "POS=VERB|Tense=Past|VerbForm=Part|Voice=Pass",
+      "Gender=Fem|NumType=Ord|Number=Plur|POS=ADJ",
+      "Mood=Ind|Number=Plur|POS=VERB|Person=2|Tense=Fut|VerbForm=Fin",
+      "Mood=Imp|POS=VERB|Tense=Pres|VerbForm=Fin",
+      "Number=Plur|POS=PRON|Person=2|Reflex=Yes",
+      "Mood=Cnd|Number=Sing|POS=VERB|Person=1|Tense=Pres|VerbForm=Fin",
+      "Number=Plur|POS=PRON|Person=1|Reflex=Yes",
+      "Gender=Masc|NumType=Card|Number=Sing|POS=NOUN",
+      "Mood=Ind|Number=Plur|POS=AUX|Person=1|Tense=Pres|VerbForm=Fin",
+      "Mood=Ind|Number=Plur|POS=AUX|Person=1|Tense=Fut|VerbForm=Fin",
+      "Mood=Ind|Number=Plur|POS=VERB|Person=1|Tense=Fut|VerbForm=Fin",
+      "Number=Sing|POS=PRON|Person=1|Reflex=Yes",
+      "Mood=Ind|Number=Plur|POS=VERB|Person=1|Tense=Imp|VerbForm=Fin",
+      "Mood=Ind|Number=Plur|POS=AUX|Person=1|Tense=Imp|VerbForm=Fin",
+      "Mood=Ind|Number=Sing|POS=VERB|Person=1|Tense=Imp|VerbForm=Fin",
+      "Mood=Sub|Number=Sing|POS=VERB|Person=1|Tense=Pres|VerbForm=Fin",
+      "Gender=Masc|POS=PROPN",
+      "Mood=Cnd|Number=Plur|POS=AUX|Person=3|Tense=Pres|VerbForm=Fin",
+      "Number=Plur|POS=PRON|Person=1|PronType=Prs",
+      "Mood=Sub|Number=Sing|POS=AUX|Person=1|Tense=Pres|VerbForm=Fin",
+      "Number=Plur|POS=PRON|Person=2|PronType=Prs",
+      "Mood=Ind|Number=Sing|POS=VERB|Person=1|Tense=Fut|VerbForm=Fin",
+      "Gender=Fem|Number=Plur|POS=PRON|Person=3|PronType=Prs",
+      "Number=Sing|POS=PRON|Person=1|PronType=Prs",
+      "Mood=Cnd|Number=Sing|POS=AUX|Person=1|Tense=Pres|VerbForm=Fin",
+      "Mood=Sub|Number=Plur|POS=AUX|Person=1|Tense=Pres|VerbForm=Fin",
+      "Mood=Imp|Number=Plur|POS=VERB|Person=1|Tense=Pres|VerbForm=Fin",
+      "Mood=Sub|Number=Plur|POS=AUX|Person=2|Tense=Pres|VerbForm=Fin",
+      "Mood=Ind|Number=Plur|POS=VERB|Person=2|Tense=Imp|VerbForm=Fin",
+      "Gender=Fem|POS=ADV",
+      "Mood=Ind|Number=Sing|POS=AUX|Person=2|Tense=Imp|VerbForm=Fin",
+      "Number=Plur|POS=VERB|Tense=Past|VerbForm=Part",
+      "Gender=Fem|Number=Plur|POS=PROPN",
+      "Gender=Masc|NumType=Card|POS=NUM"
+    ],
+    "parser": [
+      "ROOT",
+      "acl",
+      "acl:relcl",
+      "advcl",
+      "advmod",
+      "amod",
+      "appos",
+      "aux:pass",
+      "aux:tense",
+      "case",
+      "cc",
+      "ccomp",
+      "conj",
+      "cop",
+      "dep",
+      "det",
+      "expl:comp",
+      "expl:pass",
+      "expl:subj",
+      "fixed",
+      "flat:foreign",
+      "flat:name",
+      "iobj",
+      "mark",
+      "nmod",
+      "nsubj",
+      "nsubj:pass",
+      "nummod",
+      "obj",
+      "obl:agent",
+      "obl:arg",
+      "obl:mod",
+      "parataxis",
+      "punct",
+      "vocative",
+      "xcomp"
+    ],
+    "attribute_ruler": [],
+    "lemmatizer": []
+  },
+  "pipeline": [
+    "transformer",
+    "morphologizer",
+    "parser",
+    "attribute_ruler",
+    "lemmatizer"
+  ],
+  "components": [
+    "transformer",
+    "morphologizer",
+    "parser",
+    "attribute_ruler",
+    "lemmatizer"
+  ],
+  "disabled": [],
+  "performance": {
+    "token_acc": 0.9989751998,
+    "tag_acc": 0.9572209051,
+    "pos_acc": 0.9862900732,
+    "morph_acc": 0.9794340498,
+    "lemma_acc": 0.9119021935,
+    "dep_uas": 0.9444026613,
+    "dep_las": 0.9234862067,
+    "sents_p": 0.9268867925,
+    "sents_r": 0.9538834951,
+    "sents_f": 0.9401913876,
+    "speed": 1497.547735228,
+    "morph_per_feat": {
+      "Definite": {
+        "p": 0.9992679356,
+        "r": 0.9956236324,
+        "f": 0.9974424552
+      },
+      "Number": {
+        "p": 0.9968383857,
+        "r": 0.9933283914,
+        "f": 0.9950802933
+      },
+      "PronType": {
+        "p": 0.999356085,
+        "r": 0.9923273657,
+        "f": 0.9958293231
+      },
+      "Gender": {
+        "p": 0.9896560641,
+        "r": 0.9888888889,
+        "f": 0.9892723278
+      },
+      "Mood": {
+        "p": 1.0,
+        "r": 0.9964476021,
+        "f": 0.9982206406
+      },
+      "Person": {
+        "p": 0.9974683544,
+        "r": 0.9899497487,
+        "f": 0.9936948298
+      },
+      "Tense": {
+        "p": 0.9908536585,
+        "r": 0.9959141982,
+        "f": 0.9933774834
+      },
+      "VerbForm": {
+        "p": 0.9933884298,
+        "r": 0.9950331126,
+        "f": 0.994210091
+      },
+      "NumType": {
+        "p": 0.9963369963,
+        "r": 0.9379310345,
+        "f": 0.9662522202
+      },
+      "Reflex": {
+        "p": 1.0,
+        "r": 1.0,
+        "f": 1.0
+      },
+      "Voice": {
+        "p": 0.9652173913,
+        "r": 0.9910714286,
+        "f": 0.9779735683
+      },
+      "Poss": {
+        "p": 1.0,
+        "r": 1.0,
+        "f": 1.0
+      },
+      "Polarity": {
+        "p": 1.0,
+        "r": 1.0,
+        "f": 1.0
+      }
+    },
+    "dep_las_per_type": {
+      "det": {
+        "p": 0.9879032258,
+        "r": 0.988700565,
+        "f": 0.9883017346
+      },
+      "nsubj": {
+        "p": 0.9520383693,
+        "r": 0.956626506,
+        "f": 0.9543269231
+      },
+      "aux:tense": {
+        "p": 0.992,
+        "r": 0.992,
+        "f": 0.992
+      },
+      "root": {
+        "p": 0.9435294118,
+        "r": 0.9733009709,
+        "f": 0.9581839904
+      },
+      "obj": {
+        "p": 0.9512195122,
+        "r": 0.9258160237,
+        "f": 0.9383458647
+      },
+      "cc": {
+        "p": 0.9495412844,
+        "r": 0.9539170507,
+        "f": 0.9517241379
+      },
+      "case": {
+        "p": 0.982946794,
+        "r": 0.9816076294,
+        "f": 0.9822767553
+      },
+      "obl:mod": {
+        "p": 0.8293413174,
+        "r": 0.8244047619,
+        "f": 0.8268656716
+      },
+      "nmod": {
+        "p": 0.8997995992,
+        "r": 0.8962075848,
+        "f": 0.898
+      },
+      "conj": {
+        "p": 0.7364341085,
+        "r": 0.7480314961,
+        "f": 0.7421875
+      },
+      "nummod": {
+        "p": 0.9096385542,
+        "r": 0.8988095238,
+        "f": 0.9041916168
+      },
+      "amod": {
+        "p": 0.9737827715,
+        "r": 0.9489051095,
+        "f": 0.9611829945
+      },
+      "acl": {
+        "p": 0.8370786517,
+        "r": 0.8612716763,
+        "f": 0.849002849
+      },
+      "mark": {
+        "p": 0.9691629956,
+        "r": 0.9691629956,
+        "f": 0.9691629956
+      },
+      "xcomp": {
+        "p": 0.9342105263,
+        "r": 0.940397351,
+        "f": 0.9372937294
+      },
+      "flat:name": {
+        "p": 0.9428571429,
+        "r": 0.9428571429,
+        "f": 0.9428571429
+      },
+      "cop": {
+        "p": 0.9772727273,
+        "r": 0.9555555556,
+        "f": 0.9662921348
+      },
+      "advmod": {
+        "p": 0.9297124601,
+        "r": 0.9122257053,
+        "f": 0.9208860759
+      },
+      "obl:arg": {
+        "p": 0.8986175115,
+        "r": 0.8863636364,
+        "f": 0.8924485126
+      },
+      "appos": {
+        "p": 0.6436781609,
+        "r": 0.6746987952,
+        "f": 0.6588235294
+      },
+      "nsubj:pass": {
+        "p": 1.0,
+        "r": 0.9647058824,
+        "f": 0.9820359281
+      },
+      "aux:pass": {
+        "p": 0.9910714286,
+        "r": 0.9910714286,
+        "f": 0.9910714286
+      },
+      "acl:relcl": {
+        "p": 0.8117647059,
+        "r": 0.8023255814,
+        "f": 0.8070175439
+      },
+      "advcl": {
+        "p": 0.7058823529,
+        "r": 0.7692307692,
+        "f": 0.736196319
+      },
+      "fixed": {
+        "p": 0.9101123596,
+        "r": 0.801980198,
+        "f": 0.8526315789
+      },
+      "dep": {
+        "p": 0.2272727273,
+        "r": 0.4838709677,
+        "f": 0.3092783505
+      },
+      "expl:subj": {
+        "p": 0.8709677419,
+        "r": 0.84375,
+        "f": 0.8571428571
+      },
+      "expl:comp": {
+        "p": 0.7567567568,
+        "r": 0.9333333333,
+        "f": 0.8358208955
+      },
+      "expl:pass": {
+        "p": 0.6,
+        "r": 0.4285714286,
+        "f": 0.5
+      },
+      "obl:agent": {
+        "p": 0.9487179487,
+        "r": 0.880952381,
+        "f": 0.9135802469
+      },
+      "ccomp": {
+        "p": 0.9019607843,
+        "r": 0.9019607843,
+        "f": 0.9019607843
+      },
+      "parataxis": {
+        "p": 0.6666666667,
+        "r": 0.6428571429,
+        "f": 0.6545454545
+      },
+      "iobj": {
+        "p": 0.8,
+        "r": 0.64,
+        "f": 0.7111111111
+      },
+      "nsubj:caus": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "aux:caus": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "obj:agent": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "goeswith": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "vocative": {
+        "p": 0.8333333333,
+        "r": 0.625,
+        "f": 0.7142857143
+      },
+      "dislocated": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "flat:foreign": {
+        "p": 0.8333333333,
+        "r": 0.7142857143,
+        "f": 0.7692307692
+      },
+      "orphan": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "advcl:cleft": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "csubj": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    }
+  },
+  "sources": [
+    {
+      "name": "UD French Sequoia v2.5",
+      "url": "https://github.com/UniversalDependencies/UD_French-Sequoia",
+      "license": "LGPL-LR",
+      "author": "Candito, Marie; Seddah, Djam\u00e9; Perrier, Guy; Guillaume, Bruno"
+    }
+  ],
+  "requirements": [
+    "spacy-transformers>=1.0.0rc1,<1.1.0",
+    "sentencepiece==0.1.91",
+    "protobuf"
+  ],
+  "parent_package": "spacy-nightly",
+  "size": "381 MB",
+  "checksum": "339fcea5ed29ac14ca7529f686ea530c5d2643f8df7e5341cae6126a2561fde7"
+}
