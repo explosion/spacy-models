@@ -1,0 +1,72 @@
+{
+  "lang": "xx",
+  "name": "ent_wiki_sm",
+  "version": "3.0.0a1",
+  "description": "Multi-language pipeline optimized for CPU. Components: ner.",
+  "author": "Explosion",
+  "email": "contact@explosion.ai",
+  "url": "https://explosion.ai",
+  "license": "MIT",
+  "spacy_version": ">=3.0.0rc3,<3.1.0",
+  "spacy_git_version": "43a752a2a",
+  "vectors": {
+    "width": 0,
+    "vectors": 0,
+    "keys": 0,
+    "name": null
+  },
+  "labels": {
+    "ner": [
+      "LOC",
+      "MISC",
+      "ORG",
+      "PER"
+    ]
+  },
+  "pipeline": [
+    "ner"
+  ],
+  "components": [
+    "ner"
+  ],
+  "disabled": [],
+  "performance": {
+    "ents_p": 0.8126124573,
+    "ents_r": 0.8260046377,
+    "ents_f": 0.8192538213,
+    "speed": 27510.2251993243,
+    "ents_per_type": {
+      "LOC": {
+        "p": 0.8113291866,
+        "r": 0.8731251662,
+        "f": 0.8410936511
+      },
+      "PER": {
+        "p": 0.8509699663,
+        "r": 0.8953759035,
+        "f": 0.8726083597
+      },
+      "MISC": {
+        "p": 0.7651994398,
+        "r": 0.670244377,
+        "f": 0.7145812547
+      },
+      "ORG": {
+        "p": 0.7831019181,
+        "r": 0.704970845,
+        "f": 0.7419852505
+      }
+    }
+  },
+  "sources": [
+    {
+      "name": "WikiNER",
+      "url": "https://figshare.com/articles/Learning_multilingual_named_entity_recognition_from_Wikipedia/5462500",
+      "license": "CC BY 4.0"
+    }
+  ],
+  "requirements": [],
+  "parent_package": "spacy-nightly",
+  "size": "14 MB",
+  "checksum": "5875969871024ebc56101ca936e4706270228477b1764515d92f3969b08bb994"
+}
