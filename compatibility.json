@@ -53,6 +53,7 @@
       "es_core_news_lg": ["3.0.0a1"],
       "es_dep_news_trf": ["3.0.0a1"],
       "xx_ent_wiki_sm": ["3.0.0a1"],
+      "xx_sent_ud_sm": ["3.0.0a1"],
       "en_vectors_web_lg": ["3.0.0a1"],
       "ru_core_news_sm": ["3.0.0a1"],
       "ru_core_news_md": ["3.0.0a1"],
