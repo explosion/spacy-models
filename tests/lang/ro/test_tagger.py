@@ -10,7 +10,7 @@ TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 @pytest.mark.parametrize(
     "test_file,accuracy_threshold,pos_threshold,morph_threshold",
-    [("ro_rrt-ud-dev01_10.json", 0.95, 0.91, 0.95)],
+    [("ro_rrt-ud-dev01_10.json", 0.93, 0.91, 0.93)],
 )
 def test_ro_tagger_corpus(
     NLP, test_file, accuracy_threshold, pos_threshold, morph_threshold
