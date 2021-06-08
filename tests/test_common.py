@@ -19,11 +19,16 @@ def example_text(NLP):
     # TODO: need a language-specific setting since space is not appropriate for
     # all languages
     punct_fixed = []
+    sent_sep = " "
     for sent in sentences:
-        if not sent.endswith("."):
-            sent += "."
+        if sent[-1].isalnum():
+            if NLP.lang in ["ja", "zh"]:
+                sent += "。"
+                sent_sep = ""
+            else:
+                sent += "."
         punct_fixed.append(sent)
-    return " ".join(punct_fixed)
+    return sent_sep.join(punct_fixed)
 
 
 def test_common_installs(NLP):
