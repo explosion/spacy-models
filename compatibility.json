@@ -1,9 +1,14 @@
 {
   "spacy": {
     "3.1": {
+      "ca_core_news_lg": ["3.1.0"],
+      "ca_core_news_md": ["3.1.0"],
+      "ca_core_news_sm": ["3.1.0"],
+      "ca_core_news_trf": ["3.1.0"],
       "da_core_news_lg": ["3.1.0"],
       "da_core_news_md": ["3.1.0"],
       "da_core_news_sm": ["3.1.0"],
+      "da_core_news_trf": ["3.1.0"],
       "de_core_news_lg": ["3.1.0"],
       "de_core_news_md": ["3.1.0"],
       "de_core_news_sm": ["3.1.0"],
