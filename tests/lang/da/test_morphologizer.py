@@ -8,7 +8,7 @@ TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
 @pytest.mark.parametrize(
-    "test_file,pos_threshold,morph_threshold", [("ddt.dev01_10.json", 0.93, 0.94)],
+    "test_file,pos_threshold,morph_threshold", [("ddt.dev01_10.json", 0.93, 0.93)],
 )
 def test_da_morphologizer_corpus(NLP, test_file, pos_threshold, morph_threshold):
     data_path = TEST_FILES_DIR / test_file
