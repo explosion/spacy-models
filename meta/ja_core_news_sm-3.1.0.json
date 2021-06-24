@@ -1,0 +1,348 @@
+{
+  "lang": "ja",
+  "name": "core_news_sm",
+  "version": "3.1.0",
+  "description": "Japanese pipeline optimized for CPU. Components: tok2vec, parser, senter, ner, attribute_ruler.",
+  "author": "Explosion",
+  "email": "contact@explosion.ai",
+  "url": "https://explosion.ai",
+  "license": "CC BY-SA 4.0",
+  "spacy_version": ">=3.1.0,<3.2.0",
+  "spacy_git_version": "caba63b74",
+  "vectors": {
+    "width": 0,
+    "vectors": 0,
+    "keys": 0,
+    "name": null
+  },
+  "labels": {
+    "tok2vec": [],
+    "parser": [
+      "ROOT",
+      "acl",
+      "advcl",
+      "advmod",
+      "amod",
+      "aux",
+      "case",
+      "cc",
+      "ccomp",
+      "compound",
+      "cop",
+      "csubj",
+      "dep",
+      "det",
+      "dislocated",
+      "fixed",
+      "mark",
+      "nmod",
+      "nsubj",
+      "nummod",
+      "obj",
+      "obl",
+      "punct"
+    ],
+    "senter": [
+      "I",
+      "S"
+    ],
+    "attribute_ruler": [],
+    "ner": [
+      "CARDINAL",
+      "DATE",
+      "EVENT",
+      "FAC",
+      "GPE",
+      "LANGUAGE",
+      "LAW",
+      "LOC",
+      "MONEY",
+      "MOVEMENT",
+      "NORP",
+      "ORDINAL",
+      "ORG",
+      "PERCENT",
+      "PERSON",
+      "PET_NAME",
+      "PHONE",
+      "PRODUCT",
+      "QUANTITY",
+      "TIME",
+      "TITLE_AFFIX",
+      "WORK_OF_ART"
+    ]
+  },
+  "pipeline": [
+    "tok2vec",
+    "parser",
+    "attribute_ruler",
+    "ner"
+  ],
+  "components": [
+    "tok2vec",
+    "parser",
+    "senter",
+    "attribute_ruler",
+    "ner"
+  ],
+  "disabled": [
+    "senter"
+  ],
+  "performance": {
+    "token_acc": 0.9968965945,
+    "tag_acc": 0.9721899386,
+    "pos_acc": 0.9639755682,
+    "morph_acc": 0.0,
+    "dep_uas": 0.916212877,
+    "dep_las": 0.894130554,
+    "ents_p": 0.7163232964,
+    "ents_r": 0.5772669221,
+    "ents_f": 0.639321075,
+    "sents_p": 0.9860557769,
+    "sents_r": 0.9880239521,
+    "sents_f": 0.9870388833,
+    "speed": 14745.6510174231,
+    "morph_per_feat": {
+      "Polarity": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    },
+    "dep_las_per_type": {
+      "cc": {
+        "p": 0.7659574468,
+        "r": 0.7826086957,
+        "f": 0.7741935484
+      },
+      "nummod": {
+        "p": 0.9730769231,
+        "r": 0.8694158076,
+        "f": 0.9183303085
+      },
+      "compound": {
+        "p": 0.9299242424,
+        "r": 0.9143389199,
+        "f": 0.9220657277
+      },
+      "obl": {
+        "p": 0.7782857143,
+        "r": 0.8185096154,
+        "f": 0.7978910369
+      },
+      "case": {
+        "p": 0.9808429119,
+        "r": 0.9774723177,
+        "f": 0.9791547141
+      },
+      "dislocated": {
+        "p": 0.4285714286,
+        "r": 0.3157894737,
+        "f": 0.3636363636
+      },
+      "nmod": {
+        "p": 0.8792650919,
+        "r": 0.8072289157,
+        "f": 0.8417085427
+      },
+      "nsubj": {
+        "p": 0.8020833333,
+        "r": 0.8020833333,
+        "f": 0.8020833333
+      },
+      "root": {
+        "p": 0.967611336,
+        "r": 0.9540918164,
+        "f": 0.9608040201
+      },
+      "aux": {
+        "p": 0.9545454545,
+        "r": 0.9586956522,
+        "f": 0.9566160521
+      },
+      "advcl": {
+        "p": 0.6402877698,
+        "r": 0.6223776224,
+        "f": 0.6312056738
+      },
+      "mark": {
+        "p": 0.953815261,
+        "r": 0.9350393701,
+        "f": 0.944333996
+      },
+      "acl": {
+        "p": 0.8161434978,
+        "r": 0.8017621145,
+        "f": 0.8088888889
+      },
+      "obj": {
+        "p": 0.9254658385,
+        "r": 0.9085365854,
+        "f": 0.9169230769
+      },
+      "fixed": {
+        "p": 0.9572192513,
+        "r": 0.9835164835,
+        "f": 0.9701897019
+      },
+      "advmod": {
+        "p": 0.724137931,
+        "r": 0.5,
+        "f": 0.5915492958
+      },
+      "amod": {
+        "p": 0.7941176471,
+        "r": 0.675,
+        "f": 0.7297297297
+      },
+      "cop": {
+        "p": 0.9482758621,
+        "r": 0.9065934066,
+        "f": 0.9269662921
+      },
+      "ccomp": {
+        "p": 0.9473684211,
+        "r": 0.8181818182,
+        "f": 0.8780487805
+      },
+      "det": {
+        "p": 0.9607843137,
+        "r": 0.9607843137,
+        "f": 0.9607843137
+      },
+      "csubj": {
+        "p": 0.8333333333,
+        "r": 0.7692307692,
+        "f": 0.8
+      },
+      "dep": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    },
+    "ents_per_type": {
+      "DATE": {
+        "p": 0.9272727273,
+        "r": 0.9444444444,
+        "f": 0.9357798165
+      },
+      "PERSON": {
+        "p": 0.6464646465,
+        "r": 0.4604316547,
+        "f": 0.5378151261
+      },
+      "GPE": {
+        "p": 0.6455696203,
+        "r": 0.5425531915,
+        "f": 0.5895953757
+      },
+      "PRODUCT": {
+        "p": 0.55,
+        "r": 0.2682926829,
+        "f": 0.3606557377
+      },
+      "TIME": {
+        "p": 0.6666666667,
+        "r": 1.0,
+        "f": 0.8
+      },
+      "QUANTITY": {
+        "p": 0.9090909091,
+        "r": 0.9090909091,
+        "f": 0.9090909091
+      },
+      "NORP": {
+        "p": 0.7826086957,
+        "r": 0.5625,
+        "f": 0.6545454545
+      },
+      "ORDINAL": {
+        "p": 0.5909090909,
+        "r": 0.6842105263,
+        "f": 0.6341463415
+      },
+      "TITLE_AFFIX": {
+        "p": 0.7647058824,
+        "r": 0.4333333333,
+        "f": 0.5531914894
+      },
+      "ORG": {
+        "p": 0.504950495,
+        "r": 0.3893129771,
+        "f": 0.4396551724
+      },
+      "WORK_OF_ART": {
+        "p": 0.7222222222,
+        "r": 0.7647058824,
+        "f": 0.7428571429
+      },
+      "PERCENT": {
+        "p": 1.0,
+        "r": 0.4285714286,
+        "f": 0.6
+      },
+      "EVENT": {
+        "p": 0.7619047619,
+        "r": 0.6153846154,
+        "f": 0.6808510638
+      },
+      "LOC": {
+        "p": 0.6363636364,
+        "r": 0.7,
+        "f": 0.6666666667
+      },
+      "FAC": {
+        "p": 0.6315789474,
+        "r": 0.3243243243,
+        "f": 0.4285714286
+      },
+      "MOVEMENT": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "LAW": {
+        "p": 1.0,
+        "r": 0.3333333333,
+        "f": 0.5
+      },
+      "MONEY": {
+        "p": 1.0,
+        "r": 1.0,
+        "f": 1.0
+      },
+      "LANGUAGE": {
+        "p": 1.0,
+        "r": 1.0,
+        "f": 1.0
+      },
+      "CARDINAL": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    }
+  },
+  "sources": [
+    {
+      "name": "UD Japanese GSD v2.6",
+      "url": "https://github.com/UniversalDependencies/UD_Japanese-GSD",
+      "license": "CC BY-SA 4.0",
+      "author": "Omura, Mai; Miyao, Yusuke; Kanayama, Hiroshi; Matsuda, Hiroshi; Wakasa, Aya; Yamashita, Kayo; Asahara, Masayuki; Tanaka, Takaaki; Murawaki, Yugo; Matsumoto, Yuji; Mori, Shinsuke; Uematsu, Sumire; McDonald, Ryan; Nivre, Joakim; Zeman, Daniel"
+    },
+    {
+      "name": "UD Japanese GSD v2.6 NER",
+      "url": "https://github.com/megagonlabs/UD_Japanese-GSD",
+      "license": "CC BY-SA 4.0",
+      "author": "Megagon Labs Tokyo"
+    }
+  ],
+  "requirements": [
+    "sudachipy>=0.4.9",
+    "sudachidict-core>=20200330"
+  ],
+  "size": "12 MB",
+  "checksum": "7d289912249839d57853b832e3fd0ecad49ca7358ba220b66f8f1d6e57709a94",
+  "checksum_whl": "b45400d19cd9682fb40946402532000ad81164abbaff6828abb012929ea918c8"
+}
