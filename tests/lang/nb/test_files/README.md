@@ -4,7 +4,7 @@ The following corpora provide data for evaluating Norwegian Bokmål models.
 
 ## UD Norwegian Bokmål / NorNE
 
-[UD Norwegian Bokmål corpus](https://github.com/UniversalDependencies/UD_Norwegian-Bokmaal) v2.5
+[UD Norwegian Bokmål corpus](https://github.com/UniversalDependencies/UD_Norwegian-Bokmaal) v2.8
 
 [NorNE](https://github.com/ltgoslo/norne)
 
