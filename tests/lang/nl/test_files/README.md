@@ -4,7 +4,7 @@ The following corpora provide data for evaluating Dutch models.
 
 ## UD Dutch LassySmall
 
-[UD Dutch LassySmall corpus](https://github.com/UniversalDependencies/UD_Dutch-LassySmall) v2.5.
+[UD Dutch LassySmall corpus](https://github.com/UniversalDependencies/UD_Dutch-LassySmall) v2.8.
 
 Contributors: Bouma, Gosse; van Noord, Gertjan
 
