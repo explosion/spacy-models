@@ -24,7 +24,7 @@ Authors: Dumitrescu, Stefan Daniel, and Andrei-Marius Avram
 
 ## UD Romanian RRT
 
-[UD Romanian RRT corpus](https://github.com/UniversalDependencies/UD_Romanian-RRT) v2.5.
+[UD Romanian RRT corpus](https://github.com/UniversalDependencies/UD_Romanian-RRT) v2.8.
 
 Contributors: Barbu Mititelu, Verginica; Irimia, Elena; Perez, Cenel-Augusto; Ion, Radu; Simionescu, Radu; Popel, Martin
 
