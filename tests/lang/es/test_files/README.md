@@ -4,7 +4,7 @@ The following corpora provide data for evaluating Spanish models.
 
 ## UD Spanish AnCora
 
-[UD Spanish AnCora corpus](https://github.com/UniversalDependencies/UD_Spanish-AnCora) v2.5.
+[UD Spanish AnCora corpus](https://github.com/UniversalDependencies/UD_Spanish-AnCora) v2.8.
 
 Contributors: Martínez Alonso, Héctor; Zeman, Daniel
 
