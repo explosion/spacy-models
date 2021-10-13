@@ -8,7 +8,7 @@ TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 @pytest.mark.parametrize(
     "test_file,lemma_threshold",
-    [("dev001_1.json", 0.85)],
+    [("dev001_1.json", 0.95)],
 )
 def test_ca_lemmatizer_corpus(NLP, test_file, lemma_threshold):
     data_path = TEST_FILES_DIR / test_file
