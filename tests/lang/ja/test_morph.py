@@ -16,8 +16,8 @@ def test_ja_morph(NLP, word, morph):
     doc = NLP(word)
     reading, infl = morph
 
-    assert reading == doc[0].morph.get("reading")[0]
+    assert reading == doc[0].morph.get("Reading")[0]
     if infl == "":
-        assert "inflection" not in doc[0].morph
+        assert "Inflection" not in doc[0].morph
     else:
-        assert infl.split(",") == doc[0].morph.get("inflection")
+        assert infl.split(",") == doc[0].morph.get("Inflection")
