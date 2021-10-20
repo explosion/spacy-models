@@ -9,7 +9,7 @@ TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
 @pytest.mark.parametrize(
-    "test_file,accuracy_threshold", [("es_ancora-ud-dev001_10.json", 0.96)],
+    "test_file,accuracy_threshold", [("es_ancora-ud-dev001_10.json", 0.95)],
 )
 def test_es_morphologizer_corpus(NLP, test_file, accuracy_threshold):
     data_path = TEST_FILES_DIR / test_file
