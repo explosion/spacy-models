@@ -8,7 +8,7 @@ TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
 @pytest.mark.parametrize(
-    "test_file,accuracy_threshold", [("nl_lassysmall-ud-dev01_10.json", 0.96)],
+    "test_file,accuracy_threshold", [("nl_lassysmall-ud-dev01_10.json", 0.94)],
 )
 def test_nl_tagger_corpus(NLP, test_file, accuracy_threshold):
     data_path = TEST_FILES_DIR / test_file
