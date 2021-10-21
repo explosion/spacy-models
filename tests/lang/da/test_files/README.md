@@ -5,7 +5,7 @@ The following corpora provide data for evaluating Danish models.
 ## UD Danish DDT
 
 [UD Danish DDT corpus](https://github.com/UniversalDependencies/UD_Danish-DDT)
-v2.5. [DaNE](https://github.com/alexandrainst/danlp/blob/master/docs/datasets.md#danish-dependency-treebank-dane)
+v2.8. [DaNE](https://github.com/alexandrainst/danlp/blob/master/docs/datasets.md#danish-dependency-treebank-dane)
 
 Contributors:
 
