@@ -1,0 +1,388 @@
+{
+  "lang": "ja",
+  "name": "core_news_sm",
+  "version": "3.2.0",
+  "description": "Japanese pipeline optimized for CPU. Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler.",
+  "author": "Explosion",
+  "email": "contact@explosion.ai",
+  "url": "https://explosion.ai",
+  "license": "CC BY-SA 4.0",
+  "spacy_version": ">=3.2.0,<3.3.0",
+  "spacy_git_version": "bb26550e2",
+  "vectors": {
+    "width": 0,
+    "vectors": 0,
+    "keys": 0,
+    "name": null
+  },
+  "labels": {
+    "tok2vec": [],
+    "morphologizer": [
+      "POS=NOUN",
+      "POS=ADP",
+      "POS=VERB",
+      "POS=SCONJ",
+      "POS=AUX",
+      "POS=PUNCT",
+      "POS=PART",
+      "POS=DET",
+      "POS=NUM",
+      "POS=ADV",
+      "POS=PRON",
+      "POS=ADJ",
+      "POS=PROPN",
+      "POS=CCONJ",
+      "POS=SYM",
+      "POS=NOUN|Polarity=Neg",
+      "POS=AUX|Polarity=Neg",
+      "POS=INTJ",
+      "POS=SCONJ|Polarity=Neg"
+    ],
+    "parser": [
+      "ROOT",
+      "acl",
+      "advcl",
+      "advmod",
+      "amod",
+      "aux",
+      "case",
+      "cc",
+      "ccomp",
+      "compound",
+      "cop",
+      "csubj",
+      "dep",
+      "det",
+      "dislocated",
+      "fixed",
+      "mark",
+      "nmod",
+      "nsubj",
+      "nummod",
+      "obj",
+      "obl",
+      "punct"
+    ],
+    "senter": [
+      "I",
+      "S"
+    ],
+    "attribute_ruler": [],
+    "ner": [
+      "CARDINAL",
+      "DATE",
+      "EVENT",
+      "FAC",
+      "GPE",
+      "LANGUAGE",
+      "LAW",
+      "LOC",
+      "MONEY",
+      "MOVEMENT",
+      "NORP",
+      "ORDINAL",
+      "ORG",
+      "PERCENT",
+      "PERSON",
+      "PET_NAME",
+      "PHONE",
+      "PRODUCT",
+      "QUANTITY",
+      "TIME",
+      "TITLE_AFFIX",
+      "WORK_OF_ART"
+    ]
+  },
+  "pipeline": [
+    "tok2vec",
+    "morphologizer",
+    "parser",
+    "attribute_ruler",
+    "ner"
+  ],
+  "components": [
+    "tok2vec",
+    "morphologizer",
+    "parser",
+    "senter",
+    "attribute_ruler",
+    "ner"
+  ],
+  "disabled": [
+    "senter"
+  ],
+  "performance": {
+    "token_acc": 0.9968649485,
+    "token_p": 0.9764591282,
+    "token_r": 0.9790021974,
+    "token_f": 0.9777290092,
+    "pos_acc": 0.9624933535,
+    "morph_acc": 0.0040005162,
+    "morph_micro_p": 0.3401360544,
+    "morph_micro_r": 0.9803921569,
+    "morph_micro_f": 0.5050505051,
+    "morph_per_feat": {
+      "Polarity": {
+        "p": 1.0,
+        "r": 0.9803921569,
+        "f": 0.9900990099
+      },
+      "Inflection": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "Reading": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    },
+    "sents_p": 0.9823529412,
+    "sents_r": 0.9881656805,
+    "sents_f": 0.9852507375,
+    "dep_uas": 0.921981982,
+    "dep_las": 0.9069390694,
+    "dep_las_per_type": {
+      "cc": {
+        "p": 0.8163265306,
+        "r": 0.8333333333,
+        "f": 0.824742268
+      },
+      "compound": {
+        "p": 0.9411421911,
+        "r": 0.9103720406,
+        "f": 0.9255014327
+      },
+      "obl": {
+        "p": 0.8113207547,
+        "r": 0.8052434457,
+        "f": 0.8082706767
+      },
+      "case": {
+        "p": 0.9892638037,
+        "r": 0.9802431611,
+        "f": 0.9847328244
+      },
+      "dislocated": {
+        "p": 0.7,
+        "r": 0.5384615385,
+        "f": 0.6086956522
+      },
+      "nsubj": {
+        "p": 0.8202676864,
+        "r": 0.8234165067,
+        "f": 0.8218390805
+      },
+      "nmod": {
+        "p": 0.8793532338,
+        "r": 0.8269005848,
+        "f": 0.8523206751
+      },
+      "root": {
+        "p": 0.9741035857,
+        "r": 0.9644970414,
+        "f": 0.9692765114
+      },
+      "aux": {
+        "p": 0.9796296296,
+        "r": 0.982358403,
+        "f": 0.9809921187
+      },
+      "advcl": {
+        "p": 0.6893424036,
+        "r": 0.6831460674,
+        "f": 0.6862302483
+      },
+      "mark": {
+        "p": 0.9755600815,
+        "r": 0.958,
+        "f": 0.9667003027
+      },
+      "fixed": {
+        "p": 0.9569892473,
+        "r": 0.9709090909,
+        "f": 0.963898917
+      },
+      "acl": {
+        "p": 0.8239130435,
+        "r": 0.832967033,
+        "f": 0.8284153005
+      },
+      "obj": {
+        "p": 0.9507692308,
+        "r": 0.9335347432,
+        "f": 0.9420731707
+      },
+      "nummod": {
+        "p": 0.9934640523,
+        "r": 0.899408284,
+        "f": 0.9440993789
+      },
+      "advmod": {
+        "p": 0.6771653543,
+        "r": 0.6142857143,
+        "f": 0.6441947566
+      },
+      "amod": {
+        "p": 0.8709677419,
+        "r": 0.7297297297,
+        "f": 0.7941176471
+      },
+      "cop": {
+        "p": 0.9464285714,
+        "r": 0.9244186047,
+        "f": 0.9352941176
+      },
+      "ccomp": {
+        "p": 0.8571428571,
+        "r": 0.8181818182,
+        "f": 0.8372093023
+      },
+      "det": {
+        "p": 1.0,
+        "r": 0.9811320755,
+        "f": 0.9904761905
+      },
+      "dep": {
+        "p": 0.0714285714,
+        "r": 0.1428571429,
+        "f": 0.0952380952
+      },
+      "csubj": {
+        "p": 0.6363636364,
+        "r": 0.5833333333,
+        "f": 0.6086956522
+      }
+    },
+    "tag_acc": 0.9715755942,
+    "lemma_acc": 0.9659109444,
+    "ents_p": 0.6767371601,
+    "ents_r": 0.5635220126,
+    "ents_f": 0.6149622512,
+    "ents_per_type": {
+      "DATE": {
+        "p": 0.9285714286,
+        "r": 0.9541284404,
+        "f": 0.9411764706
+      },
+      "ORG": {
+        "p": 0.5046728972,
+        "r": 0.3941605839,
+        "f": 0.4426229508
+      },
+      "GPE": {
+        "p": 0.6296296296,
+        "r": 0.5425531915,
+        "f": 0.5828571429
+      },
+      "PRODUCT": {
+        "p": 0.4285714286,
+        "r": 0.2142857143,
+        "f": 0.2857142857
+      },
+      "TIME": {
+        "p": 0.5714285714,
+        "r": 1.0,
+        "f": 0.7272727273
+      },
+      "QUANTITY": {
+        "p": 0.7972972973,
+        "r": 0.8939393939,
+        "f": 0.8428571429
+      },
+      "PERSON": {
+        "p": 0.6346153846,
+        "r": 0.4748201439,
+        "f": 0.5432098765
+      },
+      "NORP": {
+        "p": 0.6666666667,
+        "r": 0.5625,
+        "f": 0.6101694915
+      },
+      "TITLE_AFFIX": {
+        "p": 0.7142857143,
+        "r": 0.5,
+        "f": 0.5882352941
+      },
+      "ORDINAL": {
+        "p": 0.5909090909,
+        "r": 0.5909090909,
+        "f": 0.5909090909
+      },
+      "WORK_OF_ART": {
+        "p": 0.7692307692,
+        "r": 0.5882352941,
+        "f": 0.6666666667
+      },
+      "EVENT": {
+        "p": 0.6,
+        "r": 0.4615384615,
+        "f": 0.5217391304
+      },
+      "PERCENT": {
+        "p": 1.0,
+        "r": 0.2857142857,
+        "f": 0.4444444444
+      },
+      "CARDINAL": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "LOC": {
+        "p": 0.7,
+        "r": 0.7,
+        "f": 0.7
+      },
+      "FAC": {
+        "p": 0.44,
+        "r": 0.2972972973,
+        "f": 0.3548387097
+      },
+      "MOVEMENT": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "LAW": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "MONEY": {
+        "p": 1.0,
+        "r": 1.0,
+        "f": 1.0
+      },
+      "LANGUAGE": {
+        "p": 1.0,
+        "r": 1.0,
+        "f": 1.0
+      }
+    },
+    "speed": 4844.6752174676
+  },
+  "sources": [
+    {
+      "name": "UD Japanese GSD v2.8",
+      "url": "https://github.com/UniversalDependencies/UD_Japanese-GSD",
+      "license": "CC BY-SA 4.0",
+      "author": "Omura, Mai; Miyao, Yusuke; Kanayama, Hiroshi; Matsuda, Hiroshi; Wakasa, Aya; Yamashita, Kayo; Asahara, Masayuki; Tanaka, Takaaki; Murawaki, Yugo; Matsumoto, Yuji; Mori, Shinsuke; Uematsu, Sumire; McDonald, Ryan; Nivre, Joakim; Zeman, Daniel"
+    },
+    {
+      "name": "UD Japanese GSD v2.8 NER",
+      "url": "https://github.com/megagonlabs/UD_Japanese-GSD",
+      "license": "CC BY-SA 4.0",
+      "author": "Megagon Labs Tokyo"
+    }
+  ],
+  "requirements": [
+    "sudachipy>=0.4.9",
+    "sudachidict-core>=20200330"
+  ],
+  "size": "12 MB",
+  "checksum": "b2ca9398c0d8e102cf85a052a8656eac182808a3b7d02c6aa141a0e92bb52f92",
+  "checksum_whl": "be790d131bfe78f83dfdf9205bdefd603a8438a8b3f125e85dcd3a309f605f53"
+}
