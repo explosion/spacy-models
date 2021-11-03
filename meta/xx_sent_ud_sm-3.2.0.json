@@ -1,0 +1,53 @@
+{
+  "lang": "xx",
+  "name": "sent_ud_sm",
+  "version": "3.2.0",
+  "description": "Multi-language pipeline optimized for CPU. Components: senter.",
+  "author": "Explosion",
+  "email": "contact@explosion.ai",
+  "url": "https://explosion.ai",
+  "license": "CC BY-SA 3.0",
+  "spacy_version": ">=3.2.0,<3.3.0",
+  "spacy_git_version": "bb26550e2",
+  "vectors": {
+    "width": 0,
+    "vectors": 0,
+    "keys": 0,
+    "name": null
+  },
+  "labels": {
+    "senter": [
+      "I",
+      "S"
+    ]
+  },
+  "pipeline": [
+    "senter"
+  ],
+  "components": [
+    "senter"
+  ],
+  "disabled": [],
+  "performance": {
+    "token_acc": 0.9929085533,
+    "token_p": 0.9530830451,
+    "token_r": 0.9572374635,
+    "token_f": 0.955155737,
+    "sents_p": 0.9064259367,
+    "sents_r": 0.8160447435,
+    "sents_f": 0.8588641067,
+    "speed": 156389.1460516867
+  },
+  "sources": [
+    {
+      "name": "Universal Dependencies v2.8 (UD_Afrikaans-AfriBooms, UD_Croatian-SET, UD_Czech-CAC, UD_Czech-CLTT, UD_Danish-DDT, UD_Dutch-Alpino, UD_Dutch-LassySmall, UD_English-EWT, UD_Finnish-FTB, UD_Finnish-TDT, UD_French-GSD, UD_French-Spoken, UD_German-GSD, UD_Indonesian-GSD, UD_Irish-IDT, UD_Italian-TWITTIRO, UD_Korean-GSD, UD_Korean-Kaist, UD_Latvian-LVTB, UD_Lithuanian-ALKSNIS, UD_Lithuanian-HSE, UD_Marathi-UFAL, UD_Norwegian-Bokmaal, UD_Norwegian-Nynorsk, UD_Norwegian-NynorskLIA, UD_Persian-Seraji, UD_Portuguese-Bosque, UD_Portuguese-GSD, UD_Romanian-Nonstandard, UD_Romanian-RRT, UD_Russian-GSD, UD_Russian-Taiga, UD_Serbian-SET, UD_Slovak-SNK, UD_Spanish-GSD, UD_Swedish-Talbanken, UD_Telugu-MTG, UD_Vietnamese-VTB)",
+      "url": "https://universaldependencies.org/",
+      "license": "CC BY-SA 3.0",
+      "author": "Zeman, Daniel; Nivre, Joakim; Abrams, Mitchell; et al."
+    }
+  ],
+  "requirements": [],
+  "size": "4 MB",
+  "checksum": "2b747ed6489ef31c6ed9834f77f1af9e4d06ecf1710d6b26200a369856b52a02",
+  "checksum_whl": "19b4e7acea13782ff17f9d1c926309bb9bf336fa6d888ba14ecffa21693d3653"
+}
