@@ -1,0 +1,773 @@
+{
+  "lang": "nl",
+  "name": "core_news_md",
+  "version": "3.2.0",
+  "description": "Dutch pipeline optimized for CPU. Components: tok2vec, morphologizer, tagger, parser, senter, ner, attribute_ruler, lemmatizer.",
+  "author": "Explosion",
+  "email": "contact@explosion.ai",
+  "url": "https://explosion.ai",
+  "license": "CC BY-SA 4.0",
+  "spacy_version": ">=3.2.0,<3.3.0",
+  "spacy_git_version": "bb26550e2",
+  "vectors": {
+    "width": 300,
+    "vectors": 20000,
+    "keys": 500000,
+    "name": "nl_vectors"
+  },
+  "labels": {
+    "tok2vec": [],
+    "morphologizer": [
+      "POS=PRON|Person=3|PronType=Dem",
+      "Number=Sing|POS=AUX|Tense=Pres|VerbForm=Fin",
+      "POS=ADV",
+      "POS=VERB|VerbForm=Part",
+      "POS=PUNCT",
+      "Number=Sing|POS=AUX|Tense=Past|VerbForm=Fin",
+      "POS=ADP",
+      "POS=NUM",
+      "Number=Plur|POS=NOUN",
+      "POS=VERB|VerbForm=Inf",
+      "POS=SCONJ",
+      "Definite=Def|POS=DET",
+      "Gender=Com|Number=Sing|POS=NOUN",
+      "Number=Sing|POS=VERB|Tense=Pres|VerbForm=Fin",
+      "Degree=Pos|POS=ADJ",
+      "Gender=Neut|Number=Sing|POS=PROPN",
+      "Gender=Com|Number=Sing|POS=PROPN",
+      "POS=AUX|VerbForm=Inf",
+      "Number=Sing|POS=VERB|Tense=Past|VerbForm=Fin",
+      "POS=DET",
+      "Gender=Neut|Number=Sing|POS=NOUN",
+      "POS=PRON|Person=3|PronType=Prs",
+      "POS=CCONJ",
+      "Number=Plur|POS=VERB|Tense=Pres|VerbForm=Fin",
+      "POS=PRON|Person=3|PronType=Ind",
+      "Degree=Cmp|POS=ADJ",
+      "Case=Nom|POS=PRON|Person=1|PronType=Prs",
+      "Definite=Ind|POS=DET",
+      "Case=Nom|POS=PRON|Person=3|PronType=Prs",
+      "POS=PRON|Person=3|Poss=Yes|PronType=Prs",
+      "Number=Plur|POS=AUX|Tense=Pres|VerbForm=Fin",
+      "POS=PRON|PronType=Rel",
+      "Case=Acc|POS=PRON|Person=1|PronType=Prs",
+      "Number=Plur|POS=VERB|Tense=Past|VerbForm=Fin",
+      "Gender=Com,Neut|Number=Sing|POS=NOUN",
+      "Case=Acc|POS=PRON|Person=3|PronType=Prs|Reflex=Yes",
+      "Case=Acc|POS=PRON|Person=3|PronType=Prs",
+      "POS=PROPN",
+      "POS=PRON|PronType=Ind",
+      "POS=PRON|Person=3|PronType=Int",
+      "Case=Acc|POS=PRON|PronType=Rcp",
+      "Number=Plur|POS=AUX|Tense=Past|VerbForm=Fin",
+      "Number=Sing|POS=NOUN",
+      "POS=PRON|Person=1|Poss=Yes|PronType=Prs",
+      "POS=SYM",
+      "Abbr=Yes|POS=X",
+      "Gender=Com,Neut|Number=Sing|POS=PROPN",
+      "Degree=Sup|POS=ADJ",
+      "POS=ADJ",
+      "Number=Sing|POS=PROPN",
+      "POS=PRON|PronType=Dem",
+      "POS=AUX|VerbForm=Part",
+      "POS=PRON|Person=3|PronType=Rel",
+      "Number=Plur|POS=PROPN",
+      "POS=PRON|Person=2|Poss=Yes|PronType=Prs",
+      "Case=Dat|POS=PRON|PronType=Dem",
+      "Case=Nom|POS=PRON|Person=2|PronType=Prs",
+      "POS=INTJ",
+      "Case=Acc|POS=PRON|Person=2|PronType=Prs",
+      "Case=Gen|POS=PRON|Person=3|Poss=Yes|PronType=Prs",
+      "POS=PRON|PronType=Int",
+      "POS=PRON|Person=2|PronType=Prs",
+      "POS=PRON|Person=3",
+      "Case=Gen|POS=PRON|Person=2|PronType=Prs",
+      "POS=X"
+    ],
+    "tagger": [
+      "ADJ|nom|basis|met-e|mv-n",
+      "ADJ|nom|basis|met-e|zonder-n|bijz",
+      "ADJ|nom|basis|met-e|zonder-n|stan",
+      "ADJ|nom|basis|zonder|mv-n",
+      "ADJ|nom|basis|zonder|zonder-n",
+      "ADJ|nom|comp|met-e|mv-n",
+      "ADJ|nom|comp|met-e|zonder-n|stan",
+      "ADJ|nom|sup|met-e|mv-n",
+      "ADJ|nom|sup|met-e|zonder-n|bijz",
+      "ADJ|nom|sup|met-e|zonder-n|stan",
+      "ADJ|nom|sup|zonder|zonder-n",
+      "ADJ|postnom|basis|met-s",
+      "ADJ|postnom|basis|zonder",
+      "ADJ|postnom|comp|met-s",
+      "ADJ|prenom|basis|met-e|bijz",
+      "ADJ|prenom|basis|met-e|stan",
+      "ADJ|prenom|basis|zonder",
+      "ADJ|prenom|comp|met-e|stan",
+      "ADJ|prenom|comp|zonder",
+      "ADJ|prenom|sup|met-e|stan",
+      "ADJ|prenom|sup|zonder",
+      "ADJ|vrij|basis|zonder",
+      "ADJ|vrij|comp|zonder",
+      "ADJ|vrij|dim|zonder",
+      "ADJ|vrij|sup|zonder",
+      "BW",
+      "LET",
+      "LID|bep|dat|evmo",
+      "LID|bep|gen|evmo",
+      "LID|bep|gen|rest3",
+      "LID|bep|stan|evon",
+      "LID|bep|stan|rest",
+      "LID|onbep|stan|agr",
+      "N|eigen|ev|basis|gen",
+      "N|eigen|ev|basis|genus|stan",
+      "N|eigen|ev|basis|onz|stan",
+      "N|eigen|ev|basis|zijd|stan",
+      "N|eigen|ev|dim|onz|stan",
+      "N|eigen|mv|basis",
+      "N|soort|ev|basis|dat",
+      "N|soort|ev|basis|gen",
+      "N|soort|ev|basis|genus|stan",
+      "N|soort|ev|basis|onz|stan",
+      "N|soort|ev|basis|zijd|stan",
+      "N|soort|ev|dim|onz|stan",
+      "N|soort|mv|basis",
+      "N|soort|mv|dim",
+      "SPEC|afgebr",
+      "SPEC|afk",
+      "SPEC|deeleigen",
+      "SPEC|enof",
+      "SPEC|meta",
+      "SPEC|symb",
+      "SPEC|vreemd",
+      "TSW",
+      "TW|hoofd|nom|mv-n|basis",
+      "TW|hoofd|nom|mv-n|dim",
+      "TW|hoofd|nom|zonder-n|basis",
+      "TW|hoofd|nom|zonder-n|dim",
+      "TW|hoofd|prenom|stan",
+      "TW|hoofd|vrij",
+      "TW|rang|nom|mv-n",
+      "TW|rang|nom|zonder-n",
+      "TW|rang|prenom|stan",
+      "VG|neven",
+      "VG|onder",
+      "VNW|aanw|adv-pron|obl|vol|3o|getal",
+      "VNW|aanw|adv-pron|stan|red|3|getal",
+      "VNW|aanw|det|dat|nom|met-e|zonder-n",
+      "VNW|aanw|det|dat|prenom|met-e|evmo",
+      "VNW|aanw|det|gen|prenom|met-e|rest3",
+      "VNW|aanw|det|stan|nom|met-e|mv-n",
+      "VNW|aanw|det|stan|nom|met-e|zonder-n",
+      "VNW|aanw|det|stan|prenom|met-e|rest",
+      "VNW|aanw|det|stan|prenom|zonder|agr",
+      "VNW|aanw|det|stan|prenom|zonder|evon",
+      "VNW|aanw|det|stan|prenom|zonder|rest",
+      "VNW|aanw|det|stan|vrij|zonder",
+      "VNW|aanw|pron|gen|vol|3m|ev",
+      "VNW|aanw|pron|stan|vol|3o|ev",
+      "VNW|aanw|pron|stan|vol|3|getal",
+      "VNW|betr|det|stan|nom|met-e|zonder-n",
+      "VNW|betr|det|stan|nom|zonder|zonder-n",
+      "VNW|betr|pron|stan|vol|3|ev",
+      "VNW|betr|pron|stan|vol|persoon|getal",
+      "VNW|bez|det|gen|vol|3|ev|prenom|met-e|rest3",
+      "VNW|bez|det|stan|nadr|2v|mv|prenom|zonder|agr",
+      "VNW|bez|det|stan|red|1|ev|prenom|zonder|agr",
+      "VNW|bez|det|stan|red|2v|ev|prenom|zonder|agr",
+      "VNW|bez|det|stan|red|3|ev|prenom|zonder|agr",
+      "VNW|bez|det|stan|vol|1|ev|prenom|met-e|rest",
+      "VNW|bez|det|stan|vol|1|ev|prenom|zonder|agr",
+      "VNW|bez|det|stan|vol|1|mv|prenom|met-e|rest",
+      "VNW|bez|det|stan|vol|1|mv|prenom|zonder|evon",
+      "VNW|bez|det|stan|vol|2v|ev|prenom|zonder|agr",
+      "VNW|bez|det|stan|vol|2|getal|prenom|zonder|agr",
+      "VNW|bez|det|stan|vol|3m|ev|nom|met-e|zonder-n",
+      "VNW|bez|det|stan|vol|3m|ev|prenom|met-e|rest",
+      "VNW|bez|det|stan|vol|3p|mv|prenom|met-e|rest",
+      "VNW|bez|det|stan|vol|3v|ev|nom|met-e|zonder-n",
+      "VNW|bez|det|stan|vol|3v|ev|prenom|met-e|rest",
+      "VNW|bez|det|stan|vol|3|ev|prenom|zonder|agr",
+      "VNW|bez|det|stan|vol|3|mv|prenom|zonder|agr",
+      "VNW|excl|pron|stan|vol|3|getal",
+      "VNW|onbep|adv-pron|gen|red|3|getal",
+      "VNW|onbep|adv-pron|obl|vol|3o|getal",
+      "VNW|onbep|det|stan|nom|met-e|mv-n",
+      "VNW|onbep|det|stan|nom|met-e|zonder-n",
+      "VNW|onbep|det|stan|nom|zonder|zonder-n",
+      "VNW|onbep|det|stan|prenom|met-e|agr",
+      "VNW|onbep|det|stan|prenom|met-e|evz",
+      "VNW|onbep|det|stan|prenom|met-e|mv",
+      "VNW|onbep|det|stan|prenom|met-e|rest",
+      "VNW|onbep|det|stan|prenom|zonder|agr",
+      "VNW|onbep|det|stan|prenom|zonder|evon",
+      "VNW|onbep|det|stan|vrij|zonder",
+      "VNW|onbep|grad|gen|nom|met-e|mv-n|basis",
+      "VNW|onbep|grad|stan|nom|met-e|mv-n|basis",
+      "VNW|onbep|grad|stan|nom|met-e|mv-n|sup",
+      "VNW|onbep|grad|stan|nom|met-e|zonder-n|basis",
+      "VNW|onbep|grad|stan|nom|met-e|zonder-n|sup",
+      "VNW|onbep|grad|stan|prenom|met-e|agr|basis",
+      "VNW|onbep|grad|stan|prenom|met-e|agr|comp",
+      "VNW|onbep|grad|stan|prenom|met-e|agr|sup",
+      "VNW|onbep|grad|stan|prenom|met-e|mv|basis",
+      "VNW|onbep|grad|stan|prenom|zonder|agr|basis",
+      "VNW|onbep|grad|stan|prenom|zonder|agr|comp",
+      "VNW|onbep|grad|stan|vrij|zonder|basis",
+      "VNW|onbep|grad|stan|vrij|zonder|comp",
+      "VNW|onbep|grad|stan|vrij|zonder|sup",
+      "VNW|onbep|pron|gen|vol|3p|ev",
+      "VNW|onbep|pron|stan|vol|3o|ev",
+      "VNW|onbep|pron|stan|vol|3p|ev",
+      "VNW|pers|pron|gen|vol|2|getal",
+      "VNW|pers|pron|nomin|nadr|3m|ev|masc",
+      "VNW|pers|pron|nomin|nadr|3v|ev|fem",
+      "VNW|pers|pron|nomin|red|1|mv",
+      "VNW|pers|pron|nomin|red|2v|ev",
+      "VNW|pers|pron|nomin|red|2|getal",
+      "VNW|pers|pron|nomin|red|3p|ev|masc",
+      "VNW|pers|pron|nomin|red|3|ev|masc",
+      "VNW|pers|pron|nomin|vol|1|ev",
+      "VNW|pers|pron|nomin|vol|1|mv",
+      "VNW|pers|pron|nomin|vol|2b|getal",
+      "VNW|pers|pron|nomin|vol|2v|ev",
+      "VNW|pers|pron|nomin|vol|2|getal",
+      "VNW|pers|pron|nomin|vol|3p|mv",
+      "VNW|pers|pron|nomin|vol|3v|ev|fem",
+      "VNW|pers|pron|nomin|vol|3|ev|masc",
+      "VNW|pers|pron|obl|nadr|3m|ev|masc",
+      "VNW|pers|pron|obl|red|3|ev|masc",
+      "VNW|pers|pron|obl|vol|2v|ev",
+      "VNW|pers|pron|obl|vol|3p|mv",
+      "VNW|pers|pron|obl|vol|3|ev|masc",
+      "VNW|pers|pron|obl|vol|3|getal|fem",
+      "VNW|pers|pron|stan|nadr|2v|mv",
+      "VNW|pers|pron|stan|red|3|ev|fem",
+      "VNW|pers|pron|stan|red|3|ev|onz",
+      "VNW|pers|pron|stan|red|3|mv",
+      "VNW|pr|pron|obl|nadr|1|ev",
+      "VNW|pr|pron|obl|nadr|2v|getal",
+      "VNW|pr|pron|obl|nadr|2|getal",
+      "VNW|pr|pron|obl|red|1|ev",
+      "VNW|pr|pron|obl|red|2v|getal",
+      "VNW|pr|pron|obl|vol|1|ev",
+      "VNW|pr|pron|obl|vol|1|mv",
+      "VNW|pr|pron|obl|vol|2|getal",
+      "VNW|recip|pron|gen|vol|persoon|mv",
+      "VNW|recip|pron|obl|vol|persoon|mv",
+      "VNW|refl|pron|obl|nadr|3|getal",
+      "VNW|refl|pron|obl|red|3|getal",
+      "VNW|vb|adv-pron|obl|vol|3o|getal",
+      "VNW|vb|det|stan|nom|met-e|zonder-n",
+      "VNW|vb|det|stan|prenom|met-e|rest",
+      "VNW|vb|det|stan|prenom|zonder|evon",
+      "VNW|vb|pron|gen|vol|3m|ev",
+      "VNW|vb|pron|gen|vol|3p|mv",
+      "VNW|vb|pron|gen|vol|3v|ev",
+      "VNW|vb|pron|stan|vol|3o|ev",
+      "VNW|vb|pron|stan|vol|3p|getal",
+      "VZ|fin",
+      "VZ|init",
+      "VZ|versm",
+      "WW|inf|nom|zonder|zonder-n",
+      "WW|inf|prenom|met-e",
+      "WW|inf|vrij|zonder",
+      "WW|od|nom|met-e|mv-n",
+      "WW|od|nom|met-e|zonder-n",
+      "WW|od|prenom|met-e",
+      "WW|od|prenom|zonder",
+      "WW|od|vrij|zonder",
+      "WW|pv|conj|ev",
+      "WW|pv|tgw|ev",
+      "WW|pv|tgw|met-t",
+      "WW|pv|tgw|mv",
+      "WW|pv|verl|ev",
+      "WW|pv|verl|mv",
+      "WW|vd|nom|met-e|mv-n",
+      "WW|vd|nom|met-e|zonder-n",
+      "WW|vd|prenom|met-e",
+      "WW|vd|prenom|zonder",
+      "WW|vd|vrij|zonder"
+    ],
+    "parser": [
+      "ROOT",
+      "acl",
+      "acl:relcl",
+      "advcl",
+      "advmod",
+      "amod",
+      "appos",
+      "aux",
+      "aux:pass",
+      "case",
+      "cc",
+      "ccomp",
+      "compound:prt",
+      "conj",
+      "cop",
+      "csubj",
+      "dep",
+      "det",
+      "expl",
+      "expl:pv",
+      "fixed",
+      "flat",
+      "iobj",
+      "mark",
+      "nmod",
+      "nmod:poss",
+      "nsubj",
+      "nsubj:pass",
+      "nummod",
+      "obj",
+      "obl",
+      "obl:agent",
+      "orphan",
+      "parataxis",
+      "punct",
+      "xcomp"
+    ],
+    "senter": [
+      "I",
+      "S"
+    ],
+    "attribute_ruler": [],
+    "lemmatizer": [],
+    "ner": [
+      "CARDINAL",
+      "DATE",
+      "EVENT",
+      "FAC",
+      "GPE",
+      "LANGUAGE",
+      "LAW",
+      "LOC",
+      "MONEY",
+      "NORP",
+      "ORDINAL",
+      "ORG",
+      "PERCENT",
+      "PERSON",
+      "PRODUCT",
+      "QUANTITY",
+      "TIME",
+      "WORK_OF_ART"
+    ]
+  },
+  "pipeline": [
+    "tok2vec",
+    "morphologizer",
+    "tagger",
+    "parser",
+    "attribute_ruler",
+    "lemmatizer",
+    "ner"
+  ],
+  "components": [
+    "tok2vec",
+    "morphologizer",
+    "tagger",
+    "parser",
+    "senter",
+    "attribute_ruler",
+    "lemmatizer",
+    "ner"
+  ],
+  "disabled": [
+    "senter"
+  ],
+  "performance": {
+    "tag_acc": 0.9482224646,
+    "sents_p": 0.8472032742,
+    "sents_r": 0.8909612626,
+    "sents_f": 0.8685314685,
+    "dep_uas": 0.8688732323,
+    "dep_las": 0.8211769476,
+    "dep_las_per_type": {
+      "nmod:poss": {
+        "p": 0.9522058824,
+        "r": 0.9452554745,
+        "f": 0.9487179487
+      },
+      "nsubj": {
+        "p": 0.8497072219,
+        "r": 0.8586456279,
+        "f": 0.8541530412
+      },
+      "aux": {
+        "p": 0.9013157895,
+        "r": 0.9013157895,
+        "f": 0.9013157895
+      },
+      "advmod": {
+        "p": 0.7848537005,
+        "r": 0.8142857143,
+        "f": 0.7992988606
+      },
+      "root": {
+        "p": 0.8676671214,
+        "r": 0.912482066,
+        "f": 0.8895104895
+      },
+      "det": {
+        "p": 0.9465937763,
+        "r": 0.9740372133,
+        "f": 0.9601194284
+      },
+      "amod": {
+        "p": 0.8758802817,
+        "r": 0.8915770609,
+        "f": 0.8836589698
+      },
+      "obl": {
+        "p": 0.7556008147,
+        "r": 0.7535545024,
+        "f": 0.7545762712
+      },
+      "mark": {
+        "p": 0.8709677419,
+        "r": 0.8836363636,
+        "f": 0.8772563177
+      },
+      "ccomp": {
+        "p": 0.7222222222,
+        "r": 0.6074766355,
+        "f": 0.6598984772
+      },
+      "case": {
+        "p": 0.9368290669,
+        "r": 0.9610334604,
+        "f": 0.9487769183
+      },
+      "appos": {
+        "p": 0.7060606061,
+        "r": 0.7060606061,
+        "f": 0.7060606061
+      },
+      "obj": {
+        "p": 0.7666666667,
+        "r": 0.772519084,
+        "f": 0.769581749
+      },
+      "compound:prt": {
+        "p": 0.7696335079,
+        "r": 0.6901408451,
+        "f": 0.7277227723
+      },
+      "xcomp": {
+        "p": 0.6373239437,
+        "r": 0.6581818182,
+        "f": 0.6475849732
+      },
+      "flat": {
+        "p": 0.7919911012,
+        "r": 0.7550371156,
+        "f": 0.773072747
+      },
+      "expl:pv": {
+        "p": 0.8,
+        "r": 0.8181818182,
+        "f": 0.808988764
+      },
+      "acl": {
+        "p": 0.5176470588,
+        "r": 0.4489795918,
+        "f": 0.4808743169
+      },
+      "advcl": {
+        "p": 0.5211267606,
+        "r": 0.5,
+        "f": 0.5103448276
+      },
+      "nummod": {
+        "p": 0.7961783439,
+        "r": 0.8333333333,
+        "f": 0.8143322476
+      },
+      "nmod": {
+        "p": 0.7246011755,
+        "r": 0.7504347826,
+        "f": 0.7372917557
+      },
+      "cc": {
+        "p": 0.8579545455,
+        "r": 0.8579545455,
+        "f": 0.8579545455
+      },
+      "conj": {
+        "p": 0.6610407876,
+        "r": 0.6385869565,
+        "f": 0.6496199032
+      },
+      "nsubj:pass": {
+        "p": 0.8,
+        "r": 0.8301886792,
+        "f": 0.8148148148
+      },
+      "aux:pass": {
+        "p": 0.8911917098,
+        "r": 0.9555555556,
+        "f": 0.9222520107
+      },
+      "cop": {
+        "p": 0.7810218978,
+        "r": 0.7838827839,
+        "f": 0.7824497258
+      },
+      "acl:relcl": {
+        "p": 0.6647398844,
+        "r": 0.7232704403,
+        "f": 0.6927710843
+      },
+      "parataxis": {
+        "p": 0.3712871287,
+        "r": 0.2717391304,
+        "f": 0.3138075314
+      },
+      "fixed": {
+        "p": 0.6714285714,
+        "r": 0.424954792,
+        "f": 0.5204872647
+      },
+      "iobj": {
+        "p": 0.5789473684,
+        "r": 0.3333333333,
+        "f": 0.4230769231
+      },
+      "obl:agent": {
+        "p": 0.8666666667,
+        "r": 0.8965517241,
+        "f": 0.8813559322
+      },
+      "expl": {
+        "p": 0.6153846154,
+        "r": 0.380952381,
+        "f": 0.4705882353
+      },
+      "csubj": {
+        "p": 0.5555555556,
+        "r": 0.25,
+        "f": 0.3448275862
+      },
+      "dep": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "orphan": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    },
+    "ents_p": 0.775862069,
+    "ents_r": 0.7468879668,
+    "ents_f": 0.7610993658,
+    "ents_per_type": {
+      "ORG": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "PERSON": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "QUANTITY": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "CARDINAL": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "GPE": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "WORK_OF_ART": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "NORP": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "PRODUCT": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "EVENT": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "FAC": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "DATE": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "ORDINAL": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "LANGUAGE": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "TIME": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "LOC": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "MONEY": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "PERCENT": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "LAW": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    },
+    "speed": 2996.2278607909,
+    "token_acc": 0.9997165842,
+    "token_p": 0.9974281853,
+    "token_r": 0.9975586363,
+    "token_f": 0.9974934066,
+    "pos_acc": 0.9646673937,
+    "morph_acc": 0.9599947649,
+    "morph_micro_p": 0.9697827701,
+    "morph_micro_r": 0.951281701,
+    "morph_micro_f": 0.9604431471,
+    "morph_per_feat": {
+      "Person": {
+        "p": 0.9931640625,
+        "r": 0.9722753346,
+        "f": 0.9826086957
+      },
+      "Poss": {
+        "p": 0.9923664122,
+        "r": 0.9961685824,
+        "f": 0.9942638623
+      },
+      "PronType": {
+        "p": 0.9931914894,
+        "r": 0.970074813,
+        "f": 0.9814970563
+      },
+      "Gender": {
+        "p": 0.9223479863,
+        "r": 0.8913762401,
+        "f": 0.9065976714
+      },
+      "Number": {
+        "p": 0.9819737244,
+        "r": 0.9621314175,
+        "f": 0.9719513117
+      },
+      "Tense": {
+        "p": 0.9787353106,
+        "r": 0.9615173172,
+        "f": 0.9700499168
+      },
+      "VerbForm": {
+        "p": 0.9617625637,
+        "r": 0.9503418496,
+        "f": 0.9560180995
+      },
+      "Degree": {
+        "p": 0.9489795918,
+        "r": 0.9353448276,
+        "f": 0.9421128799
+      },
+      "Definite": {
+        "p": 0.9973486522,
+        "r": 0.9933978873,
+        "f": 0.9953693495
+      },
+      "Case": {
+        "p": 0.996007984,
+        "r": 0.9940239044,
+        "f": 0.9950149551
+      },
+      "Reflex": {
+        "p": 1.0,
+        "r": 1.0,
+        "f": 1.0
+      },
+      "Abbr": {
+        "p": 1.0,
+        "r": 0.5555555556,
+        "f": 0.7142857143
+      }
+    },
+    "lemma_acc": 0.8150554986
+  },
+  "sources": [
+    {
+      "name": "UD Dutch LassySmall v2.8",
+      "url": "https://github.com/UniversalDependencies/UD_Dutch-LassySmall",
+      "license": "CC BY-SA 4.0",
+      "author": "Bouma, Gosse; van Noord, Gertjan"
+    },
+    {
+      "name": "Dutch NER Annotations for UD LassySmall",
+      "url": "https://nlp.town",
+      "license": "CC BY-SA 4.0",
+      "author": "NLP Town"
+    },
+    {
+      "name": "UD Dutch LassySmall v2.8",
+      "url": "https://github.com/UniversalDependencies/UD_Dutch-LassySmall",
+      "license": "CC BY-SA 4.0",
+      "author": "Bouma, Gosse; van Noord, Gertjan"
+    },
+    {
+      "name": "UD Dutch Alpino v2.8",
+      "url": "https://github.com/UniversalDependencies/UD_Dutch-Alpino",
+      "license": "CC BY-SA 4.0",
+      "author": "Zeman, Daniel; \u017dabokrtsk\u00fd, Zden\u011bk; Bouma, Gosse; van Noord, Gertjan"
+    },
+    {
+      "name": "spaCy lookups data",
+      "author": "Explosion",
+      "url": "https://github.com/explosion/spacy-lookups-data",
+      "license": "MIT"
+    },
+    {
+      "name": "Explosion fastText Vectors (cbow, OSCAR Common Crawl + Wikipedia)",
+      "url": "https://spacy.io",
+      "license": "CC0",
+      "author": "Explosion"
+    }
+  ],
+  "requirements": [],
+  "size": "45 MB",
+  "checksum": "bceae90e40fbaf0c4c7329131a7caa8aa1b37dd4e58406d5801cfee15c68e0f5",
+  "checksum_whl": "ef6b4f150ff63782df0b9d2ae94098fcc343da296f792841265c005f1c530ffd"
+}
