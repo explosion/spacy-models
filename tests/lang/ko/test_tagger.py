@@ -10,7 +10,7 @@ TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 @pytest.mark.parametrize(
     "test_file,accuracy_threshold",
-    [("ko_kaist-ud-dev001_1.json", 0.95)],
+    [("ko_kaist-ud-dev001_1.json", 0.73)],
 )
 def test_ko_tagger_corpus(NLP, test_file, accuracy_threshold):
     data_path = TEST_FILES_DIR / test_file
