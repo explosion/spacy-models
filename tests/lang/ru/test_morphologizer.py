@@ -7,6 +7,7 @@ from ...util import evaluate_corpus
 TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
+@pytest.mark.skip(reason="Inconsistent for Apple as Foreign=Yes")
 def test_ru_morphologizer_example(NLP):
     doc = NLP("Apple рассматривает возможность покупки стартапа из России")
     pos = [
