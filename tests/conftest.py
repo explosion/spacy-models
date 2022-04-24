@@ -1,6 +1,10 @@
 # coding: utf-8
 from __future__ import unicode_literals
 
+import csv
+import os
+from typing import Dict, List, Tuple
+
 import pytest
 import spacy
 from pathlib import Path
@@ -81,3 +85,36 @@ def NLP(request):
 def nlp(request):
     name = request.config.getoption(OPT_MODEL)
     return spacy.load(name)
+
+
+@pytest.fixture(scope="session")
+def lang(request):
+    return request.config.getoption(OPT_LANG)
+
+
+@pytest.fixture(scope="session")
+def model_size(request):
+    return request.config.getoption(OPT_MODEL).split("_")[-1]
+
+
+def pytest_generate_tests(metafunc):
+    # Extracts configurations for calls of evaluate_corpus(). This is done by parsing performance_thresholds.csv and
+    # bundling all metrics with their respective thresholds per data file. This corresponds to the parameter sets for
+    # individual calls of evaluate_corpus().
+    if "corpus_evaluation_configs" in metafunc.fixturenames:
+        model_size = metafunc.config.getoption("model").split("_")[-1]
+        lang = metafunc.config.getoption("lang")
+        parameter_sets: Dict[str, List[Tuple[str, float]]] = {}
+
+        with open(os.path.join("data", "performance_thresholds.csv")) as threshold_file:
+            for row in csv.DictReader(threshold_file):
+                if row["language"] == lang and (model_size in row["model_size"] or row["model_size"] == "*"):
+                    parameter_sets[row["filename"]] = [
+                        *parameter_sets.get(row["filename"], []), (row["metric"], row["accuracy"])
+                    ]
+
+        metafunc.parametrize(
+            'corpus_evaluation_configs',
+            tuple((filename, metric_thresholds) for filename, metric_thresholds in parameter_sets.items())
+        )
+
