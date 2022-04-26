@@ -1,6 +1,3 @@
-import pytest
-
-
 def test_ru_ner_example(NLP):
     doc = NLP("Apple рассматривает возможность покупки стартапа из России за $1 млрд")
     ents = [("Apple", 0, 5, "ORG"), ("России", 52, 58, "LOC")]

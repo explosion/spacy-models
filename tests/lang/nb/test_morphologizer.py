@@ -1,7 +1,4 @@
-import pytest
 from spacy.symbols import SPACE
-from pathlib import Path
-from ...util import evaluate_corpus
 
 
 def test_nb_morphologizer_spaces(NLP):

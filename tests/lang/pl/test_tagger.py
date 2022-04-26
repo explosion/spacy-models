@@ -1,8 +1,5 @@
 import pytest
-from spacy.tokens import Doc
 from spacy.symbols import SPACE
-from pathlib import Path
-from ...util import evaluate_corpus
 
 
 def test_pl_tagger_spaces(NLP):
