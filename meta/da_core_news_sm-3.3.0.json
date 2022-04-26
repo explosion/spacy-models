@@ -1,0 +1,577 @@
+{
+  "lang": "da",
+  "name": "core_news_sm",
+  "version": "3.3.0",
+  "description": "Danish pipeline optimized for CPU. Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.",
+  "author": "Explosion",
+  "email": "contact@explosion.ai",
+  "url": "https://explosion.ai",
+  "license": "CC BY-SA 4.0",
+  "spacy_version": ">=3.3.0.dev0,<3.4.0",
+  "spacy_git_version": "849bef2de",
+  "vectors": {
+    "width": 0,
+    "vectors": 0,
+    "keys": 0,
+    "name": null
+  },
+  "labels": {
+    "tok2vec": [],
+    "morphologizer": [
+      "AdpType=Prep|POS=ADP",
+      "Definite=Ind|Gender=Com|Number=Sing|POS=NOUN",
+      "Mood=Ind|POS=AUX|Tense=Pres|VerbForm=Fin|Voice=Act",
+      "POS=PROPN",
+      "Definite=Ind|Number=Sing|POS=VERB|Tense=Past|VerbForm=Part",
+      "Definite=Def|Gender=Neut|Number=Sing|POS=NOUN",
+      "POS=SCONJ",
+      "Definite=Def|Gender=Com|Number=Sing|POS=NOUN",
+      "Mood=Ind|POS=VERB|Tense=Pres|VerbForm=Fin|Voice=Act",
+      "POS=ADV",
+      "Number=Plur|POS=DET|PronType=Dem",
+      "Degree=Pos|Number=Plur|POS=ADJ",
+      "Definite=Ind|Gender=Com|Number=Plur|POS=NOUN",
+      "POS=PUNCT",
+      "POS=CCONJ",
+      "Definite=Ind|Degree=Cmp|Number=Sing|POS=ADJ",
+      "Degree=Cmp|POS=ADJ",
+      "POS=PRON|PartType=Inf",
+      "Gender=Com|Number=Sing|POS=DET|PronType=Ind",
+      "Definite=Ind|Degree=Pos|Number=Sing|POS=ADJ",
+      "Case=Acc|Gender=Neut|Number=Sing|POS=PRON|Person=3|PronType=Prs",
+      "Definite=Ind|Gender=Neut|Number=Plur|POS=NOUN",
+      "Definite=Def|Degree=Pos|Number=Sing|POS=ADJ",
+      "Gender=Neut|Number=Sing|POS=DET|PronType=Dem",
+      "Degree=Pos|POS=ADV",
+      "Definite=Def|Number=Sing|POS=VERB|Tense=Past|VerbForm=Part",
+      "Definite=Ind|Gender=Neut|Number=Sing|POS=NOUN",
+      "POS=PRON|PronType=Dem",
+      "NumType=Card|POS=NUM",
+      "Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing|POS=ADJ",
+      "Case=Acc|Gender=Com|Number=Sing|POS=PRON|Person=3|PronType=Prs",
+      "Degree=Pos|Gender=Com|Number=Sing|POS=ADJ",
+      "Case=Nom|Gender=Com|Number=Sing|POS=PRON|Person=3|PronType=Prs",
+      "NumType=Ord|POS=ADJ",
+      "Gender=Com|Number=Sing|Number[psor]=Sing|POS=DET|Person=3|Poss=Yes|PronType=Prs|Reflex=Yes",
+      "Mood=Ind|POS=AUX|Tense=Past|VerbForm=Fin|Voice=Act",
+      "POS=VERB|VerbForm=Inf|Voice=Act",
+      "Mood=Ind|POS=VERB|Tense=Past|VerbForm=Fin|Voice=Act",
+      "POS=NOUN",
+      "Mood=Ind|POS=VERB|Tense=Pres|VerbForm=Fin|Voice=Pass",
+      "POS=ADP|PartType=Inf",
+      "Degree=Pos|POS=ADJ",
+      "Definite=Def|Gender=Com|Number=Plur|POS=NOUN",
+      "Number[psor]=Sing|POS=DET|Person=3|Poss=Yes|PronType=Prs",
+      "Case=Gen|Definite=Def|Gender=Com|Number=Sing|POS=NOUN",
+      "POS=AUX|VerbForm=Inf|Voice=Act",
+      "Definite=Ind|Degree=Pos|Gender=Com|Number=Sing|POS=ADJ",
+      "Gender=Com|Number=Sing|POS=DET|PronType=Dem",
+      "Number=Plur|POS=DET|PronType=Ind",
+      "Gender=Com|Number=Sing|POS=PRON|PronType=Ind",
+      "Case=Acc|POS=PRON|Person=3|PronType=Prs|Reflex=Yes",
+      "POS=PART|PartType=Inf",
+      "Gender=Neut|Number=Sing|POS=DET|PronType=Ind",
+      "Case=Acc|Number=Plur|POS=PRON|Person=3|PronType=Prs",
+      "Case=Gen|Definite=Def|Gender=Neut|Number=Sing|POS=NOUN",
+      "Case=Nom|Number=Plur|POS=PRON|Person=3|PronType=Prs",
+      "Case=Nom|Gender=Com|Number=Sing|POS=PRON|Person=1|PronType=Prs",
+      "Case=Nom|Gender=Com|POS=PRON|PronType=Ind",
+      "Gender=Neut|Number=Sing|POS=PRON|PronType=Ind",
+      "Mood=Imp|POS=VERB",
+      "Gender=Com|Number=Sing|Number[psor]=Sing|POS=DET|Person=1|Poss=Yes|PronType=Prs",
+      "Definite=Ind|Number=Sing|POS=AUX|Tense=Past|VerbForm=Part",
+      "POS=X",
+      "Case=Nom|Gender=Com|Number=Plur|POS=PRON|Person=1|PronType=Prs",
+      "Case=Gen|Definite=Def|Gender=Com|Number=Plur|POS=NOUN",
+      "POS=VERB|Tense=Pres|VerbForm=Part",
+      "Number=Plur|POS=PRON|PronType=Int,Rel",
+      "POS=VERB|VerbForm=Inf|Voice=Pass",
+      "Case=Gen|Definite=Ind|Gender=Com|Number=Sing|POS=NOUN",
+      "Degree=Cmp|POS=ADV",
+      "POS=ADV|PartType=Inf",
+      "Degree=Sup|POS=ADV",
+      "Number=Plur|POS=PRON|PronType=Dem",
+      "Number=Plur|POS=PRON|PronType=Ind",
+      "Definite=Def|Gender=Neut|Number=Plur|POS=NOUN",
+      "Case=Acc|Gender=Com|Number=Sing|POS=PRON|Person=1|PronType=Prs",
+      "Case=Gen|POS=PROPN",
+      "POS=ADP",
+      "Degree=Cmp|Number=Plur|POS=ADJ",
+      "Definite=Def|Degree=Sup|POS=ADJ",
+      "Gender=Neut|Number=Sing|Number[psor]=Sing|POS=DET|Person=1|Poss=Yes|PronType=Prs",
+      "Degree=Pos|Number=Sing|POS=ADJ",
+      "Number=Plur|Number[psor]=Sing|POS=DET|Person=3|Poss=Yes|PronType=Prs|Reflex=Yes",
+      "Gender=Com|Number=Sing|Number[psor]=Plur|POS=DET|Person=1|Poss=Yes|PronType=Prs|Style=Form",
+      "Number=Plur|POS=PRON|PronType=Rcp",
+      "Case=Gen|Degree=Cmp|POS=ADJ",
+      "Case=Gen|Definite=Def|Gender=Neut|Number=Plur|POS=NOUN",
+      "Number[psor]=Plur|POS=DET|Person=3|Poss=Yes|PronType=Prs",
+      "POS=INTJ",
+      "Number=Plur|Number[psor]=Sing|POS=DET|Person=1|Poss=Yes|PronType=Prs",
+      "Degree=Pos|Gender=Neut|Number=Sing|POS=ADJ",
+      "Gender=Neut|Number=Sing|Number[psor]=Plur|POS=DET|Person=1|Poss=Yes|PronType=Prs|Style=Form",
+      "Case=Acc|Gender=Com|Number=Sing|POS=PRON|Person=2|PronType=Prs",
+      "Gender=Com|Number=Sing|Number[psor]=Sing|POS=DET|Person=2|Poss=Yes|PronType=Prs",
+      "Case=Gen|Definite=Ind|Gender=Neut|Number=Plur|POS=NOUN",
+      "Number=Sing|POS=PRON|PronType=Int,Rel",
+      "Number=Plur|Number[psor]=Plur|POS=DET|Person=1|Poss=Yes|PronType=Prs|Style=Form",
+      "Gender=Neut|Number=Sing|POS=PRON|PronType=Int,Rel",
+      "Definite=Def|Degree=Sup|Number=Plur|POS=ADJ",
+      "Case=Nom|Gender=Com|Number=Sing|POS=PRON|Person=2|PronType=Prs",
+      "Gender=Neut|Number=Sing|Number[psor]=Sing|POS=DET|Person=3|Poss=Yes|PronType=Prs|Reflex=Yes",
+      "Definite=Ind|Number=Sing|POS=NOUN",
+      "Number=Plur|POS=VERB|Tense=Past|VerbForm=Part",
+      "Number=Plur|Number[psor]=Sing|POS=PRON|Person=3|Poss=Yes|PronType=Prs|Reflex=Yes",
+      "POS=SYM",
+      "Case=Nom|Gender=Com|POS=PRON|Person=2|Polite=Form|PronType=Prs",
+      "Degree=Sup|POS=ADJ",
+      "Number=Plur|POS=DET|PronType=Ind|Style=Arch",
+      "Case=Gen|Gender=Com|Number=Sing|POS=DET|PronType=Dem",
+      "Foreign=Yes|POS=X",
+      "POS=DET|Person=2|Polite=Form|Poss=Yes|PronType=Prs",
+      "Gender=Neut|Number=Sing|POS=PRON|PronType=Dem",
+      "Case=Acc|Gender=Com|Number=Plur|POS=PRON|Person=1|PronType=Prs",
+      "Case=Gen|Definite=Ind|Gender=Neut|Number=Sing|POS=NOUN",
+      "Case=Gen|POS=PRON|PronType=Int,Rel",
+      "Gender=Com|Number=Sing|POS=PRON|PronType=Dem",
+      "Abbr=Yes|POS=X",
+      "Case=Gen|Definite=Ind|Gender=Com|Number=Plur|POS=NOUN",
+      "Definite=Def|Degree=Abs|POS=ADJ",
+      "Definite=Ind|Degree=Sup|Number=Sing|POS=ADJ",
+      "Definite=Ind|POS=NOUN",
+      "Gender=Com|Number=Plur|POS=NOUN",
+      "Number[psor]=Plur|POS=DET|Person=1|Poss=Yes|PronType=Prs",
+      "Gender=Com|POS=PRON|PronType=Int,Rel",
+      "Case=Nom|Gender=Com|Number=Plur|POS=PRON|Person=2|PronType=Prs",
+      "Degree=Abs|POS=ADV",
+      "POS=VERB|VerbForm=Ger",
+      "POS=VERB|Tense=Past|VerbForm=Part",
+      "Definite=Def|Degree=Sup|Number=Sing|POS=ADJ",
+      "Number=Plur|Number[psor]=Plur|POS=PRON|Person=1|Poss=Yes|PronType=Prs|Style=Form",
+      "Case=Gen|Definite=Def|Degree=Pos|Number=Sing|POS=ADJ",
+      "Case=Gen|Degree=Pos|Number=Plur|POS=ADJ",
+      "Case=Acc|Gender=Com|POS=PRON|Person=2|Polite=Form|PronType=Prs",
+      "Gender=Com|Number=Sing|POS=PRON|PronType=Int,Rel",
+      "POS=VERB|Tense=Pres",
+      "Case=Gen|Number=Plur|POS=DET|PronType=Ind",
+      "Number[psor]=Plur|POS=DET|Person=2|Poss=Yes|PronType=Prs",
+      "POS=PRON|Person=2|Polite=Form|Poss=Yes|PronType=Prs",
+      "Gender=Neut|Number=Sing|Number[psor]=Sing|POS=DET|Person=2|Poss=Yes|PronType=Prs",
+      "POS=AUX|Tense=Pres|VerbForm=Part",
+      "Mood=Ind|POS=VERB|Tense=Past|VerbForm=Fin|Voice=Pass",
+      "Gender=Com|Number=Sing|Number[psor]=Sing|POS=PRON|Person=3|Poss=Yes|PronType=Prs|Reflex=Yes",
+      "Degree=Sup|Number=Plur|POS=ADJ",
+      "Case=Acc|Gender=Com|Number=Plur|POS=PRON|Person=2|PronType=Prs",
+      "Gender=Neut|Number=Sing|Number[psor]=Sing|POS=PRON|Person=3|Poss=Yes|PronType=Prs|Reflex=Yes",
+      "Definite=Ind|Number=Plur|POS=NOUN",
+      "Case=Gen|Number=Plur|POS=VERB|Tense=Past|VerbForm=Part",
+      "Mood=Imp|POS=AUX",
+      "Gender=Com|Number=Sing|Number[psor]=Sing|POS=PRON|Person=1|Poss=Yes|PronType=Prs",
+      "Number[psor]=Sing|POS=PRON|Person=3|Poss=Yes|PronType=Prs",
+      "Definite=Def|Gender=Com|Number=Sing|POS=VERB|Tense=Past|VerbForm=Part",
+      "Number=Plur|Number[psor]=Sing|POS=DET|Person=2|Poss=Yes|PronType=Prs",
+      "Case=Gen|Gender=Com|Number=Sing|POS=DET|PronType=Ind",
+      "Case=Gen|POS=NOUN",
+      "Number[psor]=Plur|POS=PRON|Person=3|Poss=Yes|PronType=Prs",
+      "POS=DET|PronType=Dem",
+      "Definite=Def|Number=Plur|POS=NOUN"
+    ],
+    "parser": [
+      "ROOT",
+      "acl:relcl",
+      "advcl",
+      "advmod",
+      "advmod:lmod",
+      "amod",
+      "appos",
+      "aux",
+      "case",
+      "cc",
+      "ccomp",
+      "compound:prt",
+      "conj",
+      "cop",
+      "dep",
+      "det",
+      "expl",
+      "fixed",
+      "flat",
+      "iobj",
+      "list",
+      "mark",
+      "nmod",
+      "nmod:poss",
+      "nsubj",
+      "nummod",
+      "obj",
+      "obl",
+      "obl:lmod",
+      "obl:tmod",
+      "punct",
+      "xcomp"
+    ],
+    "attribute_ruler": [],
+    "ner": [
+      "LOC",
+      "MISC",
+      "ORG",
+      "PER"
+    ]
+  },
+  "pipeline": [
+    "tok2vec",
+    "morphologizer",
+    "parser",
+    "lemmatizer",
+    "attribute_ruler",
+    "ner"
+  ],
+  "components": [
+    "tok2vec",
+    "morphologizer",
+    "parser",
+    "lemmatizer",
+    "senter",
+    "attribute_ruler",
+    "ner"
+  ],
+  "disabled": [
+    "senter"
+  ],
+  "performance": {
+    "token_acc": 0.9994672349,
+    "token_p": 0.9977732598,
+    "token_r": 0.9974835463,
+    "token_f": 0.997628382,
+    "pos_acc": 0.9506053269,
+    "morph_acc": 0.9371428571,
+    "morph_micro_p": 0.9565925398,
+    "morph_micro_r": 0.9488667912,
+    "morph_micro_f": 0.9527140033,
+    "morph_per_feat": {
+      "Mood": {
+        "p": 0.9636711281,
+        "r": 0.9609151573,
+        "f": 0.9622911695
+      },
+      "Tense": {
+        "p": 0.9503759398,
+        "r": 0.9518072289,
+        "f": 0.9510910459
+      },
+      "VerbForm": {
+        "p": 0.9457125231,
+        "r": 0.9381884945,
+        "f": 0.9419354839
+      },
+      "Voice": {
+        "p": 0.9713423831,
+        "r": 0.9626307922,
+        "f": 0.966966967
+      },
+      "Definite": {
+        "p": 0.950039968,
+        "r": 0.9391544844,
+        "f": 0.9445658653
+      },
+      "Gender": {
+        "p": 0.9317497491,
+        "r": 0.9255566633,
+        "f": 0.928642881
+      },
+      "Number": {
+        "p": 0.9502107482,
+        "r": 0.9407929056,
+        "f": 0.9454783748
+      },
+      "AdpType": {
+        "p": 0.9991087344,
+        "r": 0.991158267,
+        "f": 0.9951176209
+      },
+      "PartType": {
+        "p": 1.0,
+        "r": 0.9967532468,
+        "f": 0.9983739837
+      },
+      "Case": {
+        "p": 0.9774557166,
+        "r": 0.9589257504,
+        "f": 0.9681020734
+      },
+      "Person": {
+        "p": 0.9771528998,
+        "r": 0.9875666075,
+        "f": 0.9823321555
+      },
+      "PronType": {
+        "p": 0.9851851852,
+        "r": 0.984375,
+        "f": 0.984779926
+      },
+      "NumType": {
+        "p": 0.9726027397,
+        "r": 0.940397351,
+        "f": 0.9562289562
+      },
+      "Degree": {
+        "p": 0.9394313968,
+        "r": 0.9156626506,
+        "f": 0.9273947529
+      },
+      "Reflex": {
+        "p": 1.0,
+        "r": 1.0,
+        "f": 1.0
+      },
+      "Number[psor]": {
+        "p": 0.9772727273,
+        "r": 1.0,
+        "f": 0.9885057471
+      },
+      "Poss": {
+        "p": 0.9887640449,
+        "r": 1.0,
+        "f": 0.9943502825
+      },
+      "Polite": {
+        "p": 0.6,
+        "r": 0.75,
+        "f": 0.6666666667
+      },
+      "Foreign": {
+        "p": 1.0,
+        "r": 0.4,
+        "f": 0.5714285714
+      },
+      "Abbr": {
+        "p": 0.6666666667,
+        "r": 0.4,
+        "f": 0.5
+      },
+      "Style": {
+        "p": 1.0,
+        "r": 1.0,
+        "f": 1.0
+      }
+    },
+    "sents_p": 0.9012567325,
+    "sents_r": 0.890070922,
+    "sents_f": 0.8956289028,
+    "dep_uas": 0.8080446927,
+    "dep_las": 0.7628624099,
+    "dep_las_per_type": {
+      "advmod": {
+        "p": 0.6630434783,
+        "r": 0.6892655367,
+        "f": 0.675900277
+      },
+      "root": {
+        "p": 0.8085867621,
+        "r": 0.8014184397,
+        "f": 0.8049866429
+      },
+      "nsubj": {
+        "p": 0.8269639066,
+        "r": 0.8217299578,
+        "f": 0.8243386243
+      },
+      "case": {
+        "p": 0.881372549,
+        "r": 0.8865877712,
+        "f": 0.883972468
+      },
+      "obl": {
+        "p": 0.6786885246,
+        "r": 0.6428571429,
+        "f": 0.6602870813
+      },
+      "cc": {
+        "p": 0.7614942529,
+        "r": 0.7703488372,
+        "f": 0.7658959538
+      },
+      "conj": {
+        "p": 0.6264044944,
+        "r": 0.5946666667,
+        "f": 0.610123119
+      },
+      "obj": {
+        "p": 0.761732852,
+        "r": 0.8194174757,
+        "f": 0.7895229186
+      },
+      "aux": {
+        "p": 0.8795180723,
+        "r": 0.8513119534,
+        "f": 0.8651851852
+      },
+      "acl:relcl": {
+        "p": 0.6054054054,
+        "r": 0.6054054054,
+        "f": 0.6054054054
+      },
+      "advmod:lmod": {
+        "p": 0.6875,
+        "r": 0.6567164179,
+        "f": 0.6717557252
+      },
+      "det": {
+        "p": 0.9126853377,
+        "r": 0.9126853377,
+        "f": 0.9126853377
+      },
+      "amod": {
+        "p": 0.7852348993,
+        "r": 0.7986348123,
+        "f": 0.7918781726
+      },
+      "nmod:poss": {
+        "p": 0.6767676768,
+        "r": 0.6633663366,
+        "f": 0.67
+      },
+      "ccomp": {
+        "p": 0.6290322581,
+        "r": 0.6290322581,
+        "f": 0.6290322581
+      },
+      "nummod": {
+        "p": 0.824,
+        "r": 0.8583333333,
+        "f": 0.8408163265
+      },
+      "flat": {
+        "p": 0.7901234568,
+        "r": 0.8476821192,
+        "f": 0.8178913738
+      },
+      "compound:prt": {
+        "p": 0.44,
+        "r": 0.2682926829,
+        "f": 0.3333333333
+      },
+      "advcl": {
+        "p": 0.5877192982,
+        "r": 0.5775862069,
+        "f": 0.5826086957
+      },
+      "mark": {
+        "p": 0.872651357,
+        "r": 0.8583162218,
+        "f": 0.8654244306
+      },
+      "cop": {
+        "p": 0.752688172,
+        "r": 0.8,
+        "f": 0.7756232687
+      },
+      "dep": {
+        "p": 0.1707317073,
+        "r": 0.2641509434,
+        "f": 0.2074074074
+      },
+      "nmod": {
+        "p": 0.6122840691,
+        "r": 0.623046875,
+        "f": 0.6176185866
+      },
+      "iobj": {
+        "p": 0.6923076923,
+        "r": 0.4090909091,
+        "f": 0.5142857143
+      },
+      "xcomp": {
+        "p": 0.5161290323,
+        "r": 0.2711864407,
+        "f": 0.3555555556
+      },
+      "list": {
+        "p": 0.3636363636,
+        "r": 0.2222222222,
+        "f": 0.275862069
+      },
+      "vocative": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "fixed": {
+        "p": 0.8684210526,
+        "r": 0.8048780488,
+        "f": 0.835443038
+      },
+      "expl": {
+        "p": 0.84375,
+        "r": 0.7941176471,
+        "f": 0.8181818182
+      },
+      "appos": {
+        "p": 0.4666666667,
+        "r": 0.4242424242,
+        "f": 0.4444444444
+      },
+      "obl:tmod": {
+        "p": 0.7777777778,
+        "r": 0.3888888889,
+        "f": 0.5185185185
+      },
+      "discourse": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "obl:lmod": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    },
+    "lemma_acc": 0.9430508475,
+    "tag_acc": 0.9506053269,
+    "ents_p": 0.7450110865,
+    "ents_r": 0.7,
+    "ents_f": 0.7218045113,
+    "ents_per_type": {
+      "PER": {
+        "p": 0.7818181818,
+        "r": 0.7771084337,
+        "f": 0.7794561934
+      },
+      "ORG": {
+        "p": 0.6463414634,
+        "r": 0.5888888889,
+        "f": 0.6162790698
+      },
+      "MISC": {
+        "p": 0.6698113208,
+        "r": 0.6283185841,
+        "f": 0.6484018265
+      },
+      "LOC": {
+        "p": 0.8469387755,
+        "r": 0.7477477477,
+        "f": 0.7942583732
+      }
+    },
+    "speed": 12430.3213337348
+  },
+  "sources": [
+    {
+      "name": "UD Danish DDT v2.8",
+      "url": "https://github.com/UniversalDependencies/UD_Danish-DDT",
+      "license": "CC BY-SA 4.0",
+      "author": "Johannsen, Anders; Mart\u00ednez Alonso, H\u00e9ctor; Plank, Barbara"
+    },
+    {
+      "name": "DaNE",
+      "url": "https://github.com/alexandrainst/danlp/blob/master/docs/datasets.md#danish-dependency-treebank-dane",
+      "license": "CC BY-SA 4.0",
+      "author": "Rasmus Hvingelby, Amalie B. Pauli, Maria Barrett, Christina Rosted, Lasse M. Lidegaard, Anders S\u00f8gaard"
+    }
+  ],
+  "requirements": [],
+  "size": "11 MB",
+  "checksum": "5ece25a13124f1b3ea5d34ce933370e98e4b36e0dc2678c4db595e8aa5410729",
+  "checksum_whl": "ce68d469f3fee83ffd81e65031b80db2b6e671d300bc14e76f0d08cf50cfa6a3"
+}
