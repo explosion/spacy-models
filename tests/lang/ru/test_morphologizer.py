@@ -1,10 +1,5 @@
 import pytest
-from pathlib import Path
 from spacy.symbols import SPACE
-from ...util import evaluate_corpus
-
-
-TEST_FILES_DIR = Path(__file__).parent / "test_files"
 
 
 @pytest.mark.skip(reason="Inconsistent for Apple as Foreign=Yes")
@@ -31,16 +26,6 @@ def test_ru_morphologizer_example(NLP):
     for token, expected_pos, expected_morph in zip(doc, pos, morphs):
         assert token.pos_ == expected_pos
         assert str(token.morph) == expected_morph
-
-
-@pytest.mark.parametrize(
-    "test_file,accuracy_threshold",
-    [("nerus-dev.json", 0.96)],
-)
-def test_ru_morphologizer_corpus(NLP, test_file, accuracy_threshold):
-    data_path = TEST_FILES_DIR / test_file
-    evaluate_corpus(NLP, data_path, {"morph_acc": accuracy_threshold})
-    evaluate_corpus(NLP, data_path, {"pos_acc": accuracy_threshold})
 
 
 def test_ru_morphologizer_spaces(NLP):

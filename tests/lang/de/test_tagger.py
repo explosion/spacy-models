@@ -5,7 +5,7 @@ from pathlib import Path
 from ...util import evaluate_corpus, json_path_to_examples
 
 
-TEST_FILES_DIR = Path(__file__).parent / "test_files"
+TEST_FILES_DIR = Path(__file__).parent.parent.parent / "data" / "test_files" / "de"
 
 
 def test_de_tagger_tag_names(NLP):
@@ -21,15 +21,6 @@ def test_de_tagger_example(NLP):
     tags = ["APPR", "CARD", "KON", "CARD", "VVFIN", "PPER", "ART", "NN", "PTKVZ", "$."]
     for token, expected_tag in zip(doc, tags):
         assert token.tag_ == expected_tag
-
-
-# This threshold is artificially low due to problems with spacy 2.1. (#3830)
-@pytest.mark.parametrize(
-    "test_file,accuracy_threshold", [("de_pud-ud-test.stts.json", 0.94)]
-)
-def test_de_tagger_corpus(NLP, test_file, accuracy_threshold):
-    data_path = TEST_FILES_DIR / test_file
-    evaluate_corpus(NLP, data_path, {"tag_acc": accuracy_threshold})
 
 
 @pytest.mark.parametrize("test_file", ["de_pud-ud-test.stts.json"])

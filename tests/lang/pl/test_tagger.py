@@ -5,18 +5,6 @@ from pathlib import Path
 from ...util import evaluate_corpus
 
 
-TEST_FILES_DIR = Path(__file__).parent / "test_files"
-
-
-@pytest.mark.parametrize(
-    "test_file,accuracy_threshold",
-    [("nkjp_60s_dev_sample.json", 0.96)],
-)
-def test_pl_tagger_corpus(NLP, test_file, accuracy_threshold):
-    data_path = TEST_FILES_DIR / test_file
-    evaluate_corpus(NLP, data_path, {"tag_acc": accuracy_threshold})
-
-
 def test_pl_tagger_spaces(NLP):
     """Ensure spaces are assigned the POS tag SPACE"""
     doc = NLP("Some\nspaces are\tnecessary.")
