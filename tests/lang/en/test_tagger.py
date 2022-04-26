@@ -5,9 +5,6 @@ from pathlib import Path
 from ...util import evaluate_corpus
 
 
-TEST_FILES_DIR = Path(__file__).parent / "test_files"
-
-
 def test_en_tagger_tag_names(NLP):
     doc = NLP("I ate pizzas with anchovies.", disable=["parser"])
     assert type(doc[2].pos) == int
@@ -24,15 +21,6 @@ def test_en_tagger_example(NLP):
         assert token.pos_ == expected_pos
     for token, expected_tag in zip(doc, tags):
         assert token.tag_ == expected_tag
-
-
-@pytest.mark.parametrize(
-    "test_file,accuracy_threshold",
-    [("en_pud-ud-test.json", 0.94), ("masc-penn-treebank-sample.json", 0.88)],
-)
-def test_en_tagger_corpus(NLP, test_file, accuracy_threshold):
-    data_path = TEST_FILES_DIR / test_file
-    evaluate_corpus(NLP, data_path, {"tag_acc": accuracy_threshold})
 
 
 def test_en_tagger_spaces(NLP):

@@ -14,7 +14,7 @@ de,*,morphologizer,de_pud-ud-test.v2.5.json,pos_acc,0.89
 de,*,morphologizer,de_pud-ud-test.v2.5.json,morph_acc,0.29
 de,*,tagger,de_pud-ud-test.v2.5.json,tag_acc,0.94
 en,*,parser,masc-penn-treebank-sample.json,dep_uas,0.82
-en,*,parser,masc-penn-treebank-sample.json,dep_uas,0.78
+en,*,parser,masc-penn-treebank-sample.json,dep_las,0.78
 en,*,tagger,en_pud-ud-test.json,tag_acc,0.94
 en,*,tagger,masc-penn-treebank-sample.json,tag_acc,0.88
 es,*,morphologizer,es_ancora-ud-dev001_10.json,pos_acc,0.95
@@ -29,7 +29,7 @@ fi,*,parser,fi_tdt-ud-dev001_1.json,dep_uas,0.78
 fi,*,parser,fi_tdt-ud-dev001_1.json,dep_las,0.71
 fi,*,tagger,fi_tdt-ud-dev001_1.json,tag_acc,0.93
 fr,*,morphologizer,fr_sequoia-ud-dev01_10.json,pos_acc,0.93
-fr,*,morphologizer,fr_sequoia-ud-dev01_10.json,pos_acc,0.89
+fr,*,morphologizer,fr_sequoia-ud-dev01_10.json,morph_acc,0.89
 fr,*,parser,fr_sequoia-ud-dev01_10.json,dep_uas,0.79
 fr,*,parser,fr_sequoia-ud-dev01_10.json,dep_las,0.71
 ja,*,ner,ja_gsd-ud-dev_sample.json,ents_f,0.64

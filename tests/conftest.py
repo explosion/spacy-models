@@ -38,7 +38,9 @@ def pytest_addoption(parser):
     parser.addoption(OPT_VECTORS, action="store_true", help="Model has vectors")
     parser.addoption(OPT_PARSER, action="store_true", help="Model has parser")
     parser.addoption(OPT_TAGGER, action="store_true", help="Model has tagger")
-    parser.addoption(OPT_MORPHOLOGIZER, action="store_true", help="Model has morphologizer")
+    parser.addoption(
+        OPT_MORPHOLOGIZER, action="store_true", help="Model has morphologizer"
+    )
     parser.addoption(OPT_LEMMATIZER, action="store_true", help="Model has lemmatizer")
     parser.addoption(OPT_NER, action="store_true", help="Model has NER")
 
@@ -92,29 +94,37 @@ def lang(request):
     return request.config.getoption(OPT_LANG)
 
 
-@pytest.fixture(scope="session")
-def model_size(request):
-    return request.config.getoption(OPT_MODEL).split("_")[-1]
-
-
 def pytest_generate_tests(metafunc):
+    """
+    Initializes data generation hooks for tests. Useful e.g. for supplying tests with dynamically generated data
+    depending on pytest configuration options.
+    """
     # Extracts configurations for calls of evaluate_corpus(). This is done by parsing performance_thresholds.csv and
     # bundling all metrics with their respective thresholds per data file. This corresponds to the parameter sets for
     # individual calls of evaluate_corpus().
-    if "corpus_evaluation_configs" in metafunc.fixturenames:
+    if "corpus_evaluation_config" in metafunc.fixturenames:
         model_size = metafunc.config.getoption("model").split("_")[-1]
         lang = metafunc.config.getoption("lang")
         parameter_sets: Dict[str, List[Tuple[str, float]]] = {}
 
         with open(os.path.join("data", "performance_thresholds.csv")) as threshold_file:
             for row in csv.DictReader(threshold_file):
-                if row["language"] == lang and (model_size in row["model_size"] or row["model_size"] == "*"):
+                if row["language"] == lang and (
+                    model_size in row["model_size"] or row["model_size"] == "*"
+                ):
                     parameter_sets[row["filename"]] = [
-                        *parameter_sets.get(row["filename"], []), (row["metric"], row["accuracy"])
+                        *parameter_sets.get(row["filename"], []),
+                        (row["metric"], float(row["accuracy"])),
                     ]
 
-        metafunc.parametrize(
-            'corpus_evaluation_configs',
-            tuple((filename, metric_thresholds) for filename, metric_thresholds in parameter_sets.items())
-        )
+        assert (
+            len(parameter_sets) > 0
+        ), "No parameter threshold configuration for this language and model size found."
 
+        metafunc.parametrize(
+            "corpus_evaluation_config",
+            tuple(
+                (filename, metric_thresholds)
+                for filename, metric_thresholds in parameter_sets.items()
+            ),
+        )

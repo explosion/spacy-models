@@ -5,28 +5,6 @@ from pathlib import Path
 from ...util import evaluate_corpus
 
 
-TEST_FILES_DIR = Path(__file__).parent / "test_files"
-
-
-@pytest.mark.parametrize(
-    "test_file,accuracy_threshold,pos_threshold,morph_threshold",
-    [("ro_rrt-ud-dev01_10.json", 0.93, 0.91, 0.93)],
-)
-def test_ro_tagger_corpus(
-    NLP, test_file, accuracy_threshold, pos_threshold, morph_threshold
-):
-    data_path = TEST_FILES_DIR / test_file
-    evaluate_corpus(
-        NLP,
-        data_path,
-        {
-            "tag_acc": accuracy_threshold,
-            "pos_acc": pos_threshold,
-            "morph_acc": morph_threshold,
-        },
-    )
-
-
 def test_ro_tagger_spaces(NLP):
     """Ensure spaces are assigned the POS tag SPACE"""
     doc = NLP("Some\nspaces are\tnecessary.")

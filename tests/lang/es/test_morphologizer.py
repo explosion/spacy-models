@@ -5,19 +5,6 @@ from pathlib import Path
 from ...util import evaluate_corpus
 
 
-TEST_FILES_DIR = Path(__file__).parent / "test_files"
-
-
-@pytest.mark.parametrize(
-    "test_file,accuracy_threshold", [("es_ancora-ud-dev001_10.json", 0.95)],
-)
-def test_es_morphologizer_corpus(NLP, test_file, accuracy_threshold):
-    data_path = TEST_FILES_DIR / test_file
-    evaluate_corpus(
-        NLP, data_path, {"pos_acc": accuracy_threshold, "morph_acc": accuracy_threshold}
-    )
-
-
 def test_es_morphologizer_spaces(NLP):
     """Ensure spaces are assigned the POS tag SPACE"""
     doc = NLP("Some\nspaces are\tnecessary.")
