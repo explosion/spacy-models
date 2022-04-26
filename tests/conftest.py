@@ -147,6 +147,9 @@ def pytest_generate_tests(metafunc):
         ).items():
             if count != 1:
                 duplicate_metrics.add(key)
+        assert (
+            len(duplicate_metrics) == 0
+        ), f"Metrics {duplicate_metrics} have been set more than once."
 
         # Ensure there is at least one config to execute.
         assert (
@@ -160,37 +163,3 @@ def pytest_generate_tests(metafunc):
                 for filename, metric_thresholds in parameter_sets.items()
             ),
         )
-
-
-# if __name__ == '__main__':
-#     lang = "zh"
-#     model_size = "sm"
-#     parameter_sets: Dict[str, List[Tuple[str, float]]] = {}
-#
-#     with open(os.path.join("data", "performance_thresholds.csv")) as threshold_file:
-#         for row in csv.DictReader(threshold_file):
-#             configs = parameter_sets.get(row["filename"], [])
-#             if row["language"] == lang and (
-#                 # Ignore configs for other model sizes.
-#                 model_size == row["model_size"] or
-#                 # If model_size is *, but config specific model_size already set: skip config for generic model size.
-#                 (row["model_size"] == "*" and not any([c for c in configs if c[0] == row["metric"] and c[1] != "*"]))
-#             ):
-#                 # If model_size is specific and generic model_size already defined: drop config for generic model size.
-#                 if row["model_size"] != "*" and any([c for c in configs if c[0] == row["metric"] and c[1] == "*"]):
-#                     configs = [c for c in configs if c[0] != row["metric"] or c[1] != "*"]
-#
-#                 parameter_sets[row["filename"]] = [*configs, (row["metric"], row["model_size"], float(row["accuracy"]))]
-#
-#     # Ensure metric thresholds haven't been set ambiguously.
-#     duplicate_metrics = set()
-#     for key, count in collections.Counter(
-#         tuple((filename, metric[0]) for filename in parameter_sets for metric in parameter_sets[filename])
-#     ).items():
-#         if count != 1:
-#             duplicate_metrics.add(key)
-#     assert (
-#         len(duplicate_metrics) == 0
-#     ), f"Metrics {duplicate_metrics} have been set more than once."
-#
-#     print(parameter_sets)

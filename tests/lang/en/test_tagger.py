@@ -1,8 +1,6 @@
 import pytest
 from spacy.symbols import SPACE
 from spacy.tokens import MorphAnalysis
-from pathlib import Path
-from ...util import evaluate_corpus
 
 
 def test_en_tagger_tag_names(NLP):

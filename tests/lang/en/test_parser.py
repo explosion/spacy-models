@@ -1,8 +1,9 @@
-import pytest
 from pathlib import Path
-from spacy.tokens import Doc
-from ...util import json_path_to_examples, apply_transition_sequence
 
+import pytest
+from spacy.tokens import Doc
+
+from ...util import json_path_to_examples, apply_transition_sequence
 
 TEST_FILES_DIR = Path(__file__).parent.parent.parent / "data" / "test_files" / "en"
 

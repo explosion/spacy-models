@@ -1,9 +1,10 @@
-import pytest
-from spacy.tokens import Doc
-from spacy.symbols import SPACE
 from pathlib import Path
-from ...util import evaluate_corpus, json_path_to_examples
 
+import pytest
+from spacy.symbols import SPACE
+from spacy.tokens import Doc
+
+from ...util import json_path_to_examples
 
 TEST_FILES_DIR = Path(__file__).parent.parent.parent / "data" / "test_files" / "de"
 
