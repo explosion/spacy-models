@@ -22,8 +22,8 @@ es,*,morphologizer,es_ancora-ud-dev001_10.json,morph_acc,0.95
 es,*,parser,es_ancora-ud-dev001_10.json,dep_uas,0.84
 es,*,parser,es_ancora-ud-dev001_10.json,dep_las,0.8
 fi,*,lemmatizer,fi_tdt-ud-dev001_1.json,lemma_acc,0.79
-fi,*,lemmatizer,fi_tdt-ud-dev001_1.json,pos_acc,0.92
-fi,*,lemmatizer,fi_tdt-ud-dev001_1.json,morph_acc,0.86
+fi,*,morphologizer,fi_tdt-ud-dev001_1.json,pos_acc,0.92
+fi,*,morphologizer,fi_tdt-ud-dev001_1.json,morph_acc,0.86
 fi,*,ner,dev001_1.json,ents_f,0.75
 fi,*,parser,fi_tdt-ud-dev001_1.json,dep_uas,0.78
 fi,*,parser,fi_tdt-ud-dev001_1.json,dep_las,0.71
