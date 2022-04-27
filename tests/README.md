@@ -56,7 +56,7 @@ python -m pytest tests --model en_core_web_sm --lang en --has-parser --has-tagge
 The following settings are available on the command line when running the tests:
 
 | Name                  | Description                                                                                                                                                                                                                                       |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `--model`             | Name of the model to test, e.g. `en_core_web_sm`. The model name will be passed directly to [`spacy.load`](https://spacy.io/api/top-level#spacy.load), so it can be the name of an installed package, a shortcut link or the path to a directory. |
 | `--lang`              | The model language, e.g. `en`. This will run all language-specific tests in `/lang`, if available.                                                                                                                                                |
 | `--has-vectors`       | The model has vectors. Will run all applicable vectors tests.                                                                                                                                                                                     |
@@ -65,6 +65,7 @@ The following settings are available on the command line when running the tests:
 | `--has-ner`           | The model has an entity recognizer. Will run all applicable NER tests.                                                                                                                                                                            |
 | `--has-morphologizer` | The model has a morphologizer. Will run all applicable morphologizer tests.                                                                                                                                                                       |
 | `--has-lemmatizer`    | The model has a lemmatizer. Will run all applicable lemmatizer tests.                                                                                                                                                                             |
+| `--has-segmenter`       | The model has a segmenter. Will run all applicable segmenter tests.                                                                                                                                                                               |
 
 ## Writing Tests
 

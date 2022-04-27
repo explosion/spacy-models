@@ -22,6 +22,7 @@ OPT_TAGGER = "--has-tagger"
 OPT_MORPHOLOGIZER = "--has-morphologizer"
 OPT_LEMMATIZER = "--has-lemmatizer"
 OPT_NER = "--has-ner"
+OPT_SEGMENTER = "--has-segmenter"
 
 OPT_MAPPING = {
     "tagger": OPT_TAGGER,
@@ -30,6 +31,7 @@ OPT_MAPPING = {
     "parser": OPT_PARSER,
     "ner": OPT_NER,
     "vectors": OPT_VECTORS,
+    "segmenter": OPT_SEGMENTER
 }
 
 
@@ -44,6 +46,7 @@ def pytest_addoption(parser):
     )
     parser.addoption(OPT_LEMMATIZER, action="store_true", help="Model has lemmatizer")
     parser.addoption(OPT_NER, action="store_true", help="Model has NER")
+    parser.addoption(OPT_SEGMENTER, action="store_true", help="Model has segmenter")
 
 
 def pytest_ignore_collect(path, config):
@@ -112,7 +115,7 @@ def pytest_generate_tests(metafunc):
         with open(os.path.join("data", "performance_thresholds.csv")) as threshold_file:
             for row in csv.DictReader(threshold_file):
                 configs = parameter_sets.get(row["filename"], [])
-                if row["language"] == lang and (
+                if metafunc.config.getoption(OPT_MAPPING[row["component"]]) and row["language"] == lang and (
                     # Ignore configs for other model sizes.
                     model_size == row["model_size"]
                     or
