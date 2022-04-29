@@ -5,7 +5,7 @@ from tests.util import evaluate_corpus
 def test_corpus(NLP, lang, corpus_evaluation_config):
     """
     Evaluates corpus w.r.t. the specified model and language. Information on the files to use for the individual tests,
-    metrics and and performance thresholds are extracted from performance_thresholds.csv.
+    metrics and performance thresholds are extracted from performance_thresholds.csv.
     """
 
     evaluate_corpus(
