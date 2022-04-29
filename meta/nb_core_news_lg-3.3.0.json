@@ -1,0 +1,658 @@
+{
+  "lang": "nb",
+  "name": "core_news_lg",
+  "version": "3.3.0",
+  "description": "Norwegian (Bokm\u00e5l) pipeline optimized for CPU. Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.",
+  "author": "Explosion",
+  "email": "contact@explosion.ai",
+  "url": "https://explosion.ai",
+  "license": "MIT",
+  "spacy_version": ">=3.3.0.dev0,<3.4.0",
+  "spacy_git_version": "849bef2de",
+  "vectors": {
+    "width": 300,
+    "vectors": 500000,
+    "keys": 500000,
+    "name": "nb_vectors"
+  },
+  "labels": {
+    "tok2vec": [],
+    "morphologizer": [
+      "Definite=Ind|Gender=Neut|Number=Sing|POS=NOUN",
+      "POS=CCONJ",
+      "Definite=Ind|Gender=Masc|Number=Sing|POS=NOUN",
+      "POS=SCONJ",
+      "Definite=Def|Gender=Masc|Number=Sing|POS=NOUN",
+      "Definite=Ind|Gender=Neut|Number=Plur|POS=NOUN",
+      "POS=PUNCT",
+      "Mood=Ind|POS=VERB|Tense=Past|VerbForm=Fin",
+      "POS=ADP",
+      "Gender=Masc|Number=Sing|POS=DET|PronType=Dem",
+      "Definite=Def|Degree=Pos|Number=Sing|POS=ADJ",
+      "POS=PROPN",
+      "POS=X",
+      "Mood=Ind|POS=VERB|Tense=Pres|VerbForm=Fin",
+      "Definite=Def|Gender=Neut|Number=Sing|POS=NOUN",
+      "POS=PRON|PronType=Rel",
+      "Mood=Ind|POS=AUX|Tense=Pres|VerbForm=Fin",
+      "Definite=Ind|Gender=Neut|Number=Sing|POS=ADJ|VerbForm=Part",
+      "Definite=Ind|Degree=Pos|Number=Sing|POS=ADJ",
+      "Definite=Ind|Gender=Fem|Number=Sing|POS=NOUN",
+      "Number=Plur|POS=ADJ|VerbForm=Part",
+      "Definite=Ind|Gender=Fem|Number=Plur|POS=NOUN",
+      "POS=ADV",
+      "Gender=Neut|Number=Sing|POS=PRON|Person=3|PronType=Prs",
+      "Definite=Ind|Number=Sing|POS=ADJ|VerbForm=Part",
+      "POS=VERB|VerbForm=Part",
+      "Definite=Ind|Gender=Masc|Number=Plur|POS=NOUN",
+      "Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing|POS=ADJ",
+      "Degree=Pos|Number=Plur|POS=ADJ",
+      "NumType=Card|Number=Plur|POS=NUM",
+      "Definite=Def|Gender=Masc|Number=Plur|POS=NOUN",
+      "Case=Acc|POS=PRON|PronType=Prs|Reflex=Yes",
+      "Case=Gen|Definite=Ind|Gender=Neut|Number=Sing|POS=NOUN",
+      "POS=PART",
+      "POS=VERB|VerbForm=Inf",
+      "Case=Nom|Number=Plur|POS=PRON|Person=3|PronType=Prs",
+      "Mood=Ind|POS=AUX|Tense=Past|VerbForm=Fin",
+      "Gender=Fem|POS=PROPN",
+      "POS=NOUN",
+      "Gender=Masc|POS=PROPN",
+      "Gender=Neut|Number=Sing|POS=DET|PronType=Dem",
+      "Gender=Masc|Number=Sing|POS=DET|PronType=Art",
+      "Case=Gen|Definite=Def|Gender=Masc|Number=Sing|POS=NOUN",
+      "Abbr=Yes|POS=PROPN",
+      "POS=PART|Polarity=Neg",
+      "Number=Plur|POS=PRON|Poss=Yes|PronType=Prs",
+      "Case=Gen|Definite=Ind|Gender=Neut|Number=Plur|POS=NOUN",
+      "Case=Gen|POS=PROPN",
+      "Gender=Fem|Number=Sing|POS=DET|PronType=Dem",
+      "Gender=Masc|Number=Sing|POS=PRON|Poss=Yes|PronType=Prs",
+      "Definite=Def|Degree=Sup|POS=ADJ",
+      "Case=Gen|Gender=Fem|POS=PROPN",
+      "Number=Plur|POS=DET|PronType=Dem",
+      "Case=Gen|Definite=Def|Gender=Neut|Number=Sing|POS=NOUN",
+      "Definite=Ind|Degree=Sup|POS=ADJ",
+      "Definite=Def|Gender=Fem|Number=Plur|POS=NOUN",
+      "Gender=Neut|POS=PROPN",
+      "Number=Plur|POS=DET|PronType=Int",
+      "Definite=Def|Gender=Neut|Number=Plur|POS=NOUN",
+      "Definite=Def|POS=DET|PronType=Dem",
+      "Gender=Neut|Number=Sing|POS=DET|PronType=Art",
+      "Mood=Ind|POS=VERB|Tense=Pres|VerbForm=Fin|Voice=Pass",
+      "Abbr=Yes|Case=Gen|POS=PROPN",
+      "Animacy=Hum|Case=Nom|Gender=Masc|Number=Sing|POS=PRON|Person=3|PronType=Prs",
+      "Degree=Cmp|POS=ADJ",
+      "POS=ADJ|VerbForm=Part",
+      "Gender=Neut|Number=Sing|POS=PRON|Poss=Yes|PronType=Prs",
+      "Abbr=Yes|POS=ADP",
+      "Definite=Ind|Gender=Neut|Number=Sing|POS=DET|PronType=Prs",
+      "Case=Gen|Definite=Def|Gender=Neut|Number=Plur|POS=NOUN",
+      "POS=AUX|VerbForm=Part",
+      "POS=PRON|PronType=Int",
+      "Gender=Fem|Number=Sing|POS=PRON|Poss=Yes|PronType=Prs",
+      "Number=Plur|POS=PRON|Person=3|PronType=Ind,Prs",
+      "Number=Plur|POS=DET|PronType=Ind",
+      "Degree=Pos|POS=ADJ",
+      "Animacy=Hum|Case=Nom|Number=Plur|POS=PRON|Person=1|PronType=Prs",
+      "POS=VERB|VerbForm=Inf|Voice=Pass",
+      "Definite=Ind|Gender=Fem|Number=Sing|POS=DET|PronType=Dem",
+      "Gender=Neut|Number=Sing|POS=DET|PronType=Ind",
+      "Animacy=Hum|Case=Acc|Gender=Masc|Number=Sing|POS=PRON|Person=3|PronType=Prs",
+      "Animacy=Hum|Case=Nom|Number=Sing|POS=PRON|Person=1|PronType=Prs",
+      "Number=Plur|POS=DET|Polarity=Neg|PronType=Neg",
+      "NumType=Card|POS=NUM",
+      "Gender=Masc|Number=Sing|POS=DET|PronType=Ind",
+      "POS=DET|PronType=Prs",
+      "Gender=Fem|Number=Sing|POS=DET|PronType=Ind",
+      "Case=Gen|Gender=Neut|POS=PROPN",
+      "Gender=Masc|Number=Sing|POS=DET|Polarity=Neg|PronType=Neg",
+      "Definite=Def|Number=Sing|POS=ADJ|VerbForm=Part",
+      "Gender=Fem,Masc|Number=Sing|POS=PRON|Person=3|PronType=Prs",
+      "POS=AUX|VerbForm=Inf",
+      "Case=Acc|Number=Plur|POS=PRON|Person=3|PronType=Prs",
+      "Case=Gen|Degree=Pos|Number=Plur|POS=ADJ",
+      "Number=Plur|POS=DET|PronType=Tot",
+      "Case=Gen|Gender=Masc|Number=Sing|POS=DET|PronType=Dem",
+      "Number=Plur|POS=DET|PronType=Prs",
+      "POS=SYM",
+      "Gender=Neut|NumType=Card|Number=Sing|POS=NUM",
+      "Animacy=Hum|Case=Nom|Number=Sing|POS=PRON|PronType=Prs",
+      "Definite=Ind|Gender=Masc|Number=Sing|POS=DET|PronType=Prs",
+      "Case=Gen|Definite=Ind|Gender=Masc|Number=Sing|POS=NOUN",
+      "Abbr=Yes|POS=ADV",
+      "Definite=Ind|Gender=Neut|Number=Sing|POS=DET|PronType=Dem",
+      "Gender=Masc|Number=Sing|POS=DET|PronType=Tot",
+      "Definite=Def|POS=DET|PronType=Prs",
+      "Animacy=Hum|Case=Nom|Gender=Fem|Number=Sing|POS=PRON|Person=3|PronType=Prs",
+      "Gender=Neut|POS=NOUN",
+      "Gender=Neut|Number=Sing|POS=DET|PronType=Int",
+      "Definite=Def|NumType=Card|POS=NUM",
+      "Mood=Imp|POS=VERB|VerbForm=Fin",
+      "Definite=Ind|Number=Plur|POS=NOUN",
+      "Gender=Neut|Number=Sing|POS=DET|PronType=Tot",
+      "Gender=Fem|Number=Sing|POS=DET|PronType=Tot",
+      "Animacy=Hum|Case=Acc|Number=Plur|POS=PRON|Person=1|PronType=Prs",
+      "Gender=Fem,Masc|Number=Sing|POS=PRON|Person=3|Polarity=Neg|PronType=Neg,Prs",
+      "Number=Plur|POS=PRON|Person=3|Polarity=Neg|PronType=Neg,Prs",
+      "Definite=Def|NumType=Card|Number=Sing|POS=NUM",
+      "Gender=Masc|NumType=Card|Number=Sing|POS=NUM",
+      "Definite=Ind|Gender=Masc|Number=Sing|POS=DET|PronType=Dem",
+      "Case=Gen|Definite=Def|Gender=Fem|Number=Plur|POS=NOUN",
+      "Case=Gen|Gender=Neut|Number=Sing|POS=DET|PronType=Dem",
+      "Animacy=Hum|Number=Sing|POS=PRON|PronType=Art,Prs",
+      "Mood=Imp|POS=AUX|VerbForm=Fin",
+      "Number=Plur|POS=PRON|Person=3|PronType=Prs,Tot",
+      "Number=Plur|POS=ADJ",
+      "Gender=Masc|POS=NOUN",
+      "Abbr=Yes|POS=NOUN",
+      "Case=Gen|Definite=Ind|Gender=Masc|Number=Plur|POS=NOUN",
+      "Gender=Neut|Number=Sing|POS=PRON|Person=3|PronType=Ind,Prs",
+      "POS=INTJ",
+      "Animacy=Hum|Case=Nom|Number=Sing|POS=PRON|Person=2|PronType=Prs",
+      "Animacy=Hum|Case=Acc|Number=Sing|POS=PRON|Person=1|PronType=Prs",
+      "Case=Gen|Definite=Def|Gender=Masc|Number=Plur|POS=NOUN",
+      "POS=ADJ",
+      "Animacy=Hum|Case=Acc|Gender=Fem|Number=Sing|POS=PRON|Person=3|PronType=Prs",
+      "Animacy=Hum|Case=Acc|Number=Sing|POS=PRON|Person=2|PronType=Prs",
+      "Definite=Def|Gender=Fem|Number=Sing|POS=NOUN",
+      "Number=Sing|POS=PRON|Polarity=Neg|PronType=Neg",
+      "Case=Gen|POS=NOUN",
+      "Definite=Ind|Number=Sing|POS=ADJ",
+      "Case=Gen|Gender=Masc|POS=PROPN",
+      "Animacy=Hum|Number=Plur|POS=PRON|PronType=Rcp",
+      "Case=Gen|Definite=Ind|Gender=Fem|Number=Sing|POS=NOUN",
+      "Number=Plur|POS=PRON|Person=3|PronType=Prs",
+      "Gender=Fem,Masc|Number=Sing|POS=PRON|Person=3|PronType=Ind,Prs",
+      "Definite=Ind|Gender=Fem|Number=Sing|POS=DET|PronType=Prs",
+      "Case=Gen|Definite=Def|Gender=Fem|Number=Sing|POS=NOUN",
+      "Gender=Fem|Number=Sing|POS=DET|PronType=Art",
+      "Case=Gen|Definite=Def|Degree=Pos|Number=Sing|POS=ADJ",
+      "Gender=Masc|Number=Sing|POS=DET|PronType=Int",
+      "NumType=Card|Number=Sing|POS=NUM",
+      "Animacy=Hum|Case=Acc|Number=Plur|POS=PRON|Person=2|PronType=Prs",
+      "Animacy=Hum|Case=Nom|Number=Plur|POS=PRON|Person=2|PronType=Prs",
+      "Case=Gen|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing|POS=ADJ",
+      "Degree=Sup|POS=ADJ",
+      "Animacy=Hum|POS=PRON|PronType=Int",
+      "POS=DET|PronType=Ind",
+      "Definite=Def|Number=Sing|POS=DET|PronType=Dem",
+      "Gender=Fem|POS=NOUN",
+      "Case=Gen|Number=Plur|POS=DET|PronType=Dem",
+      "Gender=Fem,Masc|Number=Sing|POS=PRON|Person=3|PronType=Prs,Tot",
+      "Case=Gen|Definite=Ind|Gender=Fem|Number=Plur|POS=NOUN",
+      "Gender=Neut|Number=Sing|POS=DET|Polarity=Neg|PronType=Neg",
+      "Number=Plur|POS=NOUN",
+      "POS=PRON|PronType=Prs",
+      "Case=Gen|Definite=Ind|Degree=Pos|Number=Sing|POS=ADJ",
+      "Definite=Ind|Number=Sing|POS=VERB|VerbForm=Part",
+      "Case=Gen|Definite=Def|Number=Sing|POS=ADJ|VerbForm=Part",
+      "Mood=Ind|POS=VERB|Tense=Past|VerbForm=Fin|Voice=Pass",
+      "Gender=Neut|Number=Sing|POS=DET|PronType=Dem,Ind",
+      "Animacy=Hum|POS=PRON|Poss=Yes|PronType=Int",
+      "Abbr=Yes|POS=ADJ",
+      "Case=Gen|Gender=Masc|Number=Sing|POS=DET|PronType=Art",
+      "Abbr=Yes|Definite=Def,Ind|Gender=Masc|Number=Sing|POS=NOUN",
+      "Case=Gen|Gender=Fem|Number=Sing|POS=DET|PronType=Dem",
+      "Number=Plur|POS=PRON|Poss=Yes|PronType=Rcp",
+      "Definite=Ind|Degree=Pos|POS=ADJ",
+      "Number=Plur|POS=DET|PronType=Art",
+      "Case=Gen|NumType=Card|Number=Plur|POS=NUM",
+      "Abbr=Yes|Definite=Def,Ind|Gender=Neut|Number=Plur,Sing|POS=NOUN",
+      "Case=Gen|Number=Plur|POS=DET|PronType=Tot",
+      "Abbr=Yes|Definite=Def,Ind|Gender=Masc|Number=Plur,Sing|POS=NOUN",
+      "Gender=Fem|Number=Sing|POS=DET|PronType=Int",
+      "Definite=Ind|Gender=Neut|Number=Sing|POS=ADJ",
+      "Case=Gen|Definite=Ind|Gender=Masc|Number=Sing|POS=DET|PronType=Dem",
+      "Gender=Fem|Number=Sing|POS=DET|PronType=Prs",
+      "Animacy=Hum|Case=Gen,Nom|Number=Sing|POS=PRON|PronType=Art,Prs",
+      "Definite=Def|Degree=Pos|Gender=Masc|Number=Sing|POS=ADJ",
+      "Animacy=Hum|Case=Gen|Number=Sing|POS=PRON|PronType=Art,Prs",
+      "Gender=Fem|NumType=Card|Number=Sing|POS=NUM",
+      "Definite=Ind|Gender=Masc|POS=NOUN",
+      "Definite=Def|Number=Plur|POS=NOUN",
+      "Number=Sing|POS=ADJ|VerbForm=Part",
+      "Definite=Ind|Gender=Masc|Number=Sing|POS=ADJ|VerbForm=Part",
+      "Abbr=Yes|Gender=Masc|POS=NOUN",
+      "Abbr=Yes|Case=Gen|POS=NOUN",
+      "Abbr=Yes|Mood=Ind|POS=VERB|Tense=Pres|VerbForm=Fin",
+      "Abbr=Yes|Degree=Pos|POS=ADJ",
+      "Case=Gen|Gender=Fem|POS=NOUN",
+      "Case=Gen|Degree=Cmp|POS=ADJ",
+      "Definite=Ind|Degree=Pos|Gender=Masc|Number=Sing|POS=ADJ",
+      "Gender=Masc|Number=Sing|POS=NOUN"
+    ],
+    "parser": [
+      "ROOT",
+      "acl",
+      "acl:cleft",
+      "acl:relcl",
+      "advcl",
+      "advmod",
+      "amod",
+      "appos",
+      "aux",
+      "aux:pass",
+      "case",
+      "cc",
+      "ccomp",
+      "compound",
+      "compound:prt",
+      "conj",
+      "cop",
+      "csubj",
+      "dep",
+      "det",
+      "discourse",
+      "expl",
+      "flat:foreign",
+      "flat:name",
+      "iobj",
+      "mark",
+      "nmod",
+      "nsubj",
+      "nsubj:pass",
+      "nummod",
+      "obj",
+      "obl",
+      "orphan",
+      "parataxis",
+      "punct",
+      "xcomp"
+    ],
+    "attribute_ruler": [],
+    "ner": [
+      "DRV",
+      "EVT",
+      "GPE_LOC",
+      "GPE_ORG",
+      "LOC",
+      "MISC",
+      "ORG",
+      "PER",
+      "PROD"
+    ]
+  },
+  "pipeline": [
+    "tok2vec",
+    "morphologizer",
+    "parser",
+    "lemmatizer",
+    "attribute_ruler",
+    "ner"
+  ],
+  "components": [
+    "tok2vec",
+    "morphologizer",
+    "parser",
+    "lemmatizer",
+    "senter",
+    "attribute_ruler",
+    "ner"
+  ],
+  "disabled": [
+    "senter"
+  ],
+  "performance": {
+    "token_acc": 0.9990350152,
+    "token_p": 0.997080292,
+    "token_r": 0.9953256895,
+    "token_f": 0.9962022181,
+    "pos_acc": 0.9739104083,
+    "morph_acc": 0.9627486637,
+    "morph_micro_p": 0.9790111863,
+    "morph_micro_r": 0.9702832884,
+    "morph_micro_f": 0.974627698,
+    "morph_per_feat": {
+      "Definite": {
+        "p": 0.981511254,
+        "r": 0.9693773392,
+        "f": 0.9754065621
+      },
+      "Gender": {
+        "p": 0.9538020086,
+        "r": 0.9458408423,
+        "f": 0.9498047433
+      },
+      "Number": {
+        "p": 0.9785423603,
+        "r": 0.9689354531,
+        "f": 0.9737152113
+      },
+      "Mood": {
+        "p": 0.99091368,
+        "r": 0.9817454364,
+        "f": 0.9863082527
+      },
+      "Tense": {
+        "p": 0.9918781726,
+        "r": 0.9841349786,
+        "f": 0.9879914044
+      },
+      "VerbForm": {
+        "p": 0.9805364737,
+        "r": 0.9770208605,
+        "f": 0.9787755102
+      },
+      "Degree": {
+        "p": 0.9763066202,
+        "r": 0.9625558227,
+        "f": 0.9693824598
+      },
+      "PronType": {
+        "p": 0.9917766717,
+        "r": 0.9885677308,
+        "f": 0.9901696014
+      },
+      "Poss": {
+        "p": 0.9882352941,
+        "r": 0.9960474308,
+        "f": 0.9921259843
+      },
+      "Case": {
+        "p": 0.9927576602,
+        "r": 0.9867109635,
+        "f": 0.9897250764
+      },
+      "Reflex": {
+        "p": 1.0,
+        "r": 1.0,
+        "f": 1.0
+      },
+      "NumType": {
+        "p": 0.9888641425,
+        "r": 0.9135802469,
+        "f": 0.9497326203
+      },
+      "Polarity": {
+        "p": 1.0,
+        "r": 1.0,
+        "f": 1.0
+      },
+      "Person": {
+        "p": 0.9924026591,
+        "r": 0.9919316564,
+        "f": 0.9921671018
+      },
+      "Animacy": {
+        "p": 0.9982949702,
+        "r": 0.9974446337,
+        "f": 0.9978696208
+      },
+      "Voice": {
+        "p": 0.9777777778,
+        "r": 0.9565217391,
+        "f": 0.967032967
+      },
+      "Abbr": {
+        "p": 0.9647887324,
+        "r": 0.85625,
+        "f": 0.9072847682
+      }
+    },
+    "sents_p": 0.9339388935,
+    "sents_r": 0.9389788294,
+    "sents_f": 0.9364520803,
+    "dep_uas": 0.8957617053,
+    "dep_las": 0.8657915299,
+    "dep_las_per_type": {
+      "nmod": {
+        "p": 0.7998392283,
+        "r": 0.8165777595,
+        "f": 0.8081218274
+      },
+      "nsubj": {
+        "p": 0.8987538941,
+        "r": 0.8890600924,
+        "f": 0.8938807126
+      },
+      "flat:name": {
+        "p": 0.85625,
+        "r": 0.8824476651,
+        "f": 0.8691514671
+      },
+      "root": {
+        "p": 0.902754591,
+        "r": 0.897882939,
+        "f": 0.9003121748
+      },
+      "advmod": {
+        "p": 0.8460057748,
+        "r": 0.8435700576,
+        "f": 0.8447861605
+      },
+      "mark": {
+        "p": 0.9270315091,
+        "r": 0.9327030033,
+        "f": 0.9298586083
+      },
+      "advcl": {
+        "p": 0.7022375215,
+        "r": 0.6998284734,
+        "f": 0.7010309278
+      },
+      "obj": {
+        "p": 0.8935128519,
+        "r": 0.905707196,
+        "f": 0.8995686999
+      },
+      "case": {
+        "p": 0.9411764706,
+        "r": 0.9331612903,
+        "f": 0.9371517429
+      },
+      "det": {
+        "p": 0.9610307982,
+        "r": 0.967721519,
+        "f": 0.9643645538
+      },
+      "obl": {
+        "p": 0.7772093023,
+        "r": 0.7561085973,
+        "f": 0.7665137615
+      },
+      "aux": {
+        "p": 0.9544626594,
+        "r": 0.9484162896,
+        "f": 0.9514298684
+      },
+      "acl:relcl": {
+        "p": 0.7869565217,
+        "r": 0.8153153153,
+        "f": 0.8008849558
+      },
+      "iobj": {
+        "p": 0.8076923077,
+        "r": 0.7159090909,
+        "f": 0.7590361446
+      },
+      "xcomp": {
+        "p": 0.7368421053,
+        "r": 0.7301587302,
+        "f": 0.7334851936
+      },
+      "cc": {
+        "p": 0.919379845,
+        "r": 0.9144178874,
+        "f": 0.9168921531
+      },
+      "conj": {
+        "p": 0.7494615937,
+        "r": 0.7581699346,
+        "f": 0.7537906137
+      },
+      "amod": {
+        "p": 0.9307228916,
+        "r": 0.935796487,
+        "f": 0.9332527937
+      },
+      "nummod": {
+        "p": 0.921875,
+        "r": 0.9632653061,
+        "f": 0.9421157685
+      },
+      "compound:prt": {
+        "p": 0.8426966292,
+        "r": 0.8122743682,
+        "f": 0.8272058824
+      },
+      "cop": {
+        "p": 0.8571428571,
+        "r": 0.8724672229,
+        "f": 0.864737153
+      },
+      "appos": {
+        "p": 0.3285714286,
+        "r": 0.23,
+        "f": 0.2705882353
+      },
+      "ccomp": {
+        "p": 0.8339483395,
+        "r": 0.8897637795,
+        "f": 0.860952381
+      },
+      "expl": {
+        "p": 0.7192982456,
+        "r": 0.7756756757,
+        "f": 0.7464239272
+      },
+      "csubj": {
+        "p": 0.7647058824,
+        "r": 0.6642335766,
+        "f": 0.7109375
+      },
+      "nsubj:pass": {
+        "p": 0.9,
+        "r": 0.8333333333,
+        "f": 0.8653846154
+      },
+      "aux:pass": {
+        "p": 0.9473684211,
+        "r": 0.9,
+        "f": 0.9230769231
+      },
+      "acl": {
+        "p": 0.6824034335,
+        "r": 0.6411290323,
+        "f": 0.6611226611
+      },
+      "acl:cleft": {
+        "p": 0.45,
+        "r": 0.3333333333,
+        "f": 0.3829787234
+      },
+      "orphan": {
+        "p": 0.1666666667,
+        "r": 0.0384615385,
+        "f": 0.0625
+      },
+      "parataxis": {
+        "p": 0.8308823529,
+        "r": 0.6010638298,
+        "f": 0.6975308642
+      },
+      "reparandum": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "dep": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "compound": {
+        "p": 0.8461538462,
+        "r": 0.2682926829,
+        "f": 0.4074074074
+      },
+      "flat:foreign": {
+        "p": 0.75,
+        "r": 0.5806451613,
+        "f": 0.6545454545
+      },
+      "discourse": {
+        "p": 0.6363636364,
+        "r": 0.3043478261,
+        "f": 0.4117647059
+      },
+      "csubj:pass": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    },
+    "lemma_acc": 0.9732521624,
+    "tag_acc": 0.9739104083,
+    "ents_p": 0.8456937799,
+    "ents_r": 0.8376777251,
+    "ents_f": 0.8416666667,
+    "ents_per_type": {
+      "PER": {
+        "p": 0.906200318,
+        "r": 0.9328968903,
+        "f": 0.9193548387
+      },
+      "ORG": {
+        "p": 0.8492822967,
+        "r": 0.8787128713,
+        "f": 0.8637469586
+      },
+      "GPE_LOC": {
+        "p": 0.8517110266,
+        "r": 0.8648648649,
+        "f": 0.8582375479
+      },
+      "DRV": {
+        "p": 0.6842105263,
+        "r": 0.6582278481,
+        "f": 0.6709677419
+      },
+      "PROD": {
+        "p": 0.7196969697,
+        "r": 0.5864197531,
+        "f": 0.6462585034
+      },
+      "LOC": {
+        "p": 0.8064516129,
+        "r": 0.6880733945,
+        "f": 0.7425742574
+      },
+      "GPE_ORG": {
+        "p": 0.75,
+        "r": 0.7090909091,
+        "f": 0.7289719626
+      },
+      "EVT": {
+        "p": 0.4444444444,
+        "r": 0.4444444444,
+        "f": 0.4444444444
+      }
+    },
+    "speed": 10941.0233474225
+  },
+  "sources": [
+    {
+      "name": "UD Norwegian Bokmaal v2.8",
+      "url": "https://github.com/UniversalDependencies/UD_Norwegian-Bokmaal",
+      "license": "Public Domain (CC0)",
+      "author": "\u00d8vrelid, Lilja; J\u00f8rgensen, Fredrik; Hohle, Petter"
+    },
+    {
+      "name": "NorNE: Norwegian Named Entities (commit: bd311de5)",
+      "url": "https://github.com/ltgoslo/norne",
+      "license": "Public Domain (CC0)",
+      "author": "Language Technology Group (University of Oslo)"
+    },
+    {
+      "name": "Explosion fastText Vectors (cbow, OSCAR Common Crawl + Wikipedia)",
+      "url": "https://spacy.io",
+      "license": "CC0",
+      "author": "Explosion"
+    }
+  ],
+  "requirements": [],
+  "size": "542 MB",
+  "checksum": "c04aa6733fda259e15d279c72b47fdb0ba8557b97dce1443f9857d93b8303886",
+  "checksum_whl": "4451735f45ba2a87b3ae2646c783dd9697d003cb8345dc8ed560036ac2581a6b"
+}
