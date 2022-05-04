@@ -112,7 +112,7 @@ def pytest_generate_tests(metafunc):
         lang = metafunc.config.getoption("lang")
         parameter_sets: Dict[str, List[Tuple[str, float]]] = {}
 
-        with open(os.path.join("data", "performance_thresholds.csv")) as threshold_file:
+        with open(Path(__file__).parent / "data" / "performance_thresholds.csv") as threshold_file:
             for row in csv.DictReader(threshold_file):
                 configs = parameter_sets.get(row["filename"], [])
                 if metafunc.config.getoption(OPT_MAPPING[row["component"]]) and row["language"] == lang and (
