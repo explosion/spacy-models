@@ -8,12 +8,13 @@ def test_corpus(NLP, lang, corpus_evaluation_config):
     metrics and performance thresholds are extracted from performance_thresholds.csv.
     """
 
-    evaluate_corpus(
-        NLP,
-        Path(__file__).parent
-        / "data"
-        / "test_files"
-        / lang
-        / corpus_evaluation_config[0],
-        {metric[0]: metric[2] for metric in corpus_evaluation_config[1]},
-    )
+    if len(corpus_evaluation_config):
+        evaluate_corpus(
+            NLP,
+            Path(__file__).parent
+            / "data"
+            / "test_files"
+            / lang
+            / corpus_evaluation_config[0],
+            {metric[0]: metric[2] for metric in corpus_evaluation_config[1]},
+        )

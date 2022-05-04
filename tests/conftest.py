@@ -154,11 +154,6 @@ def pytest_generate_tests(metafunc):
             len(duplicate_metrics) == 0
         ), f"Metrics {duplicate_metrics} have been set more than once."
 
-        # Ensure there is at least one config to execute.
-        assert (
-            len(parameter_sets) > 0
-        ), "No parameter threshold configuration for this language and model size found."
-
         metafunc.parametrize(
             "corpus_evaluation_config",
             tuple(
