@@ -1,9 +1,10 @@
-import pytest
 from pathlib import Path
+
+import pytest
+
 from ...util import json_path_to_examples
 
-
-TEST_FILES_DIR = Path(__file__).parent / "test_files"
+TEST_FILES_DIR = Path(__file__).parent.parent.parent / "data" / "test_files" / "de"
 
 
 @pytest.mark.parametrize("test_file", [("de_pud-ud-test.stts.json")])

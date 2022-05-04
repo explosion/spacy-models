@@ -1,6 +1,11 @@
 # coding: utf-8
 from __future__ import unicode_literals
 
+import collections
+import csv
+import os
+from typing import Dict, List, Tuple
+
 import pytest
 import spacy
 from pathlib import Path
@@ -17,6 +22,7 @@ OPT_TAGGER = "--has-tagger"
 OPT_MORPHOLOGIZER = "--has-morphologizer"
 OPT_LEMMATIZER = "--has-lemmatizer"
 OPT_NER = "--has-ner"
+OPT_SEGMENTER = "--has-segmenter"
 
 OPT_MAPPING = {
     "tagger": OPT_TAGGER,
@@ -25,6 +31,7 @@ OPT_MAPPING = {
     "parser": OPT_PARSER,
     "ner": OPT_NER,
     "vectors": OPT_VECTORS,
+    "segmenter": OPT_SEGMENTER
 }
 
 
@@ -34,9 +41,12 @@ def pytest_addoption(parser):
     parser.addoption(OPT_VECTORS, action="store_true", help="Model has vectors")
     parser.addoption(OPT_PARSER, action="store_true", help="Model has parser")
     parser.addoption(OPT_TAGGER, action="store_true", help="Model has tagger")
-    parser.addoption(OPT_MORPHOLOGIZER, action="store_true", help="Model has morphologizer")
+    parser.addoption(
+        OPT_MORPHOLOGIZER, action="store_true", help="Model has morphologizer"
+    )
     parser.addoption(OPT_LEMMATIZER, action="store_true", help="Model has lemmatizer")
     parser.addoption(OPT_NER, action="store_true", help="Model has NER")
+    parser.addoption(OPT_SEGMENTER, action="store_true", help="Model has segmenter")
 
 
 def pytest_ignore_collect(path, config):
@@ -81,3 +91,73 @@ def NLP(request):
 def nlp(request):
     name = request.config.getoption(OPT_MODEL)
     return spacy.load(name)
+
+
+@pytest.fixture(scope="session")
+def lang(request):
+    return request.config.getoption(OPT_LANG)
+
+
+def pytest_generate_tests(metafunc):
+    """
+    Initializes data generation hooks for tests. Useful e.g. for supplying tests with dynamically generated data
+    depending on pytest configuration options.
+    """
+
+    # Extracts configurations for calls of evaluate_corpus(). This is done by parsing performance_thresholds.csv and
+    # bundling all metrics with their respective thresholds per data file. This corresponds to the parameter sets for
+    # individual calls of evaluate_corpus().
+    if "corpus_evaluation_config" in metafunc.fixturenames:
+        model_size = metafunc.config.getoption("model").split("_")[-1]
+        lang = metafunc.config.getoption("lang")
+        parameter_sets: Dict[str, List[Tuple[str, float]]] = {}
+
+        with open(Path(__file__).parent / "data" / "performance_thresholds.csv") as threshold_file:
+            for row in csv.DictReader(threshold_file):
+                configs = parameter_sets.get(row["filename"], [])
+                if metafunc.config.getoption(OPT_MAPPING[row["component"]]) and row["language"] == lang and (
+                    # Ignore configs for other model sizes.
+                    model_size == row["model_size"]
+                    or
+                    # If model_size is *, but specific model_size already set: skip config for generic model size.
+                    row["model_size"] == "*"
+                    and not any(
+                        [c for c in configs if c[0] == row["metric"] and c[1] != "*"]
+                    )
+                ):
+                    # If model_size is specific and generic model_size already defined: drop config for generic model
+                    # size.
+                    if row["model_size"] != "*" and any(
+                        [c for c in configs if c[0] == row["metric"] and c[1] == "*"]
+                    ):
+                        configs = [
+                            c for c in configs if c[0] != row["metric"] or c[1] != "*"
+                        ]
+
+                    parameter_sets[row["filename"]] = [
+                        *configs,
+                        (row["metric"], row["model_size"], float(row["accuracy"])),
+                    ]
+
+        # Ensure metric thresholds haven't been set ambiguously.
+        duplicate_metrics = set()
+        for key, count in collections.Counter(
+            tuple(
+                (filename, metric[0])
+                for filename in parameter_sets
+                for metric in parameter_sets[filename]
+            )
+        ).items():
+            if count != 1:
+                duplicate_metrics.add(key)
+        assert (
+            len(duplicate_metrics) == 0
+        ), f"Metrics {duplicate_metrics} have been set more than once."
+
+        metafunc.parametrize(
+            "corpus_evaluation_config",
+            tuple(
+                (filename, metric_thresholds)
+                for filename, metric_thresholds in parameter_sets.items()
+            ),
+        )

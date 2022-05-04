@@ -1,10 +1,11 @@
-import pytest
 from pathlib import Path
+
+import pytest
 from spacy.tokens import Doc
-from ...util import evaluate_corpus, json_path_to_examples, apply_transition_sequence
 
+from ...util import json_path_to_examples, apply_transition_sequence
 
-TEST_FILES_DIR = Path(__file__).parent / "test_files"
+TEST_FILES_DIR = Path(__file__).parent.parent.parent / "data" / "test_files" / "en"
 
 
 def test_en_parser_example(NLP):
@@ -12,17 +13,6 @@ def test_en_parser_example(NLP):
     deps = ["nsubj", "aux", "ROOT", "prep", "pcomp", "det", "compound", "dobj"]
     for token, expected_dep in zip(doc, deps):
         assert token.dep_ == expected_dep
-
-
-@pytest.mark.parametrize(
-    "test_file,uas_threshold,las_threshold",
-    [("masc-penn-treebank-sample.json", 0.82, 0.78)],
-)
-def test_en_parser_corpus(NLP, test_file, uas_threshold, las_threshold):
-    data_path = TEST_FILES_DIR / test_file
-    evaluate_corpus(
-        NLP, data_path, {"dep_uas": uas_threshold, "dep_las": las_threshold}
-    )
 
 
 @pytest.mark.parametrize(
@@ -59,7 +49,7 @@ def test_en_parser_norm_exceptions(NLP, text):
 @pytest.mark.skip
 def test_en_parser_sbd_serialization_projective(nlp):
     """Test that before and after serialization, the sentence boundaries are
-     the same."""
+    the same."""
     # NB: This was marked as causing segfault previously.
     # fmt: off
     text = "I bought a couch from IKEA It wasn't very comfortable."
