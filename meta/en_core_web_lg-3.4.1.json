@@ -1,0 +1,522 @@
+{
+  "lang": "en",
+  "name": "core_web_lg",
+  "version": "3.4.1",
+  "description": "English pipeline optimized for CPU. Components: tok2vec, tagger, parser, senter, ner, attribute_ruler, lemmatizer.",
+  "author": "Explosion",
+  "email": "contact@explosion.ai",
+  "url": "https://explosion.ai",
+  "license": "MIT",
+  "spacy_version": ">=3.4.0,<3.5.0",
+  "spacy_git_version": "2b5f955c2",
+  "vectors": {
+    "width": 300,
+    "vectors": 514157,
+    "keys": 514157,
+    "name": "en_vectors"
+  },
+  "labels": {
+    "tok2vec": [],
+    "tagger": [
+      "$",
+      "''",
+      ",",
+      "-LRB-",
+      "-RRB-",
+      ".",
+      ":",
+      "ADD",
+      "AFX",
+      "CC",
+      "CD",
+      "DT",
+      "EX",
+      "FW",
+      "HYPH",
+      "IN",
+      "JJ",
+      "JJR",
+      "JJS",
+      "LS",
+      "MD",
+      "NFP",
+      "NN",
+      "NNP",
+      "NNPS",
+      "NNS",
+      "PDT",
+      "POS",
+      "PRP",
+      "PRP$",
+      "RB",
+      "RBR",
+      "RBS",
+      "RP",
+      "SYM",
+      "TO",
+      "UH",
+      "VB",
+      "VBD",
+      "VBG",
+      "VBN",
+      "VBP",
+      "VBZ",
+      "WDT",
+      "WP",
+      "WP$",
+      "WRB",
+      "XX",
+      "_SP",
+      "``"
+    ],
+    "parser": [
+      "ROOT",
+      "acl",
+      "acomp",
+      "advcl",
+      "advmod",
+      "agent",
+      "amod",
+      "appos",
+      "attr",
+      "aux",
+      "auxpass",
+      "case",
+      "cc",
+      "ccomp",
+      "compound",
+      "conj",
+      "csubj",
+      "csubjpass",
+      "dative",
+      "dep",
+      "det",
+      "dobj",
+      "expl",
+      "intj",
+      "mark",
+      "meta",
+      "neg",
+      "nmod",
+      "npadvmod",
+      "nsubj",
+      "nsubjpass",
+      "nummod",
+      "oprd",
+      "parataxis",
+      "pcomp",
+      "pobj",
+      "poss",
+      "preconj",
+      "predet",
+      "prep",
+      "prt",
+      "punct",
+      "quantmod",
+      "relcl",
+      "xcomp"
+    ],
+    "attribute_ruler": [],
+    "lemmatizer": [],
+    "ner": [
+      "CARDINAL",
+      "DATE",
+      "EVENT",
+      "FAC",
+      "GPE",
+      "LANGUAGE",
+      "LAW",
+      "LOC",
+      "MONEY",
+      "NORP",
+      "ORDINAL",
+      "ORG",
+      "PERCENT",
+      "PERSON",
+      "PRODUCT",
+      "QUANTITY",
+      "TIME",
+      "WORK_OF_ART"
+    ]
+  },
+  "pipeline": [
+    "tok2vec",
+    "tagger",
+    "parser",
+    "attribute_ruler",
+    "lemmatizer",
+    "ner"
+  ],
+  "components": [
+    "tok2vec",
+    "tagger",
+    "parser",
+    "senter",
+    "attribute_ruler",
+    "lemmatizer",
+    "ner"
+  ],
+  "disabled": [
+    "senter"
+  ],
+  "performance": {
+    "token_acc": 0.9993092439,
+    "token_p": 0.9956819193,
+    "token_r": 0.9957659295,
+    "token_f": 0.9957239226,
+    "tag_acc": 0.9734404547,
+    "sents_p": 0.9179347826,
+    "sents_r": 0.8913516723,
+    "sents_f": 0.90444794,
+    "dep_uas": 0.9204363007,
+    "dep_las": 0.9023174614,
+    "dep_las_per_type": {
+      "prep": {
+        "p": 0.8597877625,
+        "r": 0.8669322709,
+        "f": 0.8633452361
+      },
+      "det": {
+        "p": 0.9797074284,
+        "r": 0.9803066134,
+        "f": 0.9800069293
+      },
+      "pobj": {
+        "p": 0.963921354,
+        "r": 0.9683879835,
+        "f": 0.9661495063
+      },
+      "nsubj": {
+        "p": 0.9573359244,
+        "r": 0.94966046,
+        "f": 0.9534827457
+      },
+      "aux": {
+        "p": 0.981595092,
+        "r": 0.9828184813,
+        "f": 0.9822064057
+      },
+      "advmod": {
+        "p": 0.8567202029,
+        "r": 0.8526838297,
+        "f": 0.8546972508
+      },
+      "relcl": {
+        "p": 0.7682926829,
+        "r": 0.7772133527,
+        "f": 0.7727272727
+      },
+      "root": {
+        "p": 0.9196058444,
+        "r": 0.8926710205,
+        "f": 0.9059382741
+      },
+      "xcomp": {
+        "p": 0.8853797019,
+        "r": 0.8955491744,
+        "f": 0.8904354033
+      },
+      "amod": {
+        "p": 0.9199114468,
+        "r": 0.9153223194,
+        "f": 0.9176111454
+      },
+      "compound": {
+        "p": 0.9198242724,
+        "r": 0.9328358209,
+        "f": 0.9262843555
+      },
+      "poss": {
+        "p": 0.9735205617,
+        "r": 0.9768518519,
+        "f": 0.9751833618
+      },
+      "ccomp": {
+        "p": 0.7757201646,
+        "r": 0.8446028513,
+        "f": 0.8086973479
+      },
+      "attr": {
+        "p": 0.9064542484,
+        "r": 0.93313709,
+        "f": 0.919602155
+      },
+      "case": {
+        "p": 0.9797330697,
+        "r": 0.991991992,
+        "f": 0.9858244218
+      },
+      "mark": {
+        "p": 0.9015625,
+        "r": 0.9173290938,
+        "f": 0.9093774626
+      },
+      "intj": {
+        "p": 0.680533752,
+        "r": 0.6351648352,
+        "f": 0.6570670709
+      },
+      "advcl": {
+        "p": 0.6686002522,
+        "r": 0.6675900277,
+        "f": 0.6680947581
+      },
+      "cc": {
+        "p": 0.8381204182,
+        "r": 0.8341107523,
+        "f": 0.8361107781
+      },
+      "neg": {
+        "p": 0.9451371571,
+        "r": 0.9508278976,
+        "f": 0.947973987
+      },
+      "conj": {
+        "p": 0.7760468594,
+        "r": 0.7838620342,
+        "f": 0.7799348697
+      },
+      "nsubjpass": {
+        "p": 0.9234693878,
+        "r": 0.9282051282,
+        "f": 0.925831202
+      },
+      "auxpass": {
+        "p": 0.9468791501,
+        "r": 0.9744874715,
+        "f": 0.9604849573
+      },
+      "dobj": {
+        "p": 0.9278213166,
+        "r": 0.9434217866,
+        "f": 0.9355565214
+      },
+      "nummod": {
+        "p": 0.9377224199,
+        "r": 0.9315656566,
+        "f": 0.9346338992
+      },
+      "npadvmod": {
+        "p": 0.7837218189,
+        "r": 0.7285968028,
+        "f": 0.7551546392
+      },
+      "prt": {
+        "p": 0.8103025348,
+        "r": 0.8879928315,
+        "f": 0.8473706712
+      },
+      "pcomp": {
+        "p": 0.8873937677,
+        "r": 0.8774509804,
+        "f": 0.8823943662
+      },
+      "expl": {
+        "p": 0.9809725159,
+        "r": 0.9935760171,
+        "f": 0.9872340426
+      },
+      "acl": {
+        "p": 0.7534883721,
+        "r": 0.7070376432,
+        "f": 0.7295243456
+      },
+      "agent": {
+        "p": 0.9042735043,
+        "r": 0.9480286738,
+        "f": 0.9256342957
+      },
+      "dative": {
+        "p": 0.7725,
+        "r": 0.7087155963,
+        "f": 0.7392344498
+      },
+      "acomp": {
+        "p": 0.9080091533,
+        "r": 0.8997732426,
+        "f": 0.9038724374
+      },
+      "dep": {
+        "p": 0.3263473054,
+        "r": 0.1769480519,
+        "f": 0.2294736842
+      },
+      "csubj": {
+        "p": 0.7045454545,
+        "r": 0.7337278107,
+        "f": 0.7188405797
+      },
+      "quantmod": {
+        "p": 0.8531468531,
+        "r": 0.7928513404,
+        "f": 0.8218947368
+      },
+      "nmod": {
+        "p": 0.7539432177,
+        "r": 0.5825716027,
+        "f": 0.6572705397
+      },
+      "appos": {
+        "p": 0.6997270246,
+        "r": 0.6672451193,
+        "f": 0.6831001555
+      },
+      "predet": {
+        "p": 0.8524590164,
+        "r": 0.8927038627,
+        "f": 0.8721174004
+      },
+      "preconj": {
+        "p": 0.5684210526,
+        "r": 0.6279069767,
+        "f": 0.5966850829
+      },
+      "oprd": {
+        "p": 0.8322368421,
+        "r": 0.7552238806,
+        "f": 0.7918622848
+      },
+      "parataxis": {
+        "p": 0.6323119777,
+        "r": 0.4924078091,
+        "f": 0.5536585366
+      },
+      "meta": {
+        "p": 0.8461538462,
+        "r": 0.4230769231,
+        "f": 0.5641025641
+      },
+      "csubjpass": {
+        "p": 0.4285714286,
+        "r": 0.5,
+        "f": 0.4615384615
+      }
+    },
+    "ents_p": 0.8535469108,
+    "ents_r": 0.8592748397,
+    "ents_f": 0.8564012977,
+    "ents_per_type": {
+      "DATE": {
+        "p": 0.8657320872,
+        "r": 0.8822222222,
+        "f": 0.8738993711
+      },
+      "GPE": {
+        "p": 0.926199262,
+        "r": 0.910181311,
+        "f": 0.9181204277
+      },
+      "ORDINAL": {
+        "p": 0.7826086957,
+        "r": 0.8385093168,
+        "f": 0.8095952024
+      },
+      "LOC": {
+        "p": 0.6990291262,
+        "r": 0.6878980892,
+        "f": 0.6934189406
+      },
+      "ORG": {
+        "p": 0.8197402597,
+        "r": 0.8366914104,
+        "f": 0.8281291
+      },
+      "QUANTITY": {
+        "p": 0.7866666667,
+        "r": 0.6483516484,
+        "f": 0.7108433735
+      },
+      "CARDINAL": {
+        "p": 0.8249158249,
+        "r": 0.8739595719,
+        "f": 0.8487297921
+      },
+      "PERSON": {
+        "p": 0.8759975445,
+        "r": 0.931462141,
+        "f": 0.9028788358
+      },
+      "NORP": {
+        "p": 0.921837228,
+        "r": 0.9152,
+        "f": 0.9185066238
+      },
+      "FAC": {
+        "p": 0.3958333333,
+        "r": 0.4384615385,
+        "f": 0.4160583942
+      },
+      "TIME": {
+        "p": 0.6994382022,
+        "r": 0.7280701754,
+        "f": 0.7134670487
+      },
+      "WORK_OF_ART": {
+        "p": 0.4285714286,
+        "r": 0.3556701031,
+        "f": 0.3887323944
+      },
+      "MONEY": {
+        "p": 0.9161676647,
+        "r": 0.9031877214,
+        "f": 0.9096313912
+      },
+      "EVENT": {
+        "p": 0.59,
+        "r": 0.3390804598,
+        "f": 0.4306569343
+      },
+      "LAW": {
+        "p": 0.5846153846,
+        "r": 0.59375,
+        "f": 0.5891472868
+      },
+      "PERCENT": {
+        "p": 0.9175911252,
+        "r": 0.886676876,
+        "f": 0.9018691589
+      },
+      "PRODUCT": {
+        "p": 0.4482758621,
+        "r": 0.2464454976,
+        "f": 0.3180428135
+      },
+      "LANGUAGE": {
+        "p": 0.7692307692,
+        "r": 0.625,
+        "f": 0.6896551724
+      }
+    },
+    "speed": 9221.3523549505
+  },
+  "sources": [
+    {
+      "name": "OntoNotes 5",
+      "url": "https://catalog.ldc.upenn.edu/LDC2013T19",
+      "license": "commercial (licensed by Explosion)",
+      "author": "Ralph Weischedel, Martha Palmer, Mitchell Marcus, Eduard Hovy, Sameer Pradhan, Lance Ramshaw, Nianwen Xue, Ann Taylor, Jeff Kaufman, Michelle Franchini, Mohammed El-Bachouti, Robert Belvin, Ann Houston"
+    },
+    {
+      "name": "ClearNLP Constituent-to-Dependency Conversion",
+      "url": "https://github.com/clir/clearnlp-guidelines/blob/master/md/components/dependency_conversion.md",
+      "license": "Citation provided for reference, no code packaged with model",
+      "author": "Emory University"
+    },
+    {
+      "name": "WordNet 3.0",
+      "url": "https://wordnet.princeton.edu/",
+      "author": "Princeton University",
+      "license": "WordNet 3.0 License"
+    },
+    {
+      "name": "Explosion Vectors (OSCAR 2109 + Wikipedia + OpenSubtitles + WMT News Crawl)",
+      "url": "https://github.com/explosion/spacy-vectors-builder",
+      "license": "CC0",
+      "author": "Explosion"
+    }
+  ],
+  "requirements": [],
+  "size": "560 MB",
+  "checksum": "e13023c15ce2774deb3243cda358630888ecf5abbbf43cb04efd22711b91e865",
+  "checksum_whl": "7b1681d44181b1ae6517044c9beed90cb71faaa0d7dc92bf18fbe590847051d5"
+}
