@@ -38,7 +38,7 @@ hr,*,morphologizer,hr500k.dev01_1.json,morph_acc,0.92
 hr,*,ner,hr500k.dev01_1.json,ents_f,0.83
 hr,*,parser,hr500k.dev01_1.json,dep_las,0.81
 hr,*,tagger,hr500k.dev01_1.json,dep_uas,0.87
-ja,*,ner,ja_gsd-ud-dev_sample.json,ents_f,0.64
+ja,*,ner,ja_gsd-ud-dev_sample.json,ents_f,0.63
 ja,*,parser,ja_gsd-ud-dev_sample.json,dep_uas,0.86
 ja,*,parser,ja_gsd-ud-dev_sample.json,dep_las,0.82
 ja,*,segmenter,ja_gsd-ud-dev_sample.json,token_acc,0.96
