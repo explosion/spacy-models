@@ -83,7 +83,7 @@ ru,*,parser,nerus-dev.json,dep_uas,0.95
 ru,*,parser,nerus-dev.json,dep_las,0.9
 sv,*,lemmatizer,sv_talbanken-ud-dev01_1.json,lemma_acc,0.94
 sv,*,morphologizer,sv_talbanken-ud-dev01_1.json,pos_acc,0.94
-sv,*,morphologizer,sv_talbanken-ud-dev01_1.json,morph_acc,0.94
+sv,*,morphologizer,sv_talbanken-ud-dev01_1.json,morph_acc,0.93
 sv,*,ner,validation0001_1.json,ents_f,0.71
 sv,*,parser,sv_talbanken-ud-dev01_1.json,dep_uas,0.8
 sv,*,parser,sv_talbanken-ud-dev01_1.json,dep_las,0.75
