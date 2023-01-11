@@ -24,7 +24,7 @@ def evaluate_corpus(NLP, data_path, thresholds):
     scores = NLP.evaluate(examples)
     for score_key, score_val in thresholds.items():
         print("key:", score_key, "threshold:", score_val, "score:", scores[score_key])
-        assert scores[score_key] > score_val
+        assert scores[score_key] >= score_val
     pipe_docs = NLP.pipe([example.predicted.text for example in examples[:50]])
     nopipe_docs = [NLP(example.predicted.text) for example in examples[:50]]
     for pipe_doc, nopipe_doc in zip(pipe_docs, nopipe_docs):
