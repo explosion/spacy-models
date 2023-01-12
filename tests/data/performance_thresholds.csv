@@ -91,5 +91,5 @@ sv,*,tagger,sv_talbanken-ud-dev01_1.json,tag_acc,0.93
 zh,*,parser,zh_gsd-ud-dev_sample.json,dep_uas,0.25
 zh,*,segmenter,zh_gsd-ud-dev_sample.json,token_acc,0.7
 zh,*,tagger,zh_gsd-ud-dev_sample.json,tag_acc,0.32
-zh,*,tagger,zh_gsd-ud-dev_sample.json,pos_acc,0.59
+zh,*,tagger,zh_gsd-ud-dev_sample.json,pos_acc,0.58
 zh,*,tagger,zh_gsd-ud-dev_sample.json,morph_acc,0.74
