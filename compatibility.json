@@ -1,6 +1,10 @@
 {
   "spacy": {
     "3.6.0.dev0": {
+      "sl_core_news_lg": ["3.6.0a5"],
+      "sl_core_news_md": ["3.6.0a5"],
+      "sl_core_news_sm": ["3.6.0a5"],
+      "sl_core_news_trf": ["3.6.0a5"],
       "sr_core_news_lg": ["3.6.0a5"],
       "sr_core_news_md": ["3.6.0a5"],
       "sr_core_news_sm": ["3.6.0a5"]
