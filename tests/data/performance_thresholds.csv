@@ -81,6 +81,13 @@ ru,*,morphologizer,nerus-dev.json,morph_acc,0.96
 ru,*,morphologizer,nerus-dev.json,pos_acc,0.96
 ru,*,parser,nerus-dev.json,dep_uas,0.95
 ru,*,parser,nerus-dev.json,dep_las,0.9
+sl,*,lemmatizer,ssj500k-syn.ud-dev-487.json,lemma_acc,0.94
+sl,*,morphologizer,ssj500k-syn.ud-dev-487.json,pos_acc,0.96
+sl,*,morphologizer,ssj500k-syn.ud-dev-487.json,morph_acc,0.89
+sl,*,ner,ssj500k-syn.ud-dev-487.json,ents_f,0.62
+sl,*,parser,ssj500k-syn.ud-dev-487.json,dep_uas,0.83
+sl,*,parser,ssj500k-syn.ud-dev-487.json,dep_las,0.78
+sl,*,tagger,ssj500k-syn.ud-dev-487.json,tag_acc,0.89
 sv,*,lemmatizer,sv_talbanken-ud-dev01_1.json,lemma_acc,0.94
 sv,*,morphologizer,sv_talbanken-ud-dev01_1.json,pos_acc,0.94
 sv,*,morphologizer,sv_talbanken-ud-dev01_1.json,morph_acc,0.93
