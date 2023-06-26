@@ -88,6 +88,12 @@ sv,*,ner,validation0001_1.json,ents_f,0.71
 sv,*,parser,sv_talbanken-ud-dev01_1.json,dep_uas,0.8
 sv,*,parser,sv_talbanken-ud-dev01_1.json,dep_las,0.75
 sv,*,tagger,sv_talbanken-ud-dev01_1.json,tag_acc,0.93
+uk,*,morphologizer,ukr_synth-dev_sample.json,morph_acc,0.94
+uk,*,morphologizer,ukr_synth-dev_sample.json,pos_acc,0.98
+uk,*,morphologizer,ukr_synth-dev_sample.json,tag_acc,0.98
+uk,*,ner,ukr_synth-dev_sample.json,ents_f,0.86
+uk,*,parser,ukr_synth-dev_sample.json,dep_uas,0.93
+uk,*,parser,ukr_synth-dev_sample.json,dep_las,0.91
 zh,*,parser,zh_gsd-ud-dev_sample.json,dep_uas,0.25
 zh,*,segmenter,zh_gsd-ud-dev_sample.json,token_acc,0.7
 zh,*,tagger,zh_gsd-ud-dev_sample.json,tag_acc,0.32
