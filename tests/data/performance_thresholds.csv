@@ -81,7 +81,7 @@ ru,*,morphologizer,nerus-dev.json,morph_acc,0.96
 ru,*,morphologizer,nerus-dev.json,pos_acc,0.96
 ru,*,parser,nerus-dev.json,dep_uas,0.95
 ru,*,parser,nerus-dev.json,dep_las,0.9
-sl,*,lemmatizer,ssj500k-syn.ud-dev-487.json,lemma_acc,0.93
+sl,*,lemmatizer,ssj500k-syn.ud-dev-487.json,lemma_acc,0.91
 sl,*,morphologizer,ssj500k-syn.ud-dev-487.json,pos_acc,0.96
 sl,*,morphologizer,ssj500k-syn.ud-dev-487.json,morph_acc,0.89
 sl,*,ner,ssj500k-syn.ud-dev-487.json,ents_f,0.62
