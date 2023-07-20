@@ -1,0 +1,393 @@
+{
+  "lang": "ja",
+  "name": "core_news_trf",
+  "version": "3.7.0",
+  "description": "Japanese transformer pipeline (Transformer(name='cl-tohoku/bert-base-japanese-char-v2', piece_encoder='char', stride=160, type='bert', width=768, window=216, vocab_size=6144)). Components: transformer, morphologizer, parser, ner.",
+  "author": "Explosion",
+  "email": "contact@explosion.ai",
+  "url": "https://explosion.ai",
+  "license": "CC BY-SA 3.0",
+  "spacy_version": ">=3.7.0.dev0,<3.8.0",
+  "spacy_git_version": "b1b20bf69",
+  "vectors": {
+    "width": 0,
+    "vectors": 0,
+    "keys": 0,
+    "name": null
+  },
+  "labels": {
+    "transformer": [],
+    "morphologizer": [
+      "POS=NOUN",
+      "POS=ADP",
+      "POS=VERB",
+      "POS=SCONJ",
+      "POS=AUX",
+      "POS=PUNCT",
+      "POS=PART",
+      "POS=DET",
+      "POS=NUM",
+      "POS=ADV",
+      "POS=PRON",
+      "POS=ADJ",
+      "POS=PROPN",
+      "POS=CCONJ",
+      "POS=SYM",
+      "POS=NOUN|Polarity=Neg",
+      "POS=AUX|Polarity=Neg",
+      "POS=INTJ",
+      "POS=SCONJ|Polarity=Neg"
+    ],
+    "parser": [
+      "ROOT",
+      "acl",
+      "advcl",
+      "advmod",
+      "amod",
+      "aux",
+      "case",
+      "cc",
+      "ccomp",
+      "compound",
+      "cop",
+      "csubj",
+      "dep",
+      "det",
+      "dislocated",
+      "fixed",
+      "mark",
+      "nmod",
+      "nsubj",
+      "nummod",
+      "obj",
+      "obl",
+      "punct"
+    ],
+    "attribute_ruler": [],
+    "ner": [
+      "CARDINAL",
+      "DATE",
+      "EVENT",
+      "FAC",
+      "GPE",
+      "LANGUAGE",
+      "LAW",
+      "LOC",
+      "MONEY",
+      "MOVEMENT",
+      "NORP",
+      "ORDINAL",
+      "ORG",
+      "PERCENT",
+      "PERSON",
+      "PET_NAME",
+      "PHONE",
+      "PRODUCT",
+      "QUANTITY",
+      "TIME",
+      "TITLE_AFFIX",
+      "WORK_OF_ART"
+    ]
+  },
+  "pipeline": [
+    "transformer",
+    "morphologizer",
+    "parser",
+    "attribute_ruler",
+    "ner"
+  ],
+  "components": [
+    "transformer",
+    "morphologizer",
+    "parser",
+    "attribute_ruler",
+    "ner"
+  ],
+  "disabled": [],
+  "performance": {
+    "token_acc": 0.9937494927,
+    "token_p": 0.9764591282,
+    "token_r": 0.9790021974,
+    "token_f": 0.9777290092,
+    "pos_acc": 0.9801899149,
+    "morph_acc": 0.0,
+    "morph_micro_p": 0.3356164384,
+    "morph_micro_r": 0.9607843137,
+    "morph_micro_f": 0.4974619289,
+    "morph_per_feat": {
+      "Polarity": {
+        "p": 1.0,
+        "r": 0.9607843137,
+        "f": 0.98
+      },
+      "Inflection": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      },
+      "Reading": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    },
+    "sents_p": 0.9372623574,
+    "sents_r": 0.9723865878,
+    "sents_f": 0.9545014521,
+    "dep_uas": 0.9333753773,
+    "dep_las": 0.922370317,
+    "dep_las_per_type": {
+      "cc": {
+        "p": 0.8125,
+        "r": 0.8125,
+        "f": 0.8125
+      },
+      "compound": {
+        "p": 0.9571938169,
+        "r": 0.9075535513,
+        "f": 0.931712963
+      },
+      "obl": {
+        "p": 0.8493150685,
+        "r": 0.8514357054,
+        "f": 0.8503740648
+      },
+      "case": {
+        "p": 0.9885189437,
+        "r": 0.9813829787,
+        "f": 0.9849380362
+      },
+      "dislocated": {
+        "p": 0.6666666667,
+        "r": 0.4615384615,
+        "f": 0.5454545455
+      },
+      "nsubj": {
+        "p": 0.8638132296,
+        "r": 0.8522072937,
+        "f": 0.8579710145
+      },
+      "nmod": {
+        "p": 0.9155279503,
+        "r": 0.8619883041,
+        "f": 0.8879518072
+      },
+      "root": {
+        "p": 0.9296577947,
+        "r": 0.9644970414,
+        "f": 0.9467570184
+      },
+      "aux": {
+        "p": 0.9793621013,
+        "r": 0.9693593315,
+        "f": 0.9743350443
+      },
+      "advcl": {
+        "p": 0.7613636364,
+        "r": 0.7528089888,
+        "f": 0.7570621469
+      },
+      "mark": {
+        "p": 0.9777327935,
+        "r": 0.966,
+        "f": 0.9718309859
+      },
+      "fixed": {
+        "p": 0.972972973,
+        "r": 0.9818181818,
+        "f": 0.9773755656
+      },
+      "acl": {
+        "p": 0.8883928571,
+        "r": 0.8747252747,
+        "f": 0.8815060908
+      },
+      "obj": {
+        "p": 0.9635258359,
+        "r": 0.9577039275,
+        "f": 0.9606060606
+      },
+      "nummod": {
+        "p": 0.9933774834,
+        "r": 0.8875739645,
+        "f": 0.9375
+      },
+      "advmod": {
+        "p": 0.7338129496,
+        "r": 0.7285714286,
+        "f": 0.7311827957
+      },
+      "amod": {
+        "p": 0.9117647059,
+        "r": 0.8378378378,
+        "f": 0.8732394366
+      },
+      "cop": {
+        "p": 0.9881656805,
+        "r": 0.9709302326,
+        "f": 0.9794721408
+      },
+      "ccomp": {
+        "p": 0.9047619048,
+        "r": 0.8636363636,
+        "f": 0.8837209302
+      },
+      "det": {
+        "p": 1.0,
+        "r": 0.9811320755,
+        "f": 0.9904761905
+      },
+      "csubj": {
+        "p": 0.7333333333,
+        "r": 0.9166666667,
+        "f": 0.8148148148
+      },
+      "dep": {
+        "p": 0.4285714286,
+        "r": 0.4285714286,
+        "f": 0.4285714286
+      }
+    },
+    "tag_acc": 0.9713305562,
+    "lemma_acc": 0.9670526831,
+    "ents_p": 0.8373570521,
+    "ents_r": 0.8289308176,
+    "ents_f": 0.8331226296,
+    "ents_per_type": {
+      "DATE": {
+        "p": 0.9907407407,
+        "r": 0.9816513761,
+        "f": 0.9861751152
+      },
+      "ORG": {
+        "p": 0.7553956835,
+        "r": 0.7664233577,
+        "f": 0.7608695652
+      },
+      "TITLE_AFFIX": {
+        "p": 0.9259259259,
+        "r": 0.8333333333,
+        "f": 0.8771929825
+      },
+      "PERSON": {
+        "p": 0.8992805755,
+        "r": 0.8992805755,
+        "f": 0.8992805755
+      },
+      "GPE": {
+        "p": 0.8085106383,
+        "r": 0.8085106383,
+        "f": 0.8085106383
+      },
+      "PRODUCT": {
+        "p": 0.5945945946,
+        "r": 0.5238095238,
+        "f": 0.5569620253
+      },
+      "TIME": {
+        "p": 1.0,
+        "r": 1.0,
+        "f": 1.0
+      },
+      "QUANTITY": {
+        "p": 0.8513513514,
+        "r": 0.9545454545,
+        "f": 0.9
+      },
+      "NORP": {
+        "p": 0.7666666667,
+        "r": 0.71875,
+        "f": 0.7419354839
+      },
+      "ORDINAL": {
+        "p": 0.7083333333,
+        "r": 0.7727272727,
+        "f": 0.7391304348
+      },
+      "WORK_OF_ART": {
+        "p": 0.8666666667,
+        "r": 0.7647058824,
+        "f": 0.8125
+      },
+      "CARDINAL": {
+        "p": 1.0,
+        "r": 0.5,
+        "f": 0.6666666667
+      },
+      "PERCENT": {
+        "p": 1.0,
+        "r": 0.8571428571,
+        "f": 0.9230769231
+      },
+      "EVENT": {
+        "p": 0.8695652174,
+        "r": 0.7692307692,
+        "f": 0.8163265306
+      },
+      "FAC": {
+        "p": 0.875,
+        "r": 0.7567567568,
+        "f": 0.8115942029
+      },
+      "LOC": {
+        "p": 0.5333333333,
+        "r": 0.8,
+        "f": 0.64
+      },
+      "MOVEMENT": {
+        "p": 0.5,
+        "r": 0.2,
+        "f": 0.2857142857
+      },
+      "LAW": {
+        "p": 0.6666666667,
+        "r": 0.6666666667,
+        "f": 0.6666666667
+      },
+      "MONEY": {
+        "p": 1.0,
+        "r": 1.0,
+        "f": 1.0
+      },
+      "LANGUAGE": {
+        "p": 1.0,
+        "r": 1.0,
+        "f": 1.0
+      },
+      "PET_NAME": {
+        "p": 0.0,
+        "r": 0.0,
+        "f": 0.0
+      }
+    },
+    "speed": 579.109936286
+  },
+  "sources": [
+    {
+      "name": "UD Japanese GSD v2.8",
+      "url": "https://github.com/UniversalDependencies/UD_Japanese-GSD",
+      "license": "CC BY-SA 4.0",
+      "author": "Omura, Mai; Miyao, Yusuke; Kanayama, Hiroshi; Matsuda, Hiroshi; Wakasa, Aya; Yamashita, Kayo; Asahara, Masayuki; Tanaka, Takaaki; Murawaki, Yugo; Matsumoto, Yuji; Mori, Shinsuke; Uematsu, Sumire; McDonald, Ryan; Nivre, Joakim; Zeman, Daniel"
+    },
+    {
+      "name": "UD Japanese GSD v2.8 NER",
+      "url": "https://github.com/megagonlabs/UD_Japanese-GSD",
+      "license": "CC BY-SA 4.0",
+      "author": "Megagon Labs Tokyo"
+    },
+    {
+      "name": "cl-tohoku/bert-base-japanese-char-v2",
+      "author": "Inui Laboratory, Tohoku University",
+      "url": "https://huggingface.co/cl-tohoku/bert-base-japanese-char-v2",
+      "license": "CC BY-SA 3.0"
+    }
+  ],
+  "requirements": [
+    "spacy-curated-transformers>=0.1.0,<0.2.0",
+    "sudachipy>=0.5.2,!=0.6.1",
+    "sudachidict-core>=20211220"
+  ],
+  "size": "320 MB",
+  "checksum": "737a99c4f52fb0ab74af7e8fef64bb256e741babc58663dca3d1524728c65458",
+  "checksum_whl": "2ab1bf9cda8ab3c59c031e556e2a15177019589c2315a802d46910e224bb9573"
+}
