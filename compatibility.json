@@ -1,16 +1,16 @@
 {
   "spacy": {
     "3.7.0.dev0": {
-      "ca_core_news_trf": ["3.7.0"],
-      "da_core_news_trf": ["3.7.0"],
-      "de_dep_news_trf": ["3.7.0"],
-      "en_core_web_trf": ["3.7.0"],
-      "es_dep_news_trf": ["3.7.0"],
-      "fr_dep_news_trf": ["3.7.0"],
-      "ja_core_news_trf": ["3.7.0"],
-      "sl_core_news_trf": ["3.7.0"],
-      "uk_core_news_trf": ["3.7.0"],
-      "zh_core_web_trf": ["3.7.0"]
+      "ca_core_news_trf": ["3.7.1", "3.7.0"],
+      "da_core_news_trf": ["3.7.1", "3.7.0"],
+      "de_dep_news_trf": ["3.7.1", "3.7.0"],
+      "en_core_web_trf": ["3.7.1", "3.7.0"],
+      "es_dep_news_trf": ["3.7.1", "3.7.0"],
+      "fr_dep_news_trf": ["3.7.1", "3.7.0"],
+      "ja_core_news_trf": ["3.7.1", "3.7.0"],
+      "sl_core_news_trf": ["3.7.1", "3.7.0"],
+      "uk_core_news_trf": ["3.7.1", "3.7.0"],
+      "zh_core_web_trf": ["3.7.1", "3.7.0"]
     },
     "3.6": {
       "ca_core_news_lg": ["3.6.0"],
