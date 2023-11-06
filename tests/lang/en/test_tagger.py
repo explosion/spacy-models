@@ -185,3 +185,28 @@ def test_en_tagger_lemma_issue686(NLP, text):
     """Test that pronoun lemmas are assigned correctly."""
     tokens = NLP(text)
     assert tokens[0].lemma_ == "-PRON-"
+
+
+def test_en_tagger_attribute_ruler_lemma_contractions(NLP):
+    doc = NLP.make_doc("didn't")
+    doc[0].morph = MorphAnalysis(NLP.vocab, "Mood=Ind|Tense=Past|VerbForm=Fin")
+    doc[0].tag_ = "VBD"
+    doc[1].morph = MorphAnalysis(NLP.vocab, "Polarity=Neg")
+    doc[1].tag_ = "RB"
+    doc = NLP.get_pipe("attribute_ruler")(doc)
+    # the lemmatizer is optional, just to double-check that it doesn't overwrite
+    # anything
+    doc = NLP.get_pipe("lemmatizer")(doc)
+    assert doc[0].lemma_ == "do"
+    assert doc[1].lemma_ == "not"
+
+    # note the alternate apostrophe
+    doc = NLP.make_doc("hadn’t")
+    doc[0].morph = MorphAnalysis(NLP.vocab, "Mood=Ind|Tense=Past|VerbForm=Fin")
+    doc[0].tag_ = "VBD"
+    doc[1].morph = MorphAnalysis(NLP.vocab, "Polarity=Neg")
+    doc[1].tag_ = "RB"
+    doc = NLP.get_pipe("attribute_ruler")(doc)
+    doc = NLP.get_pipe("lemmatizer")(doc)
+    assert doc[0].lemma_ == "have"
+    assert doc[1].lemma_ == "not"
