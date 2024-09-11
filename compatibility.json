@@ -1,6 +1,6 @@
 {
   "spacy": {
-    "3.8.dev0": {
+    "3.8": {
       "ca_core_news_lg": ["3.7.0"],
       "ca_core_news_md": ["3.7.0"],
       "ca_core_news_sm": ["3.7.0"],
