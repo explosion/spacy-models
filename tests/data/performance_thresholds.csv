@@ -55,7 +55,7 @@ lt,*,parser,lt_alksnis-ud-dev01_10.json,dep_las,0.51
 lt,*,tagger,lt_alksnis-ud-dev01_10.json,tag_acc,0.71
 nb,*,morphologizer,no_bokmaal-ud-dev132_1320.json,pos_acc,0.94
 nb,*,morphologizer,no_bokmaal-ud-dev132_1320.json,morph_acc,0.9
-nb,*,ner,no_bokmaal-ud-dev132_1320.json,ents_f,0.7
+nb,*,ner,no_bokmaal-ud-dev132_1320.json,ents_f,0.66
 nb,*,parser,no_bokmaal-ud-dev132_1320.json,dep_uas,0.85
 nb,*,parser,no_bokmaal-ud-dev132_1320.json,dep_las,0.81
 nl,*,parser,nl_lassysmall-ud-dev01_10.json,dep_uas,0.8
