@@ -1271,6 +1271,6 @@
     "pymorphy3>=1.0.0"
   ],
   "size": "14 MB",
-  "checksum": "bdbc0ea2880862b05245d54c3a303ae4a736c53f7d8f03d5803a87de2a31d76c",
-  "checksum_whl": "7d9a3b27a71fe0964a924d968426db93f729b5f55a579ba4582503de75188952"
+  "checksum": "a64ca2b8953f33a9b713b60eab38bd4efeb2432133f040d5218809c8b0111310",
+  "checksum_whl": "69978d47b43e2c4f329bebdb155e8e9d3861bba1a58ba25551419dae7d7e07fc"
 }
