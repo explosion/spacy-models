@@ -380,6 +380,6 @@
     "sudachidict-core>=20211220"
   ],
   "size": "11 MB",
-  "checksum": "dba14208ac1dbc6af034ff455afd1636cc85d02c29616a8037fdf999f8a1c53e",
-  "checksum_whl": "43a7015dce32a1cbf2989eb59197be4c29fd6cdd5070979432c2596e57df584c"
+  "checksum": "856f0e15da5d2151626222b10d3b224d315079ae121e8ed940a3d1bfc3a4a314",
+  "checksum_whl": "65693016b7cf33ffa845af3523a9c9b8d9aabae85dfc2e46731513a5e03def04"
 }
