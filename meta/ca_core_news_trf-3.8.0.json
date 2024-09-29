@@ -660,7 +660,7 @@
         "f": 0.964017991
       }
     },
-    "speed": 1812.3622106284
+    "speed": 1811.6909372752
   },
   "sources": [
     {
@@ -689,9 +689,9 @@
     }
   ],
   "requirements": [
-    "spacy-curated-transformers==0.2.2,<1.0.0"
+    "spacy-curated-transformers>=0.2.2,<1.0.0"
   ],
   "size": "435 MB",
-  "checksum": "ede5101d6932bd6c100f64d1d8316e5d7ee82a85b1622fb6fe3c9585a02d28cd",
-  "checksum_whl": "d565c341effd4d7fa2239454fa1623042e58b1e8acdf53317b55f7a8ff2c586f"
+  "checksum": "5f47057a0ac0a2c8be5b894aa7583dd22e1db3a8594c17316f160a958a830448",
+  "checksum_whl": "f0bf7b6d1c88640a488e4445f0a5454694a1e78ea8f63792a877b6a899820f01"
 }
