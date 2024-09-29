@@ -502,6 +502,6 @@
     "spacy-pkuseg>=1.0.0,<2.0.0"
   ],
   "size": "575 MB",
-  "checksum": "6814fee25c1f7d057aaabef062ed054e739d77ceef4825f50b3ca295cf2f2622",
-  "checksum_whl": "ee382a1e7568e285ee4a8489abdd1833b57d2589adff039235d8bf73e1fc3026"
+  "checksum": "f5ba75104f5a07854503461a6bbaf7bb34232e9a8b746953a3a46e1478380c34",
+  "checksum_whl": "eb39f5deb382752d3faef4052fb61570b7f45441076082b2a1fdbe50a8848e7c"
 }
