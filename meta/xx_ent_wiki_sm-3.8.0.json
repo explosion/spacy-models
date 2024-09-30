@@ -1,0 +1,73 @@
+{
+  "lang": "xx",
+  "name": "ent_wiki_sm",
+  "version": "3.8.0",
+  "description": "Multi-language pipeline optimized for CPU. Components: ner.",
+  "author": "Explosion",
+  "email": "contact@explosion.ai",
+  "url": "https://explosion.ai",
+  "license": "MIT",
+  "spacy_version": ">=3.8.0,<3.9.0",
+  "spacy_git_version": "5010fcbd3",
+  "vectors": {
+    "width": 0,
+    "vectors": 0,
+    "keys": 0,
+    "name": null
+  },
+  "labels": {
+    "ner": [
+      "LOC",
+      "MISC",
+      "ORG",
+      "PER"
+    ]
+  },
+  "pipeline": [
+    "ner"
+  ],
+  "components": [
+    "ner"
+  ],
+  "disabled": [],
+  "performance": {
+    "ents_p": 0.8356510289,
+    "ents_r": 0.8271470739,
+    "ents_f": 0.8313773058,
+    "ents_per_type": {
+      "LOC": {
+        "p": 0.8455438352,
+        "r": 0.873817232,
+        "f": 0.8594480679
+      },
+      "PER": {
+        "p": 0.8720573183,
+        "r": 0.8988198141,
+        "f": 0.8852363412
+      },
+      "MISC": {
+        "p": 0.7719140454,
+        "r": 0.6715873402,
+        "f": 0.7182642231
+      },
+      "ORG": {
+        "p": 0.7838007911,
+        "r": 0.7022164234,
+        "f": 0.7407690608
+      }
+    },
+    "speed": 19567.1402629334
+  },
+  "sources": [
+    {
+      "name": "WikiNER",
+      "url": "https://figshare.com/articles/Learning_multilingual_named_entity_recognition_from_Wikipedia/5462500",
+      "license": "CC BY 4.0",
+      "author": "Joel Nothman, Nicky Ringland, Will Radford, Tara Murphy, James R Curran"
+    }
+  ],
+  "requirements": [],
+  "size": "10 MB",
+  "checksum": "a0f0f1be6faa96300abf9d711f7d5a326698333ba8f21f9f9e0e12bf92f6be6b",
+  "checksum_whl": "6f3c4b853852ea9e9d2dc76cc950dddb10a7e4c42d813308caefe6c5e8be2f0a"
+}
