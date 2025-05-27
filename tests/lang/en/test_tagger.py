@@ -5,7 +5,7 @@ from spacy.tokens import MorphAnalysis
 
 def test_en_tagger_tag_names(NLP):
     doc = NLP("I ate pizzas with anchovies.", disable=["parser"])
-    assert type(doc[2].pos) == int
+    assert isinstance(doc[2].pos, int)
     assert isinstance(doc[2].pos_, str)
     assert isinstance(doc[2].dep_, str)
     assert doc[2].tag_ == "NNS"

@@ -50,6 +50,7 @@ def test_en_parser_norm_exceptions(NLP, text):
 def test_en_parser_sbd_serialization_projective(nlp):
     """Test that before and after serialization, the sentence boundaries are
     the same."""
+    # An undocumented utility function used here needs to be updated
     # NB: This was marked as causing segfault previously.
     # fmt: off
     text = "I bought a couch from IKEA It wasn't very comfortable."
@@ -59,7 +60,6 @@ def test_en_parser_sbd_serialization_projective(nlp):
     # fmt: on
 
     doc = nlp.tokenizer(text)
-    # This utility function needs to be updated I think?
     apply_transition_sequence(nlp.get_pipe("parser"), doc, transition)
     doc_serialized = Doc(nlp.vocab).from_bytes(doc.to_bytes())
     assert doc.is_parsed
@@ -87,7 +87,7 @@ def test_en_parser_issue693(NLP):
     assert len(chunks2) == 2
 
 
-@pytest.mark.skip
+@pytest.mark.xfail
 def test_en_parser_issue704(NLP):
     """Test that sentence boundaries are detected correctly."""
     text = "“Atticus said to Jem one day, “I’d rather you shot at tin cans in the backyard, but I know you’ll go after birds. Shoot all the blue jays you want, if you can hit ‘em, but remember it’s a sin to kill a mockingbird.”"
@@ -109,7 +109,7 @@ def test_en_parser_issue955(NLP):
 
 # fmt: off
 TEST_CASES_SBD = [
-    pytest.param("Hello World. My name is Jonas.", ["Hello World.", "My name is Jonas."], marks=pytest.mark.xfail()),
+    pytest.param("Hello World. My name is Jonas.", ["Hello World.", "My name is Jonas."]),
     ("What is your name? My name is Jonas.", ["What is your name?", "My name is Jonas."]),
     ("There it is! I found it.", ["There it is!", "I found it."]),
     ("My name is Jonas E. Smith.", ["My name is Jonas E. Smith."]),
@@ -165,14 +165,12 @@ TEST_CASES_SBD = [
 # fmt: on
 
 
-@pytest.mark.skip
+@pytest.mark.xfail
 @pytest.mark.parametrize("text,expected_sents", TEST_CASES_SBD)
 def test_en_sbd_prag(NLP, text, expected_sents):
     """SBD tests from Pragmatic Segmenter"""
     doc = NLP(text)
     sents = []
     for sent in doc.sents:
-        sents.append(
-            "".join(doc[i].string for i in range(sent.start, sent.end)).strip()
-        )
+        sents.append(sent.text)
     assert sents == expected_sents
