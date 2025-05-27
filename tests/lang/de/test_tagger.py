@@ -11,7 +11,7 @@ TEST_FILES_DIR = Path(__file__).parent.parent.parent / "data" / "test_files" / "
 
 def test_de_tagger_tag_names(NLP):
     doc = NLP("Ich esse eine Pizza mit Tomaten.", disable=["parser"])
-    assert type(doc[3].pos) == int
+    assert isinstance(doc[3].pos, int)
     assert isinstance(doc[3].pos_, str)
     assert isinstance(doc[3].dep_, str)
     assert doc[3].tag_ == "NN"
